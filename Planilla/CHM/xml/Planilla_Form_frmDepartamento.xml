@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmDepartamento" Text="Planilla" WindowSize="288, 146" ClientAreaOffset="20, 39" BorderStyle="2" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmDepartamento.jpg" HtmlFileName="Planilla_Form_frmDepartamento.htm" HelpContextId="550" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="Planilla">
+	<Controls>
+		<TextBox Name="TextBox1" Text="TextBox1" ClassName="TextBox" Location="104, 16" Size="152, 20" TabIndex="1" HelpContextId="560" HotSpot="124,55,276,75" Level="1" Indexes="TextBox1"/>
+		<TextBox Name="TextBox2" Text="TextBox2" ClassName="TextBox" Location="104, 48" Size="152, 20" TabIndex="2" HelpContextId="570" HotSpot="124,87,276,107" Level="1" Indexes="TextBox2"/>
+		<Label Name="Label1" Text="Descripción" ClassName="Label" Location="8, 48" Size="88, 23" TabIndex="3" HelpContextId="580" HotSpot="28,87,116,110" Level="1" Indexes="Descripción"/>
+		<Label Name="Label2" Text="Planilla" ClassName="Label" Location="8, 16" Size="88, 23" TabIndex="4" HelpContextId="590" HotSpot="28,55,116,78" Level="1" Indexes="Planilla"/>
+		<DevComponents.DotNetBar.ButtonX Name="ButtonX1" Text="ButtonX1" ClassName="DevComponents.DotNetBar.ButtonX" Location="103, 80" Size="75, 23" TabIndex="7" HelpContextId="600" HotSpot="123,119,198,142" Level="1" Indexes="ButtonX1"/>
+		<DevComponents.DotNetBar.ButtonX Name="ButtonX2" Text="ButtonX2" ClassName="DevComponents.DotNetBar.ButtonX" Location="185, 80" Size="75, 23" TabIndex="8" HelpContextId="610" HotSpot="205,119,280,142" Level="1" Indexes="ButtonX2"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="TextBox1" Bmk="TextBox1" Caption="TextBox1"/>
+			<Item Name="TextBox2" Bmk="TextBox2" Caption="TextBox2"/>
+			<Item Name="ButtonX1" Bmk="ButtonX1" Caption="ButtonX1"/>
+			<Item Name="ButtonX2" Bmk="ButtonX2" Caption="ButtonX2"/>
+		</Controls>
+	</Documented>
+</Form>

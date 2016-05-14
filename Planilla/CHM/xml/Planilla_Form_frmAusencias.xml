@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmAusencias" Text="Ausencias" WindowSize="320, 262" ClientAreaOffset="20, 39" BorderStyle="2" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmAusencias.jpg" HtmlFileName="Planilla_Form_frmAusencias.htm" HelpContextId="210" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="Ausencias">
+	<Controls>
+		<BindingNavigator Name="AusenciasBindingNavigator" Text="AusenciasBindingNavigator" ClassName="BindingNavigator" Location="0, 0" Size="304, 25" TabIndex="0" HelpContextId="220" HotSpot="20,39,324,64" Level="1" Indexes="AusenciasBindingNavigator"/>
+		<Label Name="Id_contratoLabel" Text="Empleado:" ClassName="Label" Location="9, 55" Size="57, 13" TabIndex="3" HelpContextId="230" HotSpot="29,94,86,107" Level="1" Indexes="Empleado"/>
+		<Label Name="FechaIniLabel" Text="fecha Inicio:" ClassName="Label" Location="1, 82" Size="65, 13" TabIndex="5" HelpContextId="240" HotSpot="21,121,86,134" Level="1" Indexes="fecha Inicio"/>
+		<DateTimePicker Name="FechaIniDateTimePicker" Text="fecha Inicio:" ClassName="DateTimePicker" Location="79, 78" Size="200, 20" TabIndex="6" HelpContextId="250" HotSpot="99,117,299,137" Level="1" Indexes="fecha Inicio"/>
+		<Label Name="FechafinLabel" Text="fecha fin:" ClassName="Label" Location="15, 108" Size="51, 13" TabIndex="7" HelpContextId="260" HotSpot="35,147,86,160" Level="1" Indexes="fecha fin"/>
+		<DateTimePicker Name="FechafinDateTimePicker" Text="fecha fin:" ClassName="DateTimePicker" Location="79, 104" Size="200, 20" TabIndex="8" HelpContextId="270" HotSpot="99,143,299,163" Level="1" Indexes="fecha fin"/>
+		<Label Name="DiasLabel" Text="días:" ClassName="Label" Location="37, 133" Size="31, 13" TabIndex="9" HelpContextId="280" HotSpot="57,172,88,185" Level="1" Indexes="días"/>
+		<TextBox Name="DiasTextBox" Text="días:" ClassName="TextBox" Location="79, 130" Size="200, 20" TabIndex="10" HelpContextId="290" HotSpot="99,169,299,189" Level="1" Indexes="días"/>
+		<Label Name="MontoLabel" Text="monto:" ClassName="Label" Location="27, 159" Size="39, 13" TabIndex="11" HelpContextId="300" HotSpot="47,198,86,211" Level="1" Indexes="monto"/>
+		<TextBox Name="MontoTextBox" Text="monto:" ClassName="TextBox" Location="79, 156" Size="200, 20" TabIndex="12" HelpContextId="310" HotSpot="99,195,299,215" Level="1" Indexes="monto"/>
+		<ComboBox Name="ComboBox1" Text="ComboBox1" ClassName="ComboBox" Location="79, 47" Size="200, 21" TabIndex="13" HelpContextId="320" HotSpot="99,86,299,107" Level="1" Indexes="ComboBox1"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="AusenciasBindingNavigator" Bmk="AusenciasBindingNavigator" Caption="AusenciasBindingNavigator"/>
+			<Item Name="FechaIniDateTimePicker" Bmk="FechaIniDateTimePicker" Caption="fecha Inicio"/>
+			<Item Name="FechafinDateTimePicker" Bmk="FechafinDateTimePicker" Caption="fecha fin"/>
+			<Item Name="DiasTextBox" Bmk="DiasTextBox" Caption="días"/>
+			<Item Name="MontoTextBox" Bmk="MontoTextBox" Caption="monto"/>
+			<Item Name="ComboBox1" Bmk="ComboBox1" Caption="ComboBox1"/>
+		</Controls>
+	</Documented>
+</Form>

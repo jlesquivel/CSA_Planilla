@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmPuesto" Text="Puesto" WindowSize="320, 210" ClientAreaOffset="20, 39" BorderStyle="2" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmPuesto.jpg" HtmlFileName="Planilla_Form_frmPuesto.htm" HelpContextId="930" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="Puesto">
+	<Controls>
+		<TextBox Name="TextBox1" Text="TextBox1" ClassName="TextBox" Location="128, 56" Size="120, 20" TabIndex="0" HelpContextId="940" HotSpot="148,95,268,115" Level="1" Indexes="TextBox1"/>
+		<Label Name="Label1" Text="Nombre" ClassName="Label" Location="16, 56" Size="100, 23" TabIndex="1" HelpContextId="950" HotSpot="36,95,136,118" Level="1" Indexes="Nombre"/>
+		<Label Name="Label2" Text="Forma Pago" ClassName="Label" Location="16, 88" Size="100, 23" TabIndex="2" HelpContextId="960" HotSpot="36,127,136,150" Level="1" Indexes="Forma Pago"/>
+		<ComboBox Name="ComboBox1" Text="Forma Pago" ClassName="ComboBox" Location="128, 88" Size="120, 21" TabIndex="3" HelpContextId="970" HotSpot="148,127,268,148" Level="1" Indexes="Forma Pago"/>
+		<Button Name="Button1" Text="Guardar" ClassName="Button" Location="128, 136" Size="75, 23" TabIndex="4" HelpContextId="980" HotSpot="148,175,223,198" Level="1" Indexes="Guardar"/>
+		<Button Name="Button2" Text="Cancelar" ClassName="Button" Location="208, 136" Size="75, 23" TabIndex="5" HelpContextId="990" HotSpot="228,175,303,198" Level="1" Indexes="Cancelar"/>
+		<PictureBox Name="PictureBox1" Text="PictureBox1" ClassName="PictureBox" Location="0, 0" Size="304, 40" TabIndex="6" HelpContextId="1000" PicFileName="Planilla_Form_frmPuesto_PictureBox1.jpg" HotSpot="20,39,324,79" Level="1" Indexes="PictureBox1"/>
+		<PictureBox Name="PictureBox2" Text="PictureBox2" ClassName="PictureBox" Location="256, 8" Size="24, 24" TabIndex="7" HelpContextId="1010" PicFileName="Planilla_Form_frmPuesto_PictureBox2.jpg" HotSpot="276,47,300,71" Level="1" Indexes="PictureBox2"/>
+		<Label Name="Label3" Text="Puesto" ClassName="Label" Location="16, 8" Size="100, 23" TabIndex="8" HelpContextId="1020" HotSpot="36,47,136,70" Level="1" Indexes="Puesto"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="TextBox1" Bmk="TextBox1" Caption="TextBox1"/>
+			<Item Name="ComboBox1" Bmk="ComboBox1" Caption="Forma Pago"/>
+			<Item Name="Button1" Bmk="Button1" Caption="Guardar"/>
+			<Item Name="Button2" Bmk="Button2" Caption="Cancelar"/>
+			<Item Name="PictureBox1" Bmk="PictureBox1" Caption="PictureBox1"/>
+			<Item Name="PictureBox2" Bmk="PictureBox2" Caption="PictureBox2"/>
+		</Controls>
+	</Documented>
+</Form>

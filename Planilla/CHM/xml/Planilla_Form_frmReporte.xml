@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmReporte" Text="frmReporte" WindowSize="647, 481" ClientAreaOffset="20, 39" BorderStyle="2" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmReporte.jpg" HtmlFileName="Planilla_Form_frmReporte.htm" HelpContextId="1030" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="frmReporte">
+	<Controls>
+		<CrystalDecisions.Windows.Forms.CrystalReportViewer Name="CrystalReportViewer1" Text="CrystalReportViewer1" ClassName="CrystalDecisions.Windows.Forms.CrystalReportViewer" Location="0, 0" Size="631, 445" TabIndex="0" HelpContextId="1040" HotSpot="20,39,651,484" Level="1" Indexes="CrystalReportViewer1"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="CrystalReportViewer1" Bmk="CrystalReportViewer1" Caption="CrystalReportViewer1"/>
+		</Controls>
+	</Documented>
+</Form>

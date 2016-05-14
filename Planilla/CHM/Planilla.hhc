@@ -1,0 +1,613 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+<!-- Put Java help object tag here -->
+</HEAD>
+<BODY>
+<UL>
+        <LI>  <OBJECT type="text/sitemap">
+                <param name="Name" value="Planilla">
+                <param name="Local" value="Welcome.htm">
+                </OBJECT>
+        <UL>
+                <LI>  <OBJECT type="text/sitemap">
+                        <param name="Name" value="Introduction">
+                        <param name="Local" value="Welcome.htm">
+                        </OBJECT>
+                <UL>
+                </UL>
+                <LI>  <OBJECT type="text/sitemap">
+                        <param name="Name" value="Getting Started">
+                        <param name="Local" value="GettingStarted.htm">
+                        </OBJECT>
+                <UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Installation">
+                                <param name="Local" value="Installation.htm">
+                                </OBJECT>
+                        <UL>
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Starting the program">
+                                <param name="Local" value="StartingTheProgram.htm">
+                                </OBJECT>
+                        <UL>
+                        </UL>
+                </UL>
+                <LI>  <OBJECT type="text/sitemap">
+                        <param name="Name" value="Tutorial">
+                        <param name="Local" value="Tutorial.htm">
+                        </OBJECT>
+                <UL>
+                </UL>
+                <LI>  <OBJECT type="text/sitemap">
+                        <param name="Name" value="Dialogs">
+                        <param name="Local" value="Dialogs.htm">
+                        </OBJECT>
+                <UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="bEmpleado">
+                                <param name="Local" value="Planilla_Form_bEmpleado.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="PanelEx1">
+                                        <param name="Local" value="Planilla_Form_bEmpleado.htm#bEmpleado_PanelEx1">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="colegiatura">
+                                <param name="Local" value="Planilla_Form_colegiatura.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="ColegiaturaBindingNavigator">
+                                        <param name="Local" value="Planilla_Form_colegiatura.htm#colegiatura_ColegiaturaBindingNavigator">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="ColegiaturaDataGridView">
+                                        <param name="Local" value="Planilla_Form_colegiatura.htm#colegiatura_ColegiaturaDataGridView">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Empleado">
+                                        <param name="Local" value="Planilla_Form_colegiatura.htm#colegiatura_DataGridViewTextBoxColumn1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="carnet">
+                                        <param name="Local" value="Planilla_Form_colegiatura.htm#colegiatura_DataGridViewTextBoxColumn2">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="monto">
+                                        <param name="Local" value="Planilla_Form_colegiatura.htm#colegiatura_DataGridViewTextBoxColumn3">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="cPagos">
+                                <param name="Local" value="Planilla_Form_cPagos.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DataGridView1">
+                                        <param name="Local" value="Planilla_Form_cPagos.htm#cPagos_DataGridView1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Contrato">
+                                        <param name="Local" value="Planilla_Form_cPagos.htm#cPagos_ContratoDataGridViewTextBoxColumn">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Planilla">
+                                        <param name="Local" value="Planilla_Form_cPagos.htm#cPagos_PlanillaDataGridViewTextBoxColumn">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Fecha Inicio">
+                                        <param name="Local" value="Planilla_Form_cPagos.htm#cPagos_FechaInicio">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Fecha Fin">
+                                        <param name="Local" value="Planilla_Form_cPagos.htm#cPagos_FechaFin">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Monto">
+                                        <param name="Local" value="Planilla_Form_cPagos.htm#cPagos_MontoDataGridViewTextBoxColumn">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="cRubros">
+                                <param name="Local" value="Planilla_Form_cRubros.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="RubrosBindingNavigator">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_RubrosBindingNavigator">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TAB:TabControl1">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_TabControl1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Rubros">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_TabControl1_0">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="RubrosDataGridView">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_RubrosDataGridView">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="id_rubro">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_DataGridViewTextBoxColumn1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="nombre">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_DataGridViewTextBoxColumn2">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="categoria">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_DataGridViewTextBoxColumn3">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="formula">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_DataGridViewTextBoxColumn4">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Tabla Valores">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_TabControl1_1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Tabla_valoresDataGridView">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_Tabla_valoresDataGridView">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="id">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_DataGridViewTextBoxColumn5">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="id_rubro">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_DataGridViewTextBoxColumn6">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="valor">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_DataGridViewTextBoxColumn7">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="minimo">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_DataGridViewTextBoxColumn8">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="maximo">
+                                        <param name="Local" value="Planilla_Form_cRubros.htm#cRubros_DataGridViewTextBoxColumn9">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Ausencias">
+                                <param name="Local" value="Planilla_Form_frmAusencias.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="AusenciasBindingNavigator">
+                                        <param name="Local" value="Planilla_Form_frmAusencias.htm#frmAusencias_AusenciasBindingNavigator">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="fecha Inicio">
+                                        <param name="Local" value="Planilla_Form_frmAusencias.htm#frmAusencias_FechaIniDateTimePicker">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="fecha fin">
+                                        <param name="Local" value="Planilla_Form_frmAusencias.htm#frmAusencias_FechafinDateTimePicker">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="días">
+                                        <param name="Local" value="Planilla_Form_frmAusencias.htm#frmAusencias_DiasTextBox">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="monto">
+                                        <param name="Local" value="Planilla_Form_frmAusencias.htm#frmAusencias_MontoTextBox">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="ComboBox1">
+                                        <param name="Local" value="Planilla_Form_frmAusencias.htm#frmAusencias_ComboBox1">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="frm">
+                                <param name="Local" value="Planilla_Form_frm.htm">
+                                </OBJECT>
+                        <UL>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Categoria">
+                                <param name="Local" value="Planilla_Form_frmCategoria.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="CategoriasBindingNavigator">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_CategoriasBindingNavigator">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="nombre">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_NombreTextBox">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="salario base">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_Salario_baseTextBox">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="anualidad">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_AnualidadTextBox">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="ComboBoxEx1">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_ComboBoxEx1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="tipo pago">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_Tipo_pagoComboBox">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Categorias">
+                                <param name="Local" value="Planilla_Form_frmCategoria.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="CategoriasBindingNavigator">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_CategoriasBindingNavigator">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="nombre">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_NombreTextBox">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="salario base">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_Salario_baseTextBox">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="anualidad">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_AnualidadTextBox">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="ComboBoxEx1">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_ComboBoxEx1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="tipo pago">
+                                        <param name="Local" value="Planilla_Form_frmCategoria.htm#frmCategoria_Tipo_pagoComboBox">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="frmColegiatura">
+                                <param name="Local" value="Planilla_Form_frmColegiatura.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Colegiatura1">
+                                        <param name="Local" value="Planilla_Form_frmColegiatura.htm#frmColegiatura_Colegiatura1">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Configuraci&#195;&#179;n">
+                                <param name="Local" value="Planilla_Form_frmConfiguracion.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TabControl1">
+                                        <param name="Local" value="Planilla_Form_frmConfiguracion.htm#frmConfiguracion_TabControl1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="ConfiguracionBindingNavigator">
+                                        <param name="Local" value="Planilla_Form_frmConfiguracion.htm#frmConfiguracion_ConfiguracionBindingNavigator">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="frmContrato">
+                                <param name="Local" value="Planilla_Form_frmContrato.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="UserControl21">
+                                        <param name="Local" value="Planilla_Form_frmContrato.htm#frmContrato_UserControl21">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TabControl2">
+                                        <param name="Local" value="Planilla_Form_frmContrato.htm#frmContrato_TabControl2">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="BEmpleado1">
+                                        <param name="Local" value="Planilla_Form_frmContrato.htm#frmContrato_BEmpleado1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="PanelEx3">
+                                        <param name="Local" value="Planilla_Form_frmContrato.htm#frmContrato_PanelEx3">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Planilla">
+                                <param name="Local" value="Planilla_Form_frmDepartamento.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TextBox1">
+                                        <param name="Local" value="Planilla_Form_frmDepartamento.htm#frmDepartamento_TextBox1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TextBox2">
+                                        <param name="Local" value="Planilla_Form_frmDepartamento.htm#frmDepartamento_TextBox2">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="ButtonX1">
+                                        <param name="Local" value="Planilla_Form_frmDepartamento.htm#frmDepartamento_ButtonX1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="ButtonX2">
+                                        <param name="Local" value="Planilla_Form_frmDepartamento.htm#frmDepartamento_ButtonX2">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Incapacidades">
+                                <param name="Local" value="Planilla_Form_frmIncapacidades.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TabControl1">
+                                        <param name="Local" value="Planilla_Form_frmIncapacidades.htm#frmIncapacidades_TabControl1">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Nomina">
+                                <param name="Local" value="Planilla_Form_frmNomina.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="RibbonControl1">
+                                        <param name="Local" value="Planilla_Form_frmNomina.htm#frmNomina_RibbonControl1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Bar1">
+                                        <param name="Local" value="Planilla_Form_frmNomina.htm#frmNomina_Bar1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite1">
+                                        <param name="Local" value="Planilla_Form_frmNomina.htm#frmNomina_DockSite1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite2">
+                                        <param name="Local" value="Planilla_Form_frmNomina.htm#frmNomina_DockSite2">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite3">
+                                        <param name="Local" value="Planilla_Form_frmNomina.htm#frmNomina_DockSite3">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite4">
+                                        <param name="Local" value="Planilla_Form_frmNomina.htm#frmNomina_DockSite4">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite5">
+                                        <param name="Local" value="Planilla_Form_frmNomina.htm#frmNomina_DockSite5">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite6">
+                                        <param name="Local" value="Planilla_Form_frmNomina.htm#frmNomina_DockSite6">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite7">
+                                        <param name="Local" value="Planilla_Form_frmNomina.htm#frmNomina_DockSite7">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite8">
+                                        <param name="Local" value="Planilla_Form_frmNomina.htm#frmNomina_DockSite8">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="32002,04_27">
+                                        <param name="Local" value="Planilla_Form_frmNomina.htm#frmNomina_32002_04_27">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Rubros y Perfiles">
+                                <param name="Local" value="Planilla_Form_frmPerfiles2.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TabControl1">
+                                        <param name="Local" value="Planilla_Form_frmPerfiles2.htm#frmPerfiles2_TabControl1">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Planillas">
+                                <param name="Local" value="Planilla_Form_frmPlanilla.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Panel1">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_Panel1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Deducciones">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_GroupBox2">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TextboxFormat4">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_TextboxFormat4">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Ingresos">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_GroupBox3">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TextboxFormat2">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_TextboxFormat2">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Resumen Empleado">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_GroupBox1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TextBox1">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_TextBox1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TextBox3">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_TextBox3">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TextboxFormat1">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_TextboxFormat1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TextboxFormat3">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_TextboxFormat3">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TextboxFormat5">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_TextboxFormat5">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TextboxFormat6">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_TextboxFormat6">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Resumen Planilla">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_GroupBox4">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite1">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_DockSite1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite2">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_DockSite2">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite3">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_DockSite3">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite4">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_DockSite4">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite5">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_DockSite5">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite6">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_DockSite6">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite7">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_DockSite7">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="DockSite8">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_DockSite8">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="RibbonBarMergeContainer1">
+                                        <param name="Local" value="Planilla_Form_frmPlanilla.htm#frmPlanilla_RibbonBarMergeContainer1">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="Puesto">
+                                <param name="Local" value="Planilla_Form_frmPuesto.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TextBox1">
+                                        <param name="Local" value="Planilla_Form_frmPuesto.htm#frmPuesto_TextBox1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Forma Pago">
+                                        <param name="Local" value="Planilla_Form_frmPuesto.htm#frmPuesto_ComboBox1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Guardar">
+                                        <param name="Local" value="Planilla_Form_frmPuesto.htm#frmPuesto_Button1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Cancelar">
+                                        <param name="Local" value="Planilla_Form_frmPuesto.htm#frmPuesto_Button2">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="PictureBox1">
+                                        <param name="Local" value="Planilla_Form_frmPuesto.htm#frmPuesto_PictureBox1">
+                                        </OBJECT>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="PictureBox2">
+                                        <param name="Local" value="Planilla_Form_frmPuesto.htm#frmPuesto_PictureBox2">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="frmReporte">
+                                <param name="Local" value="Planilla_Form_frmReporte.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="CrystalReportViewer1">
+                                        <param name="Local" value="Planilla_Form_frmReporte.htm#frmReporte_CrystalReportViewer1">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="frmRubros">
+                                <param name="Local" value="Planilla_Form_frmRubros.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="TabControl1">
+                                        <param name="Local" value="Planilla_Form_frmRubros.htm#frmRubros_TabControl1">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI>  <OBJECT type="text/sitemap">
+                                <param name="Name" value="UserControl2">
+                                <param name="Local" value="Planilla_Form_UserControl2.htm">
+                                </OBJECT>
+                        <UL>
+                                <LI>  <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Bar1">
+                                        <param name="Local" value="Planilla_Form_UserControl2.htm#UserControl2_Bar1">
+                                        </OBJECT>
+
+                        </UL>
+                </UL>
+                <LI>  <OBJECT type="text/sitemap">
+                        <param name="Name" value="Registration">
+                        <param name="Local" value="Registration.htm">
+                        </OBJECT>
+                <UL>
+                </UL>
+                <LI>  <OBJECT type="text/sitemap">
+                        <param name="Name" value="Support">
+                        <param name="Local" value="Support.htm">
+                        </OBJECT>
+                <UL>
+                </UL>
+                <LI>  <OBJECT type="text/sitemap">
+                        <param name="Name" value="Copyright">
+                        <param name="Local" value="Copyright.htm">
+                        </OBJECT>
+                <UL>
+                </UL>
+        </UL>
+</UL>
+</BODY>
+</HTML>
+

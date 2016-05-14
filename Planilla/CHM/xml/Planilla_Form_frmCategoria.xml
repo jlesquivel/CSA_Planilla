@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmCategoria" Text="Categoria" WindowSize="429, 259" ClientAreaOffset="20, 39" BorderStyle="2" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmCategoria.jpg" HtmlFileName="Planilla_Form_frmCategoria.htm" HelpContextId="340" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="Categoria">
+	<Controls>
+		<BindingNavigator Name="CategoriasBindingNavigator" Text="CategoriasBindingNavigator" ClassName="BindingNavigator" Location="0, 0" Size="413, 25" TabIndex="0" HelpContextId="350" HotSpot="20,39,433,64" Level="1" Indexes="CategoriasBindingNavigator"/>
+		<Label Name="NombreLabel" Text="nombre:" ClassName="Label" Location="217, 77" Size="45, 13" TabIndex="3" HelpContextId="360" HotSpot="237,116,282,129" Level="1" Indexes="nombre"/>
+		<TextBox Name="NombreTextBox" Text="nombre:" ClassName="TextBox" Location="268, 74" Size="126, 20" TabIndex="4" HelpContextId="370" HotSpot="288,113,414,133" Level="1" Indexes="nombre"/>
+		<Label Name="Salario_baseLabel" Text="salario base:" ClassName="Label" Location="196, 103" Size="66, 13" TabIndex="5" HelpContextId="380" HotSpot="216,142,282,155" Level="1" Indexes="salario base"/>
+		<TextBox Name="Salario_baseTextBox" Text="salario base:" ClassName="TextBox" Location="268, 100" Size="126, 20" TabIndex="6" HelpContextId="390" HotSpot="288,139,414,159" Level="1" Indexes="salario base"/>
+		<Label Name="AnualidadLabel" Text="anualidad:" ClassName="Label" Location="206, 129" Size="56, 13" TabIndex="7" HelpContextId="400" HotSpot="226,168,282,181" Level="1" Indexes="anualidad"/>
+		<TextBox Name="AnualidadTextBox" Text="anualidad:" ClassName="TextBox" Location="268, 126" Size="126, 20" TabIndex="8" HelpContextId="410" HotSpot="288,165,414,185" Level="1" Indexes="anualidad"/>
+		<DevComponents.DotNetBar.Controls.ComboBoxEx Name="ComboBoxEx1" Text="ComboBoxEx1" ClassName="DevComponents.DotNetBar.Controls.ComboBoxEx" Location="0, 28" Size="180, 175" TabIndex="9" HelpContextId="420" HotSpot="20,67,200,242" Level="1" Indexes="ComboBoxEx1"/>
+		<Label Name="Tipo_pagoLabel" Text="tipo pago:" ClassName="Label" Location="208, 155" Size="54, 13" TabIndex="9" HelpContextId="430" HotSpot="228,194,282,207" Level="1" Indexes="tipo pago"/>
+		<ComboBox Name="Tipo_pagoComboBox" Text="tipo pago:" ClassName="ComboBox" Location="268, 152" Size="126, 21" TabIndex="10" HelpContextId="440" HotSpot="288,191,414,212" Level="1" Indexes="tipo pago"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="CategoriasBindingNavigator" Bmk="CategoriasBindingNavigator" Caption="CategoriasBindingNavigator"/>
+			<Item Name="NombreTextBox" Bmk="NombreTextBox" Caption="nombre"/>
+			<Item Name="Salario_baseTextBox" Bmk="Salario_baseTextBox" Caption="salario base"/>
+			<Item Name="AnualidadTextBox" Bmk="AnualidadTextBox" Caption="anualidad"/>
+			<Item Name="ComboBoxEx1" Bmk="ComboBoxEx1" Caption="ComboBoxEx1"/>
+			<Item Name="Tipo_pagoComboBox" Bmk="Tipo_pagoComboBox" Caption="tipo pago"/>
+		</Controls>
+	</Documented>
+</Form>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmPerfiles2" Text="Rubros y Perfiles" WindowSize="481, 419" ClientAreaOffset="20, 39" BorderStyle="3" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmPerfiles2.jpg" HtmlFileName="Planilla_Form_frmPerfiles2.htm" HelpContextId="760" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="Rubros y Perfiles">
+	<Controls>
+		<DevComponents.DotNetBar.TabControl Name="TabControl1" Text="TabControl1" ClassName="DevComponents.DotNetBar.TabControl" Location="0, 0" Size="475, 393" TabIndex="0" HelpContextId="770" HotSpot="20,39,495,432" Level="1" Indexes="TabControl1"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="TabControl1" Bmk="TabControl1" Caption="TabControl1"/>
+		</Controls>
+	</Documented>
+</Form>

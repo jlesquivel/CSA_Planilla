@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmIncapacidades" Text="Incapacidades" WindowSize="356, 304" ClientAreaOffset="20, 39" BorderStyle="2" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmIncapacidades.jpg" HtmlFileName="Planilla_Form_frmIncapacidades.htm" HelpContextId="620" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="Incapacidades">
+	<Controls>
+		<DevComponents.DotNetBar.TabControl Name="TabControl1" Text="TabControl1" ClassName="DevComponents.DotNetBar.TabControl" Location="0, 0" Size="340, 268" TabIndex="0" HelpContextId="630" HotSpot="20,39,360,307" Level="1" Indexes="TabControl1"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="TabControl1" Bmk="TabControl1" Caption="TabControl1"/>
+		</Controls>
+	</Documented>
+</Form>

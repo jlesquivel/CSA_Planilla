@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmNomina" Text="Nomina" WindowSize="1036, 753" ClientAreaOffset="20, 39" BorderStyle="2" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmNomina.jpg" HtmlFileName="Planilla_Form_frmNomina.htm" HelpContextId="640" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="Nomina">
+	<Controls>
+		<DevComponents.DotNetBar.RibbonControl Name="RibbonControl1" Text="RibbonControl1" ClassName="DevComponents.DotNetBar.RibbonControl" Location="4, 1" Size="1028, 160" TabIndex="15" HelpContextId="650" HotSpot="24,40,1052,200" Level="1" Indexes="RibbonControl1"/>
+		<DevComponents.DotNetBar.Bar Name="Bar1" Text="Bar1" ClassName="DevComponents.DotNetBar.Bar" Location="4, 726" Size="1028, 25" TabIndex="17" HelpContextId="660" HotSpot="24,765,1052,790" Level="1" Indexes="Bar1"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite1" Text="DockSite1" ClassName="DevComponents.DotNetBar.DockSite" Location="4, 161" Size="306, 565" TabIndex="19" HelpContextId="670" HotSpot="24,200,330,765" Level="1" Indexes="DockSite1"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite2" Text="DockSite2" ClassName="DevComponents.DotNetBar.DockSite" Location="1032, 161" Size="0, 565" TabIndex="20" HelpContextId="680" HotSpot="1052,200,1052,765" Level="1" Indexes="DockSite2"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite3" Text="DockSite3" ClassName="DevComponents.DotNetBar.DockSite" Location="4, 161" Size="1028, 0" TabIndex="21" HelpContextId="690" HotSpot="24,200,1052,200" Level="1" Indexes="DockSite3"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite4" Text="DockSite4" ClassName="DevComponents.DotNetBar.DockSite" Location="4, 726" Size="1028, 0" TabIndex="22" HelpContextId="700" HotSpot="24,765,1052,765" Level="1" Indexes="DockSite4"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite5" Text="DockSite5" ClassName="DevComponents.DotNetBar.DockSite" Location="4, 161" Size="0, 565" TabIndex="23" HelpContextId="710" HotSpot="24,200,24,765" Level="1" Indexes="DockSite5"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite6" Text="DockSite6" ClassName="DevComponents.DotNetBar.DockSite" Location="1032, 161" Size="0, 565" TabIndex="24" HelpContextId="720" HotSpot="1052,200,1052,765" Level="1" Indexes="DockSite6"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite7" Text="DockSite7" ClassName="DevComponents.DotNetBar.DockSite" Location="4, 161" Size="1028, 0" TabIndex="25" HelpContextId="730" HotSpot="24,200,1052,200" Level="1" Indexes="DockSite7"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite8" Text="DockSite8" ClassName="DevComponents.DotNetBar.DockSite" Location="4, 726" Size="1028, 0" TabIndex="26" HelpContextId="740" HotSpot="24,765,1052,765" Level="1" Indexes="DockSite8"/>
+		<MdiClient Name="32002,04_27" ClassName="MdiClient" Location="310, 161" Size="722, 565" TabIndex="27" HelpContextId="750" HotSpot="330,200,1052,765" Level="1"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="RibbonControl1" Bmk="RibbonControl1" Caption="RibbonControl1"/>
+			<Item Name="Bar1" Bmk="Bar1" Caption="Bar1"/>
+			<Item Name="DockSite1" Bmk="DockSite1" Caption="DockSite1"/>
+			<Item Name="DockSite2" Bmk="DockSite2" Caption="DockSite2"/>
+			<Item Name="DockSite3" Bmk="DockSite3" Caption="DockSite3"/>
+			<Item Name="DockSite4" Bmk="DockSite4" Caption="DockSite4"/>
+			<Item Name="DockSite5" Bmk="DockSite5" Caption="DockSite5"/>
+			<Item Name="DockSite6" Bmk="DockSite6" Caption="DockSite6"/>
+			<Item Name="DockSite7" Bmk="DockSite7" Caption="DockSite7"/>
+			<Item Name="DockSite8" Bmk="DockSite8" Caption="DockSite8"/>
+			<Item Name="32002_04_27" Bmk="32002_04_27" Caption="32002,04_27"/>
+		</Controls>
+	</Documented>
+</Form>

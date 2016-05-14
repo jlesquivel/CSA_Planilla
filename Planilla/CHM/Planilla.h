@@ -1,0 +1,21 @@
+#define IDH_ALL_DIALOGS 2
+#define IDH_Planilla_Form_bEmpleado  10
+#define IDH_Planilla_Form_colegiatura  30
+#define IDH_Planilla_Form_cPagos  90
+#define IDH_Planilla_Form_cRubros  160
+#define IDH_Planilla_Form_frmAusencias  210
+#define IDH_Planilla_Form_frm  330
+#define IDH_Planilla_Form_frmCategoria  340
+#define IDH_Planilla_Form_frmColegiatura  450
+#define IDH_Planilla_Form_frmConfiguracion  470
+#define IDH_Planilla_Form_frmContrato  500
+#define IDH_Planilla_Form_frmDepartamento  550
+#define IDH_Planilla_Form_frmIncapacidades  620
+#define IDH_Planilla_Form_frmNomina  640
+#define IDH_Planilla_Form_frmPerfiles2  760
+#define IDH_Planilla_Form_frmPlanilla  780
+#define IDH_Planilla_Form_frmPuesto  930
+#define IDH_Planilla_Form_frmReporte  1030
+#define IDH_Planilla_Form_frmRubros  1050
+#define IDH_Planilla_Form_UserControl2  1070
+

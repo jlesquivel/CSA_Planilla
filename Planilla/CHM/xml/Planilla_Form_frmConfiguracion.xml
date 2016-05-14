@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmConfiguracion" Text="Configuración" WindowSize="384, 353" ClientAreaOffset="20, 39" BorderStyle="3" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmConfiguracion.jpg" HtmlFileName="Planilla_Form_frmConfiguracion.htm" HelpContextId="470" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="Configuración">
+	<Controls>
+		<DevComponents.DotNetBar.TabControl Name="TabControl1" Text="TabControl1" ClassName="DevComponents.DotNetBar.TabControl" Location="0, 25" Size="378, 302" TabIndex="0" HelpContextId="480" HotSpot="20,64,398,366" Level="1" Indexes="TabControl1"/>
+		<BindingNavigator Name="ConfiguracionBindingNavigator" Text="ConfiguracionBindingNavigator" ClassName="BindingNavigator" Location="0, 0" Size="378, 25" TabIndex="1" HelpContextId="490" HotSpot="20,39,398,64" Level="1" Indexes="ConfiguracionBindingNavigator"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="TabControl1" Bmk="TabControl1" Caption="TabControl1"/>
+			<Item Name="ConfiguracionBindingNavigator" Bmk="ConfiguracionBindingNavigator" Caption="ConfiguracionBindingNavigator"/>
+		</Controls>
+	</Documented>
+</Form>

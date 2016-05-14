@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="cRubros" Text="cRubros" WindowSize="447, 362" ClientAreaOffset="0, 0" BorderStyle="0" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_cRubros.jpg" HtmlFileName="Planilla_Form_cRubros.htm" HelpContextId="160" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="cRubros">
+	<Controls>
+		<BindingNavigator Name="RubrosBindingNavigator" Text="RubrosBindingNavigator" ClassName="BindingNavigator" Location="0, 0" Size="447, 25" TabIndex="0" HelpContextId="170" HotSpot="0,0,447,25" Level="1" Indexes="RubrosBindingNavigator"/>
+		<TabControl Name="TabControl1" Text="TabControl1" ClassName="TabControl" Location="0, 25" Size="447, 337" TabIndex="3" HelpContextId="180" HotSpot="0,25,447,362" Level="1" Indexes="TabControl1">
+			<Controls>
+				<Page Name="TabControl1_0" Text="Rubros" ClassName="Page" OriginalClassName="TabPage" Location="0, 25" Size="447, 337" TabIndex="0" HelpContextId="190" PicFileName="Planilla_Form_cRubros_TabControl1_0.jpg" HotSpot="0,25,447,362" TabPageTab="0,25,45,20" Level="2" TabPageIndex="0" Indexes="Rubros">
+					<Controls>
+						<DataGridView Name="RubrosDataGridView" Text="RubrosDataGridView" ClassName="DataGridView" Location="7, 50" Size="433, 305" TabIndex="1" PicFileName="Planilla_Form_cRubros_RubrosDataGridView.jpg" HotSpot="7,50,440,355" Level="3" Indexes="RubrosDataGridView">
+							<Controls>
+								<DataGridViewTextBoxColumn Name="DataGridViewTextBoxColumn1" Text="id_rubro" ClassName="DataGridViewTextBoxColumn" Location="32, 72" Size="100, 23" TabIndex="0" HotSpot="32,72,132,95" Level="4" Indexes="id_rubro"/>
+								<DataGridViewTextBoxColumn Name="DataGridViewTextBoxColumn2" Text="nombre" ClassName="DataGridViewTextBoxColumn" Location="132, 72" Size="150, 23" TabIndex="1" HotSpot="132,72,282,95" Level="4" Indexes="nombre"/>
+								<DataGridViewTextBoxColumn Name="DataGridViewTextBoxColumn3" Text="categoria" ClassName="DataGridViewTextBoxColumn" Location="282, 72" Size="100, 23" TabIndex="2" HotSpot="282,72,382,95" Level="4" Indexes="categoria"/>
+								<DataGridViewTextBoxColumn Name="DataGridViewTextBoxColumn4" Text="formula" ClassName="DataGridViewTextBoxColumn" Location="382, 72" Size="150, 23" TabIndex="3" HotSpot="382,72,532,95" Level="4" Indexes="formula"/>
+							</Controls>
+						</DataGridView>
+					</Controls>
+				</Page>
+				<Page Name="TabControl1_1" Text="Tabla Valores" ClassName="Page" OriginalClassName="TabPage" Location="0, 25" Size="447, 337" TabIndex="0" HelpContextId="200" PicFileName="Planilla_Form_cRubros_TabControl1_1.jpg" HotSpot="0,25,447,362" TabPageTab="45,25,80,20" Level="2" TabPageIndex="1" Indexes="Tabla Valores">
+					<Controls>
+						<DataGridView Name="Tabla_valoresDataGridView" Text="Tabla_valoresDataGridView" ClassName="DataGridView" Location="7, 50" Size="433, 305" TabIndex="2" PicFileName="Planilla_Form_cRubros_Tabla_valoresDataGridView.jpg" HotSpot="7,50,440,355" Level="3" Indexes="Tabla_valoresDataGridView">
+							<Controls>
+								<DataGridViewTextBoxColumn Name="DataGridViewTextBoxColumn5" Text="id" ClassName="DataGridViewTextBoxColumn" Location="52, 72" Size="100, 23" TabIndex="0" HotSpot="52,72,152,95" Level="4" Indexes="id"/>
+								<DataGridViewTextBoxColumn Name="DataGridViewTextBoxColumn6" Text="id_rubro" ClassName="DataGridViewTextBoxColumn" Location="152, 72" Size="100, 23" TabIndex="1" HotSpot="152,72,252,95" Level="4" Indexes="id_rubro"/>
+								<DataGridViewTextBoxColumn Name="DataGridViewTextBoxColumn7" Text="valor" ClassName="DataGridViewTextBoxColumn" Location="252, 72" Size="100, 23" TabIndex="2" HotSpot="252,72,352,95" Level="4" Indexes="valor"/>
+								<DataGridViewTextBoxColumn Name="DataGridViewTextBoxColumn8" Text="minimo" ClassName="DataGridViewTextBoxColumn" Location="352, 72" Size="100, 23" TabIndex="3" HotSpot="352,72,452,95" Level="4" Indexes="minimo"/>
+								<DataGridViewTextBoxColumn Name="DataGridViewTextBoxColumn9" Text="maximo" ClassName="DataGridViewTextBoxColumn" Location="452, 72" Size="100, 23" TabIndex="4" HotSpot="452,72,552,95" Level="4" Indexes="maximo"/>
+							</Controls>
+						</DataGridView>
+					</Controls>
+				</Page>
+			</Controls>
+		</TabControl>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="RubrosBindingNavigator" Bmk="RubrosBindingNavigator" Caption="RubrosBindingNavigator"/>
+			<Item Name="TabControl1" Bmk="TabControl1" Caption="TAB:TabControl1"/>
+			<Item Name="TabControl1_0" Bmk="TabControl1_0" Caption="Rubros"/>
+			<Item Name="RubrosDataGridView" Bmk="RubrosDataGridView" Caption="RubrosDataGridView"/>
+			<Item Name="DataGridViewTextBoxColumn1" Bmk="DataGridViewTextBoxColumn1" Caption="id_rubro"/>
+			<Item Name="DataGridViewTextBoxColumn2" Bmk="DataGridViewTextBoxColumn2" Caption="nombre"/>
+			<Item Name="DataGridViewTextBoxColumn3" Bmk="DataGridViewTextBoxColumn3" Caption="categoria"/>
+			<Item Name="DataGridViewTextBoxColumn4" Bmk="DataGridViewTextBoxColumn4" Caption="formula"/>
+			<Item Name="TabControl1_1" Bmk="TabControl1_1" Caption="Tabla Valores"/>
+			<Item Name="Tabla_valoresDataGridView" Bmk="Tabla_valoresDataGridView" Caption="Tabla_valoresDataGridView"/>
+			<Item Name="DataGridViewTextBoxColumn5" Bmk="DataGridViewTextBoxColumn5" Caption="id"/>
+			<Item Name="DataGridViewTextBoxColumn6" Bmk="DataGridViewTextBoxColumn6" Caption="id_rubro"/>
+			<Item Name="DataGridViewTextBoxColumn7" Bmk="DataGridViewTextBoxColumn7" Caption="valor"/>
+			<Item Name="DataGridViewTextBoxColumn8" Bmk="DataGridViewTextBoxColumn8" Caption="minimo"/>
+			<Item Name="DataGridViewTextBoxColumn9" Bmk="DataGridViewTextBoxColumn9" Caption="maximo"/>
+		</Controls>
+	</Documented>
+</Form>

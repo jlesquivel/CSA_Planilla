@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HelpGenProject>
+	<Project level="1" Name="Planilla" SUID="{A995D42B-4A8C-41E6-AEA6-CF9943273C7C}" HUID="{73B36640-094B-4DA1-81B1-B217F6037A18}" caption="Planilla" TemplateHtmlFile="Welcome.htm" GeneratedHtmlFile="Welcome.htm" PicsSubfolderName="images\" Charset="windows-1252" CSSFullpath="STARTPAG.css" key="Project" icon="hlpclose" title="Planilla">
+		<Introduction level="2" caption="Introduction" TemplateHtmlFile="Welcome.htm" GeneratedHtmlFile="Welcome.htm" key="Introduction" pkey="Project" nnodekey="GetStart" icon="helptopic" title="Introduction"/>
+		<GetStart level="2" caption="Getting Started" TemplateHtmlFile="GettingStarted.htm" GeneratedHtmlFile="GettingStarted.htm" key="GetStart" pkey="Project" pnodekey="Introduction" nnodekey="Tutorial" icon="hlpclose" title="Getting Started">
+			<Install level="3" caption="Installation" TemplateHtmlFile="Installation.htm" GeneratedHtmlFile="Installation.htm" key="Install" pkey="GetStart" nnodekey="StartProgram" icon="helptopic" title="Installation"/>
+			<StartProgram level="3" caption="Starting the program" TemplateHtmlFile="StartingTheProgram.htm" GeneratedHtmlFile="StartingTheProgram.htm" key="StartProgram" pkey="GetStart" pnodekey="Install" icon="helptopic" title="Starting the program"/>
+		</GetStart>
+		<Tutorial level="2" caption="Tutorial" TemplateHtmlFile="Tutorial.htm" GeneratedHtmlFile="Tutorial.htm" key="Tutorial" pkey="Project" pnodekey="GetStart" nnodekey="Dialogs" icon="helptopic" title="Tutorial"/>
+		<Dialogs level="2" caption="Dialogs" TemplateHtmlFile="Dialogs.htm" GeneratedHtmlFile="Dialogs.htm" key="Dialogs" pkey="Project" pnodekey="Tutorial" nnodekey="Registration" icon="hlpclose" title="All Dialogs" ProcessCode="1">
+			<FORM level="3" name="bEmpleado" type="2" caption="bEmpleado" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_bEmpleado.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_bEmpleado" pkey="Dialogs" nnodekey="Planilla.Form_colegiatura" icon="hlpclose" title="bEmpleado" ProcessCode="999"/>
+			<FORM level="3" name="colegiatura" type="2" caption="colegiatura" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_colegiatura.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_colegiatura" pkey="Dialogs" pnodekey="Planilla.Form_bEmpleado" nnodekey="Planilla.Form_cPagos" icon="hlpclose" title="colegiatura" ProcessCode="999"/>
+			<FORM level="3" name="cPagos" type="2" caption="cPagos" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_cPagos.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_cPagos" pkey="Dialogs" pnodekey="Planilla.Form_colegiatura" nnodekey="Planilla.Form_cRubros" icon="hlpclose" title="cPagos" ProcessCode="999"/>
+			<FORM level="3" name="cRubros" type="2" caption="cRubros" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_cRubros.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_cRubros" pkey="Dialogs" pnodekey="Planilla.Form_cPagos" nnodekey="Planilla.Form_frmAusencias" icon="hlpclose" title="cRubros" ProcessCode="999"/>
+			<FORM level="3" name="frmAusencias" type="2" caption="Ausencias" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmAusencias.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmAusencias" pkey="Dialogs" pnodekey="Planilla.Form_cRubros" nnodekey="Planilla.Form_frm" icon="hlpclose" title="Ausencias" ProcessCode="999"/>
+			<FORM level="3" name="frm" type="2" caption="frm" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frm.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frm" pkey="Dialogs" pnodekey="Planilla.Form_frmAusencias" nnodekey="Planilla.Form_frmCategoria" icon="helptopic" title="frm" ProcessCode="999"/>
+			<FORM level="3" name="frmCategoria" type="2" caption="Categoria" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmCategoria.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmCategoria" pkey="Dialogs" pnodekey="Planilla.Form_frm" nnodekey="Planilla.Form_frmCategoria1" icon="hlpclose" title="Categoria" ProcessCode="999"/>
+			<FORM level="3" name="frmCategoria" type="2" caption="Categorias" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmCategoria.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmCategoria1" pkey="Dialogs" pnodekey="Planilla.Form_frmCategoria" nnodekey="Planilla.Form_frmColegiatura" icon="hlpclose" title="Categorias" ProcessCode="999"/>
+			<FORM level="3" name="frmColegiatura" type="2" caption="frmColegiatura" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmColegiatura.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmColegiatura" pkey="Dialogs" pnodekey="Planilla.Form_frmCategoria1" nnodekey="Planilla.Form_frmConfiguracion" icon="hlpclose" title="frmColegiatura" ProcessCode="999"/>
+			<FORM level="3" name="frmConfiguracion" type="2" caption="ConfiguraciÃ³n" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmConfiguracion.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmConfiguracion" pkey="Dialogs" pnodekey="Planilla.Form_frmColegiatura" nnodekey="Planilla.Form_frmContrato" icon="hlpclose" title="ConfiguraciÃ³n" ProcessCode="999"/>
+			<FORM level="3" name="frmContrato" type="2" caption="frmContrato" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmContrato.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmContrato" pkey="Dialogs" pnodekey="Planilla.Form_frmConfiguracion" nnodekey="Planilla.Form_frmDepartamento" icon="hlpclose" title="frmContrato" ProcessCode="999"/>
+			<FORM level="3" name="frmDepartamento" type="2" caption="Planilla" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmDepartamento.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmDepartamento" pkey="Dialogs" pnodekey="Planilla.Form_frmContrato" nnodekey="Planilla.Form_frmIncapacidades" icon="hlpclose" title="Planilla" ProcessCode="999"/>
+			<FORM level="3" name="frmIncapacidades" type="2" caption="Incapacidades" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmIncapacidades.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmIncapacidades" pkey="Dialogs" pnodekey="Planilla.Form_frmDepartamento" nnodekey="Planilla.Form_frmNomina" icon="hlpclose" title="Incapacidades" ProcessCode="999"/>
+			<FORM level="3" name="frmNomina" type="2" caption="Nomina" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmNomina.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmNomina" pkey="Dialogs" pnodekey="Planilla.Form_frmIncapacidades" nnodekey="Planilla.Form_frmPerfiles2" icon="hlpclose" title="Nomina" ProcessCode="999"/>
+			<FORM level="3" name="frmPerfiles2" type="2" caption="Rubros y Perfiles" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmPerfiles2.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmPerfiles2" pkey="Dialogs" pnodekey="Planilla.Form_frmNomina" nnodekey="Planilla.Form_frmPlanilla" icon="hlpclose" title="Rubros y Perfiles" ProcessCode="999"/>
+			<FORM level="3" name="frmPlanilla" type="2" caption="Planillas" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmPlanilla.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmPlanilla" pkey="Dialogs" pnodekey="Planilla.Form_frmPerfiles2" nnodekey="Planilla.Form_frmPuesto" icon="hlpclose" title="Planillas" ProcessCode="999"/>
+			<FORM level="3" name="frmPuesto" type="2" caption="Puesto" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmPuesto.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmPuesto" pkey="Dialogs" pnodekey="Planilla.Form_frmPlanilla" nnodekey="Planilla.Form_frmReporte" icon="hlpclose" title="Puesto" ProcessCode="999"/>
+			<FORM level="3" name="frmReporte" type="2" caption="frmReporte" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmReporte.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmReporte" pkey="Dialogs" pnodekey="Planilla.Form_frmPuesto" nnodekey="Planilla.Form_frmRubros" icon="hlpclose" title="frmReporte" ProcessCode="999"/>
+			<FORM level="3" name="frmRubros" type="2" caption="frmRubros" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_frmRubros.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_frmRubros" pkey="Dialogs" pnodekey="Planilla.Form_frmReporte" nnodekey="Planilla.Form_UserControl2" icon="hlpclose" title="frmRubros" ProcessCode="999"/>
+			<FORM level="3" name="UserControl2" type="2" caption="UserControl2" TemplateHtmlFile="Form.htm" GeneratedHtmlFile="Planilla_Form_UserControl2.htm" SourceProjectType="VB.NET" SourceProjectName="Planilla" key="Planilla.Form_UserControl2" pkey="Dialogs" pnodekey="Planilla.Form_frmRubros" icon="hlpclose" title="UserControl2" ProcessCode="999"/>
+		</Dialogs>
+		<Registration level="2" caption="Registration" TemplateHtmlFile="Registration.htm" GeneratedHtmlFile="Registration.htm" key="Registration" pkey="Project" pnodekey="Dialogs" nnodekey="Support" icon="helptopic" title="Registration"/>
+		<Support level="2" caption="Support" TemplateHtmlFile="Support.htm" GeneratedHtmlFile="Support.htm" key="Support" pkey="Project" pnodekey="Registration" nnodekey="Copyright" icon="helptopic" title="Support"/>
+		<Copyright level="2" caption="Copyright" TemplateHtmlFile="Copyright.htm" GeneratedHtmlFile="Copyright.htm" key="Copyright" pkey="Project" pnodekey="Support" icon="helptopic" title="Copyright"/>
+	</Project>
+	<Settings>
+		<Options>
+			<Option Name="Version" Value="3.0.4"/>
+			<Option Name="Application" Value="Planilla"/>
+			<Option Name="Organization" Value=""/>
+			<Option Name="Author" Value="Jose Luis Esquivel"/>
+			<Option Name="Copyright" Value=""/>
+			<Option Name="Website" Value="http://"/>
+			<Option Name="EMail" Value=""/>
+			<Option Name="Registration" Value="http://"/>
+			<Option Name="IdentifyBy" Value="Caption"/>
+			<Option Name="SnapshotFormat" Value="Jpeg"/>
+			<Option Name="BulletedControlsAndMenus" Value="true"/>
+			<Option Name="AddHotSpots" Value="true"/>
+			<Option Name="AssociateHelpIndex" Value="true"/>
+			<Option Name="NoReportsScreenshots" Value="true"/>
+			<Option Name="FolderForGeneratedHelp" Value="{Project Location}CHM"/>
+			<Option Name="CompileHTMLHelp" Value="true"/>
+			<Option Name="OpenHTMLHelp" Value="false"/>
+			<Option Name="SaveApplicationChanges" Value="true"/>
+			<Option Name="Charset" Value="windows-1252"/>
+			<Option Name="AddControlsListForMenuList" Value="true"/>
+			<Option Name="AddControlsSectionForMenuList" Value="true"/>
+			<Option Name="AddImageForForm" Value="true"/>
+			<Option Name="AddHotSpotsForForm" Value="true"/>
+			<Option Name="AddControlsListForForm" Value="true"/>
+			<Option Name="AddControlsSectionForForm" Value="true"/>
+			<Option Name="AddImageForReport" Value="false"/>
+			<Option Name="AddControlsListForReport" Value="true"/>
+			<Option Name="AddControlsSectionForReport" Value="true"/>
+			<Option Name="SubFolderForScreenshots" Value="images\"/>
+			<Option Name="FillIndexFromAppObjectsAndControls" Value="true"/>
+			<Option Name="Language" Value="English"/>
+			<Option Name="AddSearchTabToHelp" Value="true"/>
+			<Option Name="CapturePreviewAreaOnly" Value="false"/>
+			<Option Name="OpenHTMLEditor" Value="true"/>
+			<Option Name="SkipInvisibleControls" Value="true"/>
+			<Option Name="InsertExternalDescriptions" Value="false"/>
+			<Option Name="ListOfTagsToParseContentsFrom" Value="H2"/>
+			<Option Name="SyncTOCOnHTMLPageNavigationComplete" Value="true"/>
+			<Option Name="GenerateHelpForForms" Value="true"/>
+			<Option Name="GenerateHelpForReports" Value="true"/>
+			<Option Name="HelpProjectName" Value="Planilla"/>
+			<Option Name="HelpProjectTitle" Value="Planilla"/>
+			<Option Name="CSSFullPath" Value="C:\Program Files\Help Generator\Visual Studio 2005\Templates\Common\STARTPAG.css"/>
+			<Option Name="MakeNormalViewScreenshots" Value="false"/>
+			<Option Name="LanguageCode" Value="en"/>
+			<Option Name="GenerateHelpForTables" Value="true"/>
+			<Option Name="MSWordTOCLowerHeadingLevel" Value="2"/>
+			<Option Name="AutomatedTestModeOn" Value="false"/>
+			<Option Name="GenerateHelpForQueries" Value="true"/>
+			<Option Name="GenerateHelpForMacros" Value="true"/>
+			<Option Name="UseProjectGroupAsSource" Value="false"/>
+			<Option Name="UnattendedExecution" Value="false"/>
+		</Options>
+	</Settings>
+</HelpGenProject>

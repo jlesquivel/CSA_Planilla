@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmColegiatura" Text="frmColegiatura" WindowSize="453, 400" ClientAreaOffset="20, 39" BorderStyle="2" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmColegiatura.jpg" HtmlFileName="Planilla_Form_frmColegiatura.htm" HelpContextId="450" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="frmColegiatura">
+	<Controls>
+		<Planilla.colegiatura Name="Colegiatura1" Text="Colegiatura1" ClassName="Planilla.colegiatura" Location="0, 0" Size="437, 364" TabIndex="0" HelpContextId="460" HotSpot="20,39,457,403" Level="1" Indexes="Colegiatura1"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="Colegiatura1" Bmk="Colegiatura1" Caption="Colegiatura1"/>
+		</Controls>
+	</Documented>
+</Form>

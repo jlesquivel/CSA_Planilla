@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="UserControl2" Text="UserControl2" WindowSize="352, 27" ClientAreaOffset="0, 0" BorderStyle="0" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_UserControl2.jpg" HtmlFileName="Planilla_Form_UserControl2.htm" HelpContextId="1070" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="UserControl2">
+	<Controls>
+		<DevComponents.DotNetBar.Bar Name="Bar1" Text="Bar1" ClassName="DevComponents.DotNetBar.Bar" Location="0, 0" Size="352, 25" TabIndex="1" HelpContextId="1080" HotSpot="0,0,352,25" Level="1" Indexes="Bar1"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="Bar1" Bmk="Bar1" Caption="Bar1"/>
+		</Controls>
+	</Documented>
+</Form>

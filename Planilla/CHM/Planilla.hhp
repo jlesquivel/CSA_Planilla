@@ -1,0 +1,109 @@
+[Options]
+Binary index = No
+Compatibility = 1.1 Or later
+Compiled file = Planilla.chm
+Contents file = Planilla.hhc
+index file = Planilla.hhk
+Default Topic = Welcome.htm
+Display compile progress=Yes
+Full-text search=Yes
+Title=Planilla
+[Files]
+Copyright.htm
+Dialogs.htm
+GettingStarted.htm
+Installation.htm
+PlanillaTOC.htm
+Planilla_Form_bEmpleado.htm
+Planilla_Form_colegiatura.htm
+Planilla_Form_cPagos.htm
+Planilla_Form_cRubros.htm
+Planilla_Form_frm.htm
+Planilla_Form_frmAusencias.htm
+Planilla_Form_frmCategoria.htm
+Planilla_Form_frmColegiatura.htm
+Planilla_Form_frmConfiguracion.htm
+Planilla_Form_frmContrato.htm
+Planilla_Form_frmDepartamento.htm
+Planilla_Form_frmIncapacidades.htm
+Planilla_Form_frmNomina.htm
+Planilla_Form_frmPerfiles2.htm
+Planilla_Form_frmPlanilla.htm
+Planilla_Form_frmPuesto.htm
+Planilla_Form_frmReporte.htm
+Planilla_Form_frmRubros.htm
+Planilla_Form_UserControl2.htm
+Registration.htm
+StartingTheProgram.htm
+Support.htm
+Tutorial.htm
+Welcome.htm
+images\Planilla_Form_bEmpleado.jpg
+images\Planilla_Form_colegiatura.jpg
+images\Planilla_Form_colegiatura_ColegiaturaDataGridView.jpg
+images\Planilla_Form_cPagos.jpg
+images\Planilla_Form_cPagos_DataGridView1.jpg
+images\Planilla_Form_cRubros.jpg
+images\Planilla_Form_cRubros_RubrosDataGridView.jpg
+images\Planilla_Form_cRubros_TabControl1_0.jpg
+images\Planilla_Form_cRubros_TabControl1_1.jpg
+images\Planilla_Form_cRubros_Tabla_valoresDataGridView.jpg
+images\Planilla_Form_frm.jpg
+images\Planilla_Form_frmAusencias.jpg
+images\Planilla_Form_frmCategoria.jpg
+images\Planilla_Form_frmColegiatura.jpg
+images\Planilla_Form_frmConfiguracion.jpg
+images\Planilla_Form_frmContrato.jpg
+images\Planilla_Form_frmDepartamento.jpg
+images\Planilla_Form_frmIncapacidades.jpg
+images\Planilla_Form_frmNomina.jpg
+images\Planilla_Form_frmPerfiles2.jpg
+images\Planilla_Form_frmPlanilla.jpg
+images\Planilla_Form_frmPlanilla_GroupBox1.jpg
+images\Planilla_Form_frmPlanilla_GroupBox2.jpg
+images\Planilla_Form_frmPlanilla_GroupBox3.jpg
+images\Planilla_Form_frmPlanilla_GroupBox4.jpg
+images\Planilla_Form_frmPlanilla_Panel1.jpg
+images\Planilla_Form_frmPuesto.jpg
+images\Planilla_Form_frmPuesto_PictureBox1.jpg
+images\Planilla_Form_frmPuesto_PictureBox2.jpg
+images\Planilla_Form_frmReporte.jpg
+images\Planilla_Form_frmRubros.jpg
+images\Planilla_Form_UserControl2.jpg
+
+[ALIAS]
+IDH_Copyright=Copyright.htm
+IDH_Dialogs=Dialogs.htm
+IDH_GettingStarted=GettingStarted.htm
+IDH_Installation=Installation.htm
+IDH_PlanillaTOC=PlanillaTOC.htm
+IDH_Planilla_Form_bEmpleado=Planilla_Form_bEmpleado.htm
+IDH_Planilla_Form_colegiatura=Planilla_Form_colegiatura.htm
+IDH_Planilla_Form_cPagos=Planilla_Form_cPagos.htm
+IDH_Planilla_Form_cRubros=Planilla_Form_cRubros.htm
+IDH_Planilla_Form_frm=Planilla_Form_frm.htm
+IDH_Planilla_Form_frmAusencias=Planilla_Form_frmAusencias.htm
+IDH_Planilla_Form_frmCategoria=Planilla_Form_frmCategoria.htm
+IDH_Planilla_Form_frmColegiatura=Planilla_Form_frmColegiatura.htm
+IDH_Planilla_Form_frmConfiguracion=Planilla_Form_frmConfiguracion.htm
+IDH_Planilla_Form_frmContrato=Planilla_Form_frmContrato.htm
+IDH_Planilla_Form_frmDepartamento=Planilla_Form_frmDepartamento.htm
+IDH_Planilla_Form_frmIncapacidades=Planilla_Form_frmIncapacidades.htm
+IDH_Planilla_Form_frmNomina=Planilla_Form_frmNomina.htm
+IDH_Planilla_Form_frmPerfiles2=Planilla_Form_frmPerfiles2.htm
+IDH_Planilla_Form_frmPlanilla=Planilla_Form_frmPlanilla.htm
+IDH_Planilla_Form_frmPuesto=Planilla_Form_frmPuesto.htm
+IDH_Planilla_Form_frmReporte=Planilla_Form_frmReporte.htm
+IDH_Planilla_Form_frmRubros=Planilla_Form_frmRubros.htm
+IDH_Planilla_Form_UserControl2=Planilla_Form_UserControl2.htm
+IDH_Registration=Registration.htm
+IDH_StartingTheProgram=StartingTheProgram.htm
+IDH_Support=Support.htm
+IDH_Tutorial=Tutorial.htm
+IDH_Welcome=Welcome.htm
+
+[MAP]
+#include Planilla.h
+[TEXT POPUPS]
+#include Planilla.h
+#include Planilla.txt

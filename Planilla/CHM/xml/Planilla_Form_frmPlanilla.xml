@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmPlanilla" Text="Planillas" WindowSize="744, 564" ClientAreaOffset="20, 39" BorderStyle="3" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmPlanilla.jpg" HtmlFileName="Planilla_Form_frmPlanilla.htm" HelpContextId="780" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="Planillas">
+	<Controls>
+		<Panel Name="Panel1" Text="Panel1" ClassName="Panel" Location="15, 312" Size="728, 232" TabIndex="5" HelpContextId="790" PicFileName="Planilla_Form_frmPlanilla_Panel1.jpg" HotSpot="35,351,763,583" Level="1" Indexes="Panel1">
+			<Controls>
+				<GroupBox Name="GroupBox2" Text="Deducciones" ClassName="GroupBox" Location="263, 320" Size="232, 216" TabIndex="1" HelpContextId="800" PicFileName="Planilla_Form_frmPlanilla_GroupBox2.jpg" HotSpot="283,359,515,575" Level="2" Indexes="Deducciones">
+					<Controls>
+						<Planilla.TextboxFormat Name="TextboxFormat4" Text="TextboxFormat4" ClassName="Planilla.TextboxFormat" Location="375, 512" Size="100, 20" TabIndex="11" HotSpot="395,551,495,571" Level="3" Indexes="TextboxFormat4"/>
+						<Label Name="Label8" Text="Sub total" ClassName="Label" Location="311, 512" Size="56, 16" TabIndex="11" HotSpot="331,551,387,567" Level="3" Indexes="Sub total"/>
+					</Controls>
+				</GroupBox>
+				<GroupBox Name="GroupBox3" Text="Ingresos" ClassName="GroupBox" Location="23, 320" Size="232, 216" TabIndex="2" HelpContextId="810" PicFileName="Planilla_Form_frmPlanilla_GroupBox3.jpg" HotSpot="43,359,275,575" Level="2" Indexes="Ingresos">
+					<Controls>
+						<Planilla.TextboxFormat Name="TextboxFormat2" Text="TextboxFormat2" ClassName="Planilla.TextboxFormat" Location="135, 512" Size="100, 20" TabIndex="8" HotSpot="155,551,255,571" Level="3" Indexes="TextboxFormat2"/>
+						<Label Name="Label6" Text="Sub total" ClassName="Label" Location="71, 512" Size="56, 16" TabIndex="10" HotSpot="91,551,147,567" Level="3" Indexes="Sub total"/>
+					</Controls>
+				</GroupBox>
+				<GroupBox Name="GroupBox1" Text="Resumen Empleado" ClassName="GroupBox" Location="503, 320" Size="232, 216" TabIndex="3" HelpContextId="820" PicFileName="Planilla_Form_frmPlanilla_GroupBox1.jpg" HotSpot="523,359,755,575" Level="2" Indexes="Resumen Empleado">
+					<Controls>
+						<TextBox Name="TextBox1" Text="TextBox1" ClassName="TextBox" Location="607, 344" Size="100, 20" TabIndex="0" HotSpot="627,383,727,403" Level="3" Indexes="TextBox1"/>
+						<TextBox Name="TextBox3" Text="TextBox3" ClassName="TextBox" Location="607, 392" Size="100, 20" TabIndex="2" HotSpot="627,431,727,451" Level="3" Indexes="TextBox3"/>
+						<Label Name="Label1" Text="Categoria" ClassName="Label" Location="543, 344" Size="64, 23" TabIndex="4" HotSpot="563,383,627,406" Level="3" Indexes="Categoria"/>
+						<Label Name="Label4" Text="Salario Bruto" ClassName="Label" Location="527, 440" Size="80, 23" TabIndex="4" HotSpot="547,479,627,502" Level="3" Indexes="Salario Bruto"/>
+						<Label Name="Label2" Text="Valor unid." ClassName="Label" Location="543, 368" Size="64, 23" TabIndex="5" HotSpot="563,407,627,430" Level="3" Indexes="Valor unid."/>
+						<Label Name="Label5" Text="Deducciones" ClassName="Label" Location="527, 464" Size="80, 23" TabIndex="5" HotSpot="547,503,627,526" Level="3" Indexes="Deducciones"/>
+						<Label Name="Label3" Text="(horas&amp;#47;dias&amp;#47;lecciones)" ClassName="Label" Location="543, 392" Size="64, 32" TabIndex="6" HotSpot="563,431,627,463" Level="3" Indexes="(horas#47;dias#47;lecciones)"/>
+						<Planilla.TextboxFormat Name="TextboxFormat1" Text="TextboxFormat1" ClassName="Planilla.TextboxFormat" Location="607, 368" Size="100, 20" TabIndex="7" HotSpot="627,407,727,427" Level="3" Indexes="TextboxFormat1"/>
+						<Label Name="Label7" Text="Salario Neto" ClassName="Label" Location="527, 488" Size="80, 23" TabIndex="7" HotSpot="547,527,627,550" Level="3" Indexes="Salario Neto"/>
+						<Planilla.TextboxFormat Name="TextboxFormat3" Text="TextboxFormat3" ClassName="Planilla.TextboxFormat" Location="607, 440" Size="100, 20" TabIndex="8" HotSpot="627,479,727,499" Level="3" Indexes="TextboxFormat3"/>
+						<Planilla.TextboxFormat Name="TextboxFormat5" Text="TextboxFormat5" ClassName="Planilla.TextboxFormat" Location="607, 464" Size="100, 20" TabIndex="9" HotSpot="627,503,727,523" Level="3" Indexes="TextboxFormat5"/>
+						<Planilla.TextboxFormat Name="TextboxFormat6" Text="TextboxFormat6" ClassName="Planilla.TextboxFormat" Location="607, 488" Size="100, 21" TabIndex="10" HotSpot="627,527,727,548" Level="3" Indexes="TextboxFormat6"/>
+					</Controls>
+				</GroupBox>
+			</Controls>
+		</Panel>
+		<GroupBox Name="GroupBox4" Text="Resumen Planilla" ClassName="GroupBox" Location="471, 6" Size="264, 306" TabIndex="10" HelpContextId="830" PicFileName="Planilla_Form_frmPlanilla_GroupBox4.jpg" HotSpot="491,45,755,351" Level="1" Indexes="Resumen Planilla"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite1" Text="DockSite1" ClassName="DevComponents.DotNetBar.DockSite" Location="0, 0" Size="233, 538" TabIndex="12" HelpContextId="840" HotSpot="20,39,253,577" Level="1" Indexes="DockSite1"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite2" Text="DockSite2" ClassName="DevComponents.DotNetBar.DockSite" Location="738, 0" Size="0, 538" TabIndex="13" HelpContextId="850" HotSpot="758,39,758,577" Level="1" Indexes="DockSite2"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite3" Text="DockSite3" ClassName="DevComponents.DotNetBar.DockSite" Location="0, 0" Size="738, 0" TabIndex="14" HelpContextId="860" HotSpot="20,39,758,39" Level="1" Indexes="DockSite3"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite4" Text="DockSite4" ClassName="DevComponents.DotNetBar.DockSite" Location="0, 538" Size="738, 0" TabIndex="15" HelpContextId="870" HotSpot="20,577,758,577" Level="1" Indexes="DockSite4"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite5" Text="DockSite5" ClassName="DevComponents.DotNetBar.DockSite" Location="0, 0" Size="0, 538" TabIndex="16" HelpContextId="880" HotSpot="20,39,20,577" Level="1" Indexes="DockSite5"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite6" Text="DockSite6" ClassName="DevComponents.DotNetBar.DockSite" Location="738, 0" Size="0, 538" TabIndex="17" HelpContextId="890" HotSpot="758,39,758,577" Level="1" Indexes="DockSite6"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite7" Text="DockSite7" ClassName="DevComponents.DotNetBar.DockSite" Location="0, 0" Size="738, 0" TabIndex="18" HelpContextId="900" HotSpot="20,39,758,39" Level="1" Indexes="DockSite7"/>
+		<DevComponents.DotNetBar.DockSite Name="DockSite8" Text="DockSite8" ClassName="DevComponents.DotNetBar.DockSite" Location="0, 538" Size="738, 0" TabIndex="19" HelpContextId="910" HotSpot="20,577,758,577" Level="1" Indexes="DockSite8"/>
+		<DevComponents.DotNetBar.RibbonBarMergeContainer Name="RibbonBarMergeContainer1" Text="RibbonBarMergeContainer1" ClassName="DevComponents.DotNetBar.RibbonBarMergeContainer" Location="239, 6" Size="504, 103" TabIndex="20" HelpContextId="920" HotSpot="259,45,763,148" Level="1" Indexes="RibbonBarMergeContainer1"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="Panel1" Bmk="Panel1" Caption="Panel1"/>
+			<Item Name="GroupBox2" Bmk="GroupBox2" Caption="Deducciones"/>
+			<Item Name="TextboxFormat4" Bmk="TextboxFormat4" Caption="TextboxFormat4"/>
+			<Item Name="GroupBox3" Bmk="GroupBox3" Caption="Ingresos"/>
+			<Item Name="TextboxFormat2" Bmk="TextboxFormat2" Caption="TextboxFormat2"/>
+			<Item Name="GroupBox1" Bmk="GroupBox1" Caption="Resumen Empleado"/>
+			<Item Name="TextBox1" Bmk="TextBox1" Caption="TextBox1"/>
+			<Item Name="TextBox3" Bmk="TextBox3" Caption="TextBox3"/>
+			<Item Name="TextboxFormat1" Bmk="TextboxFormat1" Caption="TextboxFormat1"/>
+			<Item Name="TextboxFormat3" Bmk="TextboxFormat3" Caption="TextboxFormat3"/>
+			<Item Name="TextboxFormat5" Bmk="TextboxFormat5" Caption="TextboxFormat5"/>
+			<Item Name="TextboxFormat6" Bmk="TextboxFormat6" Caption="TextboxFormat6"/>
+			<Item Name="GroupBox4" Bmk="GroupBox4" Caption="Resumen Planilla"/>
+			<Item Name="DockSite1" Bmk="DockSite1" Caption="DockSite1"/>
+			<Item Name="DockSite2" Bmk="DockSite2" Caption="DockSite2"/>
+			<Item Name="DockSite3" Bmk="DockSite3" Caption="DockSite3"/>
+			<Item Name="DockSite4" Bmk="DockSite4" Caption="DockSite4"/>
+			<Item Name="DockSite5" Bmk="DockSite5" Caption="DockSite5"/>
+			<Item Name="DockSite6" Bmk="DockSite6" Caption="DockSite6"/>
+			<Item Name="DockSite7" Bmk="DockSite7" Caption="DockSite7"/>
+			<Item Name="DockSite8" Bmk="DockSite8" Caption="DockSite8"/>
+			<Item Name="RibbonBarMergeContainer1" Bmk="RibbonBarMergeContainer1" Caption="RibbonBarMergeContainer1"/>
+		</Controls>
+	</Documented>
+</Form>

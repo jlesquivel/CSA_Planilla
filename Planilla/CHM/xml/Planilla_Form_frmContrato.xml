@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frmContrato" Text="frmContrato" WindowSize="610, 365" ClientAreaOffset="20, 39" BorderStyle="3" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frmContrato.jpg" HtmlFileName="Planilla_Form_frmContrato.htm" HelpContextId="500" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="frmContrato">
+	<Controls>
+		<Planilla.UserControl2 Name="UserControl21" Text="UserControl21" ClassName="Planilla.UserControl2" Location="200, 25" Size="404, 26" TabIndex="2" HelpContextId="510" HotSpot="220,64,624,90" Level="1" Indexes="UserControl21"/>
+		<DevComponents.DotNetBar.TabControl Name="TabControl2" Text="TabControl2" ClassName="DevComponents.DotNetBar.TabControl" Location="200, 51" Size="404, 288" TabIndex="4" HelpContextId="520" HotSpot="220,90,624,378" Level="1" Indexes="TabControl2"/>
+		<Planilla.bEmpleado Name="BEmpleado1" Text="BEmpleado1" ClassName="Planilla.bEmpleado" Location="0, 0" Size="200, 339" TabIndex="5" HelpContextId="530" HotSpot="20,39,220,378" Level="1" Indexes="BEmpleado1"/>
+		<DevComponents.DotNetBar.PanelEx Name="PanelEx3" Text="PanelEx3" ClassName="DevComponents.DotNetBar.PanelEx" Location="200, 0" Size="404, 25" TabIndex="6" HelpContextId="540" HotSpot="220,39,624,64" Level="1" Indexes="PanelEx3"/>
+	</Controls>
+	<Documented>
+		<Controls>
+			<Item Name="UserControl21" Bmk="UserControl21" Caption="UserControl21"/>
+			<Item Name="TabControl2" Bmk="TabControl2" Caption="TabControl2"/>
+			<Item Name="BEmpleado1" Bmk="BEmpleado1" Caption="BEmpleado1"/>
+			<Item Name="PanelEx3" Bmk="PanelEx3" Caption="PanelEx3"/>
+		</Controls>
+	</Documented>
+</Form>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Name="frm" Text="frm" WindowSize="300, 300" ClientAreaOffset="20, 39" BorderStyle="2" HasMap="True" Charset="windows-1252" Stylesheet="STARTPAG.css" PicFileName="Planilla_Form_frm.jpg" HtmlFileName="Planilla_Form_frm.htm" HelpContextId="330" NewHelpContextIdsCount="1" SourceProjectType="VB.NET" SourceProjectName="Planilla" OriginalClassName="clsWinForm" Indexes="frm">
+	<Documented>
+	</Documented>
+</Form>

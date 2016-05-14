@@ -1,0 +1,80 @@
+
+**************************************************************************** POR HACER
+
+############################################################################ HISTORIAL
+FECHA		D	ESTADO	DESCRIPCION
+======================================================================================
+
+2016-05-12  16h	Nuevo:	Genera archivo de reporte para coopeande con datos de capital 
+---------------------------------------------------------------------------------------
+2016-01-25  16h	Nuevo:	Carga arcivo de cobro de prestamos y ahorros de coopeandes
+---------------------------------------------------------------------------------------
+
+2014-05-12  2h	Cambio:	Se corrigió error en colegiaturas que admitia contratos vencidos
+---------------------------------------------------------------------------------------
+2014-05-12	8h	Nuevo:	Se incluyo boton Bloquear que desactiva totalmente el cálculo y
+						la edición de valores en la panilla 
+---------------------------------------------------------------------------------------						
+2014-05-10	10h	Nuevo:	Bloque de planilla, cuando se genera el archivo del banco se
+						bloquea el proceso de recalcular montos para que no altere el 
+						resultado de la planilla pero se puede hacer cambios manuales
+---------------------------------------------------------------------------------------
+2014-05-08  8h  Nuevo:	Papelera para recuperar planillas borradas
+						se agrego pestaña <borrados> al frmPlanilla 
+						y se agrego boton para recuperar planilla
+---------------------------------------------------------------------------------------
+2014-05-07	4h	Nuevo:	Se creo la reporte "rptSSVM_Mensual.rpt"
+						Genera resumen mensual para planillas quicenales para la 
+						SSVMN (Socieda de Seguro de Vida del Magisterio Nacional).
+---------------------------------------------------------------------------------------
+2014-05-06	4h  Nuevo:	Procedimiento almacenado "Planilla_DesglocePagoMensual"
+						Selecciona los pagos del una planilla pasada por parametro y 
+						con base en el mes de la planilla obtiene todos los pagos del 
+						planilla del mes para planillas pagadas por quincena  
+---------------------------------------------------------------------------------------
+2014-05-04	30m	Nuevo:	Se Agrego al proyecto icono de aplicacion "money.ico"
+---------------------------------------------------------------------------------------
+2014-05-04	4h	Nuevo:	Proyecto de instalacion con InstallShield 2013
+---------------------------------------------------------------------------------------
+2014-05-04	2h	Cambio:	El método conexionOK La clase conexionSQL mejoró tiempo respuesta
+---------------------------------------------------------------------------------------
+2014-04-25  1h	Cambio:	Se convirtio el proyecto a VS2012 con el framework 3.5 
+						para que sea compatible con (windows7 .net framework default)
+---------------------------------------------------------------------------------------
+2014-04-25  15m	Nuevo:	Se agrego el campo <estado> a la tabla Planilla para indicar 
+						si la planilla esta borrado(-1), nuevo(0), pagado (1), bloqueado (2)
+---------------------------------------------------------------------------------------
+
+2014-04-01   8o ANIVERSARIO
+....
+2013-04-01   7o ANIVERSARIO
+2012-04-01   6o ANIVERSARIO
+2011-04-01   5o ANIVERSARIO
+2010-04-01   4o ANIVERSARIO
+2009-04-01   3o ANIVERSARIO
+2008-04-01   2o ANIVERSARIO
+
+2007-04-01   1o ANIVERSARIO
+2007-01-20	4d	Nuevo:	Ventana frmColegiatura
+2007-01-15	4d	Nuevo:	Ventana frmAusencias
+
+2006-05-27  1d	Nuevo:	Se puso en modo de Producción el proyecto Planilla
+
+2006-05-25	2d	Nuevo:	reporte rptAguinaldo
+2006-05-23	2d	Nuevo:	reporte rptJPMN
+2006-05-21	2d	Nuevo:	reporte rptSSVM
+2006-05-19	2d	Nuevo:	reporte rptListadoContratosVigentes
+2006-05-17	2d	Nuevo:	reporte rptPlanilla
+2006-05-15	2d	Nuevo:	reporte rptColillaPago
+2006-05-12	3d	Nuevo:	reporte ConstansiaSalario
+2006-05-10	2d	Nuevo:	Construccion del frmReporte
+2006-05-01	8d	Nuevo:	construccion de frmPlanilla
+2006-04-27	2d	Nuevo:	Construccion del frmRubros
+2006-04-25	2d	Nuevo:	Construccion del frmPuestos
+2006-04-22	2d	Nuevo:	Construccion del frmDepartamento
+2006-04-19	3d	Nuevo:	Construccion del frmPerfiles
+2006-04-15	4d	Nuevo:	Construccion del frmCategoria
+2006-04-13	2d	Nuevo:	Construccion del frmContrato
+2006-04-05	8d	Nuevo:	Construccion del frmNomina
+2006-04-01	4d	Nuevo:	Se diseño BD , tablas (empleados,contratos, planilla,pagos,pagos_detalle,rubros...)	
+
