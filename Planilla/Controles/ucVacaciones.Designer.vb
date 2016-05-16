@@ -24,6 +24,8 @@ Partial Class ucVacaciones
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DsVacaciones = New Planilla.dsVacaciones()
         Me.VacacionesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VacacionesTableAdapter = New Planilla.dsVacacionesTableAdapters.VacacionesTableAdapter()
@@ -66,24 +68,45 @@ Partial Class ucVacaciones
         '
         'VacacionesDataGridViewX
         '
+        Me.VacacionesDataGridViewX.AllowUserToAddRows = False
+        Me.VacacionesDataGridViewX.AllowUserToDeleteRows = False
+        Me.VacacionesDataGridViewX.AllowUserToOrderColumns = True
         Me.VacacionesDataGridViewX.AutoGenerateColumns = False
-        Me.VacacionesDataGridViewX.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.VacacionesDataGridViewX.BackgroundColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.VacacionesDataGridViewX.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.VacacionesDataGridViewX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.VacacionesDataGridViewX.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.VacacionesDataGridViewX.DataSource = Me.VacacionesBindingSource
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.VacacionesDataGridViewX.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.VacacionesDataGridViewX.DefaultCellStyle = DataGridViewCellStyle2
         Me.VacacionesDataGridViewX.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.VacacionesDataGridViewX.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.VacacionesDataGridViewX.Location = New System.Drawing.Point(0, 70)
+        Me.VacacionesDataGridViewX.EnableHeadersVisualStyles = False
+        Me.VacacionesDataGridViewX.GridColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.VacacionesDataGridViewX.Location = New System.Drawing.Point(0, 44)
         Me.VacacionesDataGridViewX.Name = "VacacionesDataGridViewX"
-        Me.VacacionesDataGridViewX.Size = New System.Drawing.Size(502, 340)
+        Me.VacacionesDataGridViewX.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.VacacionesDataGridViewX.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.VacacionesDataGridViewX.Size = New System.Drawing.Size(502, 366)
         Me.VacacionesDataGridViewX.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -99,18 +122,21 @@ Partial Class ucVacaciones
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "id_contrato"
         Me.DataGridViewTextBoxColumn2.HeaderText = "id_contrato"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "derecho"
         Me.DataGridViewTextBoxColumn3.HeaderText = "derecho"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "disfrutado"
         Me.DataGridViewTextBoxColumn4.HeaderText = "disfrutado"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'DataGridViewTextBoxColumn5
         '
@@ -129,7 +155,7 @@ Partial Class ucVacaciones
         Me.ReflectionLabel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.ReflectionLabel1.Location = New System.Drawing.Point(0, 0)
         Me.ReflectionLabel1.Name = "ReflectionLabel1"
-        Me.ReflectionLabel1.Size = New System.Drawing.Size(502, 70)
+        Me.ReflectionLabel1.Size = New System.Drawing.Size(502, 44)
         Me.ReflectionLabel1.TabIndex = 2
         Me.ReflectionLabel1.Text = "<b><font size=""+6""><i>Control</i><font color=""#22B14C""> Vacaciones</font></font><" &
     "/b>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
@@ -141,9 +167,9 @@ Partial Class ucVacaciones
         Me.PanelEx1.Controls.Add(Me.LabelX1)
         Me.PanelEx1.DisabledBackColor = System.Drawing.Color.Empty
         Me.PanelEx1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelEx1.Location = New System.Drawing.Point(0, 310)
+        Me.PanelEx1.Location = New System.Drawing.Point(0, 334)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(502, 100)
+        Me.PanelEx1.Size = New System.Drawing.Size(502, 76)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine

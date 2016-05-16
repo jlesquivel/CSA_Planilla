@@ -2,8 +2,9 @@
 
 
     Private Sub ucVacaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        VacacionesTableAdapter.Fill(DsVacaciones.Vacaciones)
     End Sub
+
 
     Public Sub Calcular(pId_emp As Integer)
 
@@ -16,7 +17,4 @@
 
     End Sub
 
-    Private Sub VacacionesDataGridViewX_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles VacacionesDataGridViewX.CellContentClick
-
-    End Sub
 End Class

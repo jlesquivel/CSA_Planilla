@@ -116,6 +116,7 @@ Public Class frmContrato
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents TabControlPanel6 As TabControlPanel
     Friend WithEvents TabItem6 As TabItem
+    Friend WithEvents UcVacaciones1 As ucVacaciones
     Dim cargado As Boolean = False  ' para saber que no es la primera vez
 
     Public Sub New()
@@ -242,31 +243,6 @@ Public Class frmContrato
         Me.SqlSelectCommand7 = New System.Data.SqlClient.SqlCommand()
         Me.SqlUpdateCommand6 = New System.Data.SqlClient.SqlCommand()
         Me.TabControl2 = New DevComponents.DotNetBar.TabControl()
-        Me.TabControlPanel6 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.TabItem6 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Bar1 = New DevComponents.DotNetBar.Bar()
-        Me.ButtonItem1 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem3 = New DevComponents.DotNetBar.ButtonItem()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.sexo = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel()
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
         Me.MonedaTextBox2 = New Planilla.MonedaTextBox()
@@ -314,6 +290,34 @@ Public Class frmContrato
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.TabItem4 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.CPagos1 = New Planilla.cPagos()
+        Me.TabItem5 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Bar1 = New DevComponents.DotNetBar.Bar()
+        Me.ButtonItem1 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem3 = New DevComponents.DotNetBar.ButtonItem()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.sexo = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel6 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.TabItem6 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -322,9 +326,6 @@ Public Class frmContrato
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.CPagos1 = New Planilla.cPagos()
-        Me.TabItem5 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.ContratoscategoriasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
         Me.ComboBoxItem1 = New DevComponents.DotNetBar.ComboBoxItem()
@@ -341,16 +342,12 @@ Public Class frmContrato
         Me.Highlighter1 = New DevComponents.DotNetBar.Validator.Highlighter()
         Me.UserControl21 = New Planilla.UserControl2()
         Me.BEmpleado1 = New Planilla.bEmpleado()
+        Me.UcVacaciones1 = New Planilla.ucVacaciones()
         CType(Me.Ds2planilla1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DvContratos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl2.SuspendLayout()
-        Me.TabControlPanel2.SuspendLayout()
-        CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.TabControlPanel3.SuspendLayout()
         Me.PanelEx1.SuspendLayout()
         Me.ExpandablePanel1.SuspendLayout()
@@ -360,8 +357,14 @@ Public Class frmContrato
         Me.TabControlPanel4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControlPanel1.SuspendLayout()
         Me.TabControlPanel5.SuspendLayout()
+        Me.TabControlPanel2.SuspendLayout()
+        CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.TabControlPanel6.SuspendLayout()
+        Me.TabControlPanel1.SuspendLayout()
         CType(Me.ContratoscategoriasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -620,11 +623,11 @@ Public Class frmContrato
         '
         Me.TabControl2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TabControl2.CanReorderTabs = True
+        Me.TabControl2.Controls.Add(Me.TabControlPanel6)
+        Me.TabControl2.Controls.Add(Me.TabControlPanel2)
         Me.TabControl2.Controls.Add(Me.TabControlPanel3)
         Me.TabControl2.Controls.Add(Me.TabControlPanel4)
         Me.TabControl2.Controls.Add(Me.TabControlPanel5)
-        Me.TabControl2.Controls.Add(Me.TabControlPanel2)
-        Me.TabControl2.Controls.Add(Me.TabControlPanel6)
         Me.TabControl2.Controls.Add(Me.TabControlPanel1)
         Me.TabControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl2.ForeColor = System.Drawing.Color.Black
@@ -643,317 +646,6 @@ Public Class frmContrato
         Me.TabControl2.Tabs.Add(Me.TabItem5)
         Me.TabControl2.Tabs.Add(Me.TabItem6)
         Me.TabControl2.Text = "TabControl2"
-        '
-        'TabControlPanel6
-        '
-        Me.TabControlPanel6.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel6.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel6.Name = "TabControlPanel6"
-        Me.TabControlPanel6.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel6.Size = New System.Drawing.Size(536, 298)
-        Me.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.White
-        Me.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.TabControlPanel6.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel6.Style.GradientAngle = 90
-        Me.TabControlPanel6.TabIndex = 19
-        Me.TabControlPanel6.TabItem = Me.TabItem6
-        '
-        'TabItem6
-        '
-        Me.TabItem6.AttachedControl = Me.TabControlPanel6
-        Me.TabItem6.Name = "TabItem6"
-        Me.TabItem6.Text = "Vacaciones"
-        '
-        'TabControlPanel2
-        '
-        Me.TabControlPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.TabControlPanel2.Controls.Add(Me.Label1)
-        Me.TabControlPanel2.Controls.Add(Me.Bar1)
-        Me.TabControlPanel2.Controls.Add(Me.PictureBox2)
-        Me.TabControlPanel2.Controls.Add(Me.MaskedTextBox2)
-        Me.TabControlPanel2.Controls.Add(Me.MaskedTextBox1)
-        Me.TabControlPanel2.Controls.Add(Me.Label7)
-        Me.TabControlPanel2.Controls.Add(Me.Label6)
-        Me.TabControlPanel2.Controls.Add(Me.Label5)
-        Me.TabControlPanel2.Controls.Add(Me.Label4)
-        Me.TabControlPanel2.Controls.Add(Me.Label3)
-        Me.TabControlPanel2.Controls.Add(Me.GroupBox1)
-        Me.TabControlPanel2.Controls.Add(Me.TextBox5)
-        Me.TabControlPanel2.Controls.Add(Me.DateTimePicker1)
-        Me.TabControlPanel2.Controls.Add(Me.TextBox3)
-        Me.TabControlPanel2.Controls.Add(Me.TextBox2)
-        Me.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel2.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel2.Name = "TabControlPanel2"
-        Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel2.Size = New System.Drawing.Size(536, 298)
-        Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.White
-        Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.TabControlPanel2.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel2.Style.GradientAngle = 90
-        Me.TabControlPanel2.TabIndex = 2
-        Me.TabControlPanel2.TabItem = Me.TabItem2
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(0, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 20)
-        Me.Label1.TabIndex = 34
-        Me.Label1.Text = "Cédula o DIMEX"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Bar1
-        '
-        Me.Bar1.AntiAlias = True
-        Me.Bar1.BarType = DevComponents.DotNetBar.eBarType.StatusBar
-        Me.Bar1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Bar1.DockSide = DevComponents.DotNetBar.eDockSide.Document
-        Me.Bar1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.Bar1.IsMaximized = False
-        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem1, Me.ButtonItem3})
-        Me.Bar1.Location = New System.Drawing.Point(1, 269)
-        Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(534, 28)
-        Me.Bar1.Stretch = True
-        Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014
-        Me.Bar1.TabIndex = 33
-        Me.Bar1.TabStop = False
-        Me.Bar1.Text = "Bar1"
-        '
-        'ButtonItem1
-        '
-        Me.ButtonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem1.Name = "ButtonItem1"
-        Me.ButtonItem1.Stretch = True
-        Me.ButtonItem1.Symbol = ""
-        Me.ButtonItem1.SymbolSize = 8.0!
-        Me.ButtonItem1.Text = "Const.Salario"
-        Me.ButtonItem1.Tooltip = "Constancia de Salario"
-        '
-        'ButtonItem3
-        '
-        Me.ButtonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem3.Name = "ButtonItem3"
-        Me.ButtonItem3.Stretch = True
-        Me.ButtonItem3.Symbol = ""
-        Me.ButtonItem3.SymbolSize = 8.0!
-        Me.ButtonItem3.Text = "Const.Salario Detallada"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox2.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EmpleadosBindingSource, "foto", True))
-        Me.PictureBox2.ForeColor = System.Drawing.Color.Black
-        Me.PictureBox2.Location = New System.Drawing.Point(234, 22)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(158, 199)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox2.TabIndex = 32
-        Me.PictureBox2.TabStop = False
-        '
-        'EmpleadosBindingSource
-        '
-        Me.EmpleadosBindingSource.DataMember = "empleados"
-        Me.EmpleadosBindingSource.DataSource = Me.Ds2planilla1
-        '
-        'MaskedTextBox2
-        '
-        Me.MaskedTextBox2.BackColor = System.Drawing.Color.White
-        Me.MaskedTextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.cuenta", True))
-        Me.MaskedTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox2.ForeColor = System.Drawing.Color.Black
-        Me.MaskedTextBox2.Location = New System.Drawing.Point(92, 89)
-        Me.MaskedTextBox2.Mask = "000-00-000-000000-0"
-        Me.MaskedTextBox2.Name = "MaskedTextBox2"
-        Me.MaskedTextBox2.Size = New System.Drawing.Size(128, 21)
-        Me.MaskedTextBox2.TabIndex = 3
-        '
-        'MaskedTextBox1
-        '
-        Me.MaskedTextBox1.BackColor = System.Drawing.Color.White
-        Me.MaskedTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.cedula", True))
-        Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox1.ForeColor = System.Drawing.Color.Black
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(92, 20)
-        Me.MaskedTextBox1.Mask = "00-0000-0000"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(128, 21)
-        Me.MaskedTextBox1.TabIndex = 0
-        Me.SuperValidator1.SetValidator1(Me.MaskedTextBox1, Me.CustomValidator1)
-        '
-        'Label7
-        '
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(20, 139)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(64, 20)
-        Me.Label7.TabIndex = 31
-        Me.Label7.Text = "Nacimiento"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label6
-        '
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(20, 115)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(64, 20)
-        Me.Label6.TabIndex = 30
-        Me.Label6.Text = "Banco"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label5
-        '
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(20, 91)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(64, 20)
-        Me.Label5.TabIndex = 29
-        Me.Label5.Text = "Cuenta"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label4
-        '
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(20, 67)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(64, 20)
-        Me.Label4.TabIndex = 28
-        Me.Label4.Text = "Nombre"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(20, 43)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 20)
-        Me.Label3.TabIndex = 27
-        Me.Label3.Text = "Apellidos"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.sexo)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(92, 165)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(104, 77)
-        Me.GroupBox1.TabIndex = 25
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Sexo"
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.RadioButton2.ForeColor = System.Drawing.Color.Black
-        Me.RadioButton2.Location = New System.Drawing.Point(3, 40)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(98, 23)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.Text = "Femenino"
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.RadioButton1.ForeColor = System.Drawing.Color.Black
-        Me.RadioButton1.Location = New System.Drawing.Point(3, 17)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(98, 23)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.Text = "Masculino"
-        '
-        'sexo
-        '
-        Me.sexo.BackColor = System.Drawing.Color.White
-        Me.sexo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.sexo", True))
-        Me.sexo.ForeColor = System.Drawing.Color.Black
-        Me.sexo.Location = New System.Drawing.Point(6, 19)
-        Me.sexo.Name = "sexo"
-        Me.sexo.Size = New System.Drawing.Size(92, 21)
-        Me.sexo.TabIndex = 24
-        '
-        'TextBox5
-        '
-        Me.TextBox5.BackColor = System.Drawing.Color.White
-        Me.TextBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.banco", True))
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.ForeColor = System.Drawing.Color.Black
-        Me.TextBox5.Location = New System.Drawing.Point(92, 115)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(128, 21)
-        Me.TextBox5.TabIndex = 4
-        Me.TextBox5.Text = "TEXTBOX5"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.nacimiento", True))
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.ForeColor = System.Drawing.Color.Black
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(92, 139)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(128, 21)
-        Me.DateTimePicker1.TabIndex = 5
-        Me.DateTimePicker1.Value = New Date(2007, 2, 8, 0, 0, 0, 0)
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.Color.White
-        Me.TextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.nombre", True))
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.ForeColor = System.Drawing.Color.Black
-        Me.TextBox3.Location = New System.Drawing.Point(92, 65)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(128, 21)
-        Me.TextBox3.TabIndex = 2
-        Me.TextBox3.Text = "TEXTBOX3"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.apellidos", True))
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.Black
-        Me.TextBox2.Location = New System.Drawing.Point(92, 42)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(128, 21)
-        Me.TextBox2.TabIndex = 1
-        Me.TextBox2.Text = "TEXTBOX2"
-        '
-        'TabItem2
-        '
-        Me.TabItem2.AttachedControl = Me.TabControlPanel2
-        Me.TabItem2.Name = "TabItem2"
-        Me.TabItem2.Text = "Personal"
         '
         'TabControlPanel3
         '
@@ -1535,6 +1227,352 @@ Public Class frmContrato
         Me.TabItem4.Name = "TabItem4"
         Me.TabItem4.Text = "Rubros"
         '
+        'TabControlPanel5
+        '
+        Me.TabControlPanel5.Controls.Add(Me.CPagos1)
+        Me.TabControlPanel5.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel5.Name = "TabControlPanel5"
+        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel5.Size = New System.Drawing.Size(536, 298)
+        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.White
+        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel5.Style.GradientAngle = 90
+        Me.TabControlPanel5.TabIndex = 5
+        Me.TabControlPanel5.TabItem = Me.TabItem5
+        '
+        'CPagos1
+        '
+        Me.CPagos1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CPagos1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CPagos1.ForeColor = System.Drawing.Color.Black
+        Me.CPagos1.Location = New System.Drawing.Point(1, 1)
+        Me.CPagos1.Name = "CPagos1"
+        Me.CPagos1.Size = New System.Drawing.Size(534, 296)
+        Me.CPagos1.TabIndex = 0
+        '
+        'TabItem5
+        '
+        Me.TabItem5.AttachedControl = Me.TabControlPanel5
+        Me.TabItem5.Name = "TabItem5"
+        Me.TabItem5.Text = "Pagos"
+        '
+        'TabControlPanel2
+        '
+        Me.TabControlPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.TabControlPanel2.Controls.Add(Me.Label1)
+        Me.TabControlPanel2.Controls.Add(Me.Bar1)
+        Me.TabControlPanel2.Controls.Add(Me.PictureBox2)
+        Me.TabControlPanel2.Controls.Add(Me.MaskedTextBox2)
+        Me.TabControlPanel2.Controls.Add(Me.MaskedTextBox1)
+        Me.TabControlPanel2.Controls.Add(Me.Label7)
+        Me.TabControlPanel2.Controls.Add(Me.Label6)
+        Me.TabControlPanel2.Controls.Add(Me.Label5)
+        Me.TabControlPanel2.Controls.Add(Me.Label4)
+        Me.TabControlPanel2.Controls.Add(Me.Label3)
+        Me.TabControlPanel2.Controls.Add(Me.GroupBox1)
+        Me.TabControlPanel2.Controls.Add(Me.TextBox5)
+        Me.TabControlPanel2.Controls.Add(Me.DateTimePicker1)
+        Me.TabControlPanel2.Controls.Add(Me.TextBox3)
+        Me.TabControlPanel2.Controls.Add(Me.TextBox2)
+        Me.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel2.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel2.Name = "TabControlPanel2"
+        Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel2.Size = New System.Drawing.Size(536, 298)
+        Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.White
+        Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.TabControlPanel2.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel2.Style.GradientAngle = 90
+        Me.TabControlPanel2.TabIndex = 2
+        Me.TabControlPanel2.TabItem = Me.TabItem2
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(0, 19)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(86, 20)
+        Me.Label1.TabIndex = 34
+        Me.Label1.Text = "Cédula o DIMEX"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Bar1
+        '
+        Me.Bar1.AntiAlias = True
+        Me.Bar1.BarType = DevComponents.DotNetBar.eBarType.StatusBar
+        Me.Bar1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Bar1.DockSide = DevComponents.DotNetBar.eDockSide.Document
+        Me.Bar1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.Bar1.IsMaximized = False
+        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem1, Me.ButtonItem3})
+        Me.Bar1.Location = New System.Drawing.Point(1, 269)
+        Me.Bar1.Name = "Bar1"
+        Me.Bar1.Size = New System.Drawing.Size(534, 28)
+        Me.Bar1.Stretch = True
+        Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014
+        Me.Bar1.TabIndex = 33
+        Me.Bar1.TabStop = False
+        Me.Bar1.Text = "Bar1"
+        '
+        'ButtonItem1
+        '
+        Me.ButtonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem1.Name = "ButtonItem1"
+        Me.ButtonItem1.Stretch = True
+        Me.ButtonItem1.Symbol = ""
+        Me.ButtonItem1.SymbolSize = 8.0!
+        Me.ButtonItem1.Text = "Const.Salario"
+        Me.ButtonItem1.Tooltip = "Constancia de Salario"
+        '
+        'ButtonItem3
+        '
+        Me.ButtonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem3.Name = "ButtonItem3"
+        Me.ButtonItem3.Stretch = True
+        Me.ButtonItem3.Symbol = ""
+        Me.ButtonItem3.SymbolSize = 8.0!
+        Me.ButtonItem3.Text = "Const.Salario Detallada"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox2.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.EmpleadosBindingSource, "foto", True))
+        Me.PictureBox2.ForeColor = System.Drawing.Color.Black
+        Me.PictureBox2.Location = New System.Drawing.Point(234, 22)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(158, 199)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox2.TabIndex = 32
+        Me.PictureBox2.TabStop = False
+        '
+        'EmpleadosBindingSource
+        '
+        Me.EmpleadosBindingSource.DataMember = "empleados"
+        Me.EmpleadosBindingSource.DataSource = Me.Ds2planilla1
+        '
+        'MaskedTextBox2
+        '
+        Me.MaskedTextBox2.BackColor = System.Drawing.Color.White
+        Me.MaskedTextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.cuenta", True))
+        Me.MaskedTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaskedTextBox2.ForeColor = System.Drawing.Color.Black
+        Me.MaskedTextBox2.Location = New System.Drawing.Point(92, 89)
+        Me.MaskedTextBox2.Mask = "000-00-000-000000-0"
+        Me.MaskedTextBox2.Name = "MaskedTextBox2"
+        Me.MaskedTextBox2.Size = New System.Drawing.Size(128, 21)
+        Me.MaskedTextBox2.TabIndex = 3
+        '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.BackColor = System.Drawing.Color.White
+        Me.MaskedTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.cedula", True))
+        Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaskedTextBox1.ForeColor = System.Drawing.Color.Black
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(92, 20)
+        Me.MaskedTextBox1.Mask = "00-0000-0000"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(128, 21)
+        Me.MaskedTextBox1.TabIndex = 0
+        Me.SuperValidator1.SetValidator1(Me.MaskedTextBox1, Me.CustomValidator1)
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(20, 139)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(64, 20)
+        Me.Label7.TabIndex = 31
+        Me.Label7.Text = "Nacimiento"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(20, 115)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(64, 20)
+        Me.Label6.TabIndex = 30
+        Me.Label6.Text = "Banco"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(20, 91)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(64, 20)
+        Me.Label5.TabIndex = 29
+        Me.Label5.Text = "Cuenta"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(20, 67)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(64, 20)
+        Me.Label4.TabIndex = 28
+        Me.Label4.Text = "Nombre"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(20, 43)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(64, 20)
+        Me.Label3.TabIndex = 27
+        Me.Label3.Text = "Apellidos"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.RadioButton2)
+        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.sexo)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Black
+        Me.GroupBox1.Location = New System.Drawing.Point(92, 165)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(104, 77)
+        Me.GroupBox1.TabIndex = 25
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Sexo"
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.RadioButton2.ForeColor = System.Drawing.Color.Black
+        Me.RadioButton2.Location = New System.Drawing.Point(3, 40)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(98, 23)
+        Me.RadioButton2.TabIndex = 1
+        Me.RadioButton2.Text = "Femenino"
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.RadioButton1.ForeColor = System.Drawing.Color.Black
+        Me.RadioButton1.Location = New System.Drawing.Point(3, 17)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(98, 23)
+        Me.RadioButton1.TabIndex = 0
+        Me.RadioButton1.Text = "Masculino"
+        '
+        'sexo
+        '
+        Me.sexo.BackColor = System.Drawing.Color.White
+        Me.sexo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.sexo", True))
+        Me.sexo.ForeColor = System.Drawing.Color.Black
+        Me.sexo.Location = New System.Drawing.Point(6, 19)
+        Me.sexo.Name = "sexo"
+        Me.sexo.Size = New System.Drawing.Size(92, 21)
+        Me.sexo.TabIndex = 24
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.Color.White
+        Me.TextBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.banco", True))
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.ForeColor = System.Drawing.Color.Black
+        Me.TextBox5.Location = New System.Drawing.Point(92, 115)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(128, 21)
+        Me.TextBox5.TabIndex = 4
+        Me.TextBox5.Text = "TEXTBOX5"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.nacimiento", True))
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.ForeColor = System.Drawing.Color.Black
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(92, 139)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(128, 21)
+        Me.DateTimePicker1.TabIndex = 5
+        Me.DateTimePicker1.Value = New Date(2007, 2, 8, 0, 0, 0, 0)
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.Color.White
+        Me.TextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.nombre", True))
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.ForeColor = System.Drawing.Color.Black
+        Me.TextBox3.Location = New System.Drawing.Point(92, 65)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(128, 21)
+        Me.TextBox3.TabIndex = 2
+        Me.TextBox3.Text = "TEXTBOX3"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.White
+        Me.TextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.apellidos", True))
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.ForeColor = System.Drawing.Color.Black
+        Me.TextBox2.Location = New System.Drawing.Point(92, 42)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(128, 21)
+        Me.TextBox2.TabIndex = 1
+        Me.TextBox2.Text = "TEXTBOX2"
+        '
+        'TabItem2
+        '
+        Me.TabItem2.AttachedControl = Me.TabControlPanel2
+        Me.TabItem2.Name = "TabItem2"
+        Me.TabItem2.Text = "Personal"
+        '
+        'TabControlPanel6
+        '
+        Me.TabControlPanel6.Controls.Add(Me.UcVacaciones1)
+        Me.TabControlPanel6.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel6.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel6.Name = "TabControlPanel6"
+        Me.TabControlPanel6.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel6.Size = New System.Drawing.Size(536, 298)
+        Me.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.White
+        Me.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.TabControlPanel6.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel6.Style.GradientAngle = 90
+        Me.TabControlPanel6.TabIndex = 19
+        Me.TabControlPanel6.TabItem = Me.TabItem6
+        '
+        'TabItem6
+        '
+        Me.TabItem6.AttachedControl = Me.TabControlPanel6
+        Me.TabItem6.Name = "TabItem6"
+        Me.TabItem6.Text = "Vacaciones"
+        '
         'TabControlPanel1
         '
         Me.TabControlPanel1.Controls.Add(Me.Label11)
@@ -1636,40 +1674,6 @@ Public Class frmContrato
         Me.TabItem1.AttachedControl = Me.TabControlPanel1
         Me.TabItem1.Name = "TabItem1"
         Me.TabItem1.Text = "Localizacion"
-        '
-        'TabControlPanel5
-        '
-        Me.TabControlPanel5.Controls.Add(Me.CPagos1)
-        Me.TabControlPanel5.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel5.Name = "TabControlPanel5"
-        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel5.Size = New System.Drawing.Size(536, 298)
-        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.White
-        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel5.Style.GradientAngle = 90
-        Me.TabControlPanel5.TabIndex = 5
-        Me.TabControlPanel5.TabItem = Me.TabItem5
-        '
-        'CPagos1
-        '
-        Me.CPagos1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CPagos1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CPagos1.ForeColor = System.Drawing.Color.Black
-        Me.CPagos1.Location = New System.Drawing.Point(1, 1)
-        Me.CPagos1.Name = "CPagos1"
-        Me.CPagos1.Size = New System.Drawing.Size(534, 296)
-        Me.CPagos1.TabIndex = 0
-        '
-        'TabItem5
-        '
-        Me.TabItem5.AttachedControl = Me.TabControlPanel5
-        Me.TabItem5.Name = "TabItem5"
-        Me.TabItem5.Text = "Pagos"
         '
         'ContratoscategoriasBindingSource
         '
@@ -1779,6 +1783,15 @@ Public Class frmContrato
         Me.BEmpleado1.Size = New System.Drawing.Size(265, 376)
         Me.BEmpleado1.TabIndex = 5
         '
+        'UcVacaciones1
+        '
+        Me.UcVacaciones1.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.UcVacaciones1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.UcVacaciones1.Location = New System.Drawing.Point(1, 1)
+        Me.UcVacaciones1.Name = "UcVacaciones1"
+        Me.UcVacaciones1.Size = New System.Drawing.Size(534, 296)
+        Me.UcVacaciones1.TabIndex = 0
+        '
         'frmContrato
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
@@ -1789,6 +1802,7 @@ Public Class frmContrato
         Me.Controls.Add(Me.PanelEx3)
         Me.Controls.Add(Me.BEmpleado1)
         Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frmContrato"
         CType(Me.Ds2planilla1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1796,13 +1810,6 @@ Public Class frmContrato
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl2.ResumeLayout(False)
-        Me.TabControlPanel2.ResumeLayout(False)
-        Me.TabControlPanel2.PerformLayout()
-        CType(Me.Bar1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.TabControlPanel3.ResumeLayout(False)
         Me.PanelEx1.ResumeLayout(False)
         Me.PanelEx1.PerformLayout()
@@ -1813,9 +1820,17 @@ Public Class frmContrato
         Me.TabControlPanel4.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControlPanel5.ResumeLayout(False)
+        Me.TabControlPanel2.ResumeLayout(False)
+        Me.TabControlPanel2.PerformLayout()
+        CType(Me.Bar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.TabControlPanel6.ResumeLayout(False)
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
-        Me.TabControlPanel5.ResumeLayout(False)
         CType(Me.ContratoscategoriasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
