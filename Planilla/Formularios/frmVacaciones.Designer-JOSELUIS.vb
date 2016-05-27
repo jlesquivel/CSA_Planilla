@@ -35,11 +35,6 @@ Partial Class frmVacaciones
         Me.VacacionregBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DsVacaciones = New Planilla.dsVacaciones()
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
-        Me.LabelX9 = New DevComponents.DotNetBar.LabelX()
-        Me.LabelX8 = New DevComponents.DotNetBar.LabelX()
-        Me.DiasRangoAdic = New DevComponents.Editors.IntegerInput()
-        Me.fechaI_Adic = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
-        Me.fechaF_Adic = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
         Me.LabelX6 = New DevComponents.DotNetBar.LabelX()
         Me.DiasRango = New DevComponents.Editors.IntegerInput()
         Me.LabelX5 = New DevComponents.DotNetBar.LabelX()
@@ -53,15 +48,11 @@ Partial Class frmVacaciones
         Me.nota = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.DateTimeInput2 = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
         Me.DateTimeInput1 = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
-        Me.LabelX7 = New DevComponents.DotNetBar.LabelX()
         Me.Vacacion_regTableAdapter = New Planilla.dsVacacionesTableAdapters.Vacacion_regTableAdapter()
         CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VacacionregBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsVacaciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelEx1.SuspendLayout()
-        CType(Me.DiasRangoAdic, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.fechaI_Adic, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.fechaF_Adic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DiasRango, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DiasSaldo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateTimeInput2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,7 +80,7 @@ Partial Class frmVacaciones
         Me.DataGridViewX1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridViewX1.Name = "DataGridViewX1"
         Me.DataGridViewX1.ReadOnly = True
-        Me.DataGridViewX1.Size = New System.Drawing.Size(707, 190)
+        Me.DataGridViewX1.Size = New System.Drawing.Size(777, 243)
         Me.DataGridViewX1.TabIndex = 0
         '
         'IdDataGridViewTextBoxColumn
@@ -114,7 +105,6 @@ Partial Class frmVacaciones
         Me.DiasDataGridViewTextBoxColumn.HeaderText = "dias"
         Me.DiasDataGridViewTextBoxColumn.Name = "DiasDataGridViewTextBoxColumn"
         Me.DiasDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DiasDataGridViewTextBoxColumn.Width = 50
         '
         'fechaI
         '
@@ -231,11 +221,6 @@ Partial Class frmVacaciones
         '
         Me.PanelEx1.CanvasColor = System.Drawing.SystemColors.ButtonHighlight
         Me.PanelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.PanelEx1.Controls.Add(Me.LabelX9)
-        Me.PanelEx1.Controls.Add(Me.LabelX8)
-        Me.PanelEx1.Controls.Add(Me.DiasRangoAdic)
-        Me.PanelEx1.Controls.Add(Me.fechaI_Adic)
-        Me.PanelEx1.Controls.Add(Me.fechaF_Adic)
         Me.PanelEx1.Controls.Add(Me.LabelX6)
         Me.PanelEx1.Controls.Add(Me.DiasRango)
         Me.PanelEx1.Controls.Add(Me.LabelX5)
@@ -250,9 +235,10 @@ Partial Class frmVacaciones
         Me.PanelEx1.Controls.Add(Me.DateTimeInput2)
         Me.PanelEx1.Controls.Add(Me.DateTimeInput1)
         Me.PanelEx1.DisabledBackColor = System.Drawing.Color.Empty
-        Me.PanelEx1.Location = New System.Drawing.Point(12, 208)
+        Me.PanelEx1.Location = New System.Drawing.Point(12, 261)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(547, 233)
+        Me.PanelEx1.ShowFocusRectangle = True
+        Me.PanelEx1.Size = New System.Drawing.Size(563, 138)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -261,142 +247,15 @@ Partial Class frmVacaciones
         Me.PanelEx1.Style.GradientAngle = 90
         Me.PanelEx1.TabIndex = 3
         '
-        'LabelX9
-        '
-        '
-        '
-        '
-        Me.LabelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX9.Location = New System.Drawing.Point(32, 66)
-        Me.LabelX9.Name = "LabelX9"
-        Me.LabelX9.Size = New System.Drawing.Size(119, 21)
-        Me.LabelX9.TabIndex = 17
-        Me.LabelX9.Text = "Vacaciones Ordinarias"
-        '
-        'LabelX8
-        '
-        '
-        '
-        '
-        Me.LabelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX8.Location = New System.Drawing.Point(32, 93)
-        Me.LabelX8.Name = "LabelX8"
-        Me.LabelX8.Size = New System.Drawing.Size(119, 21)
-        Me.LabelX8.TabIndex = 16
-        Me.LabelX8.Text = "Vacaciones Adicionales"
-        '
-        'DiasRangoAdic
-        '
-        '
-        '
-        '
-        Me.DiasRangoAdic.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.DiasRangoAdic.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.DiasRangoAdic.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.DiasRangoAdic.Location = New System.Drawing.Point(405, 93)
-        Me.DiasRangoAdic.Name = "DiasRangoAdic"
-        Me.DiasRangoAdic.Size = New System.Drawing.Size(32, 22)
-        Me.DiasRangoAdic.TabIndex = 15
-        '
-        'fechaI_Adic
-        '
-        '
-        '
-        '
-        Me.fechaI_Adic.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.fechaI_Adic.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaI_Adic.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown
-        Me.fechaI_Adic.ButtonDropDown.Visible = True
-        Me.fechaI_Adic.IsPopupCalendarOpen = False
-        Me.fechaI_Adic.Location = New System.Drawing.Point(157, 93)
-        '
-        '
-        '
-        '
-        '
-        '
-        Me.fechaI_Adic.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaI_Adic.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
-        Me.fechaI_Adic.MonthCalendar.ClearButtonVisible = True
-        '
-        '
-        '
-        Me.fechaI_Adic.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2
-        Me.fechaI_Adic.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90
-        Me.fechaI_Adic.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
-        Me.fechaI_Adic.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.fechaI_Adic.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder
-        Me.fechaI_Adic.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1
-        Me.fechaI_Adic.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaI_Adic.MonthCalendar.DisplayMonth = New Date(2016, 5, 1, 0, 0, 0, 0)
-        Me.fechaI_Adic.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday
-        '
-        '
-        '
-        Me.fechaI_Adic.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
-        Me.fechaI_Adic.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90
-        Me.fechaI_Adic.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.fechaI_Adic.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaI_Adic.MonthCalendar.TodayButtonVisible = True
-        Me.fechaI_Adic.Name = "fechaI_Adic"
-        Me.fechaI_Adic.Size = New System.Drawing.Size(118, 22)
-        Me.fechaI_Adic.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.fechaI_Adic.TabIndex = 14
-        '
-        'fechaF_Adic
-        '
-        '
-        '
-        '
-        Me.fechaF_Adic.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.fechaF_Adic.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaF_Adic.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown
-        Me.fechaF_Adic.ButtonDropDown.Visible = True
-        Me.fechaF_Adic.IsPopupCalendarOpen = False
-        Me.fechaF_Adic.Location = New System.Drawing.Point(281, 94)
-        '
-        '
-        '
-        '
-        '
-        '
-        Me.fechaF_Adic.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaF_Adic.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
-        Me.fechaF_Adic.MonthCalendar.ClearButtonVisible = True
-        '
-        '
-        '
-        Me.fechaF_Adic.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2
-        Me.fechaF_Adic.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90
-        Me.fechaF_Adic.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
-        Me.fechaF_Adic.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.fechaF_Adic.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder
-        Me.fechaF_Adic.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1
-        Me.fechaF_Adic.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaF_Adic.MonthCalendar.DisplayMonth = New Date(2016, 5, 1, 0, 0, 0, 0)
-        Me.fechaF_Adic.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday
-        '
-        '
-        '
-        Me.fechaF_Adic.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
-        Me.fechaF_Adic.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90
-        Me.fechaF_Adic.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.fechaF_Adic.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaF_Adic.MonthCalendar.TodayButtonVisible = True
-        Me.fechaF_Adic.Name = "fechaF_Adic"
-        Me.fechaF_Adic.Size = New System.Drawing.Size(118, 22)
-        Me.fechaF_Adic.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.fechaF_Adic.TabIndex = 13
-        '
         'LabelX6
         '
         '
         '
         '
         Me.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX6.Location = New System.Drawing.Point(377, 45)
+        Me.LabelX6.Location = New System.Drawing.Point(434, 3)
         Me.LabelX6.Name = "LabelX6"
-        Me.LabelX6.Size = New System.Drawing.Size(82, 20)
+        Me.LabelX6.Size = New System.Drawing.Size(45, 20)
         Me.LabelX6.TabIndex = 12
         Me.LabelX6.Text = "Dias del Rango"
         '
@@ -408,7 +267,7 @@ Partial Class frmVacaciones
         Me.DiasRango.BackgroundStyle.Class = "DateTimeInputBackground"
         Me.DiasRango.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.DiasRango.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.DiasRango.Location = New System.Drawing.Point(405, 66)
+        Me.DiasRango.Location = New System.Drawing.Point(434, 21)
         Me.DiasRango.Name = "DiasRango"
         Me.DiasRango.Size = New System.Drawing.Size(32, 22)
         Me.DiasRango.TabIndex = 11
@@ -419,7 +278,7 @@ Partial Class frmVacaciones
         '
         '
         Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX5.Location = New System.Drawing.Point(460, 40)
+        Me.LabelX5.Location = New System.Drawing.Point(494, 0)
         Me.LabelX5.Name = "LabelX5"
         Me.LabelX5.Size = New System.Drawing.Size(45, 20)
         Me.LabelX5.TabIndex = 10
@@ -433,7 +292,7 @@ Partial Class frmVacaciones
         Me.DiasSaldo.BackgroundStyle.Class = "DateTimeInputBackground"
         Me.DiasSaldo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.DiasSaldo.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.DiasSaldo.Location = New System.Drawing.Point(460, 66)
+        Me.DiasSaldo.Location = New System.Drawing.Point(507, 21)
         Me.DiasSaldo.Name = "DiasSaldo"
         Me.DiasSaldo.Size = New System.Drawing.Size(32, 22)
         Me.DiasSaldo.TabIndex = 9
@@ -442,7 +301,7 @@ Partial Class frmVacaciones
         '
         Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX1.Location = New System.Drawing.Point(466, 140)
+        Me.ButtonX1.Location = New System.Drawing.Point(481, 67)
         Me.ButtonX1.Name = "ButtonX1"
         Me.ButtonX1.Size = New System.Drawing.Size(58, 61)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -456,7 +315,7 @@ Partial Class frmVacaciones
         '
         '
         Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX4.Location = New System.Drawing.Point(42, 120)
+        Me.LabelX4.Location = New System.Drawing.Point(48, 48)
         Me.LabelX4.Name = "LabelX4"
         Me.LabelX4.Size = New System.Drawing.Size(80, 14)
         Me.LabelX4.TabIndex = 7
@@ -468,7 +327,7 @@ Partial Class frmVacaciones
         '
         '
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX3.Location = New System.Drawing.Point(281, 48)
+        Me.LabelX3.Location = New System.Drawing.Point(310, 3)
         Me.LabelX3.Name = "LabelX3"
         Me.LabelX3.Size = New System.Drawing.Size(80, 17)
         Me.LabelX3.TabIndex = 6
@@ -480,7 +339,7 @@ Partial Class frmVacaciones
         '
         '
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX2.Location = New System.Drawing.Point(157, 48)
+        Me.LabelX2.Location = New System.Drawing.Point(186, 3)
         Me.LabelX2.Name = "LabelX2"
         Me.LabelX2.Size = New System.Drawing.Size(80, 17)
         Me.LabelX2.TabIndex = 5
@@ -492,7 +351,7 @@ Partial Class frmVacaciones
         '
         '
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX1.Location = New System.Drawing.Point(71, 20)
+        Me.LabelX1.Location = New System.Drawing.Point(48, 3)
         Me.LabelX1.Name = "LabelX1"
         Me.LabelX1.Size = New System.Drawing.Size(80, 14)
         Me.LabelX1.TabIndex = 4
@@ -509,7 +368,7 @@ Partial Class frmVacaciones
         Me.motivo.BackgroundStyle.Class = "TextBoxBorder"
         Me.motivo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.motivo.ButtonDropDown.Visible = True
-        Me.motivo.Location = New System.Drawing.Point(157, 20)
+        Me.motivo.Location = New System.Drawing.Point(48, 21)
         Me.motivo.Name = "motivo"
         Me.motivo.Size = New System.Drawing.Size(115, 21)
         Me.motivo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -526,11 +385,11 @@ Partial Class frmVacaciones
         Me.nota.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.nota.DisabledBackColor = System.Drawing.Color.White
         Me.nota.ForeColor = System.Drawing.Color.Black
-        Me.nota.Location = New System.Drawing.Point(42, 140)
+        Me.nota.Location = New System.Drawing.Point(48, 67)
         Me.nota.Multiline = True
         Me.nota.Name = "nota"
         Me.nota.PreventEnterBeep = True
-        Me.nota.Size = New System.Drawing.Size(401, 61)
+        Me.nota.Size = New System.Drawing.Size(380, 61)
         Me.nota.TabIndex = 2
         '
         'DateTimeInput2
@@ -543,7 +402,7 @@ Partial Class frmVacaciones
         Me.DateTimeInput2.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown
         Me.DateTimeInput2.ButtonDropDown.Visible = True
         Me.DateTimeInput2.IsPopupCalendarOpen = False
-        Me.DateTimeInput2.Location = New System.Drawing.Point(281, 66)
+        Me.DateTimeInput2.Location = New System.Drawing.Point(310, 21)
         '
         '
         '
@@ -588,7 +447,7 @@ Partial Class frmVacaciones
         Me.DateTimeInput1.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown
         Me.DateTimeInput1.ButtonDropDown.Visible = True
         Me.DateTimeInput1.IsPopupCalendarOpen = False
-        Me.DateTimeInput1.Location = New System.Drawing.Point(157, 65)
+        Me.DateTimeInput1.Location = New System.Drawing.Point(186, 20)
         '
         '
         '
@@ -623,24 +482,6 @@ Partial Class frmVacaciones
         Me.DateTimeInput1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.DateTimeInput1.TabIndex = 0
         '
-        'LabelX7
-        '
-        '
-        '
-        '
-        Me.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX7.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.LabelX7.ImageTextSpacing = 0
-        Me.LabelX7.Location = New System.Drawing.Point(575, 208)
-        Me.LabelX7.Name = "LabelX7"
-        Me.LabelX7.Size = New System.Drawing.Size(143, 138)
-        Me.LabelX7.Symbol = ""
-        Me.LabelX7.SymbolSize = 32.0!
-        Me.LabelX7.TabIndex = 13
-        Me.LabelX7.Text = "<b>CARTA VACACIÓN:</b><br/>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Seleccione la fila de la vacacion con la flecha de l" &
-    "a primer columna"
-        '
         'Vacacion_regTableAdapter
         '
         Me.Vacacion_regTableAdapter.ClearBeforeFill = True
@@ -649,25 +490,21 @@ Partial Class frmVacaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(730, 446)
-        Me.Controls.Add(Me.LabelX7)
+        Me.ClientSize = New System.Drawing.Size(801, 436)
         Me.Controls.Add(Me.PanelEx1)
         Me.Controls.Add(Me.DataGridViewX1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForeColor = System.Drawing.Color.Black
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmVacaciones"
-        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Vacaciones"
         CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VacacionregBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsVacaciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelEx1.ResumeLayout(False)
-        CType(Me.DiasRangoAdic, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.fechaI_Adic, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.fechaF_Adic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DiasRango, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DiasSaldo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateTimeInput2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -701,10 +538,4 @@ Partial Class frmVacaciones
     Friend WithEvents fechaF As DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn
     Friend WithEvents MotivoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NotaDataGridViewTextBoxColumn As DevComponents.DotNetBar.Controls.DataGridViewMaskedTextBoxAdvColumn
-    Friend WithEvents LabelX7 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents DiasRangoAdic As DevComponents.Editors.IntegerInput
-    Friend WithEvents fechaI_Adic As DevComponents.Editors.DateTimeAdv.DateTimeInput
-    Friend WithEvents fechaF_Adic As DevComponents.Editors.DateTimeAdv.DateTimeInput
-    Friend WithEvents LabelX9 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents LabelX8 As DevComponents.DotNetBar.LabelX
 End Class

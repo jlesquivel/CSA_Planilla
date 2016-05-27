@@ -19,7 +19,7 @@ Partial Class frmConfiguracion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim Id_dptoLabel As System.Windows.Forms.Label
         Dim Nombre_JurídicoLabel As System.Windows.Forms.Label
         Dim Cédula_JurídicaLabel As System.Windows.Forms.Label
@@ -32,78 +32,80 @@ Partial Class frmConfiguracion
         Dim WebLabel As System.Windows.Forms.Label
         Dim LogoLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConfiguracion))
-        Me.TabControl1 = New DevComponents.DotNetBar.TabControl
-        Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel
-        Me.Id_dptoTextBox = New System.Windows.Forms.TextBox
-        Me.ConfiguracionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PlanillaDataSet = New Planilla.planillaDataSet
-        Me.Nombre_JurídicoTextBox = New System.Windows.Forms.TextBox
-        Me.Cédula_JurídicaTextBox = New System.Windows.Forms.TextBox
-        Me.Nombre_ComercialTextBox = New System.Windows.Forms.TextBox
-        Me.CiudadTextBox = New System.Windows.Forms.TextBox
-        Me.DirecciónTextBox = New System.Windows.Forms.TextBox
-        Me.TelefonoTextBox = New System.Windows.Forms.TextBox
-        Me.FaxTextBox = New System.Windows.Forms.TextBox
-        Me.EmailTextBox = New System.Windows.Forms.TextBox
-        Me.WebTextBox = New System.Windows.Forms.TextBox
-        Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel
-        Me.LogoPictureBox = New System.Windows.Forms.PictureBox
-        Me.TabItem4 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel
-        Me.GroupPanel2 = New DevComponents.DotNetBar.Controls.GroupPanel
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.AdmSysCargoTextBox = New System.Windows.Forms.TextBox
-        Me.AdmSysTratoTextBox = New System.Windows.Forms.TextBox
-        Me.AdmSysNombreTextBox = New System.Windows.Forms.TextBox
-        Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
-        Me.AdmOrgTratoTextBox = New System.Windows.Forms.TextBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.AdmOrgNombreTextBox = New System.Windows.Forms.TextBox
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.AdmOrgCargoTextBox = New System.Windows.Forms.TextBox
-        Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel
-        Me.ConfiguracionValoresDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
+        Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.ConfiguracionValoresDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ConfiguracionValoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ConfiguracionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PlanillaDataSet = New Planilla.planillaDataSet()
         Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.ConfiguracionTableAdapter = New Planilla.planillaDataSetTableAdapters.configuracionTableAdapter
+        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
+        Me.TabItem4 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.GroupPanel2 = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.AdmSysCargoTextBox = New System.Windows.Forms.TextBox()
+        Me.AdmSysTratoTextBox = New System.Windows.Forms.TextBox()
+        Me.AdmSysNombreTextBox = New System.Windows.Forms.TextBox()
+        Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.AdmOrgTratoTextBox = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.AdmOrgNombreTextBox = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.AdmOrgCargoTextBox = New System.Windows.Forms.TextBox()
+        Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.Id_dptoTextBox = New System.Windows.Forms.TextBox()
+        Me.Nombre_JurídicoTextBox = New System.Windows.Forms.TextBox()
+        Me.Cédula_JurídicaTextBox = New System.Windows.Forms.TextBox()
+        Me.Nombre_ComercialTextBox = New System.Windows.Forms.TextBox()
+        Me.CiudadTextBox = New System.Windows.Forms.TextBox()
+        Me.DirecciónTextBox = New System.Windows.Forms.TextBox()
+        Me.TelefonoTextBox = New System.Windows.Forms.TextBox()
+        Me.FaxTextBox = New System.Windows.Forms.TextBox()
+        Me.EmailTextBox = New System.Windows.Forms.TextBox()
+        Me.WebTextBox = New System.Windows.Forms.TextBox()
+        Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.ConfiguracionTableAdapter = New Planilla.planillaDataSetTableAdapters.configuracionTableAdapter()
         Me.ConfiguracionBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.ConfiguracionBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.ConfiguracionValoresTableAdapter = New Planilla.planillaDataSetTableAdapters.configuracionValoresTableAdapter
-        Id_dptoLabel = New System.Windows.Forms.Label
-        Nombre_JurídicoLabel = New System.Windows.Forms.Label
-        Cédula_JurídicaLabel = New System.Windows.Forms.Label
-        Nombre_ComercialLabel = New System.Windows.Forms.Label
-        CiudadLabel = New System.Windows.Forms.Label
-        DirecciónLabel = New System.Windows.Forms.Label
-        TelefonoLabel = New System.Windows.Forms.Label
-        FaxLabel = New System.Windows.Forms.Label
-        EmailLabel = New System.Windows.Forms.Label
-        WebLabel = New System.Windows.Forms.Label
-        LogoLabel = New System.Windows.Forms.Label
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ConfiguracionBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ConfiguracionValoresTableAdapter = New Planilla.planillaDataSetTableAdapters.configuracionValoresTableAdapter()
+        Id_dptoLabel = New System.Windows.Forms.Label()
+        Nombre_JurídicoLabel = New System.Windows.Forms.Label()
+        Cédula_JurídicaLabel = New System.Windows.Forms.Label()
+        Nombre_ComercialLabel = New System.Windows.Forms.Label()
+        CiudadLabel = New System.Windows.Forms.Label()
+        DirecciónLabel = New System.Windows.Forms.Label()
+        TelefonoLabel = New System.Windows.Forms.Label()
+        FaxLabel = New System.Windows.Forms.Label()
+        EmailLabel = New System.Windows.Forms.Label()
+        WebLabel = New System.Windows.Forms.Label()
+        LogoLabel = New System.Windows.Forms.Label()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
-        Me.TabControlPanel1.SuspendLayout()
+        Me.TabControlPanel3.SuspendLayout()
+        CType(Me.ConfiguracionValoresDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ConfiguracionValoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ConfiguracionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PlanillaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControlPanel4.SuspendLayout()
@@ -111,9 +113,7 @@ Partial Class frmConfiguracion
         Me.TabControlPanel2.SuspendLayout()
         Me.GroupPanel2.SuspendLayout()
         Me.GroupPanel1.SuspendLayout()
-        Me.TabControlPanel3.SuspendLayout()
-        CType(Me.ConfiguracionValoresDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ConfiguracionValoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControlPanel1.SuspendLayout()
         CType(Me.ConfiguracionBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ConfiguracionBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
@@ -232,17 +232,18 @@ Partial Class frmConfiguracion
         '
         Me.TabControl1.BackColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.TabControl1.CanReorderTabs = True
-        Me.TabControl1.Controls.Add(Me.TabControlPanel3)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel4)
-        Me.TabControl1.Controls.Add(Me.TabControlPanel2)
         Me.TabControl1.Controls.Add(Me.TabControlPanel1)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel2)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel4)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel3)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.ForeColor = System.Drawing.Color.Black
         Me.TabControl1.Location = New System.Drawing.Point(0, 25)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TabControl1.SelectedTabIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(378, 302)
-        Me.TabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Office2007Document
+        Me.TabControl1.Size = New System.Drawing.Size(508, 312)
+        Me.TabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
         Me.TabControl1.Tabs.Add(Me.TabItem1)
@@ -250,6 +251,350 @@ Partial Class frmConfiguracion
         Me.TabControl1.Tabs.Add(Me.TabItem3)
         Me.TabControl1.Tabs.Add(Me.TabItem4)
         Me.TabControl1.Text = "Logo"
+        '
+        'TabControlPanel3
+        '
+        Me.TabControlPanel3.AutoScroll = True
+        Me.TabControlPanel3.Controls.Add(Me.ConfiguracionValoresDataGridView)
+        Me.TabControlPanel3.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel3.Location = New System.Drawing.Point(0, 22)
+        Me.TabControlPanel3.Name = "TabControlPanel3"
+        Me.TabControlPanel3.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel3.Size = New System.Drawing.Size(508, 280)
+        Me.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.White
+        Me.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.TabControlPanel3.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel3.Style.GradientAngle = 90
+        Me.TabControlPanel3.TabIndex = 3
+        Me.TabControlPanel3.TabItem = Me.TabItem3
+        '
+        'ConfiguracionValoresDataGridView
+        '
+        Me.ConfiguracionValoresDataGridView.AutoGenerateColumns = False
+        Me.ConfiguracionValoresDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.ConfiguracionValoresDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.ConfiguracionValoresDataGridView.DataSource = Me.ConfiguracionValoresBindingSource
+        Me.ConfiguracionValoresDataGridView.Location = New System.Drawing.Point(4, 4)
+        Me.ConfiguracionValoresDataGridView.Name = "ConfiguracionValoresDataGridView"
+        Me.ConfiguracionValoresDataGridView.RowHeadersWidth = 21
+        Me.ConfiguracionValoresDataGridView.Size = New System.Drawing.Size(446, 255)
+        Me.ConfiguracionValoresDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id_config"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "id_config"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Grupo"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Grupo"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Nombre Valor"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Nombre Valor"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "valorT"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "valorT"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "valorN"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "valorN"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'ConfiguracionValoresBindingSource
+        '
+        Me.ConfiguracionValoresBindingSource.DataMember = "FK_configuracionValores_configuracion"
+        Me.ConfiguracionValoresBindingSource.DataSource = Me.ConfiguracionBindingSource
+        '
+        'ConfiguracionBindingSource
+        '
+        Me.ConfiguracionBindingSource.DataMember = "configuracion"
+        Me.ConfiguracionBindingSource.DataSource = Me.PlanillaDataSet
+        '
+        'PlanillaDataSet
+        '
+        Me.PlanillaDataSet.DataSetName = "planillaDataSet"
+        Me.PlanillaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TabItem3
+        '
+        Me.TabItem3.AttachedControl = Me.TabControlPanel3
+        Me.TabItem3.Name = "TabItem3"
+        Me.TabItem3.Text = "Valores"
+        '
+        'TabControlPanel4
+        '
+        Me.TabControlPanel4.Controls.Add(LogoLabel)
+        Me.TabControlPanel4.Controls.Add(Me.LogoPictureBox)
+        Me.TabControlPanel4.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 22)
+        Me.TabControlPanel4.Name = "TabControlPanel4"
+        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel4.Size = New System.Drawing.Size(508, 280)
+        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.White
+        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel4.Style.GradientAngle = 90
+        Me.TabControlPanel4.TabIndex = 4
+        Me.TabControlPanel4.TabItem = Me.TabItem4
+        '
+        'LogoPictureBox
+        '
+        Me.LogoPictureBox.BackColor = System.Drawing.Color.Transparent
+        Me.LogoPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.ConfiguracionBindingSource, "logo", True))
+        Me.LogoPictureBox.Location = New System.Drawing.Point(54, 18)
+        Me.LogoPictureBox.Name = "LogoPictureBox"
+        Me.LogoPictureBox.Size = New System.Drawing.Size(222, 250)
+        Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.LogoPictureBox.TabIndex = 1
+        Me.LogoPictureBox.TabStop = False
+        '
+        'TabItem4
+        '
+        Me.TabItem4.AttachedControl = Me.TabControlPanel4
+        Me.TabItem4.Name = "TabItem4"
+        Me.TabItem4.Text = "Logo"
+        '
+        'TabControlPanel2
+        '
+        Me.TabControlPanel2.Controls.Add(Me.GroupPanel2)
+        Me.TabControlPanel2.Controls.Add(Me.GroupPanel1)
+        Me.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel2.Location = New System.Drawing.Point(0, 22)
+        Me.TabControlPanel2.Name = "TabControlPanel2"
+        Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel2.Size = New System.Drawing.Size(508, 280)
+        Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.White
+        Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.TabControlPanel2.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel2.Style.GradientAngle = 90
+        Me.TabControlPanel2.TabIndex = 2
+        Me.TabControlPanel2.TabItem = Me.TabItem2
+        '
+        'GroupPanel2
+        '
+        Me.GroupPanel2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupPanel2.CanvasColor = System.Drawing.SystemColors.Control
+        Me.GroupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.GroupPanel2.Controls.Add(Me.Label7)
+        Me.GroupPanel2.Controls.Add(Me.Label10)
+        Me.GroupPanel2.Controls.Add(Me.Label11)
+        Me.GroupPanel2.Controls.Add(Me.AdmSysCargoTextBox)
+        Me.GroupPanel2.Controls.Add(Me.AdmSysTratoTextBox)
+        Me.GroupPanel2.Controls.Add(Me.AdmSysNombreTextBox)
+        Me.GroupPanel2.DisabledBackColor = System.Drawing.Color.Empty
+        Me.GroupPanel2.Location = New System.Drawing.Point(24, 117)
+        Me.GroupPanel2.Name = "GroupPanel2"
+        Me.GroupPanel2.Size = New System.Drawing.Size(330, 105)
+        '
+        '
+        '
+        Me.GroupPanel2.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.GroupPanel2.Style.BackColorGradientAngle = 90
+        Me.GroupPanel2.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.GroupPanel2.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel2.Style.BorderBottomWidth = 1
+        Me.GroupPanel2.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.GroupPanel2.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel2.Style.BorderLeftWidth = 1
+        Me.GroupPanel2.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel2.Style.BorderRightWidth = 1
+        Me.GroupPanel2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel2.Style.BorderTopWidth = 1
+        Me.GroupPanel2.Style.CornerDiameter = 4
+        Me.GroupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.GroupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
+        Me.GroupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.GroupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
+        '
+        '
+        '
+        Me.GroupPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.GroupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.GroupPanel2.TabIndex = 8
+        Me.GroupPanel2.Text = "Sistema"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Location = New System.Drawing.Point(33, 58)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(35, 13)
+        Me.Label7.TabIndex = 12
+        Me.Label7.Text = "Cargo"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Location = New System.Drawing.Point(24, 33)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(44, 13)
+        Me.Label10.TabIndex = 11
+        Me.Label10.Text = "Nombre"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Location = New System.Drawing.Point(36, 2)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(32, 13)
+        Me.Label11.TabIndex = 10
+        Me.Label11.Text = "Trato"
+        '
+        'AdmSysCargoTextBox
+        '
+        Me.AdmSysCargoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmSysCargo", True))
+        Me.AdmSysCargoTextBox.Location = New System.Drawing.Point(74, 52)
+        Me.AdmSysCargoTextBox.Name = "AdmSysCargoTextBox"
+        Me.AdmSysCargoTextBox.Size = New System.Drawing.Size(224, 20)
+        Me.AdmSysCargoTextBox.TabIndex = 51
+        '
+        'AdmSysTratoTextBox
+        '
+        Me.AdmSysTratoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmSysTrato", True))
+        Me.AdmSysTratoTextBox.Location = New System.Drawing.Point(74, -1)
+        Me.AdmSysTratoTextBox.Name = "AdmSysTratoTextBox"
+        Me.AdmSysTratoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.AdmSysTratoTextBox.TabIndex = 47
+        '
+        'AdmSysNombreTextBox
+        '
+        Me.AdmSysNombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmSysNombre", True))
+        Me.AdmSysNombreTextBox.Location = New System.Drawing.Point(74, 26)
+        Me.AdmSysNombreTextBox.Name = "AdmSysNombreTextBox"
+        Me.AdmSysNombreTextBox.Size = New System.Drawing.Size(224, 20)
+        Me.AdmSysNombreTextBox.TabIndex = 49
+        '
+        'GroupPanel1
+        '
+        Me.GroupPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupPanel1.CanvasColor = System.Drawing.SystemColors.Control
+        Me.GroupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.GroupPanel1.Controls.Add(Me.AdmOrgTratoTextBox)
+        Me.GroupPanel1.Controls.Add(Me.Label9)
+        Me.GroupPanel1.Controls.Add(Me.Label8)
+        Me.GroupPanel1.Controls.Add(Me.AdmOrgNombreTextBox)
+        Me.GroupPanel1.Controls.Add(Me.Label6)
+        Me.GroupPanel1.Controls.Add(Me.AdmOrgCargoTextBox)
+        Me.GroupPanel1.DisabledBackColor = System.Drawing.Color.Empty
+        Me.GroupPanel1.Location = New System.Drawing.Point(24, 4)
+        Me.GroupPanel1.Name = "GroupPanel1"
+        Me.GroupPanel1.Size = New System.Drawing.Size(330, 105)
+        '
+        '
+        '
+        Me.GroupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.GroupPanel1.Style.BackColorGradientAngle = 90
+        Me.GroupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.GroupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderBottomWidth = 1
+        Me.GroupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.GroupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderLeftWidth = 1
+        Me.GroupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderRightWidth = 1
+        Me.GroupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderTopWidth = 1
+        Me.GroupPanel1.Style.CornerDiameter = 4
+        Me.GroupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.GroupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
+        Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.GroupPanel1.TabIndex = 7
+        Me.GroupPanel1.Text = "Organización"
+        '
+        'AdmOrgTratoTextBox
+        '
+        Me.AdmOrgTratoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmOrgTrato", True))
+        Me.AdmOrgTratoTextBox.Location = New System.Drawing.Point(74, 3)
+        Me.AdmOrgTratoTextBox.Name = "AdmOrgTratoTextBox"
+        Me.AdmOrgTratoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.AdmOrgTratoTextBox.TabIndex = 41
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Location = New System.Drawing.Point(33, 58)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(35, 13)
+        Me.Label9.TabIndex = 12
+        Me.Label9.Text = "Cargo"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Location = New System.Drawing.Point(24, 33)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(44, 13)
+        Me.Label8.TabIndex = 11
+        Me.Label8.Text = "Nombre"
+        '
+        'AdmOrgNombreTextBox
+        '
+        Me.AdmOrgNombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmOrgNombre", True))
+        Me.AdmOrgNombreTextBox.Location = New System.Drawing.Point(74, 28)
+        Me.AdmOrgNombreTextBox.Name = "AdmOrgNombreTextBox"
+        Me.AdmOrgNombreTextBox.Size = New System.Drawing.Size(224, 20)
+        Me.AdmOrgNombreTextBox.TabIndex = 43
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Location = New System.Drawing.Point(36, 2)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(32, 13)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "Trato"
+        '
+        'AdmOrgCargoTextBox
+        '
+        Me.AdmOrgCargoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmOrgCargo", True))
+        Me.AdmOrgCargoTextBox.Location = New System.Drawing.Point(74, 54)
+        Me.AdmOrgCargoTextBox.Name = "AdmOrgCargoTextBox"
+        Me.AdmOrgCargoTextBox.Size = New System.Drawing.Size(224, 20)
+        Me.AdmOrgCargoTextBox.TabIndex = 45
+        '
+        'TabItem2
+        '
+        Me.TabItem2.AttachedControl = Me.TabControlPanel2
+        Me.TabItem2.Name = "TabItem2"
+        Me.TabItem2.Text = "Administrador"
         '
         'TabControlPanel1
         '
@@ -274,17 +619,17 @@ Partial Class frmConfiguracion
         Me.TabControlPanel1.Controls.Add(Me.EmailTextBox)
         Me.TabControlPanel1.Controls.Add(WebLabel)
         Me.TabControlPanel1.Controls.Add(Me.WebTextBox)
+        Me.TabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty
         Me.TabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel1.Location = New System.Drawing.Point(0, 22)
+        Me.TabControlPanel1.Location = New System.Drawing.Point(0, 25)
         Me.TabControlPanel1.Name = "TabControlPanel1"
         Me.TabControlPanel1.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel1.Size = New System.Drawing.Size(378, 280)
-        Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(253, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.TabControlPanel1.Size = New System.Drawing.Size(508, 287)
+        Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.White
         Me.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(146, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(199, Byte), Integer))
+        Me.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.TabControlPanel1.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
         Me.TabControlPanel1.Style.GradientAngle = 90
         Me.TabControlPanel1.TabIndex = 1
         Me.TabControlPanel1.TabItem = Me.TabItem1
@@ -296,16 +641,6 @@ Partial Class frmConfiguracion
         Me.Id_dptoTextBox.Name = "Id_dptoTextBox"
         Me.Id_dptoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Id_dptoTextBox.TabIndex = 9
-        '
-        'ConfiguracionBindingSource
-        '
-        Me.ConfiguracionBindingSource.DataMember = "configuracion"
-        Me.ConfiguracionBindingSource.DataSource = Me.PlanillaDataSet
-        '
-        'PlanillaDataSet
-        '
-        Me.PlanillaDataSet.DataSetName = "planillaDataSet"
-        Me.PlanillaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Nombre_JurídicoTextBox
         '
@@ -385,322 +720,6 @@ Partial Class frmConfiguracion
         Me.TabItem1.Name = "TabItem1"
         Me.TabItem1.Text = "Organización"
         '
-        'TabControlPanel4
-        '
-        Me.TabControlPanel4.Controls.Add(LogoLabel)
-        Me.TabControlPanel4.Controls.Add(Me.LogoPictureBox)
-        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 22)
-        Me.TabControlPanel4.Name = "TabControlPanel4"
-        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel4.Size = New System.Drawing.Size(378, 280)
-        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(253, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(146, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel4.Style.GradientAngle = 90
-        Me.TabControlPanel4.TabIndex = 4
-        Me.TabControlPanel4.TabItem = Me.TabItem4
-        '
-        'LogoPictureBox
-        '
-        Me.LogoPictureBox.BackColor = System.Drawing.Color.Transparent
-        Me.LogoPictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.ConfiguracionBindingSource, "logo", True))
-        Me.LogoPictureBox.Location = New System.Drawing.Point(54, 18)
-        Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.LogoPictureBox.Size = New System.Drawing.Size(222, 250)
-        Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.LogoPictureBox.TabIndex = 1
-        Me.LogoPictureBox.TabStop = False
-        '
-        'TabItem4
-        '
-        Me.TabItem4.AttachedControl = Me.TabControlPanel4
-        Me.TabItem4.Name = "TabItem4"
-        Me.TabItem4.Text = "Logo"
-        '
-        'TabControlPanel2
-        '
-        Me.TabControlPanel2.Controls.Add(Me.GroupPanel2)
-        Me.TabControlPanel2.Controls.Add(Me.GroupPanel1)
-        Me.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel2.Location = New System.Drawing.Point(0, 22)
-        Me.TabControlPanel2.Name = "TabControlPanel2"
-        Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel2.Size = New System.Drawing.Size(378, 280)
-        Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(253, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(146, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.TabControlPanel2.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel2.Style.GradientAngle = 90
-        Me.TabControlPanel2.TabIndex = 2
-        Me.TabControlPanel2.TabItem = Me.TabItem2
-        '
-        'GroupPanel2
-        '
-        Me.GroupPanel2.BackColor = System.Drawing.Color.Transparent
-        Me.GroupPanel2.CanvasColor = System.Drawing.SystemColors.Control
-        Me.GroupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
-        Me.GroupPanel2.Controls.Add(Me.Label7)
-        Me.GroupPanel2.Controls.Add(Me.Label10)
-        Me.GroupPanel2.Controls.Add(Me.Label11)
-        Me.GroupPanel2.Controls.Add(Me.AdmSysCargoTextBox)
-        Me.GroupPanel2.Controls.Add(Me.AdmSysTratoTextBox)
-        Me.GroupPanel2.Controls.Add(Me.AdmSysNombreTextBox)
-        Me.GroupPanel2.Location = New System.Drawing.Point(24, 117)
-        Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(330, 105)
-        '
-        '
-        '
-        Me.GroupPanel2.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
-        Me.GroupPanel2.Style.BackColorGradientAngle = 90
-        Me.GroupPanel2.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.GroupPanel2.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel2.Style.BorderBottomWidth = 1
-        Me.GroupPanel2.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        Me.GroupPanel2.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel2.Style.BorderLeftWidth = 1
-        Me.GroupPanel2.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel2.Style.BorderRightWidth = 1
-        Me.GroupPanel2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel2.Style.BorderTopWidth = 1
-        Me.GroupPanel2.Style.CornerDiameter = 4
-        Me.GroupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.GroupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
-        Me.GroupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
-        Me.GroupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
-        Me.GroupPanel2.TabIndex = 8
-        Me.GroupPanel2.Text = "Sistema"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Location = New System.Drawing.Point(33, 58)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(35, 13)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Cargo"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Location = New System.Drawing.Point(24, 33)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(44, 13)
-        Me.Label10.TabIndex = 11
-        Me.Label10.Text = "Nombre"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Location = New System.Drawing.Point(36, 2)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(32, 13)
-        Me.Label11.TabIndex = 10
-        Me.Label11.Text = "Trato"
-        '
-        'AdmSysCargoTextBox
-        '
-        Me.AdmSysCargoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmSysCargo", True))
-        Me.AdmSysCargoTextBox.Location = New System.Drawing.Point(74, 52)
-        Me.AdmSysCargoTextBox.Name = "AdmSysCargoTextBox"
-        Me.AdmSysCargoTextBox.Size = New System.Drawing.Size(224, 20)
-        Me.AdmSysCargoTextBox.TabIndex = 51
-        '
-        'AdmSysTratoTextBox
-        '
-        Me.AdmSysTratoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmSysTrato", True))
-        Me.AdmSysTratoTextBox.Location = New System.Drawing.Point(74, -1)
-        Me.AdmSysTratoTextBox.Name = "AdmSysTratoTextBox"
-        Me.AdmSysTratoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.AdmSysTratoTextBox.TabIndex = 47
-        '
-        'AdmSysNombreTextBox
-        '
-        Me.AdmSysNombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmSysNombre", True))
-        Me.AdmSysNombreTextBox.Location = New System.Drawing.Point(74, 26)
-        Me.AdmSysNombreTextBox.Name = "AdmSysNombreTextBox"
-        Me.AdmSysNombreTextBox.Size = New System.Drawing.Size(224, 20)
-        Me.AdmSysNombreTextBox.TabIndex = 49
-        '
-        'GroupPanel1
-        '
-        Me.GroupPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupPanel1.CanvasColor = System.Drawing.SystemColors.Control
-        Me.GroupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
-        Me.GroupPanel1.Controls.Add(Me.AdmOrgTratoTextBox)
-        Me.GroupPanel1.Controls.Add(Me.Label9)
-        Me.GroupPanel1.Controls.Add(Me.Label8)
-        Me.GroupPanel1.Controls.Add(Me.AdmOrgNombreTextBox)
-        Me.GroupPanel1.Controls.Add(Me.Label6)
-        Me.GroupPanel1.Controls.Add(Me.AdmOrgCargoTextBox)
-        Me.GroupPanel1.Location = New System.Drawing.Point(24, 4)
-        Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(330, 105)
-        '
-        '
-        '
-        Me.GroupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
-        Me.GroupPanel1.Style.BackColorGradientAngle = 90
-        Me.GroupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.GroupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel1.Style.BorderBottomWidth = 1
-        Me.GroupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        Me.GroupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel1.Style.BorderLeftWidth = 1
-        Me.GroupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel1.Style.BorderRightWidth = 1
-        Me.GroupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel1.Style.BorderTopWidth = 1
-        Me.GroupPanel1.Style.CornerDiameter = 4
-        Me.GroupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.GroupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
-        Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
-        Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
-        Me.GroupPanel1.TabIndex = 7
-        Me.GroupPanel1.Text = "Organización"
-        '
-        'AdmOrgTratoTextBox
-        '
-        Me.AdmOrgTratoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmOrgTrato", True))
-        Me.AdmOrgTratoTextBox.Location = New System.Drawing.Point(74, 3)
-        Me.AdmOrgTratoTextBox.Name = "AdmOrgTratoTextBox"
-        Me.AdmOrgTratoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.AdmOrgTratoTextBox.TabIndex = 41
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Location = New System.Drawing.Point(33, 58)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(35, 13)
-        Me.Label9.TabIndex = 12
-        Me.Label9.Text = "Cargo"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Location = New System.Drawing.Point(24, 33)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(44, 13)
-        Me.Label8.TabIndex = 11
-        Me.Label8.Text = "Nombre"
-        '
-        'AdmOrgNombreTextBox
-        '
-        Me.AdmOrgNombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmOrgNombre", True))
-        Me.AdmOrgNombreTextBox.Location = New System.Drawing.Point(74, 28)
-        Me.AdmOrgNombreTextBox.Name = "AdmOrgNombreTextBox"
-        Me.AdmOrgNombreTextBox.Size = New System.Drawing.Size(224, 20)
-        Me.AdmOrgNombreTextBox.TabIndex = 43
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Location = New System.Drawing.Point(36, 2)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(32, 13)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "Trato"
-        '
-        'AdmOrgCargoTextBox
-        '
-        Me.AdmOrgCargoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ConfiguracionBindingSource, "AdmOrgCargo", True))
-        Me.AdmOrgCargoTextBox.Location = New System.Drawing.Point(74, 54)
-        Me.AdmOrgCargoTextBox.Name = "AdmOrgCargoTextBox"
-        Me.AdmOrgCargoTextBox.Size = New System.Drawing.Size(224, 20)
-        Me.AdmOrgCargoTextBox.TabIndex = 45
-        '
-        'TabItem2
-        '
-        Me.TabItem2.AttachedControl = Me.TabControlPanel2
-        Me.TabItem2.Name = "TabItem2"
-        Me.TabItem2.Text = "Administrador"
-        '
-        'TabControlPanel3
-        '
-        Me.TabControlPanel3.AutoScroll = True
-        Me.TabControlPanel3.Controls.Add(Me.ConfiguracionValoresDataGridView)
-        Me.TabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel3.Location = New System.Drawing.Point(0, 22)
-        Me.TabControlPanel3.Name = "TabControlPanel3"
-        Me.TabControlPanel3.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel3.Size = New System.Drawing.Size(378, 280)
-        Me.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(253, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(146, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.TabControlPanel3.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel3.Style.GradientAngle = 90
-        Me.TabControlPanel3.TabIndex = 3
-        Me.TabControlPanel3.TabItem = Me.TabItem3
-        '
-        'ConfiguracionValoresDataGridView
-        '
-        Me.ConfiguracionValoresDataGridView.AutoGenerateColumns = False
-        Me.ConfiguracionValoresDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.ConfiguracionValoresDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
-        Me.ConfiguracionValoresDataGridView.DataSource = Me.ConfiguracionValoresBindingSource
-        Me.ConfiguracionValoresDataGridView.Location = New System.Drawing.Point(12, 13)
-        Me.ConfiguracionValoresDataGridView.Name = "ConfiguracionValoresDataGridView"
-        Me.ConfiguracionValoresDataGridView.RowHeadersWidth = 21
-        Me.ConfiguracionValoresDataGridView.Size = New System.Drawing.Size(354, 255)
-        Me.ConfiguracionValoresDataGridView.TabIndex = 0
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id_config"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "id_config"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Grupo"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Grupo"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Nombre Valor"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Nombre Valor"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "valorT"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "valorT"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "valorN"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "valorN"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'ConfiguracionValoresBindingSource
-        '
-        Me.ConfiguracionValoresBindingSource.DataMember = "FK_configuracionValores_configuracion"
-        Me.ConfiguracionValoresBindingSource.DataSource = Me.ConfiguracionBindingSource
-        '
-        'TabItem3
-        '
-        Me.TabItem3.AttachedControl = Me.TabControlPanel3
-        Me.TabItem3.Name = "TabItem3"
-        Me.TabItem3.Text = "Valores"
-        '
         'ConfiguracionTableAdapter
         '
         Me.ConfiguracionTableAdapter.ClearBeforeFill = True
@@ -721,7 +740,7 @@ Partial Class frmConfiguracion
         Me.ConfiguracionBindingNavigator.Name = "ConfiguracionBindingNavigator"
         Me.ConfiguracionBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
         Me.ConfiguracionBindingNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ConfiguracionBindingNavigator.Size = New System.Drawing.Size(378, 25)
+        Me.ConfiguracionBindingNavigator.Size = New System.Drawing.Size(508, 25)
         Me.ConfiguracionBindingNavigator.TabIndex = 1
         Me.ConfiguracionBindingNavigator.Text = "BindingNavigator1"
         '
@@ -737,7 +756,7 @@ Partial Class frmConfiguracion
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(38, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
         Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
         '
@@ -826,9 +845,10 @@ Partial Class frmConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(378, 327)
+        Me.ClientSize = New System.Drawing.Size(508, 337)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ConfiguracionBindingNavigator)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -838,8 +858,9 @@ Partial Class frmConfiguracion
         Me.Text = "Configuración"
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
-        Me.TabControlPanel1.ResumeLayout(False)
-        Me.TabControlPanel1.PerformLayout()
+        Me.TabControlPanel3.ResumeLayout(False)
+        CType(Me.ConfiguracionValoresDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ConfiguracionValoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ConfiguracionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PlanillaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlPanel4.ResumeLayout(False)
@@ -850,9 +871,8 @@ Partial Class frmConfiguracion
         Me.GroupPanel2.PerformLayout()
         Me.GroupPanel1.ResumeLayout(False)
         Me.GroupPanel1.PerformLayout()
-        Me.TabControlPanel3.ResumeLayout(False)
-        CType(Me.ConfiguracionValoresDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ConfiguracionValoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControlPanel1.ResumeLayout(False)
+        Me.TabControlPanel1.PerformLayout()
         CType(Me.ConfiguracionBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ConfiguracionBindingNavigator.ResumeLayout(False)
         Me.ConfiguracionBindingNavigator.PerformLayout()

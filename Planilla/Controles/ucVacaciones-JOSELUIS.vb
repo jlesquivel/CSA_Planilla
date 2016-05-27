@@ -24,7 +24,6 @@
         'vent.cargarVentana(frmVacaciones, Me.ParentForm.ParentForm)
         Dim frmVaca1 As New frmVacaciones(val, sald)
         frmVaca1.Show()
-
     End Sub
 
     ''' <summary>

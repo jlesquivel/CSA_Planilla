@@ -22,18 +22,18 @@ Partial Class cPagos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
-        Me.ContratoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.PlanillaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.FechaInicio = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.FechaFin = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.MontoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PagosEmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PlanillaDataSet = New Planilla.planillaDataSet
-        Me.PagosEmpleadoTableAdapter = New Planilla.planillaDataSetTableAdapters.PagosEmpleadoTableAdapter
+        Me.PlanillaDataSet = New Planilla.planillaDataSet()
+        Me.PagosEmpleadoTableAdapter = New Planilla.planillaDataSetTableAdapters.PagosEmpleadoTableAdapter()
+        Me.ContratoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PlanillaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaInicio = New DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn()
+        Me.FechaFin = New DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn()
+        Me.MontoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PagosEmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PlanillaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,6 +60,20 @@ Partial Class cPagos
         Me.DataGridView1.Size = New System.Drawing.Size(357, 257)
         Me.DataGridView1.TabIndex = 0
         '
+        'PagosEmpleadoBindingSource
+        '
+        Me.PagosEmpleadoBindingSource.DataMember = "PagosEmpleado"
+        Me.PagosEmpleadoBindingSource.DataSource = Me.PlanillaDataSet
+        '
+        'PlanillaDataSet
+        '
+        Me.PlanillaDataSet.DataSetName = "planillaDataSet"
+        Me.PlanillaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PagosEmpleadoTableAdapter
+        '
+        Me.PagosEmpleadoTableAdapter.ClearBeforeFill = True
+        '
         'ContratoDataGridViewTextBoxColumn
         '
         Me.ContratoDataGridViewTextBoxColumn.DataPropertyName = "Contrato"
@@ -78,19 +92,69 @@ Partial Class cPagos
         '
         'FechaInicio
         '
+        '
+        '
+        '
+        Me.FechaInicio.BackgroundStyle.Class = "DataGridViewDateTimeBorder"
+        Me.FechaInicio.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.FechaInicio.ButtonDropDown.Visible = True
         Me.FechaInicio.DataPropertyName = "FechaInicio"
         Me.FechaInicio.HeaderText = "Fecha Inicio"
+        Me.FechaInicio.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
+        '
+        '
+        '
+        '
+        '
+        '
+        Me.FechaInicio.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.FechaInicio.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
+        '
+        '
+        '
+        Me.FechaInicio.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.FechaInicio.MonthCalendar.DisplayMonth = New Date(2016, 5, 1, 0, 0, 0, 0)
+        '
+        '
+        '
+        Me.FechaInicio.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.FechaInicio.Name = "FechaInicio"
         Me.FechaInicio.ReadOnly = True
-        Me.FechaInicio.Width = 75
+        Me.FechaInicio.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.FechaInicio.Width = 80
         '
         'FechaFin
         '
+        '
+        '
+        '
+        Me.FechaFin.BackgroundStyle.Class = "DataGridViewDateTimeBorder"
+        Me.FechaFin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.FechaFin.ButtonDropDown.Visible = True
         Me.FechaFin.DataPropertyName = "FechaFin"
         Me.FechaFin.HeaderText = "Fecha Fin"
+        Me.FechaFin.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
+        '
+        '
+        '
+        '
+        '
+        '
+        Me.FechaFin.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.FechaFin.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
+        '
+        '
+        '
+        Me.FechaFin.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.FechaFin.MonthCalendar.DisplayMonth = New Date(2016, 5, 1, 0, 0, 0, 0)
+        '
+        '
+        '
+        Me.FechaFin.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.FechaFin.Name = "FechaFin"
         Me.FechaFin.ReadOnly = True
-        Me.FechaFin.Width = 75
+        Me.FechaFin.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.FechaFin.Width = 80
         '
         'MontoDataGridViewTextBoxColumn
         '
@@ -103,20 +167,6 @@ Partial Class cPagos
         Me.MontoDataGridViewTextBoxColumn.HeaderText = "Monto"
         Me.MontoDataGridViewTextBoxColumn.Name = "MontoDataGridViewTextBoxColumn"
         Me.MontoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PagosEmpleadoBindingSource
-        '
-        Me.PagosEmpleadoBindingSource.DataMember = "PagosEmpleado"
-        Me.PagosEmpleadoBindingSource.DataSource = Me.PlanillaDataSet
-        '
-        'PlanillaDataSet
-        '
-        Me.PlanillaDataSet.DataSetName = "planillaDataSet"
-        Me.PlanillaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PagosEmpleadoTableAdapter
-        '
-        Me.PagosEmpleadoTableAdapter.ClearBeforeFill = True
         '
         'cPagos
         '
@@ -135,10 +185,9 @@ Partial Class cPagos
     Friend WithEvents PagosEmpleadoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents PlanillaDataSet As Planilla.planillaDataSet
     Friend WithEvents PagosEmpleadoTableAdapter As Planilla.planillaDataSetTableAdapters.PagosEmpleadoTableAdapter
-    Friend WithEvents ContratoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents PlanillaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FechaInicio As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FechaFin As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents MontoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-
+    Friend WithEvents ContratoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PlanillaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaInicio As DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn
+    Friend WithEvents FechaFin As DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn
+    Friend WithEvents MontoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

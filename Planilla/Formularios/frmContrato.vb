@@ -106,17 +106,17 @@ Public Class frmContrato
     Friend WithEvents ContratosDataGridViewX As Controls.DataGridViewX
     Friend WithEvents CategoriasBindingSource As BindingSource
     Friend WithEvents ContratoscategoriasBindingSource As BindingSource
+    Friend WithEvents TabControlPanel6 As TabControlPanel
+    Friend WithEvents TabItem6 As TabItem
+    Friend WithEvents UcVacaciones1 As ucVacaciones
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As Controls.DataGridViewDateTimeInputColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As Controls.DataGridViewDateTimeInputColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewComboBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-    Friend WithEvents TabControlPanel6 As TabControlPanel
-    Friend WithEvents TabItem6 As TabItem
-    Friend WithEvents UcVacaciones1 As ucVacaciones
     Dim cargado As Boolean = False  ' para saber que no es la primera vez
 
     Public Sub New()
@@ -263,36 +263,10 @@ Public Class frmContrato
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.ContratosDataGridViewX = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.CategoriasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ContratosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX()
         Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.TextBoxX1 = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.ComboBoxEx1 = New DevComponents.DotNetBar.Controls.ComboBoxEx()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.TabItem4 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.CPagos1 = New Planilla.cPagos()
-        Me.TabItem5 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
@@ -317,7 +291,26 @@ Public Class frmContrato
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel6 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.UcVacaciones1 = New Planilla.ucVacaciones()
         Me.TabItem6 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel4 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.TextBoxX1 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.ComboBoxEx1 = New DevComponents.DotNetBar.Controls.ComboBoxEx()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.TabItem4 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel5 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.CPagos1 = New Planilla.cPagos()
+        Me.TabItem5 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -342,7 +335,14 @@ Public Class frmContrato
         Me.Highlighter1 = New DevComponents.DotNetBar.Validator.Highlighter()
         Me.UserControl21 = New Planilla.UserControl2()
         Me.BEmpleado1 = New Planilla.bEmpleado()
-        Me.UcVacaciones1 = New Planilla.ucVacaciones()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn()
+        Me.DataGridViewTextBoxColumn3 = New DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.Ds2planilla1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DvContratos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -354,16 +354,16 @@ Public Class frmContrato
         CType(Me.ContratosDataGridViewX, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CategoriasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ContratosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControlPanel4.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControlPanel5.SuspendLayout()
         Me.TabControlPanel2.SuspendLayout()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TabControlPanel6.SuspendLayout()
+        Me.TabControlPanel4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControlPanel5.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
         CType(Me.ContratoscategoriasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -623,9 +623,9 @@ Public Class frmContrato
         '
         Me.TabControl2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TabControl2.CanReorderTabs = True
-        Me.TabControl2.Controls.Add(Me.TabControlPanel6)
-        Me.TabControl2.Controls.Add(Me.TabControlPanel2)
         Me.TabControl2.Controls.Add(Me.TabControlPanel3)
+        Me.TabControl2.Controls.Add(Me.TabControlPanel2)
+        Me.TabControl2.Controls.Add(Me.TabControlPanel6)
         Me.TabControl2.Controls.Add(Me.TabControlPanel4)
         Me.TabControl2.Controls.Add(Me.TabControlPanel5)
         Me.TabControl2.Controls.Add(Me.TabControlPanel1)
@@ -688,7 +688,7 @@ Public Class frmContrato
         Me.PanelEx1.Controls.Add(Me.Label16)
         Me.PanelEx1.Controls.Add(Me.Label17)
         Me.PanelEx1.DisabledBackColor = System.Drawing.Color.Empty
-        Me.PanelEx1.Location = New System.Drawing.Point(104, 25)
+        Me.PanelEx1.Location = New System.Drawing.Point(108, 67)
         Me.PanelEx1.Name = "PanelEx1"
         Me.PanelEx1.Size = New System.Drawing.Size(402, 219)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
@@ -709,7 +709,7 @@ Public Class frmContrato
         Me.MonedaTextBox2.Name = "MonedaTextBox2"
         Me.MonedaTextBox2.Size = New System.Drawing.Size(85, 20)
         Me.MonedaTextBox2.TabIndex = 37
-        Me.MonedaTextBox2.Text = "0,00"
+        Me.MonedaTextBox2.Text = "0.00"
         Me.MonedaTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label21
@@ -861,7 +861,7 @@ Public Class frmContrato
         Me.MonedaTextBox1.Name = "MonedaTextBox1"
         Me.MonedaTextBox1.Size = New System.Drawing.Size(85, 20)
         Me.MonedaTextBox1.TabIndex = 3
-        Me.MonedaTextBox1.Text = "0,00"
+        Me.MonedaTextBox1.Text = "0.00"
         Me.MonedaTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label15
@@ -948,78 +948,10 @@ Public Class frmContrato
         Me.ContratosDataGridViewX.Size = New System.Drawing.Size(526, 261)
         Me.ContratosDataGridViewX.TabIndex = 40
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id_contrato"
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Contrato"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 50
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "fecha_ini"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Inicio"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 60
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "fecha_fin"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Fin"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Width = 60
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "cantidad"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Cantidad"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 50
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "recargo"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "Recargo"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.Width = 50
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "DiasVigente"
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Vigente"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 50
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "id_categoria"
-        Me.DataGridViewTextBoxColumn10.DataSource = Me.CategoriasBindingSource
-        Me.DataGridViewTextBoxColumn10.DisplayMember = "nombre"
-        Me.DataGridViewTextBoxColumn10.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.DataGridViewTextBoxColumn10.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Categoría"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.DataGridViewTextBoxColumn10.ValueMember = "id_cat"
-        '
         'CategoriasBindingSource
         '
         Me.CategoriasBindingSource.DataMember = "categorias"
         Me.CategoriasBindingSource.DataSource = Me.Ds2planilla1
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "estado"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "Estado"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.Width = 50
         '
         'ContratosBindingSource
         '
@@ -1042,224 +974,6 @@ Public Class frmContrato
         Me.TabItem3.AttachedControl = Me.TabControlPanel3
         Me.TabItem3.Name = "TabItem3"
         Me.TabItem3.Text = "Contratos"
-        '
-        'TabControlPanel4
-        '
-        Me.TabControlPanel4.Controls.Add(Me.TextBoxX1)
-        Me.TabControlPanel4.Controls.Add(Me.Label20)
-        Me.TabControlPanel4.Controls.Add(Me.ComboBoxEx1)
-        Me.TabControlPanel4.Controls.Add(Me.PictureBox1)
-        Me.TabControlPanel4.Controls.Add(Me.CheckedListBox1)
-        Me.TabControlPanel4.Controls.Add(Me.Label14)
-        Me.TabControlPanel4.Controls.Add(Me.Label13)
-        Me.TabControlPanel4.Controls.Add(Me.ListBox1)
-        Me.TabControlPanel4.Controls.Add(Me.Label12)
-        Me.TabControlPanel4.Controls.Add(Me.NumericUpDown1)
-        Me.TabControlPanel4.Controls.Add(Me.Label8)
-        Me.TabControlPanel4.Controls.Add(Me.Label2)
-        Me.TabControlPanel4.Controls.Add(Me.DateTimePicker2)
-        Me.TabControlPanel4.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel4.Name = "TabControlPanel4"
-        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel4.Size = New System.Drawing.Size(536, 298)
-        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.White
-        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel4.Style.GradientAngle = 90
-        Me.TabControlPanel4.TabIndex = 4
-        Me.TabControlPanel4.TabItem = Me.TabItem4
-        '
-        'TextBoxX1
-        '
-        Me.TextBoxX1.BackColor = System.Drawing.Color.White
-        '
-        '
-        '
-        Me.TextBoxX1.Border.Class = "TextBoxBorder"
-        Me.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.TextBoxX1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DvContratos, "NombCat", True))
-        Me.TextBoxX1.DisabledBackColor = System.Drawing.Color.White
-        Me.TextBoxX1.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX1.Location = New System.Drawing.Point(88, 37)
-        Me.TextBoxX1.Name = "TextBoxX1"
-        Me.TextBoxX1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxX1.TabIndex = 37
-        '
-        'Label20
-        '
-        Me.Label20.BackColor = System.Drawing.Color.Transparent
-        Me.Label20.ForeColor = System.Drawing.Color.Black
-        Me.Label20.Location = New System.Drawing.Point(16, 13)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(64, 17)
-        Me.Label20.TabIndex = 36
-        Me.Label20.Text = "Contrato"
-        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'ComboBoxEx1
-        '
-        Me.ComboBoxEx1.DataSource = Me.DvContratos
-        Me.ComboBoxEx1.DisplayMember = "id_contrato"
-        Me.ComboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.ComboBoxEx1.ForeColor = System.Drawing.Color.Black
-        Me.ComboBoxEx1.FormattingEnabled = True
-        Me.ComboBoxEx1.ItemHeight = 14
-        Me.ComboBoxEx1.Location = New System.Drawing.Point(88, 9)
-        Me.ComboBoxEx1.Name = "ComboBoxEx1"
-        Me.ComboBoxEx1.Size = New System.Drawing.Size(100, 20)
-        Me.ComboBoxEx1.TabIndex = 35
-        Me.ComboBoxEx1.ValueMember = "id_contrato"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.ForeColor = System.Drawing.Color.Black
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(200, 141)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 34
-        Me.PictureBox1.TabStop = False
-        '
-        'CheckedListBox1
-        '
-        Me.CheckedListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CheckedListBox1.CheckOnClick = True
-        Me.CheckedListBox1.ForeColor = System.Drawing.Color.Black
-        Me.CheckedListBox1.Location = New System.Drawing.Point(242, 6)
-        Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(210, 244)
-        Me.CheckedListBox1.TabIndex = 33
-        '
-        'Label14
-        '
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(8, 110)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(72, 32)
-        Me.Label14.TabIndex = 32
-        Me.Label14.Text = "Perfiles de rebajos"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label13
-        '
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(197, 6)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(40, 16)
-        Me.Label13.TabIndex = 31
-        Me.Label13.Text = "Rubros"
-        '
-        'ListBox1
-        '
-        Me.ListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ListBox1.ForeColor = System.Drawing.Color.Black
-        Me.ListBox1.Location = New System.Drawing.Point(88, 110)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(104, 134)
-        Me.ListBox1.TabIndex = 30
-        '
-        'Label12
-        '
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(16, 87)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(64, 18)
-        Me.Label12.TabIndex = 29
-        Me.Label12.Text = "Anualidad Reconocidas"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.BackColor = System.Drawing.Color.White
-        Me.NumericUpDown1.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Ds2planilla1, "empleados.anualidadReconocida", True))
-        Me.NumericUpDown1.ForeColor = System.Drawing.Color.Black
-        Me.NumericUpDown1.Location = New System.Drawing.Point(88, 83)
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {50, 0, 0, 0})
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(100, 20)
-        Me.NumericUpDown1.TabIndex = 28
-        '
-        'Label8
-        '
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(0, 62)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(80, 17)
-        Me.Label8.TabIndex = 27
-        Me.Label8.Text = "Fecha Ingreso"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(16, 40)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 17)
-        Me.Label2.TabIndex = 26
-        Me.Label2.Text = "Categoria"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DateTimePicker2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.ingreso", True))
-        Me.DateTimePicker2.ForeColor = System.Drawing.Color.Black
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(88, 60)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(100, 20)
-        Me.DateTimePicker2.TabIndex = 25
-        '
-        'TabItem4
-        '
-        Me.TabItem4.AttachedControl = Me.TabControlPanel4
-        Me.TabItem4.Name = "TabItem4"
-        Me.TabItem4.Text = "Rubros"
-        '
-        'TabControlPanel5
-        '
-        Me.TabControlPanel5.Controls.Add(Me.CPagos1)
-        Me.TabControlPanel5.DisabledBackColor = System.Drawing.Color.Empty
-        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 27)
-        Me.TabControlPanel5.Name = "TabControlPanel5"
-        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel5.Size = New System.Drawing.Size(536, 298)
-        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.White
-        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel5.Style.GradientAngle = 90
-        Me.TabControlPanel5.TabIndex = 5
-        Me.TabControlPanel5.TabItem = Me.TabItem5
-        '
-        'CPagos1
-        '
-        Me.CPagos1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CPagos1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CPagos1.ForeColor = System.Drawing.Color.Black
-        Me.CPagos1.Location = New System.Drawing.Point(1, 1)
-        Me.CPagos1.Name = "CPagos1"
-        Me.CPagos1.Size = New System.Drawing.Size(534, 296)
-        Me.CPagos1.TabIndex = 0
-        '
-        'TabItem5
-        '
-        Me.TabItem5.AttachedControl = Me.TabControlPanel5
-        Me.TabItem5.Name = "TabItem5"
-        Me.TabItem5.Text = "Pagos"
         '
         'TabControlPanel2
         '
@@ -1567,11 +1281,238 @@ Public Class frmContrato
         Me.TabControlPanel6.TabIndex = 19
         Me.TabControlPanel6.TabItem = Me.TabItem6
         '
+        'UcVacaciones1
+        '
+        Me.UcVacaciones1.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.UcVacaciones1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.UcVacaciones1.Location = New System.Drawing.Point(1, 1)
+        Me.UcVacaciones1.Name = "UcVacaciones1"
+        Me.UcVacaciones1.Size = New System.Drawing.Size(534, 296)
+        Me.UcVacaciones1.TabIndex = 0
+        '
         'TabItem6
         '
         Me.TabItem6.AttachedControl = Me.TabControlPanel6
         Me.TabItem6.Name = "TabItem6"
         Me.TabItem6.Text = "Vacaciones"
+        '
+        'TabControlPanel4
+        '
+        Me.TabControlPanel4.Controls.Add(Me.TextBoxX1)
+        Me.TabControlPanel4.Controls.Add(Me.Label20)
+        Me.TabControlPanel4.Controls.Add(Me.ComboBoxEx1)
+        Me.TabControlPanel4.Controls.Add(Me.PictureBox1)
+        Me.TabControlPanel4.Controls.Add(Me.CheckedListBox1)
+        Me.TabControlPanel4.Controls.Add(Me.Label14)
+        Me.TabControlPanel4.Controls.Add(Me.Label13)
+        Me.TabControlPanel4.Controls.Add(Me.ListBox1)
+        Me.TabControlPanel4.Controls.Add(Me.Label12)
+        Me.TabControlPanel4.Controls.Add(Me.NumericUpDown1)
+        Me.TabControlPanel4.Controls.Add(Me.Label8)
+        Me.TabControlPanel4.Controls.Add(Me.Label2)
+        Me.TabControlPanel4.Controls.Add(Me.DateTimePicker2)
+        Me.TabControlPanel4.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel4.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel4.Name = "TabControlPanel4"
+        Me.TabControlPanel4.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel4.Size = New System.Drawing.Size(536, 298)
+        Me.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.White
+        Me.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.TabControlPanel4.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel4.Style.GradientAngle = 90
+        Me.TabControlPanel4.TabIndex = 4
+        Me.TabControlPanel4.TabItem = Me.TabItem4
+        '
+        'TextBoxX1
+        '
+        Me.TextBoxX1.BackColor = System.Drawing.Color.White
+        '
+        '
+        '
+        Me.TextBoxX1.Border.Class = "TextBoxBorder"
+        Me.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DvContratos, "NombCat", True))
+        Me.TextBoxX1.DisabledBackColor = System.Drawing.Color.White
+        Me.TextBoxX1.ForeColor = System.Drawing.Color.Black
+        Me.TextBoxX1.Location = New System.Drawing.Point(88, 37)
+        Me.TextBoxX1.Name = "TextBoxX1"
+        Me.TextBoxX1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxX1.TabIndex = 37
+        '
+        'Label20
+        '
+        Me.Label20.BackColor = System.Drawing.Color.Transparent
+        Me.Label20.ForeColor = System.Drawing.Color.Black
+        Me.Label20.Location = New System.Drawing.Point(16, 13)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(64, 17)
+        Me.Label20.TabIndex = 36
+        Me.Label20.Text = "Contrato"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ComboBoxEx1
+        '
+        Me.ComboBoxEx1.DataSource = Me.DvContratos
+        Me.ComboBoxEx1.DisplayMember = "id_contrato"
+        Me.ComboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.ComboBoxEx1.ForeColor = System.Drawing.Color.Black
+        Me.ComboBoxEx1.FormattingEnabled = True
+        Me.ComboBoxEx1.ItemHeight = 14
+        Me.ComboBoxEx1.Location = New System.Drawing.Point(88, 9)
+        Me.ComboBoxEx1.Name = "ComboBoxEx1"
+        Me.ComboBoxEx1.Size = New System.Drawing.Size(100, 20)
+        Me.ComboBoxEx1.TabIndex = 35
+        Me.ComboBoxEx1.ValueMember = "id_contrato"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.ForeColor = System.Drawing.Color.Black
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(200, 141)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 34
+        Me.PictureBox1.TabStop = False
+        '
+        'CheckedListBox1
+        '
+        Me.CheckedListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CheckedListBox1.CheckOnClick = True
+        Me.CheckedListBox1.ForeColor = System.Drawing.Color.Black
+        Me.CheckedListBox1.Location = New System.Drawing.Point(242, 6)
+        Me.CheckedListBox1.Name = "CheckedListBox1"
+        Me.CheckedListBox1.Size = New System.Drawing.Size(210, 244)
+        Me.CheckedListBox1.TabIndex = 33
+        '
+        'Label14
+        '
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.ForeColor = System.Drawing.Color.Black
+        Me.Label14.Location = New System.Drawing.Point(8, 110)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(72, 32)
+        Me.Label14.TabIndex = 32
+        Me.Label14.Text = "Perfiles de rebajos"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label13
+        '
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.ForeColor = System.Drawing.Color.Black
+        Me.Label13.Location = New System.Drawing.Point(197, 6)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(40, 16)
+        Me.Label13.TabIndex = 31
+        Me.Label13.Text = "Rubros"
+        '
+        'ListBox1
+        '
+        Me.ListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ListBox1.ForeColor = System.Drawing.Color.Black
+        Me.ListBox1.Location = New System.Drawing.Point(88, 110)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(104, 134)
+        Me.ListBox1.TabIndex = 30
+        '
+        'Label12
+        '
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.ForeColor = System.Drawing.Color.Black
+        Me.Label12.Location = New System.Drawing.Point(16, 87)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(64, 18)
+        Me.Label12.TabIndex = 29
+        Me.Label12.Text = "Anualidad Reconocidas"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.BackColor = System.Drawing.Color.White
+        Me.NumericUpDown1.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Ds2planilla1, "empleados.anualidadReconocida", True))
+        Me.NumericUpDown1.ForeColor = System.Drawing.Color.Black
+        Me.NumericUpDown1.Location = New System.Drawing.Point(88, 83)
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(100, 20)
+        Me.NumericUpDown1.TabIndex = 28
+        '
+        'Label8
+        '
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(0, 62)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(80, 17)
+        Me.Label8.TabIndex = 27
+        Me.Label8.Text = "Fecha Ingreso"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(16, 40)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(64, 17)
+        Me.Label2.TabIndex = 26
+        Me.Label2.Text = "Categoria"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DateTimePicker2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ds2planilla1, "empleados.ingreso", True))
+        Me.DateTimePicker2.ForeColor = System.Drawing.Color.Black
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(88, 60)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(100, 20)
+        Me.DateTimePicker2.TabIndex = 25
+        '
+        'TabItem4
+        '
+        Me.TabItem4.AttachedControl = Me.TabControlPanel4
+        Me.TabItem4.Name = "TabItem4"
+        Me.TabItem4.Text = "Rubros"
+        '
+        'TabControlPanel5
+        '
+        Me.TabControlPanel5.Controls.Add(Me.CPagos1)
+        Me.TabControlPanel5.DisabledBackColor = System.Drawing.Color.Empty
+        Me.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel5.Location = New System.Drawing.Point(0, 27)
+        Me.TabControlPanel5.Name = "TabControlPanel5"
+        Me.TabControlPanel5.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel5.Size = New System.Drawing.Size(536, 298)
+        Me.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.White
+        Me.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(211, Byte), Integer))
+        Me.TabControlPanel5.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel5.Style.GradientAngle = 90
+        Me.TabControlPanel5.TabIndex = 5
+        Me.TabControlPanel5.TabItem = Me.TabItem5
+        '
+        'CPagos1
+        '
+        Me.CPagos1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CPagos1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CPagos1.ForeColor = System.Drawing.Color.Black
+        Me.CPagos1.Location = New System.Drawing.Point(1, 1)
+        Me.CPagos1.Name = "CPagos1"
+        Me.CPagos1.Size = New System.Drawing.Size(534, 296)
+        Me.CPagos1.TabIndex = 0
+        '
+        'TabItem5
+        '
+        Me.TabItem5.AttachedControl = Me.TabControlPanel5
+        Me.TabItem5.Name = "TabItem5"
+        Me.TabItem5.Text = "Pagos"
         '
         'TabControlPanel1
         '
@@ -1783,14 +1724,123 @@ Public Class frmContrato
         Me.BEmpleado1.Size = New System.Drawing.Size(265, 376)
         Me.BEmpleado1.TabIndex = 5
         '
-        'UcVacaciones1
+        'DataGridViewTextBoxColumn1
         '
-        Me.UcVacaciones1.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.UcVacaciones1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.UcVacaciones1.Location = New System.Drawing.Point(1, 1)
-        Me.UcVacaciones1.Name = "UcVacaciones1"
-        Me.UcVacaciones1.Size = New System.Drawing.Size(534, 296)
-        Me.UcVacaciones1.TabIndex = 0
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id_contrato"
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Contrato"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 50
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        '
+        '
+        '
+        Me.DataGridViewTextBoxColumn2.BackgroundStyle.Class = "DataGridViewDateTimeBorder"
+        Me.DataGridViewTextBoxColumn2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.DataGridViewTextBoxColumn2.ButtonDropDown.Visible = True
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "fecha_ini"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Inicio"
+        Me.DataGridViewTextBoxColumn2.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
+        '
+        '
+        '
+        '
+        '
+        '
+        Me.DataGridViewTextBoxColumn2.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.DataGridViewTextBoxColumn2.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
+        '
+        '
+        '
+        Me.DataGridViewTextBoxColumn2.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.DataGridViewTextBoxColumn2.MonthCalendar.DisplayMonth = New Date(2016, 5, 1, 0, 0, 0, 0)
+        '
+        '
+        '
+        Me.DataGridViewTextBoxColumn2.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn2.Width = 77
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        '
+        '
+        '
+        Me.DataGridViewTextBoxColumn3.BackgroundStyle.Class = "DataGridViewDateTimeBorder"
+        Me.DataGridViewTextBoxColumn3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.DataGridViewTextBoxColumn3.ButtonDropDown.Visible = True
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "fecha_fin"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Fin"
+        Me.DataGridViewTextBoxColumn3.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
+        '
+        '
+        '
+        '
+        '
+        '
+        Me.DataGridViewTextBoxColumn3.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.DataGridViewTextBoxColumn3.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
+        '
+        '
+        '
+        Me.DataGridViewTextBoxColumn3.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.DataGridViewTextBoxColumn3.MonthCalendar.DisplayMonth = New Date(2016, 5, 1, 0, 0, 0, 0)
+        '
+        '
+        '
+        Me.DataGridViewTextBoxColumn3.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn3.Width = 77
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "cantidad"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Cantidad"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 50
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "recargo"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Recargo"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.Width = 50
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "DiasVigente"
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Vigente"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 50
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "id_categoria"
+        Me.DataGridViewTextBoxColumn10.DataSource = Me.CategoriasBindingSource
+        Me.DataGridViewTextBoxColumn10.DisplayMember = "nombre"
+        Me.DataGridViewTextBoxColumn10.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.DataGridViewTextBoxColumn10.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Categoría"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridViewTextBoxColumn10.ValueMember = "id_cat"
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "estado"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "Estado"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.Width = 45
         '
         'frmContrato
         '
@@ -1802,7 +1852,6 @@ Public Class frmContrato
         Me.Controls.Add(Me.PanelEx3)
         Me.Controls.Add(Me.BEmpleado1)
         Me.DoubleBuffered = True
-        Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frmContrato"
         CType(Me.Ds2planilla1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1817,10 +1866,6 @@ Public Class frmContrato
         CType(Me.ContratosDataGridViewX, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CategoriasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ContratosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControlPanel4.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControlPanel5.ResumeLayout(False)
         Me.TabControlPanel2.ResumeLayout(False)
         Me.TabControlPanel2.PerformLayout()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1829,6 +1874,10 @@ Public Class frmContrato
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabControlPanel6.ResumeLayout(False)
+        Me.TabControlPanel4.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControlPanel5.ResumeLayout(False)
         Me.TabControlPanel1.ResumeLayout(False)
         Me.TabControlPanel1.PerformLayout()
         CType(Me.ContratoscategoriasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2117,6 +2166,7 @@ Public Class frmContrato
         If e.Valor IsNot Nothing Then
             Me.buscaEmpleado(e.Valor)
             Me.CPagos1.buscar(e.Valor)
+            Me.UcVacaciones1.buscar(e.Valor)
         End If
     End Sub
 
