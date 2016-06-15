@@ -141,7 +141,6 @@
     <Compile Include="Clases\cCorreo.vb" />
     <Compile Include="Clases\cEmpleado.vb" />
     <Compile Include="Clases\cExcel.vb" />
-    <Compile Include="Clases\cVacaciones.vb" />
     <Compile Include="Clases\cWord.vb" />
     <Compile Include="Clases\Evaluador.vb" />
     <Compile Include="Clases\Incapacidades.vb" />
@@ -184,7 +183,7 @@
     <Compile Include="Controles\ucVacaciones.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Formularios\dsVacaciones.Designer.vb">
+    <Compile Include="dsVacaciones.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsVacaciones.xsd</DependentUpon>
@@ -609,15 +608,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Formularios\dsVacaciones.xsc">
+    <None Include="dsVacaciones.xsc">
       <DependentUpon>dsVacaciones.xsd</DependentUpon>
     </None>
-    <None Include="Formularios\dsVacaciones.xsd">
+    <None Include="dsVacaciones.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsVacaciones.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Formularios\dsVacaciones.xss">
+    <None Include="dsVacaciones.xss">
       <DependentUpon>dsVacaciones.xsd</DependentUpon>
     </None>
     <None Include="Formularios\ds2planilla.xsc">

@@ -93,7 +93,7 @@ Public Class TreeViewSQL
     End Sub
 
 
-    Sub llenar(ByVal base As String)
+    Async Sub llenar(ByVal base As String)
         Try
 
             Dim actual As String = ""
@@ -101,8 +101,8 @@ Public Class TreeViewSQL
                 actual = Me.SelectedNode.Text
             End If
 
-            Dim conexion1 As New conexionSQL
-            conexion1.bd = base
+            Dim conexion1 As New conexionSQL(base)
+
             Dim DataSet1 As New DataSet("DataSet1")
             DataSet1.Tables.Add("tree")
 

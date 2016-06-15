@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmVacaciones
+Partial Class frmVacaXPlanilla
     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
     'Form overrides dispose to clean up the component list.
@@ -24,19 +24,9 @@ Partial Class frmVacaciones
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.DataGridViewX1 = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdvacacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DiasDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fechaI = New DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn()
-        Me.fechaF = New DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn()
-        Me.MotivoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NotaDataGridViewTextBoxColumn = New DevComponents.DotNetBar.Controls.DataGridViewMaskedTextBoxAdvColumn()
-        Me.fechaI_adicionales = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fechaF_adicionales = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VacacionregBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DsVacaciones = New Planilla.dsVacaciones()
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
+        Me.LabelX5 = New DevComponents.DotNetBar.LabelX()
+        Me.Periodo = New DevComponents.Editors.IntegerInput()
         Me.LabelX9 = New DevComponents.DotNetBar.LabelX()
         Me.LabelX8 = New DevComponents.DotNetBar.LabelX()
         Me.DiasRangoAdic = New DevComponents.Editors.IntegerInput()
@@ -44,8 +34,6 @@ Partial Class frmVacaciones
         Me.fechaF_Adic = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
         Me.LabelX6 = New DevComponents.DotNetBar.LabelX()
         Me.DiasRango = New DevComponents.Editors.IntegerInput()
-        Me.LabelX5 = New DevComponents.DotNetBar.LabelX()
-        Me.DiasSaldo = New DevComponents.Editors.IntegerInput()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
         Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
@@ -55,198 +43,42 @@ Partial Class frmVacaciones
         Me.nota = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.fechaF_ord = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
         Me.fechaI_ord = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
-        Me.LabelX7 = New DevComponents.DotNetBar.LabelX()
-        Me.Vacacion_regTableAdapter = New Planilla.dsVacacionesTableAdapters.Vacacion_regTableAdapter()
-        CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VacacionregBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DsVacaciones, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelEx2 = New DevComponents.DotNetBar.PanelEx()
+        Me.ListBoxAdv1 = New DevComponents.DotNetBar.ListBoxAdv()
+        Me.ReflectionLabel1 = New DevComponents.DotNetBar.Controls.ReflectionLabel()
+        Me.DataGridViewX1 = New DevComponents.DotNetBar.Controls.DataGridViewX()
+        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.derecho = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.disfrutado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.saldo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContratosActivosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DsVacaciones = New Planilla.dsVacaciones()
+        Me.ContratosActivosTableAdapter = New Planilla.dsVacacionesTableAdapters.ContratosActivosTableAdapter()
+        Me.TableAdapterManager = New Planilla.dsVacacionesTableAdapters.TableAdapterManager()
+        Me.UcProgresoCircular1 = New Planilla.ucProgresoCircular()
         Me.PanelEx1.SuspendLayout()
+        CType(Me.Periodo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DiasRangoAdic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fechaI_Adic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fechaF_Adic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DiasRango, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DiasSaldo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fechaF_ord, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fechaI_ord, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelEx2.SuspendLayout()
+        CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ContratosActivosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DsVacaciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridViewX1
-        '
-        Me.DataGridViewX1.AllowUserToAddRows = False
-        Me.DataGridViewX1.AllowUserToDeleteRows = False
-        Me.DataGridViewX1.AutoGenerateColumns = False
-        Me.DataGridViewX1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
-        Me.DataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewX1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.IdvacacionDataGridViewTextBoxColumn, Me.DiasDataGridViewTextBoxColumn, Me.fechaI, Me.fechaF, Me.MotivoDataGridViewTextBoxColumn, Me.NotaDataGridViewTextBoxColumn, Me.fechaI_adicionales, Me.fechaF_adicionales})
-        Me.DataGridViewX1.DataSource = Me.VacacionregBindingSource
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewX1.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewX1.GridColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.DataGridViewX1.Location = New System.Drawing.Point(12, 12)
-        Me.DataGridViewX1.Name = "DataGridViewX1"
-        Me.DataGridViewX1.ReadOnly = True
-        Me.DataGridViewX1.Size = New System.Drawing.Size(894, 190)
-        Me.DataGridViewX1.TabIndex = 0
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdDataGridViewTextBoxColumn.Visible = False
-        '
-        'IdvacacionDataGridViewTextBoxColumn
-        '
-        Me.IdvacacionDataGridViewTextBoxColumn.DataPropertyName = "id_vacacion"
-        Me.IdvacacionDataGridViewTextBoxColumn.HeaderText = "id_vacacion"
-        Me.IdvacacionDataGridViewTextBoxColumn.Name = "IdvacacionDataGridViewTextBoxColumn"
-        Me.IdvacacionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdvacacionDataGridViewTextBoxColumn.Visible = False
-        '
-        'DiasDataGridViewTextBoxColumn
-        '
-        Me.DiasDataGridViewTextBoxColumn.DataPropertyName = "dias"
-        Me.DiasDataGridViewTextBoxColumn.HeaderText = "dias"
-        Me.DiasDataGridViewTextBoxColumn.Name = "DiasDataGridViewTextBoxColumn"
-        Me.DiasDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DiasDataGridViewTextBoxColumn.Width = 50
-        '
-        'fechaI
-        '
-        '
-        '
-        '
-        Me.fechaI.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window
-        Me.fechaI.BackgroundStyle.Class = "DataGridViewDateTimeBorder"
-        Me.fechaI.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaI.BackgroundStyle.TextColor = System.Drawing.Color.Black
-        Me.fechaI.ButtonCustom.Visible = True
-        Me.fechaI.ButtonDropDown.Visible = True
-        Me.fechaI.DataPropertyName = "fechaI"
-        Me.fechaI.Format = DevComponents.Editors.eDateTimePickerFormat.[Long]
-        Me.fechaI.HeaderText = "Fecha Inicio"
-        Me.fechaI.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
-        '
-        '
-        '
-        '
-        '
-        '
-        Me.fechaI.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaI.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
-        '
-        '
-        '
-        Me.fechaI.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaI.MonthCalendar.DisplayMonth = New Date(2016, 5, 1, 0, 0, 0, 0)
-        '
-        '
-        '
-        Me.fechaI.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaI.Name = "fechaI"
-        Me.fechaI.ReadOnly = True
-        Me.fechaI.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.fechaI.Width = 200
-        '
-        'fechaF
-        '
-        '
-        '
-        '
-        Me.fechaF.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window
-        Me.fechaF.BackgroundStyle.Class = "DataGridViewDateTimeBorder"
-        Me.fechaF.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaF.BackgroundStyle.TextColor = System.Drawing.Color.Black
-        Me.fechaF.ButtonDropDown.Visible = True
-        Me.fechaF.DataPropertyName = "fechaF"
-        Me.fechaF.Format = DevComponents.Editors.eDateTimePickerFormat.[Long]
-        Me.fechaF.HeaderText = "Fecha Fin"
-        Me.fechaF.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
-        '
-        '
-        '
-        '
-        '
-        '
-        Me.fechaF.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaF.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
-        '
-        '
-        '
-        Me.fechaF.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaF.MonthCalendar.DisplayMonth = New Date(2016, 5, 1, 0, 0, 0, 0)
-        '
-        '
-        '
-        Me.fechaF.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.fechaF.Name = "fechaF"
-        Me.fechaF.ReadOnly = True
-        Me.fechaF.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.fechaF.Width = 200
-        '
-        'MotivoDataGridViewTextBoxColumn
-        '
-        Me.MotivoDataGridViewTextBoxColumn.DataPropertyName = "motivo"
-        Me.MotivoDataGridViewTextBoxColumn.HeaderText = "motivo"
-        Me.MotivoDataGridViewTextBoxColumn.Name = "MotivoDataGridViewTextBoxColumn"
-        Me.MotivoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NotaDataGridViewTextBoxColumn
-        '
-        Me.NotaDataGridViewTextBoxColumn.BackColor = System.Drawing.SystemColors.Window
-        '
-        '
-        '
-        Me.NotaDataGridViewTextBoxColumn.BackgroundStyle.Class = "DataGridViewBorder"
-        Me.NotaDataGridViewTextBoxColumn.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.NotaDataGridViewTextBoxColumn.Culture = New System.Globalization.CultureInfo("es-MX")
-        Me.NotaDataGridViewTextBoxColumn.DataPropertyName = "nota"
-        Me.NotaDataGridViewTextBoxColumn.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.NotaDataGridViewTextBoxColumn.HeaderText = "nota"
-        Me.NotaDataGridViewTextBoxColumn.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.NotaDataGridViewTextBoxColumn.Mask = ""
-        Me.NotaDataGridViewTextBoxColumn.Name = "NotaDataGridViewTextBoxColumn"
-        Me.NotaDataGridViewTextBoxColumn.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.NotaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NotaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.NotaDataGridViewTextBoxColumn.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.NotaDataGridViewTextBoxColumn.Text = ""
-        '
-        'fechaI_adicionales
-        '
-        Me.fechaI_adicionales.DataPropertyName = "fechaI_adicionales"
-        Me.fechaI_adicionales.HeaderText = "Inicio Vac. adicionales"
-        Me.fechaI_adicionales.Name = "fechaI_adicionales"
-        Me.fechaI_adicionales.ReadOnly = True
-        '
-        'fechaF_adicionales
-        '
-        Me.fechaF_adicionales.DataPropertyName = "fechaF_adicionales"
-        Me.fechaF_adicionales.HeaderText = "Fin Vac. adicionales"
-        Me.fechaF_adicionales.Name = "fechaF_adicionales"
-        Me.fechaF_adicionales.ReadOnly = True
-        '
-        'VacacionregBindingSource
-        '
-        Me.VacacionregBindingSource.DataMember = "Vacacion_reg"
-        Me.VacacionregBindingSource.DataSource = Me.DsVacaciones
-        '
-        'DsVacaciones
-        '
-        Me.DsVacaciones.DataSetName = "dsVacaciones"
-        Me.DsVacaciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PanelEx1
         '
         Me.PanelEx1.CanvasColor = System.Drawing.SystemColors.ButtonHighlight
         Me.PanelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx1.Controls.Add(Me.LabelX5)
+        Me.PanelEx1.Controls.Add(Me.Periodo)
+        Me.PanelEx1.Controls.Add(Me.UcProgresoCircular1)
         Me.PanelEx1.Controls.Add(Me.LabelX9)
         Me.PanelEx1.Controls.Add(Me.LabelX8)
         Me.PanelEx1.Controls.Add(Me.DiasRangoAdic)
@@ -254,8 +86,6 @@ Partial Class frmVacaciones
         Me.PanelEx1.Controls.Add(Me.fechaF_Adic)
         Me.PanelEx1.Controls.Add(Me.LabelX6)
         Me.PanelEx1.Controls.Add(Me.DiasRango)
-        Me.PanelEx1.Controls.Add(Me.LabelX5)
-        Me.PanelEx1.Controls.Add(Me.DiasSaldo)
         Me.PanelEx1.Controls.Add(Me.ButtonX1)
         Me.PanelEx1.Controls.Add(Me.LabelX4)
         Me.PanelEx1.Controls.Add(Me.LabelX3)
@@ -266,16 +96,43 @@ Partial Class frmVacaciones
         Me.PanelEx1.Controls.Add(Me.fechaF_ord)
         Me.PanelEx1.Controls.Add(Me.fechaI_ord)
         Me.PanelEx1.DisabledBackColor = System.Drawing.Color.Empty
-        Me.PanelEx1.Location = New System.Drawing.Point(12, 208)
+        Me.PanelEx1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelEx1.Location = New System.Drawing.Point(194, 0)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(547, 233)
+        Me.PanelEx1.Size = New System.Drawing.Size(691, 215)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.PanelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx1.Style.GradientAngle = 90
-        Me.PanelEx1.TabIndex = 3
+        Me.PanelEx1.TabIndex = 7
+        '
+        'LabelX5
+        '
+        '
+        '
+        '
+        Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX5.Location = New System.Drawing.Point(280, 21)
+        Me.LabelX5.Name = "LabelX5"
+        Me.LabelX5.Size = New System.Drawing.Size(43, 20)
+        Me.LabelX5.TabIndex = 20
+        Me.LabelX5.Text = "Periodo"
+        '
+        'Periodo
+        '
+        '
+        '
+        '
+        Me.Periodo.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.Periodo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.Periodo.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.Periodo.Location = New System.Drawing.Point(327, 20)
+        Me.Periodo.Name = "Periodo"
+        Me.Periodo.ShowUpDown = True
+        Me.Periodo.Size = New System.Drawing.Size(72, 22)
+        Me.Periodo.TabIndex = 19
         '
         'LabelX9
         '
@@ -429,31 +286,6 @@ Partial Class frmVacaciones
         Me.DiasRango.Size = New System.Drawing.Size(32, 22)
         Me.DiasRango.TabIndex = 11
         '
-        'LabelX5
-        '
-        '
-        '
-        '
-        Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX5.Location = New System.Drawing.Point(460, 40)
-        Me.LabelX5.Name = "LabelX5"
-        Me.LabelX5.Size = New System.Drawing.Size(45, 20)
-        Me.LabelX5.TabIndex = 10
-        Me.LabelX5.Text = "Saldo"
-        '
-        'DiasSaldo
-        '
-        '
-        '
-        '
-        Me.DiasSaldo.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.DiasSaldo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.DiasSaldo.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.DiasSaldo.Location = New System.Drawing.Point(460, 66)
-        Me.DiasSaldo.Name = "DiasSaldo"
-        Me.DiasSaldo.Size = New System.Drawing.Size(32, 22)
-        Me.DiasSaldo.TabIndex = 9
-        '
         'ButtonX1
         '
         Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
@@ -462,7 +294,8 @@ Partial Class frmVacaciones
         Me.ButtonX1.Name = "ButtonX1"
         Me.ButtonX1.Size = New System.Drawing.Size(58, 61)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ButtonX1.Symbol = ""
+        Me.ButtonX1.Symbol = ""
+        Me.ButtonX1.SymbolColor = System.Drawing.Color.ForestGreen
         Me.ButtonX1.SymbolSize = 32.0!
         Me.ButtonX1.TabIndex = 8
         '
@@ -639,91 +472,219 @@ Partial Class frmVacaciones
         Me.fechaI_ord.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.fechaI_ord.TabIndex = 0
         '
-        'LabelX7
+        'PanelEx2
+        '
+        Me.PanelEx2.CanvasColor = System.Drawing.SystemColors.Control
+        Me.PanelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx2.Controls.Add(Me.ListBoxAdv1)
+        Me.PanelEx2.Controls.Add(Me.ReflectionLabel1)
+        Me.PanelEx2.DisabledBackColor = System.Drawing.Color.Empty
+        Me.PanelEx2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PanelEx2.Location = New System.Drawing.Point(0, 0)
+        Me.PanelEx2.Name = "PanelEx2"
+        Me.PanelEx2.Size = New System.Drawing.Size(194, 517)
+        Me.PanelEx2.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.PanelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.PanelEx2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.PanelEx2.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.PanelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.PanelEx2.Style.GradientAngle = 90
+        Me.PanelEx2.TabIndex = 8
+        Me.PanelEx2.Text = "PanelEx2"
+        '
+        'ListBoxAdv1
+        '
+        Me.ListBoxAdv1.AutoScroll = True
+        '
+        '
+        '
+        Me.ListBoxAdv1.BackgroundStyle.Class = "ListBoxAdv"
+        Me.ListBoxAdv1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ListBoxAdv1.ContainerControlProcessDialogKey = True
+        Me.ListBoxAdv1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListBoxAdv1.DragDropSupport = True
+        Me.ListBoxAdv1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBoxAdv1.Location = New System.Drawing.Point(0, 47)
+        Me.ListBoxAdv1.Name = "ListBoxAdv1"
+        Me.ListBoxAdv1.Size = New System.Drawing.Size(194, 470)
+        Me.ListBoxAdv1.TabIndex = 0
+        Me.ListBoxAdv1.Text = "ListBoxAdv1"
+        '
+        'ReflectionLabel1
         '
         '
         '
         '
-        Me.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX7.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.LabelX7.ImageTextSpacing = 0
-        Me.LabelX7.Location = New System.Drawing.Point(763, 204)
-        Me.LabelX7.Name = "LabelX7"
-        Me.LabelX7.Size = New System.Drawing.Size(143, 138)
-        Me.LabelX7.Symbol = ""
-        Me.LabelX7.SymbolSize = 32.0!
-        Me.LabelX7.TabIndex = 13
-        Me.LabelX7.Text = "<b>CARTA VACACIÓN:</b><br/>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Seleccione la fila de la vacacion con la flecha de l" &
-    "a primer columna"
+        Me.ReflectionLabel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ReflectionLabel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ReflectionLabel1.Location = New System.Drawing.Point(0, 0)
+        Me.ReflectionLabel1.Name = "ReflectionLabel1"
+        Me.ReflectionLabel1.Size = New System.Drawing.Size(194, 47)
+        Me.ReflectionLabel1.TabIndex = 1
+        Me.ReflectionLabel1.Text = "<b><font size=""+6""><i>.</i><font color=""#B02B2C"">Planillas</font></font></b>"
         '
-        'Vacacion_regTableAdapter
+        'DataGridViewX1
         '
-        Me.Vacacion_regTableAdapter.ClearBeforeFill = True
+        Me.DataGridViewX1.AllowUserToAddRows = False
+        Me.DataGridViewX1.AllowUserToDeleteRows = False
+        Me.DataGridViewX1.AllowUserToOrderColumns = True
+        Me.DataGridViewX1.AutoGenerateColumns = False
+        Me.DataGridViewX1.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewX1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CedulaDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.derecho, Me.disfrutado, Me.saldo})
+        Me.DataGridViewX1.DataSource = Me.ContratosActivosBindingSource
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewX1.DefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridViewX1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridViewX1.GridColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.DataGridViewX1.Location = New System.Drawing.Point(194, 215)
+        Me.DataGridViewX1.Name = "DataGridViewX1"
+        Me.DataGridViewX1.ReadOnly = True
+        Me.DataGridViewX1.Size = New System.Drawing.Size(691, 302)
+        Me.DataGridViewX1.TabIndex = 12
         '
-        'frmVacaciones
+        'CedulaDataGridViewTextBoxColumn
+        '
+        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
+        Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ApellidosDataGridViewTextBoxColumn.Width = 150
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreDataGridViewTextBoxColumn.Width = 150
+        '
+        'derecho
+        '
+        Me.derecho.DataPropertyName = "derecho"
+        Me.derecho.HeaderText = "derecho"
+        Me.derecho.Name = "derecho"
+        Me.derecho.ReadOnly = True
+        Me.derecho.Width = 60
+        '
+        'disfrutado
+        '
+        Me.disfrutado.DataPropertyName = "disfrutado"
+        Me.disfrutado.HeaderText = "disfrutado"
+        Me.disfrutado.Name = "disfrutado"
+        Me.disfrutado.ReadOnly = True
+        Me.disfrutado.Width = 60
+        '
+        'saldo
+        '
+        Me.saldo.DataPropertyName = "saldo"
+        Me.saldo.HeaderText = "saldo"
+        Me.saldo.Name = "saldo"
+        Me.saldo.ReadOnly = True
+        Me.saldo.Width = 60
+        '
+        'ContratosActivosBindingSource
+        '
+        Me.ContratosActivosBindingSource.DataMember = "ContratosActivos"
+        Me.ContratosActivosBindingSource.DataSource = Me.DsVacaciones
+        '
+        'DsVacaciones
+        '
+        Me.DsVacaciones.DataSetName = "dsVacaciones"
+        Me.DsVacaciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ContratosActivosTableAdapter
+        '
+        Me.ContratosActivosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.UpdateOrder = Planilla.dsVacacionesTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.Vacacion_regTableAdapter = Nothing
+        Me.TableAdapterManager.VacacionesTableAdapter = Nothing
+        '
+        'UcProgresoCircular1
+        '
+        Me.UcProgresoCircular1.Location = New System.Drawing.Point(561, 128)
+        Me.UcProgresoCircular1.Name = "UcProgresoCircular1"
+        Me.UcProgresoCircular1.Size = New System.Drawing.Size(86, 81)
+        Me.UcProgresoCircular1.TabIndex = 18
+        '
+        'frmVacaXPlanilla
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(918, 446)
-        Me.Controls.Add(Me.LabelX7)
-        Me.Controls.Add(Me.PanelEx1)
+        Me.ClientSize = New System.Drawing.Size(885, 517)
         Me.Controls.Add(Me.DataGridViewX1)
+        Me.Controls.Add(Me.PanelEx1)
+        Me.Controls.Add(Me.PanelEx2)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Black
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "frmVacaciones"
-        Me.ShowIcon = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Vacaciones"
-        CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VacacionregBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DsVacaciones, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Name = "frmVacaXPlanilla"
+        Me.Text = "Vacaciones por Planilla"
         Me.PanelEx1.ResumeLayout(False)
+        CType(Me.Periodo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DiasRangoAdic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fechaI_Adic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fechaF_Adic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DiasRango, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DiasSaldo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fechaF_ord, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fechaI_ord, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelEx2.ResumeLayout(False)
+        CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ContratosActivosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DsVacaciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
     Friend WithEvents DataGridViewX1 As DevComponents.DotNetBar.Controls.DataGridViewX
+    Friend WithEvents UcProgresoCircular1 As ucProgresoCircular
     Friend WithEvents DsVacaciones As dsVacaciones
-    Friend WithEvents VacacionregBindingSource As BindingSource
-    Friend WithEvents Vacacion_regTableAdapter As dsVacacionesTableAdapters.Vacacion_regTableAdapter
-    Friend WithEvents PanelEx1 As DevComponents.DotNetBar.PanelEx
-    Friend WithEvents motivo As DevComponents.DotNetBar.Controls.TextBoxDropDown
-    Friend WithEvents nota As DevComponents.DotNetBar.Controls.TextBoxX
-    Friend WithEvents fechaF_ord As DevComponents.Editors.DateTimeAdv.DateTimeInput
-    Friend WithEvents fechaI_ord As DevComponents.Editors.DateTimeAdv.DateTimeInput
-    Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
-    Friend WithEvents LabelX4 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents LabelX3 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents LabelX2 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents DiasSaldo As DevComponents.Editors.IntegerInput
-    Friend WithEvents LabelX5 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents LabelX6 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents DiasRango As DevComponents.Editors.IntegerInput
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdvacacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DiasDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents fechaI As DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn
-    Friend WithEvents fechaF As DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn
-    Friend WithEvents MotivoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NotaDataGridViewTextBoxColumn As DevComponents.DotNetBar.Controls.DataGridViewMaskedTextBoxAdvColumn
-    Friend WithEvents LabelX7 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents DiasRangoAdic As DevComponents.Editors.IntegerInput
-    Friend WithEvents fechaI_Adic As DevComponents.Editors.DateTimeAdv.DateTimeInput
-    Friend WithEvents fechaF_Adic As DevComponents.Editors.DateTimeAdv.DateTimeInput
-    Friend WithEvents LabelX9 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents LabelX8 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents fechaI_adicionales As DataGridViewTextBoxColumn
-    Friend WithEvents fechaF_adicionales As DataGridViewTextBoxColumn
+    Friend WithEvents ContratosActivosBindingSource As BindingSource
+    Friend WithEvents ContratosActivosTableAdapter As dsVacacionesTableAdapters.ContratosActivosTableAdapter
+    Friend WithEvents TableAdapterManager As dsVacacionesTableAdapters.TableAdapterManager
+    Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents derecho As DataGridViewTextBoxColumn
+    Friend WithEvents disfrutado As DataGridViewTextBoxColumn
+    Friend WithEvents saldo As DataGridViewTextBoxColumn
+    Private WithEvents PanelEx1 As DevComponents.DotNetBar.PanelEx
+    Private WithEvents LabelX9 As DevComponents.DotNetBar.LabelX
+    Private WithEvents LabelX8 As DevComponents.DotNetBar.LabelX
+    Private WithEvents DiasRangoAdic As DevComponents.Editors.IntegerInput
+    Private WithEvents fechaI_Adic As DevComponents.Editors.DateTimeAdv.DateTimeInput
+    Private WithEvents fechaF_Adic As DevComponents.Editors.DateTimeAdv.DateTimeInput
+    Private WithEvents LabelX6 As DevComponents.DotNetBar.LabelX
+    Private WithEvents DiasRango As DevComponents.Editors.IntegerInput
+    Private WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
+    Private WithEvents LabelX4 As DevComponents.DotNetBar.LabelX
+    Private WithEvents LabelX3 As DevComponents.DotNetBar.LabelX
+    Private WithEvents LabelX2 As DevComponents.DotNetBar.LabelX
+    Private WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
+    Private WithEvents motivo As DevComponents.DotNetBar.Controls.TextBoxDropDown
+    Private WithEvents nota As DevComponents.DotNetBar.Controls.TextBoxX
+    Private WithEvents fechaF_ord As DevComponents.Editors.DateTimeAdv.DateTimeInput
+    Private WithEvents fechaI_ord As DevComponents.Editors.DateTimeAdv.DateTimeInput
+    Private WithEvents PanelEx2 As DevComponents.DotNetBar.PanelEx
+    Private WithEvents ListBoxAdv1 As DevComponents.DotNetBar.ListBoxAdv
+    Private WithEvents ReflectionLabel1 As DevComponents.DotNetBar.Controls.ReflectionLabel
+    Private WithEvents LabelX5 As DevComponents.DotNetBar.LabelX
+    Private WithEvents Periodo As DevComponents.Editors.IntegerInput
 End Class

@@ -1,5 +1,6 @@
 Imports System.Data.SqlClient
 Imports System.IO
+Imports System.Threading.Tasks
 
 Public Class conexionSQL
     Implements IDisposable
@@ -129,8 +130,9 @@ Public Class conexionSQL
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
     End Sub
+
+
     Sub llena(ByRef ds As DataSet, ByVal tabla As String, ByVal instruccion As SqlCommand)
         Try
             If colegioConnection.State = ConnectionState.Closed Then

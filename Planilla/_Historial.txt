@@ -5,6 +5,9 @@
 FECHA		D	ESTADO	DESCRIPCION
 ======================================================================================
 
+2016-06-15- 32h Nuevo:  Gestion de vacaciones: genera vacaciones por persona y por 
+						planilla
+---------------------------------------------------------------------------------------
 2016-05-12  16h	Nuevo:	Genera archivo de reporte para coopeande con datos de capital 
 ---------------------------------------------------------------------------------------
 2016-01-25  16h	Nuevo:	Carga arcivo de cobro de prestamos y ahorros de coopeandes

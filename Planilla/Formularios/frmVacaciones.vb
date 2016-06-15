@@ -2,6 +2,7 @@ Public Class frmVacaciones
 
     Private _id As Integer
     Private _saldo As Integer
+    Private _id_emp As Integer
 
     Public Property id As Integer
         Get
@@ -14,38 +15,39 @@ Public Class frmVacaciones
     End Property
 
 
-    Public Sub New(pid_vacaciones, psaldo)
+    Public Sub New(pid_vacaciones, psaldo, pid_emp)
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
 
         _id = pid_vacaciones
         _saldo = psaldo
+        _id_emp = pid_emp
         Me.Vacacion_regTableAdapter.FillBy(Me.DsVacaciones.Vacacion_reg, _id)
     End Sub
 
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
         If Not Traslape_Fechas_Grid() Then
-            Dim diasD As Integer = DateDiff(DateInterval.Day, DateTimeInput1.Value, DateTimeInput2.Value) + 1
-            Vacacion_regTableAdapter.Insertar(_id, diasD, nota.Text, DateTimeInput1.Value, DateTimeInput2.Value, motivo.Text, fechaI_Adic.Value, fechaF_Adic.Value)
+            Dim diasD As Integer = DateDiff(DateInterval.Day, fechaI_ord.Value, fechaF_ord.Value) + 1
+            Vacacion_regTableAdapter.Insertar(_id, diasD, nota.Text, fechaI_ord.Value, fechaF_ord.Value, motivo.Text, fechaI_Adic.Value, fechaF_Adic.Value)
             Vacacion_regTableAdapter.FillBy(Me.DsVacaciones.Vacacion_reg, _id)
             _saldo = _saldo - diasD
             DiasSaldo.Value = _saldo
         End If
     End Sub
 
-    Private Sub DateTimeInput1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimeInput1.ValueChanged
+    Private Sub DateTimeInput1_ValueChanged(sender As Object, e As EventArgs) Handles fechaI_ord.ValueChanged
         If Not Traslape_Fechas_Grid() Then
             DiasRango.Value = dias()
         End If
     End Sub
 
-    Private Sub DateTimeInput2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimeInput2.ValueChanged
+    Private Sub DateTimeInput2_ValueChanged(sender As Object, e As EventArgs) Handles fechaF_ord.ValueChanged
         If Not Traslape_Fechas_Grid() Then
             DiasRango.Value = dias()
         End If
     End Sub
     Private Function dias() As Integer
-        Dim saldox As Integer = DateDiff(DateInterval.Day, DateTimeInput1.Value, DateTimeInput2.Value) + 1
+        Dim saldox As Integer = DateDiff(DateInterval.Day, fechaI_ord.Value, fechaF_ord.Value) + 1
         ButtonX1.Visible = _saldo >= saldox
         Return (saldox)
     End Function
@@ -59,8 +61,8 @@ Public Class frmVacaciones
         DiasSaldo.Value = _saldo
         ButtonX1.Visible = (_saldo > 0)
         motivo.Text = "Vacaciones"
-        DateTimeInput1.Value = Now
-        DateTimeInput2.Value = DateAdd(DateInterval.Day, _saldo - 1, Now)
+        fechaI_ord.Value = Now
+        fechaF_ord.Value = DateAdd(DateInterval.Day, _saldo - 1, Now)
     End Sub
 
     Private Function Traslape_Fechas_Grid() As Boolean
@@ -72,7 +74,7 @@ Public Class frmVacaciones
                 fdg_ini = DataGridViewX1.Item("fechaI", i).Value
                 fdg_fin = DataGridViewX1.Item("fechaF", i).Value
 
-                If Traslape_Fecha(DateTimeInput1.Value, DateTimeInput2.Value, fdg_ini, fdg_fin) Then
+                If Traslape_Fecha(fechaI_ord.Value, fechaF_ord.Value, fdg_ini, fdg_fin) Then
                     traslape = True
                     MsgBox("Existe traslape de fecha ", MsgBoxStyle.Exclamation)
                     Exit For
@@ -90,40 +92,6 @@ Public Class frmVacaciones
         Return False
 
     End Function
-
-    Private Sub DataGridViewX1_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridViewX1.RowHeaderMouseClick
-        'MsgBox("Genera Carta de Vacaciones")
-
-        Dim archivo = My.Application.Info.DirectoryPath & "\contVacaciones.docx"
-
-        Dim registro As Object = sender.currentrow.databounditem.row
-
-        Dim oConfig As New cConfiguracion
-        Dim conn As New conexionSQL
-        Dim repLegal As String = oConfig.ValorConfiguracion("RepLegal", "Nombre")
-        Dim repCargo As String = oConfig.ValorConfiguracion("RepLegal", "Cargo")
-        Dim nom
-
-        Dim valores As New ArrayList
-
-        valores.Add({"suscrita", repLegal})
-        valores.Add({"suscritaCargo", repCargo})
-        'valores.Add({"empleado", Me.TextBox3.Text & " " & TextBox2.Text})
-        'valores.Add({"administrador", oConfig.valores(15)})
-        'valores.Add({"cargoAdm", oConfig.valores(16)})
-
-        'valores.Add({"puesto", oContrato(2)})
-        'valores.Add({"desde", oContrato(0)})
-        'valores.Add({"slogan", ""})
-
-        'Dim wdDoc As New cWord(archivo)  'abre plantilla
-        'wdDoc.SustituyeValores(valores)
-
-        'Dim guardaComo = Me.TextBox3.Text & " " & TextBox2.Text
-        'wdDoc.guarda(guardaComo) 'guarda como
-
-    End Sub
-
     Private Sub fechaI_Adic_ValueChanged(sender As Object, e As EventArgs) Handles fechaI_Adic.ValueChanged
         DiasRangoAdic.Value = diasAdicionales()
     End Sub
@@ -131,5 +99,14 @@ Public Class frmVacaciones
     Private Sub fechaF_Adic_ValueChanged(sender As Object, e As EventArgs) Handles fechaF_Adic.ValueChanged
         DiasRangoAdic.Value = diasAdicionales()
     End Sub
+
+    Private Sub DataGridViewX1_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridViewX1.RowHeaderMouseClick
+        ' Crea Carta de Vacaciones
+
+        Dim oVac As New cVacaciones
+        oVac.carta(_id_emp, DataGridViewX1.CurrentRow.DataBoundItem.row, "")
+
+    End Sub
+
 End Class
 

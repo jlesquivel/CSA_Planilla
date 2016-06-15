@@ -22,7 +22,7 @@
 
         'Dim vent As New Ventanas
         'vent.cargarVentana(frmVacaciones, Me.ParentForm.ParentForm)
-        Dim frmVaca1 As New frmVacaciones(val, sald)
+        Dim frmVaca1 As New frmVacaciones(val, sald, _Id_empleado)
         frmVaca1.Show()
 
     End Sub

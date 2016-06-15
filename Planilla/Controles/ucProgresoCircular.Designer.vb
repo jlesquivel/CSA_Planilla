@@ -43,6 +43,9 @@ Partial Class ucProgresoCircular
         Me.CircularProgress1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP
         Me.CircularProgress1.TabIndex = 0
         '
+        'Timer1
+        '
+        '
         'ucProgresoCircular
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
