@@ -111,10 +111,7 @@ Public Class frmVacaXPlanilla
         UcProgresoCircular1.Muestra()
         UcProgresoCircular1.CircularProgress1.ProgressTextVisible = True
 
-        '        Cursor.Hide()
-        If Not hilo.IsBusy Then
-            hilo.RunWorkerAsync()
-        End If
+        hilo.RunWorkerAsync()
 
     End Sub
 
@@ -132,9 +129,7 @@ Public Class frmVacaXPlanilla
             _id_vac = fila.DataBoundItem.row.id_vacacion
             _id_emp = fila.DataBoundItem.row.id_emp
             Vacacion_regTableAdapter.FillById_emp(dsVaca.Vacacion_reg, Periodo.Value, _id_emp)
-            If dsVaca.Vacacion_reg.Rows.Count > 0 Then
-                oVacacion.carta(_id_emp, dsVaca.Vacacion_reg.Rows.Item(0), "Vacaciones")
-            End If
+            oVacacion.carta(_id_emp, dsVaca.Vacacion_reg.Rows.Item(0), "Vacaciones")
             tot = tot + porc
             hilo.ReportProgress(tot)
         Next
@@ -143,8 +138,6 @@ Public Class frmVacaXPlanilla
 
     Private Sub hilo_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles hilo.RunWorkerCompleted
         UcProgresoCircular1.Oculta()
-        'Cursor.Show()
-        Me.Cursor = Cursors.Default
     End Sub
 
     Private Sub hilo_ProgressChanged(sender As Object, e As ProgressChangedEventArgs) Handles hilo.ProgressChanged

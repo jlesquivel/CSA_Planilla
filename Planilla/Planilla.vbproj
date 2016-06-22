@@ -716,6 +716,7 @@
     <Content Include="money2.ico" />
     <Content Include="Resources\money2.ico" />
     <None Include="plantillas\constTiempoLaborado.docx" />
+    <None Include="plantillas\contVacaciones.docx" />
     <None Include="plantillas\Plantilla Salarios.xls" />
     <None Include="plantillas\PlantillaSalarios.xls" />
     <None Include="Resources\092.png" />
@@ -765,7 +766,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties StartAt="635830560000000000" Versioning="1" IncrementAction="2" IncrementOnBuild="False" IncrementOnRebuild="False" IncrementInformational="True" />
+      <UserProperties IncrementInformational="True" IncrementOnRebuild="False" IncrementOnBuild="False" IncrementAction="2" Versioning="1" StartAt="635830560000000000" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

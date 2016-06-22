@@ -29,10 +29,11 @@ Public Class cVacaciones
         valores.Add({"suscrita", repLegal})
         valores.Add({"suscritaCargo", repCargo})
         valores.Add({"empleado", nombreEmp})
-        valores.Add({"administrador", oConfig.valores(15)})
-        valores.Add({"cargoAdm", oConfig.valores(16)})
+        'valores.Add({"administrador", oConfig.valores(15)})
+        'valores.Add({"cargoAdm", oConfig.valores(16)})
 
         valores.Add({"fechaCarta", Now.ToLongDateString})
+        valores.Add({"fechaCarta2", Now.ToString("dd 'de' MMMM 'del' yyyy")})
         valores.Add({"estimada", nombreEmp})
 
         valores.Add({"fechaIv", fila.fechaI.ToLongDateString})
@@ -48,6 +49,7 @@ Public Class cVacaciones
 
         valores.Add({"Adm", adm})
         valores.Add({"AdmCargo", admCargo})
+
 
 
         Dim wdDoc As New cWord(archivo)  'abre plantilla

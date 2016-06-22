@@ -5,22 +5,25 @@ Public Class frmPerfiles2
     Dim id_perfil As Integer
 
     Private Sub frmPerfiles2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If Not DesignMode Then
+            conn.bd = "planilla"
+            Me.SqlConnection1.ConnectionString = conn.strConn
+            Me.RubrosTableAdapter.Connection.ConnectionString = conn.strConn
+            Me.Tabla_valoresTableAdapter.Connection.ConnectionString = conn.strConn
 
-        conn.bd = "planilla"
-        Me.SqlConnection1.ConnectionString = conn.strConn
-        Me.RubrosTableAdapter.Connection.ConnectionString = conn.strConn
-        Me.Tabla_valoresTableAdapter.Connection.ConnectionString = conn.strConn
+            Dim cant As Integer = Me.RubrosTableAdapter.Fill(Me.PlanillaDataSet.rubros)
 
-        Dim cant As Integer = Me.RubrosTableAdapter.Fill(Me.PlanillaDataSet.rubros)
-
-        Me.Tabla_valoresTableAdapter.Fill(Me.PlanillaDataSet.tabla_valores)
-        clista.DatosLista(Me.PlanillaDataSet.rubros, Me.CheckedListBox1, "id_rubro", "nombre")
-
+            Me.Tabla_valoresTableAdapter.Fill(Me.PlanillaDataSet.tabla_valores)
+            clista.DatosLista(Me.PlanillaDataSet.rubros, Me.CheckedListBox1, "id_rubro", "nombre")
+        End If
     End Sub
 
     Private Sub TabControlPanel2_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControlPanel2.GotFocus
-        Me.TreeViewSQL1.llenar("planilla")
-        Me.TreeViewSQL1.TopNode.Expand()
+        If Not DesignMode Then
+            Me.TreeViewSQL1.llenar("planilla")
+            Me.TreeViewSQL1.TopNode.Expand()
+        End If
+
     End Sub
 
     Private Sub MenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem1.Click
