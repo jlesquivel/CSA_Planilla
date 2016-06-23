@@ -1,6 +1,9 @@
 Public Class bEmpleado
     Public seleccionado As String
     Public activos As Boolean = True
+    Private conn As conexionSQL
+    Private regs As Integer
+
 
     Public Event selecionado(ByVal sender As Object, ByVal e As SeleccionadoEventArgs)
 
@@ -10,10 +13,8 @@ Public Class bEmpleado
 
     Private Sub bEmpleado_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not DesignMode Then
-            Dim conn As New conexionSQL("planilla")
-            V_empleadosTableAdapter.Connection.ConnectionString = conn.strConn
-            V_empleadosTableAdapter.Fill(PlanillaDataSet.v_empleados)
-            Me.V_empleadosBindingSource.Filter = "contrato>0"
+            conn = New conexionSQL("planilla")
+            refresca()
         End If
     End Sub
 
@@ -23,17 +24,24 @@ Public Class bEmpleado
     End Sub
 
     Public Sub refresca()
-        Dim conn As New conexionSQL("planilla")
-        Dim actual As String = Me.ComboBoxEx1.Text
 
+        Dim actual As String = Me.ComboBoxEx1.Text
         V_empleadosTableAdapter.Connection = conn.conexion
 
-        Me.PlanillaDataSet.v_empleados.Clear()
-        Me.V_empleadosTableAdapter.Fill(PlanillaDataSet.v_empleados)
-        Me.V_empleadosBindingSource.Filter = "contrato>0"
+        ComboBoxEx1.BeginUpdate()
+
+        PlanillaDataSet.v_empleados.Clear()
+        regs = V_empleadosTableAdapter.Fill(PlanillaDataSet.v_empleados)
+
+        ComboBoxEx1.EndUpdate()
+
+        V_empleadosBindingSource.Filter = ""
+        activos = False
 
         Dim pos As Integer = Me.ComboBoxEx1.FindStringExact(actual)
-        Me.ComboBoxEx1.SelectedIndex = pos
+        If pos > 0 Then
+            Me.ComboBoxEx1.SelectedIndex = pos
+        End If
 
     End Sub
 

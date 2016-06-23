@@ -267,6 +267,12 @@
     <Compile Include="Formularios\frmDepartamento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\frmHoraExtras.Designer.vb">
+      <DependentUpon>frmHoraExtras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmHoraExtras.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\frmIncapacidades.Designer.vb">
       <DependentUpon>frmIncapacidades.vb</DependentUpon>
     </Compile>
@@ -494,6 +500,9 @@
     <EmbeddedResource Include="Formularios\frmDepartamento.resx">
       <DependentUpon>frmDepartamento.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmHoraExtras.resx">
+      <DependentUpon>frmHoraExtras.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmIncapacidades.resx">
       <SubType>Designer</SubType>
@@ -766,7 +775,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties IncrementInformational="True" IncrementOnRebuild="False" IncrementOnBuild="False" IncrementAction="2" Versioning="1" StartAt="635830560000000000" />
+      <UserProperties StartAt="635830560000000000" Versioning="1" IncrementAction="2" IncrementOnBuild="False" IncrementOnRebuild="False" IncrementInformational="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

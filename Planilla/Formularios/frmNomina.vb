@@ -289,7 +289,6 @@ Public Class frmNomina
         '
         Me.RibbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonPanel1.TabIndex = 1
-        Me.RibbonPanel1.Visible = True
         '
         'RibbonBar3
         '
@@ -489,7 +488,7 @@ Public Class frmNomina
         Me.Bar1.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.ResizeHandle
         Me.Bar1.IsMaximized = False
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.LabelItem1})
-        Me.Bar1.Location = New System.Drawing.Point(5, 648)
+        Me.Bar1.Location = New System.Drawing.Point(5, 646)
         Me.Bar1.Name = "Bar1"
         Me.Bar1.Size = New System.Drawing.Size(1156, 19)
         Me.Bar1.Stretch = True
@@ -531,7 +530,7 @@ Public Class frmNomina
         Me.DockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.DockSite4.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
-        Me.DockSite4.Location = New System.Drawing.Point(5, 648)
+        Me.DockSite4.Location = New System.Drawing.Point(5, 646)
         Me.DockSite4.Name = "DockSite4"
         Me.DockSite4.Size = New System.Drawing.Size(1156, 0)
         Me.DockSite4.TabIndex = 22
@@ -542,10 +541,10 @@ Public Class frmNomina
         Me.DockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite1.Controls.Add(Me.Bar2)
         Me.DockSite1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.DockSite1.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer(New DevComponents.DotNetBar.DocumentBaseContainer() {CType(New DevComponents.DotNetBar.DocumentBarContainer(Me.Bar2, 303, 497), DevComponents.DotNetBar.DocumentBaseContainer)}, DevComponents.DotNetBar.eOrientation.Horizontal)
+        Me.DockSite1.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer(New DevComponents.DotNetBar.DocumentBaseContainer() {CType(New DevComponents.DotNetBar.DocumentBarContainer(Me.Bar2, 303, 495), DevComponents.DotNetBar.DocumentBaseContainer)}, DevComponents.DotNetBar.eOrientation.Horizontal)
         Me.DockSite1.Location = New System.Drawing.Point(5, 151)
         Me.DockSite1.Name = "DockSite1"
-        Me.DockSite1.Size = New System.Drawing.Size(306, 497)
+        Me.DockSite1.Size = New System.Drawing.Size(306, 495)
         Me.DockSite1.TabIndex = 19
         Me.DockSite1.TabStop = False
         '
@@ -564,7 +563,7 @@ Public Class frmNomina
         Me.Bar2.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer
         Me.Bar2.Location = New System.Drawing.Point(0, 0)
         Me.Bar2.Name = "Bar2"
-        Me.Bar2.Size = New System.Drawing.Size(303, 497)
+        Me.Bar2.Size = New System.Drawing.Size(303, 495)
         Me.Bar2.Stretch = True
         Me.Bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar2.TabIndex = 0
@@ -580,13 +579,12 @@ Public Class frmNomina
         Me.PanelDockContainer1.DisabledBackColor = System.Drawing.Color.Empty
         Me.PanelDockContainer1.Location = New System.Drawing.Point(3, 23)
         Me.PanelDockContainer1.Name = "PanelDockContainer1"
-        Me.PanelDockContainer1.Size = New System.Drawing.Size(297, 471)
+        Me.PanelDockContainer1.Size = New System.Drawing.Size(297, 469)
         Me.PanelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
         Me.PanelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
         Me.PanelDockContainer1.Style.GradientAngle = 90
         Me.PanelDockContainer1.TabIndex = 0
-        Me.PanelDockContainer1.Visible = True
         '
         'ExpandableSplitter1
         '
@@ -617,7 +615,7 @@ Public Class frmNomina
         Me.ExpandableSplitter1.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
         Me.ExpandableSplitter1.Location = New System.Drawing.Point(139, 0)
         Me.ExpandableSplitter1.Name = "ExpandableSplitter1"
-        Me.ExpandableSplitter1.Size = New System.Drawing.Size(3, 471)
+        Me.ExpandableSplitter1.Size = New System.Drawing.Size(3, 469)
         Me.ExpandableSplitter1.TabIndex = 18
         Me.ExpandableSplitter1.TabStop = False
         '
@@ -628,7 +626,7 @@ Public Class frmNomina
         Me.ListView1.Location = New System.Drawing.Point(139, 0)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(158, 471)
+        Me.ListView1.Size = New System.Drawing.Size(158, 469)
         Me.ListView1.SmallImageList = Me.ImageList1
         Me.ListView1.TabIndex = 15
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -650,7 +648,7 @@ Public Class frmNomina
         TreeNode1.Text = "Planillas"
         Me.TreeViewSQL1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1})
         Me.TreeViewSQL1.SelectedImageIndex = 0
-        Me.TreeViewSQL1.Size = New System.Drawing.Size(139, 471)
+        Me.TreeViewSQL1.Size = New System.Drawing.Size(139, 469)
         Me.TreeViewSQL1.TabIndex = 14
         '
         'Sqltree2
@@ -671,7 +669,7 @@ Public Class frmNomina
         Me.DockSite2.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
         Me.DockSite2.Location = New System.Drawing.Point(1161, 151)
         Me.DockSite2.Name = "DockSite2"
-        Me.DockSite2.Size = New System.Drawing.Size(0, 497)
+        Me.DockSite2.Size = New System.Drawing.Size(0, 495)
         Me.DockSite2.TabIndex = 20
         Me.DockSite2.TabStop = False
         '
@@ -679,7 +677,7 @@ Public Class frmNomina
         '
         Me.DockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite8.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.DockSite8.Location = New System.Drawing.Point(5, 648)
+        Me.DockSite8.Location = New System.Drawing.Point(5, 646)
         Me.DockSite8.Name = "DockSite8"
         Me.DockSite8.Size = New System.Drawing.Size(1156, 0)
         Me.DockSite8.TabIndex = 26
@@ -691,7 +689,7 @@ Public Class frmNomina
         Me.DockSite5.Dock = System.Windows.Forms.DockStyle.Left
         Me.DockSite5.Location = New System.Drawing.Point(5, 151)
         Me.DockSite5.Name = "DockSite5"
-        Me.DockSite5.Size = New System.Drawing.Size(0, 497)
+        Me.DockSite5.Size = New System.Drawing.Size(0, 495)
         Me.DockSite5.TabIndex = 23
         Me.DockSite5.TabStop = False
         '
@@ -701,7 +699,7 @@ Public Class frmNomina
         Me.DockSite6.Dock = System.Windows.Forms.DockStyle.Right
         Me.DockSite6.Location = New System.Drawing.Point(1161, 151)
         Me.DockSite6.Name = "DockSite6"
-        Me.DockSite6.Size = New System.Drawing.Size(0, 497)
+        Me.DockSite6.Size = New System.Drawing.Size(0, 495)
         Me.DockSite6.TabIndex = 24
         Me.DockSite6.TabStop = False
         '
@@ -735,7 +733,7 @@ Public Class frmNomina
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.Color.AliceBlue
-        Me.ClientSize = New System.Drawing.Size(1166, 669)
+        Me.ClientSize = New System.Drawing.Size(1166, 667)
         Me.Controls.Add(Me.DockSite1)
         Me.Controls.Add(Me.DockSite2)
         Me.Controls.Add(Me.DockSite3)
