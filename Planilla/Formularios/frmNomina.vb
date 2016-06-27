@@ -1,4 +1,4 @@
-Imports System.Threading
+ï»¿Imports System.Threading
 Imports System.Threading.Tasks
 Imports AutoUpdaterDotNET
 
@@ -19,15 +19,15 @@ Imports AutoUpdaterDotNET
 Public Class frmNomina
     Inherits DevComponents.DotNetBar.Office2007RibbonForm
 
-#Region " Código generado por el Diseñador de Windows Forms "
+#Region " CÃ³digo generado por el DiseÃ±ador de Windows Forms "
 
     Public Sub New()
         MyBase.New()
 
-        'El Diseñador de Windows Forms requiere esta llamada.
+        'El DiseÃ±ador de Windows Forms requiere esta llamada.
         InitializeComponent()
 
-        'Agregar cualquier inicialización después de la llamada a InitializeComponent()
+        'Agregar cualquier inicializaciÃ³n despuÃ©s de la llamada a InitializeComponent()
 
     End Sub
 
@@ -41,12 +41,12 @@ Public Class frmNomina
         MyBase.Dispose(disposing)
     End Sub
 
-    'Requerido por el Diseñador de Windows Forms
+    'Requerido por el DiseÃ±ador de Windows Forms
     Private components As System.ComponentModel.IContainer
 
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
+    'NOTA: el DiseÃ±ador de Windows Forms requiere el siguiente procedimiento
+    'Puede modificarse utilizando el DiseÃ±ador de Windows Forms. 
+    'No lo modifique con el editor de cÃ³digo.
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
     Friend WithEvents SqlConnection1 As System.Data.SqlClient.SqlConnection
     Friend WithEvents Sqltree As System.Data.SqlClient.SqlCommand
@@ -95,7 +95,7 @@ Public Class frmNomina
     Private WithEvents CoopeAnde As DevComponents.DotNetBar.ButtonItem
 
     Private WithEvents ButtonItem2 As DevComponents.DotNetBar.ButtonItem
-
+    Friend WithEvents ButtonItem9 As DevComponents.DotNetBar.ButtonItem
     Private WithEvents ButtonItem3 As DevComponents.DotNetBar.ButtonItem
 
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
@@ -121,6 +121,7 @@ Public Class frmNomina
         Me.ButtonItem8 = New DevComponents.DotNetBar.ButtonItem()
         Me.CoopeAnde = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem9 = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonBar2 = New DevComponents.DotNetBar.RibbonBar()
         Me.ItemContainer1 = New DevComponents.DotNetBar.ItemContainer()
         Me.ComboBoxItem1 = New DevComponents.DotNetBar.ComboBoxItem()
@@ -304,10 +305,10 @@ Public Class frmNomina
         Me.RibbonBar3.ContainerControlProcessDialogKey = True
         Me.RibbonBar3.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar3.DragDropSupport = True
-        Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem7, Me.ButtonItem6, Me.ButtonItem8, Me.CoopeAnde, Me.ButtonItem2})
+        Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem7, Me.ButtonItem6, Me.ButtonItem8, Me.CoopeAnde, Me.ButtonItem2, Me.ButtonItem9})
         Me.RibbonBar3.Location = New System.Drawing.Point(448, 0)
         Me.RibbonBar3.Name = "RibbonBar3"
-        Me.RibbonBar3.Size = New System.Drawing.Size(379, 93)
+        Me.RibbonBar3.Size = New System.Drawing.Size(420, 93)
         Me.RibbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar3.TabIndex = 2
         Me.RibbonBar3.Text = "Ajustes"
@@ -359,6 +360,15 @@ Public Class frmNomina
         Me.ButtonItem2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material
         Me.ButtonItem2.SymbolSize = 32.0!
         Me.ButtonItem2.Text = "Vacaciones"
+        '
+        'ButtonItem9
+        '
+        Me.ButtonItem9.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem9.Name = "ButtonItem9"
+        Me.ButtonItem9.SubItemsExpandWidth = 14
+        Me.ButtonItem9.Symbol = "ï€—"
+        Me.ButtonItem9.SymbolSize = 32.0!
+        Me.ButtonItem9.Text = "Horas Extras"
         '
         'RibbonBar2
         '
@@ -488,7 +498,7 @@ Public Class frmNomina
         Me.Bar1.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.ResizeHandle
         Me.Bar1.IsMaximized = False
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.LabelItem1})
-        Me.Bar1.Location = New System.Drawing.Point(5, 646)
+        Me.Bar1.Location = New System.Drawing.Point(5, 644)
         Me.Bar1.Name = "Bar1"
         Me.Bar1.Size = New System.Drawing.Size(1156, 19)
         Me.Bar1.Stretch = True
@@ -530,7 +540,7 @@ Public Class frmNomina
         Me.DockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.DockSite4.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
-        Me.DockSite4.Location = New System.Drawing.Point(5, 646)
+        Me.DockSite4.Location = New System.Drawing.Point(5, 644)
         Me.DockSite4.Name = "DockSite4"
         Me.DockSite4.Size = New System.Drawing.Size(1156, 0)
         Me.DockSite4.TabIndex = 22
@@ -541,10 +551,10 @@ Public Class frmNomina
         Me.DockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite1.Controls.Add(Me.Bar2)
         Me.DockSite1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.DockSite1.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer(New DevComponents.DotNetBar.DocumentBaseContainer() {CType(New DevComponents.DotNetBar.DocumentBarContainer(Me.Bar2, 303, 495), DevComponents.DotNetBar.DocumentBaseContainer)}, DevComponents.DotNetBar.eOrientation.Horizontal)
+        Me.DockSite1.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer(New DevComponents.DotNetBar.DocumentBaseContainer() {CType(New DevComponents.DotNetBar.DocumentBarContainer(Me.Bar2, 303, 493), DevComponents.DotNetBar.DocumentBaseContainer)}, DevComponents.DotNetBar.eOrientation.Horizontal)
         Me.DockSite1.Location = New System.Drawing.Point(5, 151)
         Me.DockSite1.Name = "DockSite1"
-        Me.DockSite1.Size = New System.Drawing.Size(306, 495)
+        Me.DockSite1.Size = New System.Drawing.Size(306, 493)
         Me.DockSite1.TabIndex = 19
         Me.DockSite1.TabStop = False
         '
@@ -563,7 +573,7 @@ Public Class frmNomina
         Me.Bar2.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer
         Me.Bar2.Location = New System.Drawing.Point(0, 0)
         Me.Bar2.Name = "Bar2"
-        Me.Bar2.Size = New System.Drawing.Size(303, 495)
+        Me.Bar2.Size = New System.Drawing.Size(303, 493)
         Me.Bar2.Stretch = True
         Me.Bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar2.TabIndex = 0
@@ -579,7 +589,7 @@ Public Class frmNomina
         Me.PanelDockContainer1.DisabledBackColor = System.Drawing.Color.Empty
         Me.PanelDockContainer1.Location = New System.Drawing.Point(3, 23)
         Me.PanelDockContainer1.Name = "PanelDockContainer1"
-        Me.PanelDockContainer1.Size = New System.Drawing.Size(297, 469)
+        Me.PanelDockContainer1.Size = New System.Drawing.Size(297, 467)
         Me.PanelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
         Me.PanelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
@@ -615,7 +625,7 @@ Public Class frmNomina
         Me.ExpandableSplitter1.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
         Me.ExpandableSplitter1.Location = New System.Drawing.Point(139, 0)
         Me.ExpandableSplitter1.Name = "ExpandableSplitter1"
-        Me.ExpandableSplitter1.Size = New System.Drawing.Size(3, 469)
+        Me.ExpandableSplitter1.Size = New System.Drawing.Size(3, 467)
         Me.ExpandableSplitter1.TabIndex = 18
         Me.ExpandableSplitter1.TabStop = False
         '
@@ -626,7 +636,7 @@ Public Class frmNomina
         Me.ListView1.Location = New System.Drawing.Point(139, 0)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(158, 469)
+        Me.ListView1.Size = New System.Drawing.Size(158, 467)
         Me.ListView1.SmallImageList = Me.ImageList1
         Me.ListView1.TabIndex = 15
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -648,7 +658,7 @@ Public Class frmNomina
         TreeNode1.Text = "Planillas"
         Me.TreeViewSQL1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1})
         Me.TreeViewSQL1.SelectedImageIndex = 0
-        Me.TreeViewSQL1.Size = New System.Drawing.Size(139, 469)
+        Me.TreeViewSQL1.Size = New System.Drawing.Size(139, 467)
         Me.TreeViewSQL1.TabIndex = 14
         '
         'Sqltree2
@@ -669,7 +679,7 @@ Public Class frmNomina
         Me.DockSite2.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
         Me.DockSite2.Location = New System.Drawing.Point(1161, 151)
         Me.DockSite2.Name = "DockSite2"
-        Me.DockSite2.Size = New System.Drawing.Size(0, 495)
+        Me.DockSite2.Size = New System.Drawing.Size(0, 493)
         Me.DockSite2.TabIndex = 20
         Me.DockSite2.TabStop = False
         '
@@ -677,7 +687,7 @@ Public Class frmNomina
         '
         Me.DockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite8.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.DockSite8.Location = New System.Drawing.Point(5, 646)
+        Me.DockSite8.Location = New System.Drawing.Point(5, 644)
         Me.DockSite8.Name = "DockSite8"
         Me.DockSite8.Size = New System.Drawing.Size(1156, 0)
         Me.DockSite8.TabIndex = 26
@@ -689,7 +699,7 @@ Public Class frmNomina
         Me.DockSite5.Dock = System.Windows.Forms.DockStyle.Left
         Me.DockSite5.Location = New System.Drawing.Point(5, 151)
         Me.DockSite5.Name = "DockSite5"
-        Me.DockSite5.Size = New System.Drawing.Size(0, 495)
+        Me.DockSite5.Size = New System.Drawing.Size(0, 493)
         Me.DockSite5.TabIndex = 23
         Me.DockSite5.TabStop = False
         '
@@ -699,7 +709,7 @@ Public Class frmNomina
         Me.DockSite6.Dock = System.Windows.Forms.DockStyle.Right
         Me.DockSite6.Location = New System.Drawing.Point(1161, 151)
         Me.DockSite6.Name = "DockSite6"
-        Me.DockSite6.Size = New System.Drawing.Size(0, 495)
+        Me.DockSite6.Size = New System.Drawing.Size(0, 493)
         Me.DockSite6.TabIndex = 24
         Me.DockSite6.TabStop = False
         '
@@ -733,7 +743,7 @@ Public Class frmNomina
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.Color.AliceBlue
-        Me.ClientSize = New System.Drawing.Size(1166, 667)
+        Me.ClientSize = New System.Drawing.Size(1166, 665)
         Me.Controls.Add(Me.DockSite1)
         Me.Controls.Add(Me.DockSite2)
         Me.Controls.Add(Me.DockSite3)
@@ -780,8 +790,8 @@ Public Class frmNomina
 
             If (args.IsUpdateAvailable) Then
                 Dim dialogResult = MessageBox.Show(String.Format(
-               "Existe una nueva versión {0} desea actualizarla ?",
-               args.CurrentVersion), "Actualización Disponible",
+               "Existe una nueva versiÃ³n {0} desea actualizarla ?",
+               args.CurrentVersion), "ActualizaciÃ³n Disponible",
                MessageBoxButtons.YesNo, MessageBoxIcon.Information)
 
                 If (dialogResult.Equals(dialogResult.Yes)) Then
@@ -794,7 +804,7 @@ Public Class frmNomina
             End If
         Else
             'MessageBox.Show(
-            '   "Problemas con la conexión internet. intente más tarde.",
+            '   "Problemas con la conexiÃ³n internet. intente mÃ¡s tarde.",
             '   "Error servidor ", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
@@ -820,7 +830,7 @@ Public Class frmNomina
             End If
             Me.Tag = "Colegio Santa Ana"
         Catch ex As Exception
-            MsgBox("Sin comunicación con la Base de Datos", MsgBoxStyle.Critical, "ERROR")
+            MsgBox("Sin comunicaciÃ³n con la Base de Datos", MsgBoxStyle.Critical, "ERROR")
             Application.Exit()
         End Try
 #End If
@@ -1055,5 +1065,9 @@ Public Class frmNomina
 
     Private Sub ButtonItem2_Click(sender As Object, e As EventArgs) Handles ButtonItem2.Click
         vnt.cargarVentana(New frmVacaXPlanilla, Me)
+    End Sub
+
+    Private Sub ButtonItem9_Click(sender As Object, e As EventArgs) Handles ButtonItem9.Click
+        vnt.cargarVentana(New frmHoraExtras, Me)
     End Sub
 End Class

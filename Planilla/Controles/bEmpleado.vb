@@ -3,7 +3,21 @@ Public Class bEmpleado
     Public activos As Boolean = True
     Private conn As conexionSQL
     Private regs As Integer
+    Private _hora_extra As Boolean = False
 
+    Public Property HoraExtra() As Boolean
+        Get
+            Return _hora_extra
+        End Get
+        Set(ByVal Value As Boolean)
+            _hora_extra = Value
+            If _hora_extra Then
+                Me.V_empleadosBindingSource.Filter = "contrato>0 and horaExtra>0"
+            Else
+                Me.V_empleadosBindingSource.Filter = "contrato>0"
+            End If
+        End Set
+    End Property
 
     Public Event selecionado(ByVal sender As Object, ByVal e As SeleccionadoEventArgs)
 
@@ -34,9 +48,9 @@ Public Class bEmpleado
         regs = V_empleadosTableAdapter.Fill(PlanillaDataSet.v_empleados)
 
         ComboBoxEx1.EndUpdate()
+        Me.V_empleadosBindingSource.Filter = "contrato>0"
 
-        V_empleadosBindingSource.Filter = ""
-        activos = False
+        activos = True
 
         Dim pos As Integer = Me.ComboBoxEx1.FindStringExact(actual)
         If pos > 0 Then
@@ -52,10 +66,18 @@ Public Class bEmpleado
     Private Sub SwitchButton1_ValueChanged(sender As Object, e As EventArgs) Handles SwitchButton1.ValueChanged
 
         If SwitchButton1.Value Then
-            Me.V_empleadosBindingSource.Filter = ""
+            If _hora_extra Then
+                Me.V_empleadosBindingSource.Filter = "horaExtra>0"
+            Else
+                Me.V_empleadosBindingSource.Filter = ""
+            End If
             activos = False
         Else
-            Me.V_empleadosBindingSource.Filter = "contrato>0"
+            If _hora_extra Then
+                Me.V_empleadosBindingSource.Filter = "contrato>0 and horaExtra>0"
+            Else
+                Me.V_empleadosBindingSource.Filter = "contrato>0"
+            End If
             activos = True
 
         End If
@@ -83,4 +105,6 @@ Public Class SeleccionadoEventArgs
             ivalor = Value
         End Set
     End Property
+
+
 End Class

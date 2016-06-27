@@ -21,8 +21,8 @@ Partial Class frmRubros
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Perfiles")
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRubros))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRubros))
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel()
         Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
@@ -37,10 +37,6 @@ Partial Class frmRubros
         Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
         Me.RubrosDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RubrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PlanillaDataSet = New Planilla.planillaDataSet()
         Me.RubrosBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
@@ -58,6 +54,10 @@ Partial Class frmRubros
         Me.RubrosBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.RubrosTableAdapter = New Planilla.planillaDataSetTableAdapters.rubrosTableAdapter()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel2.SuspendLayout()
@@ -73,14 +73,14 @@ Partial Class frmRubros
         '
         Me.TabControl1.BackColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.TabControl1.CanReorderTabs = True
-        Me.TabControl1.Controls.Add(Me.TabControlPanel2)
         Me.TabControl1.Controls.Add(Me.TabControlPanel1)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel2)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TabControl1.SelectedTabIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(496, 419)
+        Me.TabControl1.Size = New System.Drawing.Size(718, 419)
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
         Me.TabControl1.Tabs.Add(Me.TabItem2)
@@ -97,7 +97,7 @@ Partial Class frmRubros
         Me.TabControlPanel2.Location = New System.Drawing.Point(0, 26)
         Me.TabControlPanel2.Name = "TabControlPanel2"
         Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel2.Size = New System.Drawing.Size(496, 393)
+        Me.TabControlPanel2.Size = New System.Drawing.Size(649, 393)
         Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -114,7 +114,7 @@ Partial Class frmRubros
         Me.CheckedListBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CheckedListBox1.Location = New System.Drawing.Point(204, 1)
         Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(291, 391)
+        Me.CheckedListBox1.Size = New System.Drawing.Size(444, 391)
         Me.CheckedListBox1.TabIndex = 3
         '
         'ExpandableSplitter1
@@ -214,7 +214,7 @@ Partial Class frmRubros
         Me.TabControlPanel1.Location = New System.Drawing.Point(0, 26)
         Me.TabControlPanel1.Name = "TabControlPanel1"
         Me.TabControlPanel1.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel1.Size = New System.Drawing.Size(496, 310)
+        Me.TabControlPanel1.Size = New System.Drawing.Size(718, 393)
         Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.TabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -237,39 +237,8 @@ Partial Class frmRubros
         Me.RubrosDataGridView.Location = New System.Drawing.Point(1, 26)
         Me.RubrosDataGridView.Name = "RubrosDataGridView"
         Me.RubrosDataGridView.RowHeadersWidth = 20
-        Me.RubrosDataGridView.Size = New System.Drawing.Size(494, 283)
+        Me.RubrosDataGridView.Size = New System.Drawing.Size(716, 366)
         Me.RubrosDataGridView.TabIndex = 0
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id_rubro"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "id_rubro"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 150
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "categoria"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "categoria"
-        Me.DataGridViewTextBoxColumn3.Items.AddRange(New Object() {"Ingreso", "Deducción"})
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "formula"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "formula"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 200
         '
         'RubrosBindingSource
         '
@@ -295,7 +264,7 @@ Partial Class frmRubros
         Me.RubrosBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.RubrosBindingNavigator.Name = "RubrosBindingNavigator"
         Me.RubrosBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.RubrosBindingNavigator.Size = New System.Drawing.Size(494, 25)
+        Me.RubrosBindingNavigator.Size = New System.Drawing.Size(716, 25)
         Me.RubrosBindingNavigator.TabIndex = 1
         Me.RubrosBindingNavigator.Text = "BindingNavigator1"
         '
@@ -402,11 +371,43 @@ Partial Class frmRubros
         '
         Me.RubrosTableAdapter.ClearBeforeFill = True
         '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id_rubro"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "id_rubro"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 150
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "categoria"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "categoria"
+        Me.DataGridViewTextBoxColumn3.Items.AddRange(New Object() {"Ingreso", "Deducción"})
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DataGridViewTextBoxColumn3.Width = 125
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "formula"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "formula"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 400
+        '
         'frmRubros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(496, 419)
+        Me.ClientSize = New System.Drawing.Size(718, 419)
         Me.Controls.Add(Me.TabControl1)
         Me.DoubleBuffered = True
         Me.Name = "frmRubros"
@@ -447,10 +448,6 @@ Partial Class frmRubros
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents RubrosBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents RubrosDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ContextMenu1 As System.Windows.Forms.ContextMenu
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
@@ -460,4 +457,8 @@ Partial Class frmRubros
     Friend WithEvents TreeViewSQL1 As Planilla.TreeViewSQL
     Friend WithEvents CheckedListBox1 As System.Windows.Forms.CheckedListBox
     Friend WithEvents SqlConnection1 As System.Data.SqlClient.SqlConnection
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewComboBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
 End Class

@@ -118,13 +118,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4357BEC7ED7D498DA253476AE855CBA2"
+        "OwnerKey" = "8:_DDEA7179A9E103B280E74EEAC39E0E5F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DDEA7179A9E103B280E74EEAC39E0E5F"
+        "OwnerKey" = "8:_4357BEC7ED7D498DA253476AE855CBA2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -662,15 +662,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:iPlanilla"
-        "ProductCode" = "8:{83BB8603-569C-44D9-951A-782047EAC4CA}"
-        "PackageCode" = "8:{8A59ED8B-DF1A-4AB5-99BA-A1A73257CBBC}"
+        "ProductCode" = "8:{F487AB67-4276-4DDA-8ACB-AE2CA2778E7A}"
+        "PackageCode" = "8:{0C08A00C-D64B-406E-8D5A-2692DA70D6B8}"
         "UpgradeCode" = "8:{19BE1C7A-1F38-4E26-91D0-B898CBD57051}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:FALSE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.79"
+        "ProductVersion" = "8:1.0.80"
         "Manufacturer" = "8:SE"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1198,7 +1198,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4357BEC7ED7D498DA253476AE855CBA2"
             {
-            "SourcePath" = "8:..\\Planilla\\obj\\Release\\Planilla.exe"
+            "SourcePath" = "8:..\\Planilla\\obj\\Debug\\Planilla.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E3C8A64E8CD241ECAFC0DCB3446DCEE8"

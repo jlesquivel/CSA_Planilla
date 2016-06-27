@@ -141,6 +141,7 @@
     <Compile Include="Clases\cCorreo.vb" />
     <Compile Include="Clases\cEmpleado.vb" />
     <Compile Include="Clases\cExcel.vb" />
+    <Compile Include="Clases\cHorasExtras.vb" />
     <Compile Include="Clases\cVacaciones.vb" />
     <Compile Include="Clases\cWord.vb" />
     <Compile Include="Clases\Evaluador.vb" />
@@ -170,6 +171,12 @@
       <DependentUpon>cRubros.vb</DependentUpon>
     </Compile>
     <Compile Include="Controles\cRubros.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\cuEmpleado.Designer.vb">
+      <DependentUpon>cuEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\cuEmpleado.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controles\ucProgresoCircular.Designer.vb">
@@ -370,6 +377,12 @@
       <DependentUpon>rptAguinaldo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\rptColillasHorasExtras.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptColillasHorasExtras.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\rptColillasPago.vb">
       <DependentUpon>rptColillasPago.rpt</DependentUpon>
       <SubType>Component</SubType>
@@ -454,6 +467,9 @@
     <EmbeddedResource Include="Controles\cRubros.resx">
       <SubType>Designer</SubType>
       <DependentUpon>cRubros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\cuEmpleado.resx">
+      <DependentUpon>cuEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ucProgresoCircular.resx">
       <DependentUpon>ucProgresoCircular.vb</DependentUpon>
@@ -571,6 +587,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptAguinaldo.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptColillasHorasExtras.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptColillasHorasExtras.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptColillasPago.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptColillasPago.vb</LastGenOutput>
@@ -618,6 +638,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Formularios\dsVacaciones.xsc">
       <DependentUpon>dsVacaciones.xsd</DependentUpon>
     </None>
@@ -775,7 +796,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties StartAt="635830560000000000" Versioning="1" IncrementAction="2" IncrementOnBuild="False" IncrementOnRebuild="False" IncrementInformational="True" />
+      <UserProperties IncrementInformational="True" IncrementOnRebuild="False" IncrementOnBuild="False" IncrementAction="2" Versioning="1" StartAt="635830560000000000" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

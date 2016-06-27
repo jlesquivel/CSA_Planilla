@@ -178,19 +178,21 @@ Public Class conexionSQL
         Return arreglo
     End Function
 
-    Public Sub ejecuta(ByVal comando As String)
+    Public Function ejecuta(ByVal comando As String) As Integer
         Try
+            Dim regs As Integer
             Dim myCommand As New SqlCommand(comando)
             myCommand.Connection = colegioConnection
             If colegioConnection.State = ConnectionState.Closed Then
                 colegioConnection.Open()
             End If
-            myCommand.ExecuteNonQuery()
+            regs = myCommand.ExecuteNonQuery()
             myCommand.Connection.Close()
+            Return regs
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-    End Sub
+    End Function
 
     Public Sub ejecuta_sinerror(ByVal comando As String)
 

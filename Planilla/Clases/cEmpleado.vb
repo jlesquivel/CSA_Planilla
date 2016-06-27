@@ -7,16 +7,24 @@
     Dim dsEmp As New ds2planilla
     Dim taEmp As New ds2planillaTableAdapters.empleadosTableAdapter
 
+
     Sub New(pid_emp As Integer)
         _id_emp = pid_emp
-        taEmp.FillById_Emp(dsEmp.empleados, _id_emp)
-        datos = dsEmp.empleados.Rows.Item(0)
+        Dim regs As Integer
+        regs = taEmp.FillById_Emp(dsEmp.empleados, _id_emp)
+        If regs > 0 Then
+            datos = dsEmp.empleados.Rows.Item(0)
+        End If
+
     End Sub
 
     Sub New(pcedula As String)
         _cedula = pcedula
-        taEmp.FillByCedula(dsEmp.empleados, _cedula)
-        datos = dsEmp.empleados.Rows.Item(0)
+        Dim regs As Integer
+        regs = taEmp.FillByCedula(dsEmp.empleados, _cedula)
+        If regs > 0 Then
+            datos = dsEmp.empleados.Rows.Item(0)
+        End If
     End Sub
 
     Function Registro() As ds2planilla.empleadosRow

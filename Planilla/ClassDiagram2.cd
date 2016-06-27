@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Planilla.Ausencias" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAEAAAAAAAAAgAAAAAAgQBAAAAAAAIAAAAIAA=</HashCode>
+      <FileName>Clases\Ausencias.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cAnualidades" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\cAnualidades.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.carga" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAQAAAAAAAAAAAAABAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Clases\carga.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CargarLista" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\CargarLista.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cConfiguracion" Collapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAQAAACAAAQAAAAgACA=</HashCode>
+      <FileName>Clases\cConfiguracion.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cCoopeAnde">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEQAAABAAAAAAAACAAAAAAAAITAAEAAAAIgIAEAAAA=</HashCode>
+      <FileName>Clases\cCoopeAnde.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cCorreo" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAQAAiAAAAEAACAAAAAABABEAQAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\cCorreo.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cEmpleado">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAEAAAAABABAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\cEmpleado.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cExcel" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAgAAAAEAAgAAQAAABgAAABAAIAAAAAAAAQAE=</HashCode>
+      <FileName>Clases\cExcel.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cHorasExtras">
+    <Position X="0.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAgiAAAAAAAIEAAIAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\cHorasExtras.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.conexionSQL" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAASACCAEZEEAMAMACACAAQAABAAAAAAAAAEQAAE=</HashCode>
+      <FileName>Clases\conexionSQL.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.cVacaciones" Collapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAIAAIAAAAgAAgAAAACAAA=</HashCode>
+      <FileName>Clases\cVacaciones.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cWord" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIQAEAAAAAQEIAAgAAEAIAAAAAQAQAAAAA=</HashCode>
+      <FileName>Clases\cWord.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.Evaluador" Collapsed="true">
+    <Position X="15.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAgAA=</HashCode>
+      <FileName>Clases\Evaluador.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.Incapacidades" Collapsed="true">
+    <Position X="12.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAEAAAAAAAAAgCAAAAAgQBAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Clases\Incapacidades.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.NetworkInformation" Collapsed="true">
+    <Position X="22.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkAAAAAEAAAEAAAEIAAQAAAIAAAAQAAAAAgAAAAAAAI=</HashCode>
+      <FileName>Clases\NetworkInformation.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cPlanilla" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACIAAAAA=</HashCode>
+      <FileName>Clases\Planilla.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.Reportes" Collapsed="true">
+    <Position X="14" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAIAAAAAAAQAAAAAAAQQAAAAAAA=</HashCode>
+      <FileName>Clases\Reportes.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.Ventanas" Collapsed="true">
+    <Position X="22.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAIAAAAA=</HashCode>
+      <FileName>Clases\Ventanas.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.bEmpleado" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAiAACAECAEAQCIA4AAAAFQAQAEAAAAoA=</HashCode>
+      <FileName>Controles\bEmpleado.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.SeleccionadoEventArgs" Collapsed="true">
+    <Position X="19.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controles\bEmpleado.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.colegiatura" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABGAAEAAACGQmBAEAECAACACYAAQACYAAgAAIAEACQA=</HashCode>
+      <FileName>Controles\colegiatura.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cPagos" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQCACAAAAAAEACAAAECIgIAAAAoAAAAAAAgAAA=</HashCode>
+      <FileName>Controles\cPagos.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cRubros" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBGAAEIAACCAgRAAANCAACADZGUQAAAAApUIIAAAAQA=</HashCode>
+      <FileName>Controles\cRubros.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cuEmpleado" Collapsed="true">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAAAAAAICCAAAACAADzAAQAAAAABAEAQAA=</HashCode>
+      <FileName>Controles\cuEmpleado.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.MonedaTextBox" Collapsed="true">
+    <Position X="17.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAIACAAAACAAAADAAAACABAAAABCAAAAQA=</HashCode>
+      <FileName>Controles\MonedaTextBox.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.TextboxFormat" Collapsed="true">
+    <Position X="5.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAIASAAAACAAAADAAAAAABAAAAACAAAAUA=</HashCode>
+      <FileName>Controles\TextboxFormat.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.TreeViewSQL" Collapsed="true">
+    <Position X="7" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABACAESAgAAAABACAAAACACAAAAAAAAAIgAAAAAA=</HashCode>
+      <FileName>Controles\TreeViewSQL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.ucProgresoCircular" Collapsed="true">
+    <Position X="8.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABIAAAAACAAgACAAAAAAQAAAAgAAAEAAA=</HashCode>
+      <FileName>Controles\ucProgresoCircular.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.ucVacaciones" Collapsed="true">
+    <Position X="10.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAACIAOAAAAACAUCIAAACAI5gAAAMEASoDAASAEA=</HashCode>
+      <FileName>Controles\ucVacaciones.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.UserControl2" Collapsed="true">
+    <Position X="12.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAACAAlAAAAACAAAACAAEAJAABAAAABADAAAA=</HashCode>
+      <FileName>Controles\UserControl2.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.ds2planilla" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYigAQESEwCBSANABAQQQpASQCqCUBgCAgKAEIEABBA=</HashCode>
+      <FileName>Formularios\ds2planilla.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.dsEmpleados" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAACAwAAQAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.dsPlanilla" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAACECA0QAwAJQBAAAQgAQgAoCZhgAAAKoQAEABFA=</HashCode>
+      <FileName>Formularios\dsPlanilla.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.dsVacaciones" Collapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAAQAAAwiAIAJABACAQAAAAAwCQBgAAAEAAAEIBBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frm" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Formularios\frm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmAusencias" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABHAAAIIkCCQhBQEAECIESACYAQAAiEAACQCKAAAAQQ=</HashCode>
+      <FileName>Formularios\frmAusencias.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmCategoria" Collapsed="true">
+    <Position X="17.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEDAAAAACAAgAAAAAiAAAAGIAIAIAAAAAgQAARgAIA=</HashCode>
+      <FileName>Formularios\frmCategoria.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmCategoria2" Collapsed="true">
+    <Position X="19.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAAAIAELAAAAAIAACAEAACAAoQACABACAAIAAQEAQ=</HashCode>
+      <FileName>Formularios\frmCategoria2.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmColegiatura" Collapsed="true">
+    <Position X="21" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABGAAEAAACGQmBAEAEKAACACYAQQAAYAAgAAJAAACQA=</HashCode>
+      <FileName>Formularios\frmColegiatura.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmConfiguracion" Collapsed="true">
+    <Position X="22.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhmAoEgQVSCA4BgAAECAkHASbjQwJIiAAgOQIBAAAUg=</HashCode>
+      <FileName>Formularios\frmConfiguracion.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmConstSalario" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAQiAAAAAAAACAAAACAAAAAAAAAAAAIAAgAQA=</HashCode>
+      <FileName>Formularios\frmConstSalario.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmContrato" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>46CltOKqELPElAVJK0yL9tTyjv7/YLABQv7MM8rIFNY=</HashCode>
+      <FileName>Formularios\frmContrato.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmCoopeAnde" Collapsed="true">
+    <Position X="8.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAJIKCAaAAAAAAAACQQAACoAQACAABAABEAAAgEAA=</HashCode>
+      <FileName>Formularios\frmCoopeAnde.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmCoopeAndeX" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIEBgAKAAAEAAAACQAAhCJGgwAAABAIR4AAABABA=</HashCode>
+      <FileName>Formularios\frmCoopeAndeX.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmDepartamento" Collapsed="true">
+    <Position X="12.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAIAIgEKQAABAIBACQAAACAAIQACABACAAIAAAEAA=</HashCode>
+      <FileName>Formularios\frmDepartamento.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmHoraExtras" Collapsed="true">
+    <Position X="14" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACCAACCAAgCAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Formularios\frmHoraExtras.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmIncapacidades" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhHAAWgogCCwhBAMEEDEECQiZgSAYAMAAgAAIIChBQA=</HashCode>
+      <FileName>Formularios\frmIncapacidades.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmNomina" Collapsed="true">
+    <Position X="15.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>aA3GIKKAAKBgl1xgIAGiBEQGAAwA4AXBoSCAAMnWA0A=</HashCode>
+      <FileName>Formularios\frmNomina.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmPerfiles2" Collapsed="true">
+    <Position X="17.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IjGABgAAAKCAiBBAAFCgICACZlUgACRAAAQEKAADgUg=</HashCode>
+      <FileName>Formularios\frmPerfiles2.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmPlanilla" Collapsed="true">
+    <Position X="19.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKA6aOZNEaKp1VOIRMD0+6Q+gA36Y2EZcrjAKP/H0zA=</HashCode>
+      <FileName>Formularios\frmPlanilla.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmPlanillaAgregaRubro" Collapsed="true">
+    <Position X="21" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAACAAAAAAAACAAAACIAEAIAABAAQAAAAAAQA=</HashCode>
+      <FileName>Formularios\frmPlanillaAgregaRubro.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmPuesto" Collapsed="true">
+    <Position X="22.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAIAEKBAABAIBACAEBgCgAIQYCAAAGAAIAAAEAA=</HashCode>
+      <FileName>Formularios\frmPuesto.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmReporte" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACBAAACAAAAABAAgAAAAAAAQAA=</HashCode>
+      <FileName>Formularios\frmReporte.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmRubros" Collapsed="true">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CjGARkAAAKCAgBBAAECgICADZmUwAARAAgQAKAATwUg=</HashCode>
+      <FileName>Formularios\frmRubros.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmVacaciones" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AcJAAMAAQSAAAAFAAADEpgAiArjvEEApCAABAgSAAhg=</HashCode>
+      <FileName>Formularios\frmVacaciones.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.frmVacaXPlanilla" Collapsed="true">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUJBQIAAgWBgAAUAMCCEQAAiQjjnUEAALISoBACKABA=</HashCode>
+      <FileName>Formularios\frmVacaXPlanilla.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSet" Collapsed="true">
+    <Position X="12.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JLghCSESE2UFyCNABGAwQxEUAmqCQngAEBqwRkFCBBo=</HashCode>
+      <FileName>Formularios\planillaDataSet.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.ConstanciaSalario" Collapsed="true">
+    <Position X="22.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgBAAAJAAAQAAAAAAAIAAAAAAAAAAAACAABAAAABAA=</HashCode>
+      <FileName>Reportes\ConstanciaSalario.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedConstanciaSalario" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\ConstanciaSalario.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptAguinaldo" Collapsed="true">
+    <Position X="15.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAABJAAAQAAAAAAAIAAAAAAABAAAADAABAAAABAA=</HashCode>
+      <FileName>Reportes\rptAguinaldo.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptAguinaldo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptAguinaldo.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptColillasPago" Collapsed="true">
+    <Position X="17.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAABJAAAQAAAAAAAIAAAAAAABAAAADAABAAAABAA=</HashCode>
+      <FileName>Reportes\rptColillasPago.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptColillasPago" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptColillasPago.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptColillasPagoEmpleado" Collapsed="true">
+    <Position X="19.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAJAAAQACAAAAAIAAAAAAAAAAAACAABAAAABAA=</HashCode>
+      <FileName>Reportes\rptColillasPagoEmpleado.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptColillasPagoEmpleado" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptColillasPagoEmpleado.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptColillasPagoPOS" Collapsed="true">
+    <Position X="21" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAABJAAAQAAAAAAAIAAAAAAABAAAADAABAAAABAA=</HashCode>
+      <FileName>Reportes\rptColillasPagoPOS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptColillasPagoPOS" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptColillasPagoPOS.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptCoopAnde_Mensual" Collapsed="true">
+    <Position X="22.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAABJAAAQAAAAAAAIAAAAEAABAAAADAABAAAABAA=</HashCode>
+      <FileName>Reportes\rptCoopAnde_Mensual.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptCoopAnde_Mensual" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptCoopAnde_Mensual.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptJPMN" Collapsed="true">
+    <Position X="5.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAJAAAQAAAAAAAIAAAAAAABAAAACAABAAAABAA=</HashCode>
+      <FileName>Reportes\rptJPMN.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptJPMN" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptJPMN.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptJPMNFondoReparto" Collapsed="true">
+    <Position X="7" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAJAAAQAAAAAAAIAAAAAAABAAAACAABAAAABAA=</HashCode>
+      <FileName>Reportes\rptJPMNFondoReparto.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptJPMNFondoReparto" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptJPMNFondoReparto.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptListadoContratosVigentes" Collapsed="true">
+    <Position X="8.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAABJAgAQAAAAAAAIAAAAAAAAAAAADgABAAAABAA=</HashCode>
+      <FileName>Reportes\rptListadoContratosVigentes1.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptListadoContratosVigentes" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptListadoContratosVigentes1.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptPlanilla" Collapsed="true">
+    <Position X="10.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAJAAgQAAAAAAAIAAAAAAAAAAAACAABAAAABAA=</HashCode>
+      <FileName>Reportes\rptPlanilla.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptPlanilla" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptPlanilla.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptPlanillasMensual" Collapsed="true">
+    <Position X="12.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiACAAJAAAQAAAAAAAJAAAAAAAAAAAACAABAAAABAA=</HashCode>
+      <FileName>Reportes\rptPlanillasMensual.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptPlanillasMensual" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptPlanillasMensual.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptSSVM" Collapsed="true">
+    <Position X="14" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAJAAAQAAAAAAAIAAAAAAABAAAACAABAAAABAA=</HashCode>
+      <FileName>Reportes\rptSSVM.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptSSVM" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptSSVM.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.rptSSVM_Mensual" Collapsed="true">
+    <Position X="15.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAABJAAAQAAAAAAAIAAAAAAABAAAADAABAAAABAA=</HashCode>
+      <FileName>Reportes\rptSSVM_Mensual.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.CachedrptSSVM_Mensual" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reportes\rptSSVM_Mensual.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Planilla.ds2planillaTableAdapters.empleadosTableAdapter" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAgAAAMAIAAAAEAAACEYCAAAAAAAAAAARBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.ds2planillaTableAdapters.pagos_detalleTableAdapter" Collapsed="true">
+    <Position X="7" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.ds2planillaTableAdapters.ContratosActivosTableAdapter" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAABAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.dsPlanillaTableAdapters.departamentoTableAdapter" Collapsed="true">
+    <Position X="22.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.dsVacacionesTableAdapters.Vacacion_regTableAdapter" Collapsed="true">
+    <Position X="17.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEBAACAcAIAAAAAAAAKFICAAAAAAAAAAARBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.dsVacacionesTableAdapters.VacacionesTableAdapter" Collapsed="true">
+    <Position X="19.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAgEAAAAAcAIAAAAAAAACEICAAAAAAAAAAARBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.dsVacacionesTableAdapters.ContratosActivosTableAdapter" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.dsVacacionesTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="22.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAQACAAAABABAEBAAAAMAAgAAADgAAAAAQAAAAQBAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.v_empleadosTableAdapter" Collapsed="true">
+    <Position X="15.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.rubrosTableAdapter" Collapsed="true">
+    <Position X="17.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAACAMAIAAAAAAAACEICAAAAAAAAAAARBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.tabla_valoresTableAdapter" Collapsed="true">
+    <Position X="21" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.departamentoTableAdapter" Collapsed="true">
+    <Position X="21" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.PagosEmpleadoTableAdapter" Collapsed="true">
+    <Position X="8.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.Planilla_DesglocePagoTableAdapter" Collapsed="true">
+    <Position X="10.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.config_valoresTableAdapter" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.colegiaturaTableAdapter" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.contratosTableAdapter" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.empleadosTableAdapter" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.configuracionTableAdapter" Collapsed="true">
+    <Position X="19.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.configuracionValoresTableAdapter" Collapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.categoriasTableAdapter" Collapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.v_empleados_contratadosTableAdapter" Collapsed="true">
+    <Position X="14" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.incapacidadesTipoTableAdapter" Collapsed="true">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.IncapacidadesTableAdapter" Collapsed="true">
+    <Position X="14" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.ausenciasTableAdapter" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.pagos_detalleTableAdapter" Collapsed="true">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.planillaDataSetTableAdapters.vCoopeAndeXLSTableAdapter" Collapsed="true">
+    <Position X="21" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAGAAEAAAAAMAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.My.MyApplication" Collapsed="true">
+    <Position X="19.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.My.MySettings" Collapsed="true">
+    <Position X="21" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAABEgAEAABAADAAAAkAAAAAAAAAA=</HashCode>
+      <FileName>Settings.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Module Name="Planilla.My.MySettingsProperty" Collapsed="true">
+    <Position X="5.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="Planilla.My.Resources.Resources" Collapsed="true">
+    <Position X="7" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQIAAAAAAAAAAAABBIA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="Segoe UI" Size="9.75" />
+</ClassDiagram>

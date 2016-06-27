@@ -2143,6 +2143,7 @@ Public Class frmPlanilla
         Me.cargarPlanillas()
         Me.cargarPlanilla(Me.id_planilla)
         Me.DataGridView1.Refresh()
+        MuestraPlanilla(Me.id_planilla)
     End Sub
 
 
@@ -2225,6 +2226,10 @@ Public Class frmPlanilla
     End Sub
 
     Private Sub ButtonItem7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem7.Click
+
+        'actualizar el id de planilla en el que se pagaron las horas extras
+        conn.ejecuta("HoraExtra_act_id_planilla " & id_planilla.ToString)
+
         Dim reportes As New Reportes
         Dim rep As ReportClass
         Dim tsResult As System.TimeSpan = ffin.Subtract(fini)
@@ -2389,7 +2394,6 @@ Public Class frmPlanilla
 
         refrescaRubros()
     End Sub
-
     Sub refrescaRubros()
         Dim actual As Integer = DataGrid1.CurrentRowIndex
         DataGrid1.CurrentRowIndex = 0
@@ -2430,8 +2434,6 @@ Public Class frmPlanilla
         rep.SummaryInfo.ReportComments = "CoopeAnde Capital"
         reportes.imprimir(rep, False, Me.ParentForm)
     End Sub
-
-
 
     Private Sub ButtonX3_Click(sender As Object, e As EventArgs) Handles ButtonX3.Click
         'RECUPERAR PLANILLA BORRADA
