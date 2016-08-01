@@ -82,7 +82,7 @@ Partial Class frmPerfiles2
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TabControl1.SelectedTabIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(475, 433)
+        Me.TabControl1.Size = New System.Drawing.Size(635, 433)
         Me.TabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Metro
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.MultilineWithNavigationBox
@@ -99,7 +99,7 @@ Partial Class frmPerfiles2
         Me.TabControlPanel1.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel1.Name = "TabControlPanel1"
         Me.TabControlPanel1.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel1.Size = New System.Drawing.Size(475, 406)
+        Me.TabControlPanel1.Size = New System.Drawing.Size(635, 406)
         Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(227, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -116,7 +116,7 @@ Partial Class frmPerfiles2
         Me.CRubros1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CRubros1.Location = New System.Drawing.Point(1, 1)
         Me.CRubros1.Name = "CRubros1"
-        Me.CRubros1.Size = New System.Drawing.Size(473, 404)
+        Me.CRubros1.Size = New System.Drawing.Size(633, 404)
         Me.CRubros1.TabIndex = 0
         '
         'TabItem1
@@ -136,7 +136,7 @@ Partial Class frmPerfiles2
         Me.TabControlPanel2.Location = New System.Drawing.Point(0, 27)
         Me.TabControlPanel2.Name = "TabControlPanel2"
         Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel2.Size = New System.Drawing.Size(475, 406)
+        Me.TabControlPanel2.Size = New System.Drawing.Size(635, 406)
         Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.White
         Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -410,7 +410,7 @@ Partial Class frmPerfiles2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(475, 433)
+        Me.ClientSize = New System.Drawing.Size(635, 433)
         Me.Controls.Add(Me.TabControl1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog

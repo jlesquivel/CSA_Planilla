@@ -1,10 +1,8 @@
 
 Public Class CargarLista
     ' declaro la clase Carga, para solo ser usada dentro de la clase CargarLista
-
-
     ' la función DatosLista es pública y sirve para llenar la carga de objetos de listas
-    Public Function DatosLista(ByVal DataTable As DataTable, ByRef Objeto As Object, _
+    Public Function DatosLista(ByVal DataTable As DataTable, ByRef Objeto As Object,
         ByVal Codigo As String, ByVal Descripcion As String) As Integer
         ' declaro la matriz de tipo ArrayList, dimensionandola a la cantidad de registros de la tabla
         Dim Array As New ArrayList(DataTable.Rows.Count)
@@ -30,7 +28,7 @@ Public Class CargarLista
     End Function
 
 
-    Public Function DatosListadeView(ByVal DataTable As DataView, ByRef Objeto As Object, _
+    Public Function DatosListadeView(ByVal DataTable As DataView, ByRef Objeto As Object,
             ByVal Codigo As String, ByVal Descripcion As String) As Integer
         ' declaro la matriz de tipo ArrayList, dimensionandola a la cantidad de registros de la tabla
         Dim Array As New ArrayList(DataTable.Count)
@@ -46,7 +44,7 @@ Public Class CargarLista
         ' recorro la Table, registro por registro
         Dim i As Integer
         For i = 0 To DataTable.Count - 1
-            Array.Add(New Carga(DataTable(i)(Codigo), Trim(DataTable(i)(Descripcion))))
+            Array.Add(New carga(DataTable(i)(Codigo), Trim(DataTable(i)(Descripcion))))
         Next
 
         ' asigno al DataSource del control enviado como parámetro el ArrayList

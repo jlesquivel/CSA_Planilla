@@ -31,6 +31,7 @@ Public Class frmPlanilla
     Friend WithEvents TextboxFormat10 As TextboxFormat
     Friend WithEvents UcProgresoCircular1 As ucProgresoCircular
     Friend WithEvents bw1 As BackgroundWorker
+    Friend WithEvents ButtonItem15 As DevComponents.DotNetBar.ButtonItem
     Dim plan As New cPlanilla    ' objeto de la clase planilla para cambiar estado de la planilla
 
     Public Sub New(ByVal pid_dpto As Integer)
@@ -283,15 +284,6 @@ Public Class frmPlanilla
         Me.PanelDockContainer2 = New DevComponents.DotNetBar.PanelDockContainer()
         Me.UcProgresoCircular1 = New Planilla.ucProgresoCircular()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
-        Me.PanelDockContainer3 = New DevComponents.DotNetBar.PanelDockContainer()
-        Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX()
-        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.IdplanillaDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechainiDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechafinDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IddptoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PlanillasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.PanelDockContainer1 = New DevComponents.DotNetBar.PanelDockContainer()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IdplanillaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -302,6 +294,15 @@ Public Class frmPlanilla
         Me.TextboxFormat7 = New Planilla.TextboxFormat()
         Me.TextboxFormat8 = New Planilla.TextboxFormat()
         Me.TextboxFormat9 = New Planilla.TextboxFormat()
+        Me.PanelDockContainer3 = New DevComponents.DotNetBar.PanelDockContainer()
+        Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX()
+        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.IdplanillaDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechainiDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechafinDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IddptoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PlanillasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DockContainerItem1 = New DevComponents.DotNetBar.DockContainerItem()
         Me.DockContainerItem2 = New DevComponents.DotNetBar.DockContainerItem()
         Me.DockContainerItem3 = New DevComponents.DotNetBar.DockContainerItem()
@@ -324,6 +325,7 @@ Public Class frmPlanilla
         Me.RibbonBar2 = New DevComponents.DotNetBar.RibbonBar()
         Me.ButtonItem6 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem7 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem15 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem8 = New DevComponents.DotNetBar.ButtonItem()
         Me.CoopeAnde = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem1 = New DevComponents.DotNetBar.ButtonItem()
@@ -378,12 +380,12 @@ Public Class frmPlanilla
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Bar1.SuspendLayout()
         Me.PanelDockContainer2.SuspendLayout()
-        Me.PanelDockContainer3.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PlanillasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDockContainer1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PlanillasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelDockContainer3.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PlanillasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RibbonBarMergeContainer1.SuspendLayout()
         CType(Me.DataViewPlanillas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -613,18 +615,18 @@ Public Class frmPlanilla
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarRubroToolStripMenuItem, Me.EliminarRubroToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(178, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(163, 48)
         '
         'AgregarRubroToolStripMenuItem
         '
         Me.AgregarRubroToolStripMenuItem.Name = "AgregarRubroToolStripMenuItem"
-        Me.AgregarRubroToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.AgregarRubroToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.AgregarRubroToolStripMenuItem.Text = "+ Agregar Rubro"
         '
         'EliminarRubroToolStripMenuItem
         '
         Me.EliminarRubroToolStripMenuItem.Name = "EliminarRubroToolStripMenuItem"
-        Me.EliminarRubroToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.EliminarRubroToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.EliminarRubroToolStripMenuItem.Text = "- Eliminar Rubro"
         '
         'DataViewIngresos
@@ -1038,7 +1040,7 @@ Public Class frmPlanilla
         Me.DockSite4.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
         Me.DockSite4.Location = New System.Drawing.Point(0, 541)
         Me.DockSite4.Name = "DockSite4"
-        Me.DockSite4.Size = New System.Drawing.Size(755, 0)
+        Me.DockSite4.Size = New System.Drawing.Size(767, 0)
         Me.DockSite4.TabIndex = 15
         Me.DockSite4.TabStop = False
         '
@@ -1117,100 +1119,6 @@ Public Class frmPlanilla
         Me.ButtonX1.Size = New System.Drawing.Size(108, 41)
         Me.ButtonX1.TabIndex = 3
         Me.ButtonX1.Text = "Generar"
-        '
-        'PanelDockContainer3
-        '
-        Me.PanelDockContainer3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.PanelDockContainer3.Controls.Add(Me.ButtonX3)
-        Me.PanelDockContainer3.Controls.Add(Me.ButtonX2)
-        Me.PanelDockContainer3.Controls.Add(Me.DataGridView2)
-        Me.PanelDockContainer3.DisabledBackColor = System.Drawing.Color.Empty
-        Me.PanelDockContainer3.Location = New System.Drawing.Point(3, 48)
-        Me.PanelDockContainer3.Name = "PanelDockContainer3"
-        Me.PanelDockContainer3.Size = New System.Drawing.Size(215, 490)
-        Me.PanelDockContainer3.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelDockContainer3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
-        Me.PanelDockContainer3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
-        Me.PanelDockContainer3.Style.GradientAngle = 90
-        Me.PanelDockContainer3.TabIndex = 4
-        '
-        'ButtonX3
-        '
-        Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX3.Location = New System.Drawing.Point(106, 417)
-        Me.ButtonX3.Name = "ButtonX3"
-        Me.ButtonX3.Size = New System.Drawing.Size(94, 43)
-        Me.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ButtonX3.TabIndex = 2
-        Me.ButtonX3.Text = "LIMPIAR"
-        '
-        'ButtonX2
-        '
-        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX2.Location = New System.Drawing.Point(9, 417)
-        Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(91, 43)
-        Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ButtonX2.TabIndex = 1
-        Me.ButtonX2.Text = "RECUPERAR"
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.AllowUserToAddRows = False
-        Me.DataGridView2.AllowUserToDeleteRows = False
-        Me.DataGridView2.AutoGenerateColumns = False
-        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdplanillaDataGridViewTextBoxColumn1, Me.FechainiDataGridViewTextBoxColumn1, Me.FechafinDataGridViewTextBoxColumn1, Me.IddptoDataGridViewTextBoxColumn})
-        Me.DataGridView2.DataSource = Me.PlanillasBindingSource1
-        Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.DataGridView2.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.ReadOnly = True
-        Me.DataGridView2.RowHeadersVisible = False
-        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.Size = New System.Drawing.Size(215, 409)
-        Me.DataGridView2.TabIndex = 0
-        '
-        'IdplanillaDataGridViewTextBoxColumn1
-        '
-        Me.IdplanillaDataGridViewTextBoxColumn1.DataPropertyName = "id_planilla"
-        Me.IdplanillaDataGridViewTextBoxColumn1.HeaderText = "id_planilla"
-        Me.IdplanillaDataGridViewTextBoxColumn1.Name = "IdplanillaDataGridViewTextBoxColumn1"
-        Me.IdplanillaDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.IdplanillaDataGridViewTextBoxColumn1.Width = 60
-        '
-        'FechainiDataGridViewTextBoxColumn1
-        '
-        Me.FechainiDataGridViewTextBoxColumn1.DataPropertyName = "fecha_ini"
-        Me.FechainiDataGridViewTextBoxColumn1.HeaderText = "fecha_ini"
-        Me.FechainiDataGridViewTextBoxColumn1.Name = "FechainiDataGridViewTextBoxColumn1"
-        Me.FechainiDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.FechainiDataGridViewTextBoxColumn1.Width = 60
-        '
-        'FechafinDataGridViewTextBoxColumn1
-        '
-        Me.FechafinDataGridViewTextBoxColumn1.DataPropertyName = "fecha_fin"
-        Me.FechafinDataGridViewTextBoxColumn1.HeaderText = "fecha_fin"
-        Me.FechafinDataGridViewTextBoxColumn1.Name = "FechafinDataGridViewTextBoxColumn1"
-        Me.FechafinDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.FechafinDataGridViewTextBoxColumn1.Width = 60
-        '
-        'IddptoDataGridViewTextBoxColumn
-        '
-        Me.IddptoDataGridViewTextBoxColumn.DataPropertyName = "id_dpto"
-        Me.IddptoDataGridViewTextBoxColumn.HeaderText = "id_dpto"
-        Me.IddptoDataGridViewTextBoxColumn.Name = "IddptoDataGridViewTextBoxColumn"
-        Me.IddptoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IddptoDataGridViewTextBoxColumn.Width = 50
-        '
-        'PlanillasBindingSource1
-        '
-        Me.PlanillasBindingSource1.DataMember = "planillas"
-        Me.PlanillasBindingSource1.DataSource = Me.Ds2planilla1
-        Me.PlanillasBindingSource1.Filter = "estado=-1"
         '
         'PanelDockContainer1
         '
@@ -1316,6 +1224,100 @@ Public Class frmPlanilla
         Me.TextboxFormat9.TabIndex = 14
         Me.TextboxFormat9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
+        'PanelDockContainer3
+        '
+        Me.PanelDockContainer3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelDockContainer3.Controls.Add(Me.ButtonX3)
+        Me.PanelDockContainer3.Controls.Add(Me.ButtonX2)
+        Me.PanelDockContainer3.Controls.Add(Me.DataGridView2)
+        Me.PanelDockContainer3.DisabledBackColor = System.Drawing.Color.Empty
+        Me.PanelDockContainer3.Location = New System.Drawing.Point(3, 48)
+        Me.PanelDockContainer3.Name = "PanelDockContainer3"
+        Me.PanelDockContainer3.Size = New System.Drawing.Size(215, 490)
+        Me.PanelDockContainer3.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.PanelDockContainer3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
+        Me.PanelDockContainer3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
+        Me.PanelDockContainer3.Style.GradientAngle = 90
+        Me.PanelDockContainer3.TabIndex = 4
+        '
+        'ButtonX3
+        '
+        Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX3.Location = New System.Drawing.Point(106, 417)
+        Me.ButtonX3.Name = "ButtonX3"
+        Me.ButtonX3.Size = New System.Drawing.Size(94, 43)
+        Me.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX3.TabIndex = 2
+        Me.ButtonX3.Text = "LIMPIAR"
+        '
+        'ButtonX2
+        '
+        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX2.Location = New System.Drawing.Point(9, 417)
+        Me.ButtonX2.Name = "ButtonX2"
+        Me.ButtonX2.Size = New System.Drawing.Size(91, 43)
+        Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX2.TabIndex = 1
+        Me.ButtonX2.Text = "RECUPERAR"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AutoGenerateColumns = False
+        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdplanillaDataGridViewTextBoxColumn1, Me.FechainiDataGridViewTextBoxColumn1, Me.FechafinDataGridViewTextBoxColumn1, Me.IddptoDataGridViewTextBoxColumn})
+        Me.DataGridView2.DataSource = Me.PlanillasBindingSource1
+        Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.DataGridView2.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.RowHeadersVisible = False
+        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView2.Size = New System.Drawing.Size(215, 409)
+        Me.DataGridView2.TabIndex = 0
+        '
+        'IdplanillaDataGridViewTextBoxColumn1
+        '
+        Me.IdplanillaDataGridViewTextBoxColumn1.DataPropertyName = "id_planilla"
+        Me.IdplanillaDataGridViewTextBoxColumn1.HeaderText = "id_planilla"
+        Me.IdplanillaDataGridViewTextBoxColumn1.Name = "IdplanillaDataGridViewTextBoxColumn1"
+        Me.IdplanillaDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.IdplanillaDataGridViewTextBoxColumn1.Width = 60
+        '
+        'FechainiDataGridViewTextBoxColumn1
+        '
+        Me.FechainiDataGridViewTextBoxColumn1.DataPropertyName = "fecha_ini"
+        Me.FechainiDataGridViewTextBoxColumn1.HeaderText = "fecha_ini"
+        Me.FechainiDataGridViewTextBoxColumn1.Name = "FechainiDataGridViewTextBoxColumn1"
+        Me.FechainiDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.FechainiDataGridViewTextBoxColumn1.Width = 60
+        '
+        'FechafinDataGridViewTextBoxColumn1
+        '
+        Me.FechafinDataGridViewTextBoxColumn1.DataPropertyName = "fecha_fin"
+        Me.FechafinDataGridViewTextBoxColumn1.HeaderText = "fecha_fin"
+        Me.FechafinDataGridViewTextBoxColumn1.Name = "FechafinDataGridViewTextBoxColumn1"
+        Me.FechafinDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.FechafinDataGridViewTextBoxColumn1.Width = 60
+        '
+        'IddptoDataGridViewTextBoxColumn
+        '
+        Me.IddptoDataGridViewTextBoxColumn.DataPropertyName = "id_dpto"
+        Me.IddptoDataGridViewTextBoxColumn.HeaderText = "id_dpto"
+        Me.IddptoDataGridViewTextBoxColumn.Name = "IddptoDataGridViewTextBoxColumn"
+        Me.IddptoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IddptoDataGridViewTextBoxColumn.Width = 50
+        '
+        'PlanillasBindingSource1
+        '
+        Me.PlanillasBindingSource1.DataMember = "planillas"
+        Me.PlanillasBindingSource1.DataSource = Me.Ds2planilla1
+        Me.PlanillasBindingSource1.Filter = "estado=-1"
+        '
         'DockContainerItem1
         '
         Me.DockContainerItem1.Control = Me.PanelDockContainer1
@@ -1339,7 +1341,7 @@ Public Class frmPlanilla
         Me.DockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite2.Dock = System.Windows.Forms.DockStyle.Right
         Me.DockSite2.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
-        Me.DockSite2.Location = New System.Drawing.Point(755, 0)
+        Me.DockSite2.Location = New System.Drawing.Point(767, 0)
         Me.DockSite2.Name = "DockSite2"
         Me.DockSite2.Size = New System.Drawing.Size(0, 541)
         Me.DockSite2.TabIndex = 13
@@ -1351,7 +1353,7 @@ Public Class frmPlanilla
         Me.DockSite8.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.DockSite8.Location = New System.Drawing.Point(0, 541)
         Me.DockSite8.Name = "DockSite8"
-        Me.DockSite8.Size = New System.Drawing.Size(755, 0)
+        Me.DockSite8.Size = New System.Drawing.Size(767, 0)
         Me.DockSite8.TabIndex = 19
         Me.DockSite8.TabStop = False
         '
@@ -1369,7 +1371,7 @@ Public Class frmPlanilla
         '
         Me.DockSite6.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite6.Dock = System.Windows.Forms.DockStyle.Right
-        Me.DockSite6.Location = New System.Drawing.Point(755, 0)
+        Me.DockSite6.Location = New System.Drawing.Point(767, 0)
         Me.DockSite6.Name = "DockSite6"
         Me.DockSite6.Size = New System.Drawing.Size(0, 541)
         Me.DockSite6.TabIndex = 17
@@ -1381,7 +1383,7 @@ Public Class frmPlanilla
         Me.DockSite7.Dock = System.Windows.Forms.DockStyle.Top
         Me.DockSite7.Location = New System.Drawing.Point(0, 0)
         Me.DockSite7.Name = "DockSite7"
-        Me.DockSite7.Size = New System.Drawing.Size(755, 0)
+        Me.DockSite7.Size = New System.Drawing.Size(767, 0)
         Me.DockSite7.TabIndex = 18
         Me.DockSite7.TabStop = False
         '
@@ -1392,7 +1394,7 @@ Public Class frmPlanilla
         Me.DockSite3.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
         Me.DockSite3.Location = New System.Drawing.Point(0, 0)
         Me.DockSite3.Name = "DockSite3"
-        Me.DockSite3.Size = New System.Drawing.Size(755, 0)
+        Me.DockSite3.Size = New System.Drawing.Size(767, 0)
         Me.DockSite3.TabIndex = 14
         Me.DockSite3.TabStop = False
         '
@@ -1436,7 +1438,7 @@ Public Class frmPlanilla
         Me.RibbonBar3.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar3.DragDropSupport = True
         Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem12, Me.ButtonItem11, Me.ButtonItem10, Me.ButtonItem13, Me.ButtonItem14})
-        Me.RibbonBar3.Location = New System.Drawing.Point(529, 0)
+        Me.RibbonBar3.Location = New System.Drawing.Point(587, 0)
         Me.RibbonBar3.Name = "RibbonBar3"
         Me.RibbonBar3.Size = New System.Drawing.Size(244, 103)
         Me.RibbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -1521,10 +1523,10 @@ Public Class frmPlanilla
         Me.RibbonBar2.ContainerControlProcessDialogKey = True
         Me.RibbonBar2.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar2.DragDropSupport = True
-        Me.RibbonBar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem6, Me.ButtonItem7, Me.ButtonItem8, Me.CoopeAnde, Me.ButtonItem1, Me.ButtonItem3, Me.ButtonItem4})
+        Me.RibbonBar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem6, Me.ButtonItem7, Me.ButtonItem15, Me.ButtonItem8, Me.CoopeAnde, Me.ButtonItem1, Me.ButtonItem3, Me.ButtonItem4})
         Me.RibbonBar2.Location = New System.Drawing.Point(156, 0)
         Me.RibbonBar2.Name = "RibbonBar2"
-        Me.RibbonBar2.Size = New System.Drawing.Size(373, 103)
+        Me.RibbonBar2.Size = New System.Drawing.Size(431, 103)
         Me.RibbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar2.TabIndex = 1
         Me.RibbonBar2.Text = "Reportes"
@@ -1554,6 +1556,15 @@ Public Class frmPlanilla
         Me.ButtonItem7.Name = "ButtonItem7"
         Me.ButtonItem7.Text = "Colilla Pago"
         Me.ButtonItem7.Tooltip = "Rep. Pagos"
+        '
+        'ButtonItem15
+        '
+        Me.ButtonItem15.Enabled = False
+        Me.ButtonItem15.Image = Global.Planilla.My.Resources.Resources.document
+        Me.ButtonItem15.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem15.Name = "ButtonItem15"
+        Me.ButtonItem15.SubItemsExpandWidth = 14
+        Me.ButtonItem15.Text = "Colilla H.Extras"
         '
         'ButtonItem8
         '
@@ -1759,7 +1770,7 @@ Public Class frmPlanilla
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(755, 541)
+        Me.ClientSize = New System.Drawing.Size(767, 541)
         Me.Controls.Add(Me.RibbonBarMergeContainer1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.DockSite1)
@@ -1800,13 +1811,13 @@ Public Class frmPlanilla
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Bar1.ResumeLayout(False)
         Me.PanelDockContainer2.ResumeLayout(False)
-        Me.PanelDockContainer3.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PlanillasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelDockContainer1.ResumeLayout(False)
         Me.PanelDockContainer1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PlanillasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelDockContainer3.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PlanillasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RibbonBarMergeContainer1.ResumeLayout(False)
         CType(Me.DataViewPlanillas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -2039,6 +2050,7 @@ Public Class frmPlanilla
         Me.ButtonItem7.Enabled = True
         Me.ButtonItem8.Enabled = True
         Me.ButtonItem9.Enabled = True
+        Me.ButtonItem15.Enabled = True
         Me.CoopeAnde.Enabled = True
 
         Select Case planilla_estado
@@ -2049,6 +2061,7 @@ Public Class frmPlanilla
                 Me.ButtonItem7.Enabled = False
                 Me.ButtonItem8.Enabled = False
                 Me.ButtonItem9.Enabled = False
+                Me.ButtonItem15.Enabled = False
                 Me.CoopeAnde.Enabled = False
             Case 0  'nuevo
                 Me.ButtonItem2.Enabled = True
@@ -2183,6 +2196,10 @@ Public Class frmPlanilla
 
         'cambia el estado a la planilla 
         plan.SetEstado(cPlanilla.Estado.Pagado, id_planilla)
+
+        Dim oHE As New cHorasExtras()
+
+        oHE.
 
     End Sub
     '
@@ -2432,6 +2449,22 @@ Public Class frmPlanilla
         reportes.inserta_parametro(rep, "@id_planilla", id_planilla)
         reportes.inserta_parametro(rep, "@nomb_rubro", "COPEANDE CAPITAL")
         rep.SummaryInfo.ReportComments = "CoopeAnde Capital"
+        reportes.imprimir(rep, False, Me.ParentForm)
+    End Sub
+    ''' <summary>
+    ''' Reporte de Horas Extras
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub ButtonItem15_Click(sender As Object, e As EventArgs) Handles ButtonItem15.Click
+
+        Dim reportes As New Reportes
+        Dim rep As ReportClass
+
+        rep = New rptColillasHorasExtras
+        rep.SummaryInfo.ReportComments = "Informe Horas Extras"
+
+        reportes.inserta_parametro(rep, "@id_planilla", id_planilla)
         reportes.imprimir(rep, False, Me.ParentForm)
     End Sub
 

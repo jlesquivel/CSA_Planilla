@@ -9,10 +9,13 @@ Public Class cRubros
     End Sub
 
     Private Sub cRubros_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Me.Tabla_valoresTableAdapter.Connection.ConnectionString = conn.strConn
-        Me.RubrosTableAdapter.Connection.ConnectionString = conn.strConn
+        If Not DesignMode Then
 
-        Me.RubrosTableAdapter.Fill(Me.PlanillaDataSet.rubros)
-        Me.Tabla_valoresTableAdapter.Fill(Me.PlanillaDataSet.tabla_valores)
+            Me.Tabla_valoresTableAdapter.Connection.ConnectionString = conn.strConn
+            Me.RubrosTableAdapter.Connection.ConnectionString = conn.strConn
+
+            Me.RubrosTableAdapter.Fill(Me.PlanillaDataSet.rubros)
+            Me.Tabla_valoresTableAdapter.Fill(Me.PlanillaDataSet.tabla_valores)
+        End If
     End Sub
 End Class

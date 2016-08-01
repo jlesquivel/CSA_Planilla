@@ -66,7 +66,7 @@
   <Class Name="Planilla.cHorasExtras">
     <Position X="0.5" Y="3.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAgiAAAAAAAIEAAIAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQEAAAAgiAAAAAAAIEAAIAABgAQAAAAAAAAQACBAIAA=</HashCode>
       <FileName>Clases\cHorasExtras.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -137,7 +137,7 @@
   <Class Name="Planilla.bEmpleado" Collapsed="true">
     <Position X="8.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAiAACAECAEAQCIA4AAAAFQAQAEAAAAoA=</HashCode>
+      <HashCode>AAAAAAAAgCAAiAACAECAEAQCIA4AAAAFQAQAEAAAAoE=</HashCode>
       <FileName>Controles\bEmpleado.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -221,7 +221,7 @@
   <Class Name="Planilla.ds2planilla" Collapsed="true">
     <Position X="5.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AYigAQESEwCBSANABAQQQpASQCqCUBgCAgKAEIEABBA=</HashCode>
+      <HashCode>AYigAQESEwCBSENIBAQSQpASQCqCUBgCEgKBFIEABBA=</HashCode>
       <FileName>Formularios\ds2planilla.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -324,7 +324,7 @@
   <Class Name="Planilla.frmHoraExtras" Collapsed="true">
     <Position X="14" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACCAACCAAgCAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAgAACEEAoAABACKMACiCCxSBAAIgACKCAIAAAQ=</HashCode>
       <FileName>Formularios\frmHoraExtras.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -773,6 +773,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAABEgAEAABAADAAAAkAAAAAAAAAA=</HashCode>
       <FileName>Settings.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planilla.cLiquidacion">
+    <Position X="2.75" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAQAgACAAAAAAAAAAAAAABAAACAAAAAAAACAA=</HashCode>
+      <FileName>cLiquidacion.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Module Name="Planilla.My.MySettingsProperty" Collapsed="true">

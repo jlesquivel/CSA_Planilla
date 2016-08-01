@@ -15,6 +15,11 @@
     Dim taHE As New ds2planillaTableAdapters.horas_extrasTableAdapter
 
 #Region "métodos"
+
+    Public Sub New()
+
+    End Sub
+
     Public Sub New(pcat As Integer)
 
     End Sub

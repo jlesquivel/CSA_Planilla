@@ -18,9 +18,7 @@ Public Class cVacaciones
 
     Sub carta(_id_emp As Int16, dgv_row As Object, directorio As String)
 
-
         Dim archivo = My.Application.Info.DirectoryPath & "\contVacaciones.docx"
-
         Dim emp1 As New cEmpleado(_id_emp)
         Dim fila = dgv_row
         Dim nombreEmp As String = emp1.datos.nombre & " " & emp1.datos.apellidos
@@ -29,8 +27,6 @@ Public Class cVacaciones
         valores.Add({"suscrita", repLegal})
         valores.Add({"suscritaCargo", repCargo})
         valores.Add({"empleado", nombreEmp})
-        'valores.Add({"administrador", oConfig.valores(15)})
-        'valores.Add({"cargoAdm", oConfig.valores(16)})
 
         valores.Add({"fechaCarta", Now.ToLongDateString})
         valores.Add({"fechaCarta2", Now.ToString("dd 'de' MMMM 'del' yyyy")})
@@ -50,8 +46,6 @@ Public Class cVacaciones
         valores.Add({"Adm", adm})
         valores.Add({"AdmCargo", admCargo})
 
-
-
         Dim wdDoc As New cWord(archivo)  'abre plantilla
         wdDoc.SustituyeValores(valores)
 
@@ -61,9 +55,5 @@ Public Class cVacaciones
         Else
             wdDoc.guarda(guardaComo, directorio)
         End If
-
     End Sub
-
-
-
 End Class

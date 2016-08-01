@@ -24,9 +24,9 @@ Partial Class cRubros
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cRubros))
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PlanillaDataSet = New Planilla.planillaDataSet()
         Me.RubrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RubrosTableAdapter = New Planilla.planillaDataSetTableAdapters.rubrosTableAdapter()
@@ -44,10 +44,6 @@ Partial Class cRubros
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.RubrosBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.RubrosDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tabla_valoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tabla_valoresTableAdapter = New Planilla.planillaDataSetTableAdapters.tabla_valoresTableAdapter()
         Me.Tabla_valoresDataGridView = New System.Windows.Forms.DataGridView()
@@ -59,6 +55,10 @@ Partial Class cRubros
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.PlanillaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RubrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RubrosBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,7 +100,7 @@ Partial Class cRubros
         Me.RubrosBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.RubrosBindingNavigator.Name = "RubrosBindingNavigator"
         Me.RubrosBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.RubrosBindingNavigator.Size = New System.Drawing.Size(521, 25)
+        Me.RubrosBindingNavigator.Size = New System.Drawing.Size(611, 25)
         Me.RubrosBindingNavigator.TabIndex = 0
         Me.RubrosBindingNavigator.Text = "BindingNavigator1"
         '
@@ -199,62 +199,34 @@ Partial Class cRubros
         '
         'RubrosDataGridView
         '
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue
-        Me.RubrosDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue
+        Me.RubrosDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.RubrosDataGridView.AutoGenerateColumns = False
         Me.RubrosDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.RubrosDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.RubrosDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.RubrosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.RubrosDataGridView.DataSource = Me.RubrosBindingSource
         Me.RubrosDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RubrosDataGridView.Location = New System.Drawing.Point(3, 3)
         Me.RubrosDataGridView.Name = "RubrosDataGridView"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.AliceBlue
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.RubrosDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.AliceBlue
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.RubrosDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.RubrosDataGridView.RowHeadersWidth = 21
-        Me.RubrosDataGridView.Size = New System.Drawing.Size(507, 359)
+        Me.RubrosDataGridView.Size = New System.Drawing.Size(597, 359)
         Me.RubrosDataGridView.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id_rubro"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "id_rubro"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 150
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "categoria"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "categoria"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "formula"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "formula"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 150
         '
         'Tabla_valoresBindingSource
         '
@@ -274,7 +246,7 @@ Partial Class cRubros
         Me.Tabla_valoresDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Tabla_valoresDataGridView.Location = New System.Drawing.Point(3, 3)
         Me.Tabla_valoresDataGridView.Name = "Tabla_valoresDataGridView"
-        Me.Tabla_valoresDataGridView.Size = New System.Drawing.Size(507, 359)
+        Me.Tabla_valoresDataGridView.Size = New System.Drawing.Size(597, 359)
         Me.Tabla_valoresDataGridView.TabIndex = 2
         '
         'DataGridViewTextBoxColumn5
@@ -318,7 +290,7 @@ Partial Class cRubros
         Me.TabControl1.Location = New System.Drawing.Point(0, 25)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(521, 393)
+        Me.TabControl1.Size = New System.Drawing.Size(611, 393)
         Me.TabControl1.TabIndex = 3
         '
         'TabPage1
@@ -327,7 +299,7 @@ Partial Class cRubros
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(513, 365)
+        Me.TabPage1.Size = New System.Drawing.Size(603, 365)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Rubros"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -338,10 +310,38 @@ Partial Class cRubros
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(513, 365)
+        Me.TabPage2.Size = New System.Drawing.Size(603, 365)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Tabla Valores"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id_rubro"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "id_rubro"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 150
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "categoria"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "categoria"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "formula"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "formula"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 350
         '
         'cRubros
         '
@@ -351,7 +351,7 @@ Partial Class cRubros
         Me.Controls.Add(Me.RubrosBindingNavigator)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "cRubros"
-        Me.Size = New System.Drawing.Size(521, 418)
+        Me.Size = New System.Drawing.Size(611, 418)
         CType(Me.PlanillaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RubrosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RubrosBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
@@ -384,10 +384,6 @@ Partial Class cRubros
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents RubrosBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents RubrosDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Tabla_valoresBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Tabla_valoresTableAdapter As Planilla.planillaDataSetTableAdapters.tabla_valoresTableAdapter
     Friend WithEvents Tabla_valoresDataGridView As System.Windows.Forms.DataGridView
@@ -399,5 +395,8 @@ Partial Class cRubros
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
 End Class
