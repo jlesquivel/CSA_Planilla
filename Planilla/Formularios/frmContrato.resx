@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="SqlDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>405, 17</value>
+    <value>479, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -133,7 +133,7 @@
     <value>DELETE FROM empleados WHERE (id_emp = @Original_id_emp) AND (anualidadReconocida = @Original_anualidadReconocida OR @Original_anualidadReconocida IS NULL AND anualidadReconocida IS NULL) AND (apellidos = @Original_apellidos) AND (banco = @Original_banco) AND (categoria = @Original_categoria OR @Original_categoria IS NULL AND categoria IS NULL) AND (cedula = @Original_cedula) AND (celular = @Original_celular OR @Original_celular IS NULL AND celular IS NULL) AND (cuenta = @Original_cuenta) AND (direccion = @Original_direccion OR @Original_direccion IS NULL AND direccion IS NULL) AND (ingreso = @Original_ingreso OR @Original_ingreso IS NULL AND ingreso IS NULL) AND (nacimiento = @Original_nacimiento) AND (nombre = @Original_nombre) AND (sexo = @Original_sexo) AND (telefono = @Original_telefono OR @Original_telefono IS NULL AND telefono IS NULL)</value>
   </data>
   <metadata name="SqlConnection2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>549, 17</value>
+    <value>651, 17</value>
   </metadata>
   <metadata name="SqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -169,13 +169,13 @@
     <value>UPDATE empleados SET cedula = @cedula, apellidos = @apellidos, nombre = @nombre, categoria = @categoria, nacimiento = @nacimiento, cuenta = @cuenta, ingreso = @ingreso, banco = @banco, direccion = @direccion, telefono = @telefono, celular = @celular, sexo = @sexo, anualidadReconocida = @anualidadReconocida WHERE (id_emp = @Original_id_emp) AND (anualidadReconocida = @Original_anualidadReconocida OR @Original_anualidadReconocida IS NULL AND anualidadReconocida IS NULL) AND (apellidos = @Original_apellidos) AND (banco = @Original_banco) AND (categoria = @Original_categoria OR @Original_categoria IS NULL AND categoria IS NULL) AND (cedula = @Original_cedula) AND (celular = @Original_celular OR @Original_celular IS NULL AND celular IS NULL) AND (cuenta = @Original_cuenta) AND (direccion = @Original_direccion OR @Original_direccion IS NULL AND direccion IS NULL) AND (ingreso = @Original_ingreso OR @Original_ingreso IS NULL AND ingreso IS NULL) AND (nacimiento = @Original_nacimiento) AND (nombre = @Original_nombre) AND (sexo = @Original_sexo) AND (telefono = @Original_telefono OR @Original_telefono IS NULL AND telefono IS NULL); SELECT id_emp, cedula, apellidos, nombre, categoria, nacimiento, cuenta, ingreso, banco, direccion, telefono, celular, sexo, anualidadReconocida FROM empleados WHERE (id_emp = @id_emp)</value>
   </data>
   <metadata name="Ds2planilla1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>686, 17</value>
+    <value>815, 17</value>
   </metadata>
   <metadata name="DvContratos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>804, 17</value>
+    <value>954, 17</value>
   </metadata>
   <metadata name="SqlDataAdapter2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>1095, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -222,13 +222,13 @@ SELECT id_cat, nombre, salario_base, anualidad FROM categorias WHERE (id_cat = S
 SELECT id_cat, nombre, salario_base, anualidad FROM categorias WHERE (id_cat = @id_cat)</value>
   </data>
   <metadata name="BorraPuesto.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>161, 56</value>
+    <value>1267, 17</value>
   </metadata>
   <metadata name="Puestos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>279, 56</value>
+    <value>1406, 17</value>
   </metadata>
   <metadata name="SqlDataAdapter3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>373, 56</value>
+    <value>1515, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -273,7 +273,7 @@ SELECT id_cat, nombre, salario_base, anualidad FROM categorias WHERE (id_cat = @
     <value>UPDATE rubros SET nombre = @nombre, categoria = @categoria, formula = @formula WHERE (id_rubro = @Original_id_rubro) AND (categoria = @Original_categoria) AND (formula = @Original_formula OR @Original_formula IS NULL AND formula IS NULL) AND (nombre = @Original_nombre); SELECT id_rubro, nombre, categoria, formula FROM rubros WHERE (id_rubro = @id_rubro)</value>
   </data>
   <metadata name="SqlDataAdapter4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>517, 56</value>
+    <value>1687, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -312,7 +312,7 @@ SELECT id_cat, nombre, salario_base, anualidad FROM categorias WHERE (id_cat = @
     <value>False</value>
   </metadata>
   <metadata name="SqlDataAdapter5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>661, 56</value>
+    <value>1859, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -354,7 +354,7 @@ SELECT id_cat, nombre, salario_base, anualidad FROM categorias WHERE (id_cat = @
     <value>UPDATE empleado_rubro SET id_rubro = @id_rubro, id_contrato = @id_contrato WHERE (id = @Original_id) AND (id_contrato = @Original_id_contrato) AND (id_rubro = @Original_id_rubro); SELECT id, id_rubro, id_contrato FROM empleado_rubro WHERE (id = @id)</value>
   </data>
   <metadata name="Contratos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>805, 56</value>
+    <value>2031, 17</value>
   </metadata>
   <metadata name="SqlSelectCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -374,25 +374,58 @@ WHERE        (contratos.id_emp = @id_emp)
 ORDER BY contratos.id_contrato DESC</value>
   </data>
   <metadata name="ErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>2154, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>176</value>
   </metadata>
-  <metadata name="EmpleadosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>487, 96</value>
+  <metadata name="SqlDataAdapter6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>2309, 17</value>
   </metadata>
-  <metadata name="SuperValidator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>147, 17</value>
+  <metadata name="SqlDeleteCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="ErrorProvider2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="SqlDeleteCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
   </metadata>
-  <metadata name="Highlighter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>286, 17</value>
+  <metadata name="SqlDeleteCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlInsertCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand7.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlSelectCommand7.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="CategoriasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>862, 60</value>
+  </metadata>
+  <metadata name="ContratosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>640, 60</value>
   </metadata>
   <metadata name="Sqltree.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>291, 95</value>
+    <value>2481, 17</value>
   </metadata>
   <data name="Sqltree.CommandText" xml:space="preserve">
     <value>SELECT     departamento.nombre AS Depto, puestos.nombre + ':' + STR(puestos.id_puesto) AS Puesto
@@ -403,10 +436,22 @@ FROM         contratos INNER JOIN
 ORDER BY departamento.nombre, puestos.nombre, empleados.apellidos + ' ' + empleados.nombre</value>
   </data>
   <metadata name="CategoriasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>343, 135</value>
+    <value>862, 60</value>
   </metadata>
-  <metadata name="ContratosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>159, 135</value>
+  <metadata name="EmpleadosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 60</value>
+  </metadata>
+  <metadata name="SuperValidator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>172, 17</value>
+  </metadata>
+  <metadata name="ErrorProvider2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="Highlighter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>338, 17</value>
+  </metadata>
+  <metadata name="EmpleadosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 60</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -513,50 +558,11 @@ ORDER BY departamento.nombre, puestos.nombre, empleados.apellidos + ' ' + emplea
         +2O/j7XitpB//S95SNZMBP0Q4gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="SqlDataAdapter6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>147, 95</value>
-  </metadata>
-  <metadata name="SqlDeleteCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlDeleteCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="SqlDeleteCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlInsertCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlInsertCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="SqlInsertCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlSelectCommand7.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlSelectCommand7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="SqlSelectCommand7.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlUpdateCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlUpdateCommand6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="SqlUpdateCommand6.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="ContratoscategoriasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>531, 135</value>
+    <value>1090, 60</value>
   </metadata>
   <metadata name="Contratos2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>381, 95</value>
+    <value>2585, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -568,7 +574,7 @@ ORDER BY departamento.nombre, puestos.nombre, empleados.apellidos + ' ' + emplea
     <value>False</value>
   </metadata>
   <data name="SqlDeleteCommand.CommandText" xml:space="preserve">
-    <value>DELETE FROM [contratos] WHERE (([id_contrato] = @Original_id_contrato) AND ((@IsNull_fecha_ini = 1 AND [fecha_ini] IS NULL) OR ([fecha_ini] = @Original_fecha_ini)) AND ((@IsNull_fecha_fin = 1 AND [fecha_fin] IS NULL) OR ([fecha_fin] = @Original_fecha_fin)) AND ((@IsNull_cantidad = 1 AND [cantidad] IS NULL) OR ([cantidad] = @Original_cantidad)) AND ((@IsNull_recargo = 1 AND [recargo] IS NULL) OR ([recargo] = @Original_recargo)) AND ((@IsNull_estado = 1 AND [estado] IS NULL) OR ([estado] = @Original_estado)) AND ((@IsNull_id_categoria = 1 AND [id_categoria] IS NULL) OR ([id_categoria] = @Original_id_categoria)))</value>
+    <value>DELETE FROM [contratos] WHERE (([id_contrato] = @Original_id_contrato) AND ((@IsNull_fecha_ini = 1 AND [fecha_ini] IS NULL) OR ([fecha_ini] = @Original_fecha_ini)) AND ((@IsNull_fecha_fin = 1 AND [fecha_fin] IS NULL) OR ([fecha_fin] = @Original_fecha_fin)) AND ((@IsNull_cantidad = 1 AND [cantidad] IS NULL) OR ([cantidad] = @Original_cantidad)) AND ((@IsNull_recargo = 1 AND [recargo] IS NULL) OR ([recargo] = @Original_recargo)) AND ((@IsNull_estado = 1 AND [estado] IS NULL) OR ([estado] = @Original_estado)) AND ((@IsNull_id_categoria = 1 AND [id_categoria] IS NULL) OR ([id_categoria] = @Original_id_categoria)) AND ((@IsNull_liquidado = 1 AND [liquidado] IS NULL) OR ([liquidado] = @Original_liquidado)))</value>
   </data>
   <metadata name="SqlCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -589,21 +595,13 @@ ORDER BY departamento.nombre, puestos.nombre, empleados.apellidos + ' ' + emplea
     <value>False</value>
   </metadata>
   <data name="SqlUpdateCommand.CommandText" xml:space="preserve">
-    <value>UPDATE       contratos
-SET                fecha_ini = @fecha_ini, fecha_fin = @fecha_fin, cantidad = @cantidad, recargo = @recargo, estado = @estado, id_categoria = @id_categoria
-WHERE        (id_contrato = @Original_id_contrato) AND (@IsNull_fecha_ini = 1 AND fecha_ini IS NULL OR
-                         fecha_ini = @Original_fecha_ini) AND (@IsNull_fecha_fin = 1 AND fecha_fin IS NULL OR
-                         fecha_fin = @Original_fecha_fin) AND (@IsNull_cantidad = 1 AND cantidad IS NULL OR
-                         cantidad = @Original_cantidad) AND (@IsNull_recargo = 1 AND recargo IS NULL OR
-                         recargo = @Original_recargo) AND (@IsNull_estado = 1 AND estado IS NULL OR
-                         estado = @Original_estado) AND (@IsNull_id_categoria = 1 AND id_categoria IS NULL OR
-                         id_categoria = @Original_id_categoria); 
-SELECT id_contrato, fecha_ini, fecha_fin, cantidad, recargo, estado, id_categoria FROM contratos WHERE (id_contrato = @id_contrato)</value>
+    <value>UPDATE [contratos] SET [fecha_ini] = @fecha_ini, [fecha_fin] = @fecha_fin, [cantidad] = @cantidad, [recargo] = @recargo, [estado] = @estado, [id_categoria] = @id_categoria, [liquidado] = @liquidado WHERE (([id_contrato] = @Original_id_contrato) AND ((@IsNull_fecha_ini = 1 AND [fecha_ini] IS NULL) OR ([fecha_ini] = @Original_fecha_ini)) AND ((@IsNull_fecha_fin = 1 AND [fecha_fin] IS NULL) OR ([fecha_fin] = @Original_fecha_fin)) AND ((@IsNull_cantidad = 1 AND [cantidad] IS NULL) OR ([cantidad] = @Original_cantidad)) AND ((@IsNull_recargo = 1 AND [recargo] IS NULL) OR ([recargo] = @Original_recargo)) AND ((@IsNull_estado = 1 AND [estado] IS NULL) OR ([estado] = @Original_estado)) AND ((@IsNull_id_categoria = 1 AND [id_categoria] IS NULL) OR ([id_categoria] = @Original_id_categoria)) AND ((@IsNull_liquidado = 1 AND [liquidado] IS NULL) OR ([liquidado] = @Original_liquidado)));
+SELECT id_contrato, fecha_ini, fecha_fin, cantidad, recargo, estado, id_categoria, liquidado FROM contratos WHERE (id_contrato = @id_contrato)</value>
   </data>
   <metadata name="EmpleadosTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>677, 96</value>
+    <value>247, 60</value>
   </metadata>
   <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 135</value>
+    <value>470, 60</value>
   </metadata>
 </root>

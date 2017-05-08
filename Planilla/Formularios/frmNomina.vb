@@ -9,12 +9,11 @@ Imports AutoUpdaterDotNET
 'OK LLenar archivo de Coopeande con el dato CAPITAL ; seleccionar archivo y llenar
 
 '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-'TODO generar archivo para reportar planillas al CCSS via archivo CISERE
+
 'TODO llenar archivo planilla para INS 
 'TODO Aguinaldo las Incapacidades por maternidad no se deben aplicar
-
 'TODO a cada pago , agregar informacion, categoria, salario-base, cantidad , recargo ,anualidad,anualidad-reconocida
-'TODO
+
 
 Public Class frmNomina
     Inherits DevComponents.DotNetBar.Office2007RibbonForm
@@ -49,7 +48,6 @@ Public Class frmNomina
     'No lo modifique con el editor de código.
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
     Friend WithEvents SqlConnection1 As System.Data.SqlClient.SqlConnection
-    Friend WithEvents Sqltree As System.Data.SqlClient.SqlCommand
     Friend WithEvents DsPlanilla1 As Planilla.dsPlanilla
     Friend WithEvents ImageList2 As System.Windows.Forms.ImageList
     Friend WithEvents old_ContextMenu1 As System.Windows.Forms.ContextMenu
@@ -96,6 +94,9 @@ Public Class frmNomina
 
     Private WithEvents ButtonItem2 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem9 As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents ButtonItem10 As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents bMarcas As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents ButtonItem11 As DevComponents.DotNetBar.ButtonItem
     Private WithEvents ButtonItem3 As DevComponents.DotNetBar.ButtonItem
 
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
@@ -109,7 +110,6 @@ Public Class frmNomina
         Me.old_MenuItem3 = New System.Windows.Forms.MenuItem()
         Me.MenuItem2 = New System.Windows.Forms.MenuItem()
         Me.MenuItem1 = New System.Windows.Forms.MenuItem()
-        Me.Sqltree = New System.Data.SqlClient.SqlCommand()
         Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
         Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
         Me.DsPlanilla1 = New Planilla.dsPlanilla()
@@ -120,8 +120,10 @@ Public Class frmNomina
         Me.ButtonItem6 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem8 = New DevComponents.DotNetBar.ButtonItem()
         Me.CoopeAnde = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem11 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem9 = New DevComponents.DotNetBar.ButtonItem()
+        Me.bMarcas = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonBar2 = New DevComponents.DotNetBar.RibbonBar()
         Me.ItemContainer1 = New DevComponents.DotNetBar.ItemContainer()
         Me.ComboBoxItem1 = New DevComponents.DotNetBar.ComboBoxItem()
@@ -129,6 +131,7 @@ Public Class frmNomina
         Me.ButtonItem3 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem4 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem5 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem10 = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonTabItem1 = New DevComponents.DotNetBar.RibbonTabItem()
         Me.ButtonItem1 = New DevComponents.DotNetBar.ButtonItem()
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
@@ -201,15 +204,10 @@ Public Class frmNomina
         Me.MenuItem1.Index = 4
         Me.MenuItem1.Text = "Genera Planilla"
         '
-        'Sqltree
-        '
-        Me.Sqltree.CommandText = resources.GetString("Sqltree.CommandText")
-        Me.Sqltree.Connection = Me.SqlConnection1
-        '
         'SqlConnection1
         '
-        Me.SqlConnection1.ConnectionString = "workstation id=""SERVIDOR-BD"";packet size=4096;integrated security=SSPI;data sourc" &
-    "e=""SERVIDOR-BD"";persist security info=False;initial catalog=planilla"
+        Me.SqlConnection1.ConnectionString = "Data Source=servidor-bd;Initial Catalog=planilla;Persist Security Info=True;User " &
+    "ID=sa;Password=123"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'ImageList2
@@ -243,9 +241,10 @@ Public Class frmNomina
         Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.RibbonTabItem1})
         Me.RibbonControl1.KeyTipsFont = New System.Drawing.Font("Tahoma", 7.0!)
         Me.RibbonControl1.Location = New System.Drawing.Point(5, 1)
+        Me.RibbonControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.QuickToolbarItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem1})
-        Me.RibbonControl1.Size = New System.Drawing.Size(1156, 150)
+        Me.RibbonControl1.Size = New System.Drawing.Size(1118, 172)
         Me.RibbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon"
         Me.RibbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon"
@@ -274,9 +273,10 @@ Public Class frmNomina
         Me.RibbonPanel1.Controls.Add(Me.RibbonBar1)
         Me.RibbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RibbonPanel1.Location = New System.Drawing.Point(0, 55)
+        Me.RibbonPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonPanel1.Name = "RibbonPanel1"
-        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 2)
-        Me.RibbonPanel1.Size = New System.Drawing.Size(1156, 95)
+        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 2, 2)
+        Me.RibbonPanel1.Size = New System.Drawing.Size(1118, 117)
         '
         '
         '
@@ -305,10 +305,11 @@ Public Class frmNomina
         Me.RibbonBar3.ContainerControlProcessDialogKey = True
         Me.RibbonBar3.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar3.DragDropSupport = True
-        Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem7, Me.ButtonItem6, Me.ButtonItem8, Me.CoopeAnde, Me.ButtonItem2, Me.ButtonItem9})
-        Me.RibbonBar3.Location = New System.Drawing.Point(448, 0)
+        Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem7, Me.ButtonItem6, Me.ButtonItem8, Me.CoopeAnde, Me.ButtonItem11, Me.ButtonItem2, Me.ButtonItem9, Me.bMarcas})
+        Me.RibbonBar3.Location = New System.Drawing.Point(535, 0)
+        Me.RibbonBar3.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonBar3.Name = "RibbonBar3"
-        Me.RibbonBar3.Size = New System.Drawing.Size(420, 93)
+        Me.RibbonBar3.Size = New System.Drawing.Size(588, 115)
         Me.RibbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar3.TabIndex = 2
         Me.RibbonBar3.Text = "Ajustes"
@@ -351,6 +352,16 @@ Public Class frmNomina
         Me.CoopeAnde.SubItemsExpandWidth = 14
         Me.CoopeAnde.Text = "CoopAnde <br/> Archivo"
         '
+        'ButtonItem11
+        '
+        Me.ButtonItem11.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem11.Name = "ButtonItem11"
+        Me.ButtonItem11.SubItemsExpandWidth = 14
+        Me.ButtonItem11.Symbol = "57686"
+        Me.ButtonItem11.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material
+        Me.ButtonItem11.SymbolSize = 32.0!
+        Me.ButtonItem11.Text = "SSVM Archivo"
+        '
         'ButtonItem2
         '
         Me.ButtonItem2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
@@ -370,6 +381,15 @@ Public Class frmNomina
         Me.ButtonItem9.SymbolSize = 32.0!
         Me.ButtonItem9.Text = "Horas Extras"
         '
+        'bMarcas
+        '
+        Me.bMarcas.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.bMarcas.Name = "bMarcas"
+        Me.bMarcas.SubItemsExpandWidth = 14
+        Me.bMarcas.Symbol = ""
+        Me.bMarcas.SymbolSize = 32.0!
+        Me.bMarcas.Text = "Marcas"
+        '
         'RibbonBar2
         '
         Me.RibbonBar2.AutoOverflowEnabled = True
@@ -385,9 +405,10 @@ Public Class frmNomina
         Me.RibbonBar2.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar2.DragDropSupport = True
         Me.RibbonBar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ItemContainer1})
-        Me.RibbonBar2.Location = New System.Drawing.Point(271, 0)
+        Me.RibbonBar2.Location = New System.Drawing.Point(323, 0)
+        Me.RibbonBar2.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonBar2.Name = "RibbonBar2"
-        Me.RibbonBar2.Size = New System.Drawing.Size(177, 93)
+        Me.RibbonBar2.Size = New System.Drawing.Size(212, 115)
         Me.RibbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar2.TabIndex = 1
         Me.RibbonBar2.Text = "Planillas"
@@ -437,10 +458,11 @@ Public Class frmNomina
         Me.RibbonBar1.ContainerControlProcessDialogKey = True
         Me.RibbonBar1.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar1.DragDropSupport = True
-        Me.RibbonBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem3, Me.ButtonItem4, Me.ButtonItem5})
-        Me.RibbonBar1.Location = New System.Drawing.Point(3, 0)
+        Me.RibbonBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem3, Me.ButtonItem4, Me.ButtonItem5, Me.ButtonItem10})
+        Me.RibbonBar1.Location = New System.Drawing.Point(2, 0)
+        Me.RibbonBar1.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonBar1.Name = "RibbonBar1"
-        Me.RibbonBar1.Size = New System.Drawing.Size(268, 93)
+        Me.RibbonBar1.Size = New System.Drawing.Size(321, 115)
         Me.RibbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar1.TabIndex = 1
         Me.RibbonBar1.Text = "Empleados"
@@ -475,6 +497,15 @@ Public Class frmNomina
         Me.ButtonItem5.Name = "ButtonItem5"
         Me.ButtonItem5.Text = "Perfiles y Rubros"
         '
+        'ButtonItem10
+        '
+        Me.ButtonItem10.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem10.Name = "ButtonItem10"
+        Me.ButtonItem10.SubItemsExpandWidth = 14
+        Me.ButtonItem10.Symbol = ""
+        Me.ButtonItem10.SymbolSize = 32.0!
+        Me.ButtonItem10.Text = "Liquidación"
+        '
         'RibbonTabItem1
         '
         Me.RibbonTabItem1.Checked = True
@@ -498,9 +529,10 @@ Public Class frmNomina
         Me.Bar1.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.ResizeHandle
         Me.Bar1.IsMaximized = False
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.LabelItem1})
-        Me.Bar1.Location = New System.Drawing.Point(5, 644)
+        Me.Bar1.Location = New System.Drawing.Point(5, 514)
+        Me.Bar1.Margin = New System.Windows.Forms.Padding(2)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(1156, 19)
+        Me.Bar1.Size = New System.Drawing.Size(1118, 23)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
         Me.Bar1.TabIndex = 17
@@ -540,9 +572,10 @@ Public Class frmNomina
         Me.DockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.DockSite4.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
-        Me.DockSite4.Location = New System.Drawing.Point(5, 644)
+        Me.DockSite4.Location = New System.Drawing.Point(5, 514)
+        Me.DockSite4.Margin = New System.Windows.Forms.Padding(2)
         Me.DockSite4.Name = "DockSite4"
-        Me.DockSite4.Size = New System.Drawing.Size(1156, 0)
+        Me.DockSite4.Size = New System.Drawing.Size(1118, 0)
         Me.DockSite4.TabIndex = 22
         Me.DockSite4.TabStop = False
         '
@@ -551,10 +584,11 @@ Public Class frmNomina
         Me.DockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite1.Controls.Add(Me.Bar2)
         Me.DockSite1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.DockSite1.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer(New DevComponents.DotNetBar.DocumentBaseContainer() {CType(New DevComponents.DotNetBar.DocumentBarContainer(Me.Bar2, 303, 493), DevComponents.DotNetBar.DocumentBaseContainer)}, DevComponents.DotNetBar.eOrientation.Horizontal)
-        Me.DockSite1.Location = New System.Drawing.Point(5, 151)
+        Me.DockSite1.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer(New DevComponents.DotNetBar.DocumentBaseContainer() {CType(New DevComponents.DotNetBar.DocumentBarContainer(Me.Bar2, 365, 341), DevComponents.DotNetBar.DocumentBaseContainer)}, DevComponents.DotNetBar.eOrientation.Horizontal)
+        Me.DockSite1.Location = New System.Drawing.Point(5, 173)
+        Me.DockSite1.Margin = New System.Windows.Forms.Padding(2)
         Me.DockSite1.Name = "DockSite1"
-        Me.DockSite1.Size = New System.Drawing.Size(306, 493)
+        Me.DockSite1.Size = New System.Drawing.Size(368, 341)
         Me.DockSite1.TabIndex = 19
         Me.DockSite1.TabStop = False
         '
@@ -566,14 +600,15 @@ Public Class frmNomina
         Me.Bar2.AutoHideAnimationTime = 400
         Me.Bar2.AutoSyncBarCaption = True
         Me.Bar2.Controls.Add(Me.PanelDockContainer1)
-        Me.Bar2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Bar2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bar2.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.Caption
         Me.Bar2.IsMaximized = False
         Me.Bar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.DockContainerItem1})
         Me.Bar2.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer
         Me.Bar2.Location = New System.Drawing.Point(0, 0)
+        Me.Bar2.Margin = New System.Windows.Forms.Padding(2)
         Me.Bar2.Name = "Bar2"
-        Me.Bar2.Size = New System.Drawing.Size(303, 493)
+        Me.Bar2.Size = New System.Drawing.Size(365, 341)
         Me.Bar2.Stretch = True
         Me.Bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar2.TabIndex = 0
@@ -588,8 +623,9 @@ Public Class frmNomina
         Me.PanelDockContainer1.Controls.Add(Me.TreeViewSQL1)
         Me.PanelDockContainer1.DisabledBackColor = System.Drawing.Color.Empty
         Me.PanelDockContainer1.Location = New System.Drawing.Point(3, 23)
+        Me.PanelDockContainer1.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelDockContainer1.Name = "PanelDockContainer1"
-        Me.PanelDockContainer1.Size = New System.Drawing.Size(297, 467)
+        Me.PanelDockContainer1.Size = New System.Drawing.Size(359, 315)
         Me.PanelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
         Me.PanelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
@@ -623,9 +659,10 @@ Public Class frmNomina
         Me.ExpandableSplitter1.HotGripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.ExpandableSplitter1.HotGripLightColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.ExpandableSplitter1.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
-        Me.ExpandableSplitter1.Location = New System.Drawing.Point(139, 0)
+        Me.ExpandableSplitter1.Location = New System.Drawing.Point(166, 0)
+        Me.ExpandableSplitter1.Margin = New System.Windows.Forms.Padding(2)
         Me.ExpandableSplitter1.Name = "ExpandableSplitter1"
-        Me.ExpandableSplitter1.Size = New System.Drawing.Size(3, 467)
+        Me.ExpandableSplitter1.Size = New System.Drawing.Size(2, 315)
         Me.ExpandableSplitter1.TabIndex = 18
         Me.ExpandableSplitter1.TabStop = False
         '
@@ -633,10 +670,11 @@ Public Class frmNomina
         '
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView1.LargeImageList = Me.ImageList2
-        Me.ListView1.Location = New System.Drawing.Point(139, 0)
+        Me.ListView1.Location = New System.Drawing.Point(166, 0)
+        Me.ListView1.Margin = New System.Windows.Forms.Padding(2)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(158, 467)
+        Me.ListView1.Size = New System.Drawing.Size(193, 315)
         Me.ListView1.SmallImageList = Me.ImageList1
         Me.ListView1.TabIndex = 15
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -651,6 +689,7 @@ Public Class frmNomina
         Me.TreeViewSQL1.ImageList = Me.ImageList1
         Me.TreeViewSQL1.InstruccionSQL = Me.Sqltree2
         Me.TreeViewSQL1.Location = New System.Drawing.Point(0, 0)
+        Me.TreeViewSQL1.Margin = New System.Windows.Forms.Padding(2)
         Me.TreeViewSQL1.Name = "TreeViewSQL1"
         TreeNode1.ImageIndex = 1
         TreeNode1.Name = ""
@@ -658,12 +697,13 @@ Public Class frmNomina
         TreeNode1.Text = "Planillas"
         Me.TreeViewSQL1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1})
         Me.TreeViewSQL1.SelectedImageIndex = 0
-        Me.TreeViewSQL1.Size = New System.Drawing.Size(139, 467)
+        Me.TreeViewSQL1.Size = New System.Drawing.Size(166, 315)
         Me.TreeViewSQL1.TabIndex = 14
         '
         'Sqltree2
         '
-        Me.Sqltree2.CommandText = resources.GetString("Sqltree2.CommandText")
+        Me.Sqltree2.CommandText = "SELECT        Depto, Puesto, empleado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            v_TreeViewEmpleados" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ORDER" &
+    " BY Depto, Puesto, empleado"
         Me.Sqltree2.Connection = Me.SqlConnection1
         '
         'DockContainerItem1
@@ -677,9 +717,10 @@ Public Class frmNomina
         Me.DockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite2.Dock = System.Windows.Forms.DockStyle.Right
         Me.DockSite2.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
-        Me.DockSite2.Location = New System.Drawing.Point(1161, 151)
+        Me.DockSite2.Location = New System.Drawing.Point(1123, 173)
+        Me.DockSite2.Margin = New System.Windows.Forms.Padding(2)
         Me.DockSite2.Name = "DockSite2"
-        Me.DockSite2.Size = New System.Drawing.Size(0, 493)
+        Me.DockSite2.Size = New System.Drawing.Size(0, 341)
         Me.DockSite2.TabIndex = 20
         Me.DockSite2.TabStop = False
         '
@@ -687,9 +728,10 @@ Public Class frmNomina
         '
         Me.DockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite8.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.DockSite8.Location = New System.Drawing.Point(5, 644)
+        Me.DockSite8.Location = New System.Drawing.Point(5, 514)
+        Me.DockSite8.Margin = New System.Windows.Forms.Padding(2)
         Me.DockSite8.Name = "DockSite8"
-        Me.DockSite8.Size = New System.Drawing.Size(1156, 0)
+        Me.DockSite8.Size = New System.Drawing.Size(1118, 0)
         Me.DockSite8.TabIndex = 26
         Me.DockSite8.TabStop = False
         '
@@ -697,9 +739,10 @@ Public Class frmNomina
         '
         Me.DockSite5.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite5.Dock = System.Windows.Forms.DockStyle.Left
-        Me.DockSite5.Location = New System.Drawing.Point(5, 151)
+        Me.DockSite5.Location = New System.Drawing.Point(5, 173)
+        Me.DockSite5.Margin = New System.Windows.Forms.Padding(2)
         Me.DockSite5.Name = "DockSite5"
-        Me.DockSite5.Size = New System.Drawing.Size(0, 493)
+        Me.DockSite5.Size = New System.Drawing.Size(0, 341)
         Me.DockSite5.TabIndex = 23
         Me.DockSite5.TabStop = False
         '
@@ -707,9 +750,10 @@ Public Class frmNomina
         '
         Me.DockSite6.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite6.Dock = System.Windows.Forms.DockStyle.Right
-        Me.DockSite6.Location = New System.Drawing.Point(1161, 151)
+        Me.DockSite6.Location = New System.Drawing.Point(1123, 173)
+        Me.DockSite6.Margin = New System.Windows.Forms.Padding(2)
         Me.DockSite6.Name = "DockSite6"
-        Me.DockSite6.Size = New System.Drawing.Size(0, 493)
+        Me.DockSite6.Size = New System.Drawing.Size(0, 341)
         Me.DockSite6.TabIndex = 24
         Me.DockSite6.TabStop = False
         '
@@ -717,9 +761,10 @@ Public Class frmNomina
         '
         Me.DockSite7.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.DockSite7.Location = New System.Drawing.Point(5, 151)
+        Me.DockSite7.Location = New System.Drawing.Point(5, 173)
+        Me.DockSite7.Margin = New System.Windows.Forms.Padding(2)
         Me.DockSite7.Name = "DockSite7"
-        Me.DockSite7.Size = New System.Drawing.Size(1156, 0)
+        Me.DockSite7.Size = New System.Drawing.Size(1118, 0)
         Me.DockSite7.TabIndex = 25
         Me.DockSite7.TabStop = False
         '
@@ -728,9 +773,10 @@ Public Class frmNomina
         Me.DockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite3.Dock = System.Windows.Forms.DockStyle.Top
         Me.DockSite3.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
-        Me.DockSite3.Location = New System.Drawing.Point(5, 151)
+        Me.DockSite3.Location = New System.Drawing.Point(5, 173)
+        Me.DockSite3.Margin = New System.Windows.Forms.Padding(2)
         Me.DockSite3.Name = "DockSite3"
-        Me.DockSite3.Size = New System.Drawing.Size(1156, 0)
+        Me.DockSite3.Size = New System.Drawing.Size(1118, 0)
         Me.DockSite3.TabIndex = 21
         Me.DockSite3.TabStop = False
         '
@@ -741,9 +787,12 @@ Public Class frmNomina
         '
         'frmNomina
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.AliceBlue
-        Me.ClientSize = New System.Drawing.Size(1166, 665)
+        Me.ClientSize = New System.Drawing.Size(1128, 539)
         Me.Controls.Add(Me.DockSite1)
         Me.Controls.Add(Me.DockSite2)
         Me.Controls.Add(Me.DockSite3)
@@ -756,6 +805,7 @@ Public Class frmNomina
         Me.Controls.Add(Me.Bar1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmNomina"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Nomina"
@@ -779,7 +829,6 @@ Public Class frmNomina
     Dim llave As String
     Private mHiloArch As Thread
     Dim vnt As New Ventanas
-    Dim conn As conexionSQL
 
     Dim dptos As New ArrayList
     Dim i As Integer
@@ -812,40 +861,13 @@ Public Class frmNomina
         Application.Exit()
     End Sub
 
-    Private Sub frmNomina_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-#If DEBUG Then
-
-#Else
-        Try
-            Dim myUri As New Uri(My.Settings.ServActualizacion)
-            Dim host As String = myUri.Host
-
-            If My.Computer.Network.Ping(host, 1000) Then
-                AddHandler AutoUpdater.CheckForUpdateEvent, AddressOf AutoUpdaterRevisarEvent
-                AutoUpdater.Start(My.Settings.ServActualizacion)
-            Else
-                MsgBox("Comunicacion muy lenta con el servidor", MsgBoxStyle.Exclamation, "Advertencia")
-                Application.Exit()
-            End If
-            Me.Tag = "Colegio Santa Ana"
-        Catch ex As Exception
-            MsgBox("Sin comunicación con la Base de Datos", MsgBoxStyle.Critical, "ERROR")
-            Application.Exit()
-        End Try
-#End If
-
-
-    End Sub
-
-    Private Sub frmNomina_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        conn = New conexionSQL
+    Private Sub frmNomina_HandleCreated(sender As Object, e As EventArgs) Handles Me.HandleCreated
+        Dim conn As conexionSQL = New conexionSQL
 
         TreeViewSQL1.llenar("planilla")
-        'vnt.cambia_fondoMDI(Me)
-        mHiloArch = New Thread(AddressOf cargar_datos)
-        mHiloArch.Start()
+        vnt.cambia_fondoMDI(Me)
 
+        Me.SqlConnection1.ConnectionString = conn.strConn
         dptos = conn.llena("select nombre,id_dpto from departamento")
         If dptos.Count > 0 Then
 
@@ -853,17 +875,38 @@ Public Class frmNomina
                 Me.ComboBoxItem1.Items.Add(dptos(i)(0))
             Next
             'Me.ComboBoxItem1.SelectedIndex = 0
-
         End If
-        mHiloArch.Abort()
-        mHiloArch = Nothing
+
         LabelItem1.Text = conn.servidor
 
-        Dim coope As New cCoopeAnde
-        If Not coope.ExistenDatosMes Then
-            CoopeAnde.NotificationMarkText = " "
-        End If
     End Sub
+
+    Private Sub frmNomina_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+#If DEBUG Then
+
+#Else
+                Try
+                    Dim myUri As New Uri(My.Settings.ServActualizacion)
+                    Dim host As String = myUri.Host
+
+                    If My.Computer.Network.Ping(host, 1000) Then
+                        AddHandler AutoUpdater.CheckForUpdateEvent, AddressOf AutoUpdaterRevisarEvent
+                        AutoUpdater.Start(My.Settings.ServActualizacion)
+                    Else
+                        MsgBox("Comunicacion muy lenta con el servidor", MsgBoxStyle.Exclamation, "Advertencia")
+                        Application.Exit()
+                    End If
+                    Me.Tag = "Colegio Santa Ana"
+                Catch ex As Exception
+                    MsgBox("Sin comunicación con la Base de Datos", MsgBoxStyle.Critical, "ERROR")
+                    Application.Exit()
+                End Try
+#End If
+
+
+    End Sub
+
 
     Private Sub frmNomina_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
         Dim coope As New cCoopeAnde
@@ -872,16 +915,6 @@ Public Class frmNomina
         Else
             CoopeAnde.NotificationMarkText = ""
         End If
-    End Sub
-    Private Sub cargar_datos()
-        Try
-            Dim conn As New conexionSQL
-            conn.bd = "planilla"
-            Me.SqlConnection1.ConnectionString = conn.strConn
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-            Return
-        End Try
     End Sub
 
     Private Sub llenar_list(ByRef pnodo As TreeNode)
@@ -1057,7 +1090,6 @@ Public Class frmNomina
         vnt.cargarVentana(New frmCoopeAndeX, Me)
     End Sub
 
-
     Private Sub ComboBoxItem1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxItem1.SelectedIndexChanged
         Dim id_departamento As Integer = dptos(Me.ComboBoxItem1.SelectedIndex)(1)
         vnt.cargarVentana(New frmPlanilla(id_departamento), Me)
@@ -1069,5 +1101,24 @@ Public Class frmNomina
 
     Private Sub ButtonItem9_Click(sender As Object, e As EventArgs) Handles ButtonItem9.Click
         vnt.cargarVentana(New frmHoraExtras, Me)
+    End Sub
+
+    Private Sub ButtonItem10_Click(sender As Object, e As EventArgs) Handles ButtonItem10.Click
+        vnt.cargarVentana(New frmLiquidacion, Me)
+    End Sub
+
+    Public Sub ocultarBar2()
+        Bar2.AutoHide = True
+    End Sub
+    Public Sub MostrarBar2()
+        Bar2.AutoHide = False
+    End Sub
+
+    Private Sub bMarcas_Click(sender As Object, e As EventArgs) Handles bMarcas.Click
+        vnt.cargarVentana(New frmMarcas, Me)
+    End Sub
+
+    Private Sub ButtonItem11_Click(sender As Object, e As EventArgs) Handles ButtonItem11.Click
+        vnt.cargarVentana(New frmPrestamosSSVM, Me)
     End Sub
 End Class

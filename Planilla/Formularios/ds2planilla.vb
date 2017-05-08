@@ -26,3 +26,14 @@ Partial Public Class ds2planilla
     End Class
 
 End Class
+
+Namespace ds2planillaTableAdapters
+    Partial Public Class Contatos_puestosTableAdapter
+    End Class
+
+    Partial Public Class AguinaldoTableAdapter
+    End Class
+
+    Partial Public Class DiasPreavisoTableAdapter
+    End Class
+End Namespace

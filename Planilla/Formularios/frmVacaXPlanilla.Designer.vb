@@ -25,10 +25,10 @@ Partial Class frmVacaXPlanilla
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
+        Me.SwitchButton1 = New DevComponents.DotNetBar.Controls.SwitchButton()
         Me.bt_carta = New DevComponents.DotNetBar.ButtonX()
         Me.LabelX5 = New DevComponents.DotNetBar.LabelX()
         Me.Periodo = New DevComponents.Editors.IntegerInput()
-        Me.UcProgresoCircular1 = New Planilla.ucProgresoCircular()
         Me.LabelX9 = New DevComponents.DotNetBar.LabelX()
         Me.LabelX8 = New DevComponents.DotNetBar.LabelX()
         Me.DiasRangoAdic = New DevComponents.Editors.IntegerInput()
@@ -49,17 +49,20 @@ Partial Class frmVacaXPlanilla
         Me.ListBoxAdv1 = New DevComponents.DotNetBar.ListBoxAdv()
         Me.ReflectionLabel1 = New DevComponents.DotNetBar.Controls.ReflectionLabel()
         Me.DataGridViewX1 = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.derecho = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.disfrutado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.saldo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.hilo = New System.ComponentModel.BackgroundWorker()
+        Me.LabelX7 = New DevComponents.DotNetBar.LabelX()
+        Me.FechaCarta = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
+        Me.UcProgresoCircular1 = New Planilla.ucProgresoCircular()
+        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ContratosActivosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DsVacaciones = New Planilla.dsVacaciones()
         Me.ContratosActivosTableAdapter = New Planilla.dsVacacionesTableAdapters.ContratosActivosTableAdapter()
         Me.TableAdapterManager = New Planilla.dsVacacionesTableAdapters.TableAdapterManager()
-        Me.hilo = New System.ComponentModel.BackgroundWorker()
         Me.PanelEx1.SuspendLayout()
         CType(Me.Periodo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DiasRangoAdic, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,6 +73,7 @@ Partial Class frmVacaXPlanilla
         CType(Me.fechaI_ord, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelEx2.SuspendLayout()
         CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FechaCarta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ContratosActivosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsVacaciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -78,6 +82,9 @@ Partial Class frmVacaXPlanilla
         '
         Me.PanelEx1.CanvasColor = System.Drawing.SystemColors.ButtonHighlight
         Me.PanelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx1.Controls.Add(Me.FechaCarta)
+        Me.PanelEx1.Controls.Add(Me.LabelX7)
+        Me.PanelEx1.Controls.Add(Me.SwitchButton1)
         Me.PanelEx1.Controls.Add(Me.bt_carta)
         Me.PanelEx1.Controls.Add(Me.LabelX5)
         Me.PanelEx1.Controls.Add(Me.Periodo)
@@ -110,6 +117,22 @@ Partial Class frmVacaXPlanilla
         Me.PanelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx1.Style.GradientAngle = 90
         Me.PanelEx1.TabIndex = 7
+        '
+        'SwitchButton1
+        '
+        '
+        '
+        '
+        Me.SwitchButton1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.SwitchButton1.Location = New System.Drawing.Point(424, 94)
+        Me.SwitchButton1.Name = "SwitchButton1"
+        Me.SwitchButton1.OffText = "SIN"
+        Me.SwitchButton1.OnText = "CON"
+        Me.SwitchButton1.Size = New System.Drawing.Size(66, 22)
+        Me.SwitchButton1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.SwitchButton1.TabIndex = 22
+        Me.SwitchButton1.Value = True
+        Me.SwitchButton1.ValueObject = "Y"
         '
         'bt_carta
         '
@@ -151,13 +174,6 @@ Partial Class frmVacaXPlanilla
         Me.Periodo.ShowUpDown = True
         Me.Periodo.Size = New System.Drawing.Size(72, 22)
         Me.Periodo.TabIndex = 19
-        '
-        'UcProgresoCircular1
-        '
-        Me.UcProgresoCircular1.Location = New System.Drawing.Point(470, 12)
-        Me.UcProgresoCircular1.Name = "UcProgresoCircular1"
-        Me.UcProgresoCircular1.Size = New System.Drawing.Size(96, 96)
-        Me.UcProgresoCircular1.TabIndex = 18
         '
         'LabelX9
         '
@@ -534,7 +550,6 @@ Partial Class frmVacaXPlanilla
         '
         Me.ListBoxAdv1.BackgroundStyle.Class = "ListBoxAdv"
         Me.ListBoxAdv1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.ListBoxAdv1.CheckStateMember = Nothing
         Me.ListBoxAdv1.ContainerControlProcessDialogKey = True
         Me.ListBoxAdv1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListBoxAdv1.DragDropSupport = True
@@ -584,29 +599,6 @@ Partial Class frmVacaXPlanilla
         Me.DataGridViewX1.Size = New System.Drawing.Size(691, 302)
         Me.DataGridViewX1.TabIndex = 12
         '
-        'CedulaDataGridViewTextBoxColumn
-        '
-        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
-        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "cedula"
-        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
-        Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ApellidosDataGridViewTextBoxColumn
-        '
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
-        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ApellidosDataGridViewTextBoxColumn.Width = 150
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombreDataGridViewTextBoxColumn.Width = 150
-        '
         'derecho
         '
         Me.derecho.DataPropertyName = "derecho"
@@ -631,6 +623,97 @@ Partial Class frmVacaXPlanilla
         Me.saldo.ReadOnly = True
         Me.saldo.Width = 60
         '
+        'hilo
+        '
+        Me.hilo.WorkerReportsProgress = True
+        '
+        'LabelX7
+        '
+        '
+        '
+        '
+        Me.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX7.Location = New System.Drawing.Point(394, 20)
+        Me.LabelX7.Name = "LabelX7"
+        Me.LabelX7.Size = New System.Drawing.Size(78, 20)
+        Me.LabelX7.TabIndex = 24
+        Me.LabelX7.Text = "Fecha Carta"
+        '
+        'FechaCarta
+        '
+        '
+        '
+        '
+        Me.FechaCarta.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.FechaCarta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.FechaCarta.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown
+        Me.FechaCarta.ButtonDropDown.Visible = True
+        Me.FechaCarta.IsPopupCalendarOpen = False
+        Me.FechaCarta.Location = New System.Drawing.Point(461, 20)
+        '
+        '
+        '
+        '
+        '
+        '
+        Me.FechaCarta.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.FechaCarta.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
+        Me.FechaCarta.MonthCalendar.ClearButtonVisible = True
+        '
+        '
+        '
+        Me.FechaCarta.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2
+        Me.FechaCarta.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90
+        Me.FechaCarta.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
+        Me.FechaCarta.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.FechaCarta.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder
+        Me.FechaCarta.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1
+        Me.FechaCarta.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.FechaCarta.MonthCalendar.DisplayMonth = New Date(2016, 5, 1, 0, 0, 0, 0)
+        Me.FechaCarta.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday
+        '
+        '
+        '
+        Me.FechaCarta.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.FechaCarta.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90
+        Me.FechaCarta.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.FechaCarta.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.FechaCarta.MonthCalendar.TodayButtonVisible = True
+        Me.FechaCarta.Name = "FechaCarta"
+        Me.FechaCarta.Size = New System.Drawing.Size(118, 22)
+        Me.FechaCarta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.FechaCarta.TabIndex = 25
+        '
+        'UcProgresoCircular1
+        '
+        Me.UcProgresoCircular1.Location = New System.Drawing.Point(470, 12)
+        Me.UcProgresoCircular1.Name = "UcProgresoCircular1"
+        Me.UcProgresoCircular1.Size = New System.Drawing.Size(96, 96)
+        Me.UcProgresoCircular1.TabIndex = 18
+        '
+        'CedulaDataGridViewTextBoxColumn
+        '
+        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
+        Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ApellidosDataGridViewTextBoxColumn.Width = 150
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreDataGridViewTextBoxColumn.Width = 150
+        '
         'ContratosActivosBindingSource
         '
         Me.ContratosActivosBindingSource.DataMember = "ContratosActivos"
@@ -653,10 +736,6 @@ Partial Class frmVacaXPlanilla
         Me.TableAdapterManager.Vacacion_regTableAdapter = Nothing
         Me.TableAdapterManager.VacacionesTableAdapter = Nothing
         '
-        'hilo
-        '
-        Me.hilo.WorkerReportsProgress = True
-        '
         'frmVacaXPlanilla
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -667,7 +746,6 @@ Partial Class frmVacaXPlanilla
         Me.Controls.Add(Me.PanelEx2)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "frmVacaXPlanilla"
         Me.Text = "Vacaciones por Planilla"
         Me.PanelEx1.ResumeLayout(False)
@@ -680,6 +758,7 @@ Partial Class frmVacaXPlanilla
         CType(Me.fechaI_ord, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelEx2.ResumeLayout(False)
         CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FechaCarta, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ContratosActivosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsVacaciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -721,4 +800,7 @@ Partial Class frmVacaXPlanilla
     Private WithEvents Periodo As DevComponents.Editors.IntegerInput
     Private WithEvents bt_carta As DevComponents.DotNetBar.ButtonX
     Friend WithEvents hilo As System.ComponentModel.BackgroundWorker
+    Friend WithEvents SwitchButton1 As DevComponents.DotNetBar.Controls.SwitchButton
+    Private WithEvents FechaCarta As DevComponents.Editors.DateTimeAdv.DateTimeInput
+    Private WithEvents LabelX7 As DevComponents.DotNetBar.LabelX
 End Class

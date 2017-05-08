@@ -5,13 +5,7 @@ Imports System.Threading.Tasks
 Public Class conexionSQL
     Implements IDisposable
 
-#If DEBUG Then
-    'Private vServidor As String = "(localdb)\ProjectsV12"
     Private vServidor As String = "servidor-bd"
-#Else
-    Private vServidor As String = "servidor-bd"
-#End If
-
     Private seguridadIntegrada As Boolean = True
     Private vbd As String = "planilla"
     Public vusuario As String = "sa"
@@ -128,7 +122,7 @@ Public Class conexionSQL
             ds.Tables(tabla).Clear()
             da.Fill(ds, tabla)
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("ConexionSQL{llena}" & ex.Message)
         End Try
     End Sub
 
@@ -154,9 +148,8 @@ Public Class conexionSQL
 
     Function llena(ByVal instruccion As String) As ArrayList
         Dim arreglo As New ArrayList
-        Dim pos As Integer = 0
-        Try
 
+        Try
             Dim ds As New DataSet
             Dim registros As Integer
             If colegioConnection.State = ConnectionState.Closed Then
@@ -166,11 +159,12 @@ Public Class conexionSQL
 
             registros = da.Fill(ds, 0)
             ' convierte ds a un arreglo a partir de aqui
+            If registros > 0 Then
+                For Each fila As DataRow In ds.Tables(0).Rows
+                    arreglo.Add(fila.ItemArray)
+                Next
 
-            For Each fila As DataRow In ds.Tables(0).Rows
-                arreglo.Add(fila.ItemArray)
-                pos = pos + 1
-            Next
+            End If
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -282,6 +276,10 @@ Public Class conexionSQL
     End Sub
 
     Private Sub Construye_String()
+        'Dim arr As String() = {"PC-CASA", "bb"}
+        'If Debugger.IsAttached And (Array.IndexOf(arr, Environment.MachineName) >= 0) Then
+        '    vServidor = "(localdb)\ProjectsV13"
+        'End If
 
         If red.Status = NetworkInformation.JoinStatus.Domain Then
             vstrConn = "data source=" & vServidor &
@@ -291,9 +289,8 @@ Public Class conexionSQL
                      ";packet size=4096;MultipleActiveResultSets=true"
         Else
             If vServidor.Substring(0, 9) = "(localdb)" Then
-                vstrConn = "Data Source=(localdb)\ProjectsV12;Initial Catalog=planilla;Integrated Security=True;" &
-                    "Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;" &
-                    "ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+                vstrConn = "Data Source=(localdb)\ProjectsV13;Initial Catalog=planilla;Integrated Security=True;Connect Timeout=30;" &
+                    "Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
             Else
                 vstrConn = "data source=" & vServidor &
                             ";initial catalog=" & vbd & ";persist security info=TRUE" &

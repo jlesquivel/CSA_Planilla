@@ -40,11 +40,11 @@ Partial Class frmCoopeAndeX
         Me.ReflectionLabel1 = New DevComponents.DotNetBar.Controls.ReflectionLabel()
         Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
         Me.PanelEx2 = New DevComponents.DotNetBar.PanelEx()
+        Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
         Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
         Me.ReflectionLabel2 = New DevComponents.DotNetBar.Controls.ReflectionLabel()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.VCoopeAndeXLSTableAdapter = New Planilla.planillaDataSetTableAdapters.vCoopeAndeXLSTableAdapter()
-        Me.UcProgresoCircular1 = New Planilla.ucProgresoCircular()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.PanelEx1.SuspendLayout()
         CType(Me.VCoopeAndeXLSDataGridViewX, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -220,7 +220,7 @@ Partial Class frmCoopeAndeX
         '
         Me.PanelEx2.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.PanelEx2.Controls.Add(Me.UcProgresoCircular1)
+        Me.PanelEx2.Controls.Add(Me.CircularProgressBar1)
         Me.PanelEx2.Controls.Add(Me.ButtonX2)
         Me.PanelEx2.Controls.Add(Me.ReflectionLabel2)
         Me.PanelEx2.DisabledBackColor = System.Drawing.Color.Empty
@@ -236,6 +236,38 @@ Partial Class frmCoopeAndeX
         Me.PanelEx2.Style.GradientAngle = 90
         Me.PanelEx2.TabIndex = 4
         '
+        'CircularProgressBar1
+        '
+        Me.CircularProgressBar1.AnimationSpeed = 500
+        Me.CircularProgressBar1.BackColor = System.Drawing.SystemColors.Control
+        Me.CircularProgressBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CircularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CircularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.CircularProgressBar1.InnerMargin = 2
+        Me.CircularProgressBar1.InnerWidth = -1
+        Me.CircularProgressBar1.Location = New System.Drawing.Point(44, 251)
+        Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
+        Me.CircularProgressBar1.Name = "CircularProgressBar1"
+        Me.CircularProgressBar1.OuterColor = System.Drawing.Color.Gray
+        Me.CircularProgressBar1.OuterMargin = -25
+        Me.CircularProgressBar1.OuterWidth = 26
+        Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.Green
+        Me.CircularProgressBar1.ProgressWidth = 25
+        Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 36.0!)
+        Me.CircularProgressBar1.Size = New System.Drawing.Size(174, 170)
+        Me.CircularProgressBar1.StartAngle = 270
+        Me.CircularProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
+        Me.CircularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.CircularProgressBar1.SubscriptMargin = New System.Windows.Forms.Padding(10, -35, 0, 0)
+        Me.CircularProgressBar1.SubscriptText = ""
+        Me.CircularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.CircularProgressBar1.SuperscriptMargin = New System.Windows.Forms.Padding(10, 35, 0, 0)
+        Me.CircularProgressBar1.SuperscriptText = ""
+        Me.CircularProgressBar1.TabIndex = 5
+        Me.CircularProgressBar1.Text = "Procesando"
+        Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(0)
+        Me.CircularProgressBar1.Value = 68
+        '
         'ButtonX2
         '
         Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
@@ -247,7 +279,7 @@ Partial Class frmCoopeAndeX
         Me.ButtonX2.Symbol = ""
         Me.ButtonX2.SymbolColor = System.Drawing.Color.Green
         Me.ButtonX2.TabIndex = 3
-        Me.ButtonX2.Text = "Asigna Capital"
+        Me.ButtonX2.Text = "Asigna Capital."
         '
         'ReflectionLabel2
         '
@@ -264,18 +296,11 @@ Partial Class frmCoopeAndeX
         '
         'OpenFileDialog1
         '
-        Me.OpenFileDialog1.Filter = "Excel (*.xlsx) | *.xlsx"
+        Me.OpenFileDialog1.Filter = "Excel (*.xlsx)|*.xlsx;*.xls|Todos (*.*)|*.*"
         '
         'VCoopeAndeXLSTableAdapter
         '
         Me.VCoopeAndeXLSTableAdapter.ClearBeforeFill = True
-        '
-        'UcProgresoCircular1
-        '
-        Me.UcProgresoCircular1.Location = New System.Drawing.Point(72, 122)
-        Me.UcProgresoCircular1.Name = "UcProgresoCircular1"
-        Me.UcProgresoCircular1.Size = New System.Drawing.Size(93, 88)
-        Me.UcProgresoCircular1.TabIndex = 4
         '
         'BackgroundWorker1
         '
@@ -289,7 +314,6 @@ Partial Class frmCoopeAndeX
         Me.Controls.Add(Me.PanelEx1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frmCoopeAndeX"
         Me.Text = "CoopeAnde"
@@ -320,6 +344,6 @@ Partial Class frmCoopeAndeX
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents ButtonX2 As DevComponents.DotNetBar.ButtonX
-    Friend WithEvents UcProgresoCircular1 As ucProgresoCircular
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents CircularProgressBar1 As CircularProgressBar.CircularProgressBar
 End Class

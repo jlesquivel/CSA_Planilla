@@ -5,6 +5,7 @@ Public Class frmVacaXPlanilla
 
     Dim dsPlanilla1 As New dsPlanilla
     Dim dsVac1 As New dsVacaciones
+    Dim Adicionales As Boolean = True
 
     Dim taDepart As New dsPlanillaTableAdapters.departamentoTableAdapter
     Dim taContratos As New dsVacacionesTableAdapters.ContratosActivosTableAdapter
@@ -24,6 +25,9 @@ Public Class frmVacaXPlanilla
 
         fechaI_Adic.Value = fechaF_ord.Value.AddDays(1)
         fechaF_Adic.Value = fechaF_ord.Value.AddDays(7)
+
+        FechaCarta.MinDate = Now
+
     End Sub
 
 
@@ -97,7 +101,13 @@ Public Class frmVacaXPlanilla
         For Each fila As DataGridViewRow In DataGridViewX1.SelectedRows
             _id_vac = fila.DataBoundItem.row.id_vacacion
             _id_emp = fila.DataBoundItem.row.id_emp
-            Vacacion_regTableAdapter.Insertar(_id_vac, DiasRango.Value, nota.Text, fechaI_ord.Value, fechaF_ord.Value, motivo.Text, fechaI_Adic.Value, fechaF_Adic.Value)
+
+            If Adicionales Then
+                Vacacion_regTableAdapter.Insertar(_id_vac, DiasRango.Value, nota.Text, fechaI_ord.Value, fechaF_ord.Value, motivo.Text, fechaI_Adic.Value, fechaF_Adic.Value, FechaCarta.Value)
+            Else
+                Vacacion_regTableAdapter.Insertar(_id_vac, DiasRango.Value, nota.Text, fechaI_ord.Value, fechaF_ord.Value, motivo.Text, Nothing, Nothing, FechaCarta.Value)
+            End If
+
         Next
 
         UcProgresoCircular1.Oculta()
@@ -115,7 +125,6 @@ Public Class frmVacaXPlanilla
         If Not hilo.IsBusy Then
             hilo.RunWorkerAsync()
         End If
-
     End Sub
 
 
@@ -133,7 +142,7 @@ Public Class frmVacaXPlanilla
             _id_emp = fila.DataBoundItem.row.id_emp
             Vacacion_regTableAdapter.FillById_emp(dsVaca.Vacacion_reg, Periodo.Value, _id_emp)
             If dsVaca.Vacacion_reg.Rows.Count > 0 Then
-                oVacacion.carta(_id_emp, dsVaca.Vacacion_reg.Rows.Item(0), "Vacaciones")
+                oVacacion.carta(_id_emp, dsVaca.Vacacion_reg.Rows.Item(0), "Vacaciones", Adicionales)
             End If
             tot = tot + porc
             hilo.ReportProgress(tot)
@@ -151,7 +160,21 @@ Public Class frmVacaXPlanilla
         UcProgresoCircular1.CircularProgress1.ProgressText = CStr(e.ProgressPercentage)
     End Sub
 
+    Private Sub SwitchButton1_ValueChanged(sender As Object, e As EventArgs) Handles SwitchButton1.ValueChanged
+        Adicionales = SwitchButton1.Value
+        Vac_adic(Adicionales)
 
+    End Sub
+    ''' <summary>
+    ''' Desactiva los controles de vacaciones adicionales
+    ''' </summary>
+    ''' <param name="valor"></param>
+    Sub Vac_adic(valor As Boolean)
+        LabelX8.Enabled = valor
+        fechaI_Adic.Enabled = valor
+        fechaF_Adic.Enabled = valor
+        DiasRangoAdic.Enabled = valor
+    End Sub
 #End Region
 
 End Class

@@ -376,6 +376,8 @@ Partial Public Class dsVacaciones
         
         Private columnfechaF_adicionales As Global.System.Data.DataColumn
         
+        Private columnfecha_carta As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -484,6 +486,14 @@ Partial Public Class dsVacaciones
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property fecha_cartaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnfecha_carta
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -520,9 +530,9 @@ Partial Public Class dsVacaciones
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddVacacion_regRow(ByVal parentVacacionesRowByFK_Vacacion_reg_Vacaciones As VacacionesRow, ByVal dias As Integer, ByVal nota As String, ByVal fechaI As Date, ByVal fechaF As Date, ByVal motivo As String, ByVal fechaI_adicionales As Date, ByVal fechaF_adicionales As Date) As Vacacion_regRow
+        Public Overloads Function AddVacacion_regRow(ByVal parentVacacionesRowByFK_Vacacion_reg_Vacaciones As VacacionesRow, ByVal dias As Integer, ByVal nota As String, ByVal fechaI As Date, ByVal fechaF As Date, ByVal motivo As String, ByVal fechaI_adicionales As Date, ByVal fechaF_adicionales As Date, ByVal fecha_carta As Date) As Vacacion_regRow
             Dim rowVacacion_regRow As Vacacion_regRow = CType(Me.NewRow,Vacacion_regRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, dias, nota, fechaI, fechaF, motivo, fechaI_adicionales, fechaF_adicionales}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, dias, nota, fechaI, fechaF, motivo, fechaI_adicionales, fechaF_adicionales, fecha_carta}
             If (Not (parentVacacionesRowByFK_Vacacion_reg_Vacaciones) Is Nothing) Then
                 columnValuesArray(1) = parentVacacionesRowByFK_Vacacion_reg_Vacaciones(0)
             End If
@@ -563,6 +573,7 @@ Partial Public Class dsVacaciones
             Me.columnmotivo = MyBase.Columns("motivo")
             Me.columnfechaI_adicionales = MyBase.Columns("fechaI_adicionales")
             Me.columnfechaF_adicionales = MyBase.Columns("fechaF_adicionales")
+            Me.columnfecha_carta = MyBase.Columns("fecha_carta")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -586,6 +597,8 @@ Partial Public Class dsVacaciones
             MyBase.Columns.Add(Me.columnfechaI_adicionales)
             Me.columnfechaF_adicionales = New Global.System.Data.DataColumn("fechaF_adicionales", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnfechaF_adicionales)
+            Me.columnfecha_carta = New Global.System.Data.DataColumn("fecha_carta", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfecha_carta)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
@@ -1770,6 +1783,21 @@ Partial Public Class dsVacaciones
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property fecha_carta() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableVacacion_reg.fecha_cartaColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'fecha_carta' de la tabla 'Vacacion_reg' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVacacion_reg.fecha_cartaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property VacacionesRow() As VacacionesRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Vacacion_reg_Vacaciones")),VacacionesRow)
@@ -1825,6 +1853,18 @@ Partial Public Class dsVacaciones
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetfechaF_adicionalesNull()
             Me(Me.tableVacacion_reg.fechaF_adicionalesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isfecha_cartaNull() As Boolean
+            Return Me.IsNull(Me.tableVacacion_reg.fecha_cartaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setfecha_cartaNull()
+            Me(Me.tableVacacion_reg.fecha_cartaColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -2634,6 +2674,7 @@ Namespace dsVacacionesTableAdapters
             tableMapping.ColumnMappings.Add("motivo", "motivo")
             tableMapping.ColumnMappings.Add("fechaI_adicionales", "fechaI_adicionales")
             tableMapping.ColumnMappings.Add("fechaF_adicionales", "fechaF_adicionales")
+            tableMapping.ColumnMappings.Add("fecha_carta", "fecha_carta")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -2643,7 +2684,8 @@ Namespace dsVacacionesTableAdapters
                 "LL) OR ([motivo] = @Original_motivo)) AND ((@IsNull_fechaF_adicionales = 1 AND ["& _ 
                 "fechaF_adicionales] IS NULL) OR ([fechaF_adicionales] = @Original_fechaF_adicion"& _ 
                 "ales)) AND ((@IsNull_fechaI_adicionales = 1 AND [fechaI_adicionales] IS NULL) OR"& _ 
-                " ([fechaI_adicionales] = @Original_fechaI_adicionales)))"
+                " ([fechaI_adicionales] = @Original_fechaI_adicionales)) AND ((@IsNull_fecha_cart"& _ 
+                "a = 1 AND [fecha_carta] IS NULL) OR ([fecha_carta] = @Original_fecha_carta)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_vacacion", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "id_vacacion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -2656,13 +2698,16 @@ Namespace dsVacacionesTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaF_adicionales", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaF_adicionales", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_fechaI_adicionales", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaI_adicionales", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaI_adicionales", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaI_adicionales", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_fecha_carta", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_carta", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fecha_carta", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_carta", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [Vacacion_reg] ([id_vacacion], [dias], [nota], [fechaI], [fechaF], [m"& _ 
-                "otivo], [fechaF_adicionales], [fechaI_adicionales]) VALUES (@id_vacacion, @dias,"& _ 
-                " @nota, @fechaI, @fechaF, @motivo, @fechaF_adicionales, @fechaI_adicionales);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"S"& _ 
-                "ELECT id, id_vacacion, dias, nota, fechaI, fechaF, motivo, fechaF_adicionales, f"& _ 
-                "echaI_adicionales FROM Vacacion_reg WHERE (id = SCOPE_IDENTITY())"
+                "otivo], [fechaF_adicionales], [fechaI_adicionales], [fecha_carta]) VALUES (@id_v"& _ 
+                "acacion, @dias, @nota, @fechaI, @fechaF, @motivo, @fechaF_adicionales, @fechaI_a"& _ 
+                "dicionales, @fecha_carta);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id, id_vacacion, dias, nota, fechaI, fechaF, "& _ 
+                "motivo, fechaF_adicionales, fechaI_adicionales, fecha_carta FROM Vacacion_reg WH"& _ 
+                "ERE (id = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_vacacion", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "id_vacacion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dias", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dias", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2672,20 +2717,22 @@ Namespace dsVacacionesTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@motivo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "motivo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaF_adicionales", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaF_adicionales", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaI_adicionales", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaI_adicionales", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha_carta", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_carta", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [Vacacion_reg] SET [id_vacacion] = @id_vacacion, [dias] = @dias, [nota] = "& _ 
                 "@nota, [fechaI] = @fechaI, [fechaF] = @fechaF, [motivo] = @motivo, [fechaF_adici"& _ 
-                "onales] = @fechaF_adicionales, [fechaI_adicionales] = @fechaI_adicionales WHERE "& _ 
-                "(([id] = @Original_id) AND ([id_vacacion] = @Original_id_vacacion) AND ([dias] ="& _ 
-                " @Original_dias) AND ([fechaI] = @Original_fechaI) AND ([fechaF] = @Original_fec"& _ 
-                "haF) AND ((@IsNull_motivo = 1 AND [motivo] IS NULL) OR ([motivo] = @Original_mot"& _ 
-                "ivo)) AND ((@IsNull_fechaF_adicionales = 1 AND [fechaF_adicionales] IS NULL) OR "& _ 
-                "([fechaF_adicionales] = @Original_fechaF_adicionales)) AND ((@IsNull_fechaI_adic"& _ 
-                "ionales = 1 AND [fechaI_adicionales] IS NULL) OR ([fechaI_adicionales] = @Origin"& _ 
-                "al_fechaI_adicionales)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id, id_vacacion, dias, nota, fechaI, fechaF, m"& _ 
-                "otivo, fechaF_adicionales, fechaI_adicionales FROM Vacacion_reg WHERE (id = @id)"& _ 
-                ""
+                "onales] = @fechaF_adicionales, [fechaI_adicionales] = @fechaI_adicionales, [fech"& _ 
+                "a_carta] = @fecha_carta WHERE (([id] = @Original_id) AND ([id_vacacion] = @Origi"& _ 
+                "nal_id_vacacion) AND ([dias] = @Original_dias) AND ([fechaI] = @Original_fechaI)"& _ 
+                " AND ([fechaF] = @Original_fechaF) AND ((@IsNull_motivo = 1 AND [motivo] IS NULL"& _ 
+                ") OR ([motivo] = @Original_motivo)) AND ((@IsNull_fechaF_adicionales = 1 AND [fe"& _ 
+                "chaF_adicionales] IS NULL) OR ([fechaF_adicionales] = @Original_fechaF_adicional"& _ 
+                "es)) AND ((@IsNull_fechaI_adicionales = 1 AND [fechaI_adicionales] IS NULL) OR ("& _ 
+                "[fechaI_adicionales] = @Original_fechaI_adicionales)) AND ((@IsNull_fecha_carta "& _ 
+                "= 1 AND [fecha_carta] IS NULL) OR ([fecha_carta] = @Original_fecha_carta)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SE"& _ 
+                "LECT id, id_vacacion, dias, nota, fechaI, fechaF, motivo, fechaF_adicionales, fe"& _ 
+                "chaI_adicionales, fecha_carta FROM Vacacion_reg WHERE (id = @id)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_vacacion", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "id_vacacion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dias", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dias", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2695,6 +2742,7 @@ Namespace dsVacacionesTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@motivo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "motivo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaF_adicionales", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaF_adicionales", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaI_adicionales", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaI_adicionales", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha_carta", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_carta", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_vacacion", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "id_vacacion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_dias", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "dias", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -2706,6 +2754,8 @@ Namespace dsVacacionesTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaF_adicionales", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaF_adicionales", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_fechaI_adicionales", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaI_adicionales", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaI_adicionales", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaI_adicionales", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_fecha_carta", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_carta", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fecha_carta", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_carta", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -2722,31 +2772,34 @@ Namespace dsVacacionesTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id, id_vacacion, dias, nota, fechaI, fechaF, motivo, fechaF_adicionales, f"& _ 
-                "echaI_adicionales FROM Vacacion_reg"
+            Me._commandCollection(0).CommandText = "SELECT        id, id_vacacion, dias, nota, fechaI, fechaF, motivo, fechaF_adicion"& _ 
+                "ales, fechaI_adicionales, fecha_carta"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Vacacion_reg"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT id, id_vacacion, dias, nota, fechaI, fechaF, motivo, fechaF_adicionales, f"& _ 
-                "echaI_adicionales FROM Vacacion_reg WHERE (id_vacacion = @id_vacacion)"
+            Me._commandCollection(1).CommandText = "SELECT dias, fechaF, fechaF_adicionales, fechaI, fechaI_adicionales, fecha_carta,"& _ 
+                " id, id_vacacion, motivo, nota FROM Vacacion_reg WHERE (id_vacacion = @id_vacaci"& _ 
+                "on)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_vacacion", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "id_vacacion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT *"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM vacacion_reg"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"id_vacacion IN( SELECT TOP 1 id_vacacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
-                ""&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"FROM Vacaciones"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"WHERE ("&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"id_contrato IN ("&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"SELECT id_contrato"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)& _ 
-                ""&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"FROM contratos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"WHERE (id_emp = @id_emp)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&")"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&")"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"AND periodo ="& _ 
-                " @periodo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"ORDER BY fIni DESC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&")"
+            Me._commandCollection(2).CommandText = "SELECT top 1"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"dias"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&",fechaF"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&",fechaF_adicionales"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&",fechaI"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&",fechaI_adicional"& _ 
+                "es"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&",fecha_carta"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&",id"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&",id_vacacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&",motivo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&",nota"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"Vacacion_reg"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"W"& _ 
+                "HERE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"(id_vacacion IN (SELECT TOP (1)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"id_vacacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"FROM Vacaciones"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"WHE"& _ 
+                "RE (id_contrato IN (SELECT"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"id_contrato"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"FROM contratos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"WHERE (id_emp"& _ 
+                " = @id_emp))"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&")"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"AND (periodo = @periodo)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&Global.Microsoft.VisualBasic.ChrW(9)&"ORDER BY fIni DESC)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&")"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"order "& _ 
+                "by id DESC"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@periodo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_emp", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "INSERT INTO Vacacion_reg"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (id_vacacion, dias, nota, fech"& _ 
-                "aI, fechaF, motivo, fechaI_adicionales, fechaF_adicionales)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (@id_"& _ 
-                "vacacion,@dias,@nota,@fechaI,@fechaF,@motivo,@fechaI_a,@fechaF_a);   "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id"& _ 
-                ", id_vacacion, dias, nota, fechaI, fechaF, motivo FROM Vacacion_reg WHERE (id = "& _ 
-                "SCOPE_IDENTITY())"
+                "aI, fechaF, motivo, fechaI_adicionales, fechaF_adicionales, fecha_carta)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES"& _ 
+                "        (@id_vacacion,@dias,@nota,@fechaI,@fechaF,@motivo,@fechaI_a,@fechaF_a,@f"& _ 
+                "echa_carta);     "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id, id_vacacion, dias, nota, fechaI, fechaF, motivo FR"& _ 
+                "OM Vacacion_reg WHERE (id = SCOPE_IDENTITY())"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_vacacion", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "id_vacacion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dias", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "dias", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2756,6 +2809,7 @@ Namespace dsVacacionesTableAdapters
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@motivo", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "motivo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaI_a", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaI_adicionales", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaF_a", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaF_adicionales", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha_carta", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_carta", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2876,7 +2930,7 @@ Namespace dsVacacionesTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_id As Decimal, ByVal Original_id_vacacion As Decimal, ByVal Original_dias As Integer, ByVal Original_fechaI As Date, ByVal Original_fechaF As Date, ByVal Original_motivo As String, ByVal Original_fechaF_adicionales As Global.System.Nullable(Of Date), ByVal Original_fechaI_adicionales As Global.System.Nullable(Of Date)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_id As Decimal, ByVal Original_id_vacacion As Decimal, ByVal Original_dias As Integer, ByVal Original_fechaI As Date, ByVal Original_fechaF As Date, ByVal Original_motivo As String, ByVal Original_fechaF_adicionales As Global.System.Nullable(Of Date), ByVal Original_fechaI_adicionales As Global.System.Nullable(Of Date), ByVal Original_fecha_carta As Global.System.Nullable(Of Date)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_id,Decimal)
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_id_vacacion,Decimal)
             Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_dias,Integer)
@@ -2903,6 +2957,13 @@ Namespace dsVacacionesTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
+            If (Original_fecha_carta.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_fecha_carta.Value,Date)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -2922,7 +2983,7 @@ Namespace dsVacacionesTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal id_vacacion As Decimal, ByVal dias As Integer, ByVal nota As String, ByVal fechaI As Date, ByVal fechaF As Date, ByVal motivo As String, ByVal fechaF_adicionales As Global.System.Nullable(Of Date), ByVal fechaI_adicionales As Global.System.Nullable(Of Date)) As Integer
+        Public Overloads Overridable Function Insert(ByVal id_vacacion As Decimal, ByVal dias As Integer, ByVal nota As String, ByVal fechaI As Date, ByVal fechaF As Date, ByVal motivo As String, ByVal fechaF_adicionales As Global.System.Nullable(Of Date), ByVal fechaI_adicionales As Global.System.Nullable(Of Date), ByVal fecha_carta As Global.System.Nullable(Of Date)) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(id_vacacion,Decimal)
             Me.Adapter.InsertCommand.Parameters(1).Value = CType(dias,Integer)
             If (nota Is Nothing) Then
@@ -2946,6 +3007,11 @@ Namespace dsVacacionesTableAdapters
                 Me.Adapter.InsertCommand.Parameters(7).Value = CType(fechaI_adicionales.Value,Date)
             Else
                 Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (fecha_carta.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(fecha_carta.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -2975,6 +3041,7 @@ Namespace dsVacacionesTableAdapters
                     ByVal motivo As String,  _
                     ByVal fechaF_adicionales As Global.System.Nullable(Of Date),  _
                     ByVal fechaI_adicionales As Global.System.Nullable(Of Date),  _
+                    ByVal fecha_carta As Global.System.Nullable(Of Date),  _
                     ByVal Original_id As Decimal,  _
                     ByVal Original_id_vacacion As Decimal,  _
                     ByVal Original_dias As Integer,  _
@@ -2983,6 +3050,7 @@ Namespace dsVacacionesTableAdapters
                     ByVal Original_motivo As String,  _
                     ByVal Original_fechaF_adicionales As Global.System.Nullable(Of Date),  _
                     ByVal Original_fechaI_adicionales As Global.System.Nullable(Of Date),  _
+                    ByVal Original_fecha_carta As Global.System.Nullable(Of Date),  _
                     ByVal id As Decimal) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(id_vacacion,Decimal)
             Me.Adapter.UpdateCommand.Parameters(1).Value = CType(dias,Integer)
@@ -3008,33 +3076,45 @@ Namespace dsVacacionesTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_id,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_id_vacacion,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_dias,Integer)
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_fechaI,Date)
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_fechaF,Date)
-            If (Original_motivo Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            If (fecha_carta.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(fecha_carta.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_motivo,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_id,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_id_vacacion,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_dias,Integer)
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_fechaI,Date)
+            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_fechaF,Date)
+            If (Original_motivo Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_motivo,String)
             End If
             If (Original_fechaF_adicionales.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_fechaF_adicionales.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_fechaF_adicionales.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             End If
             If (Original_fechaI_adicionales.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_fechaI_adicionales.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_fechaI_adicionales.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(id,Decimal)
+            If (Original_fecha_carta.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_fecha_carta.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(22).Value = CType(id,Decimal)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -3063,6 +3143,7 @@ Namespace dsVacacionesTableAdapters
                     ByVal motivo As String,  _
                     ByVal fechaF_adicionales As Global.System.Nullable(Of Date),  _
                     ByVal fechaI_adicionales As Global.System.Nullable(Of Date),  _
+                    ByVal fecha_carta As Global.System.Nullable(Of Date),  _
                     ByVal Original_id As Decimal,  _
                     ByVal Original_id_vacacion As Decimal,  _
                     ByVal Original_dias As Integer,  _
@@ -3070,15 +3151,16 @@ Namespace dsVacacionesTableAdapters
                     ByVal Original_fechaF As Date,  _
                     ByVal Original_motivo As String,  _
                     ByVal Original_fechaF_adicionales As Global.System.Nullable(Of Date),  _
-                    ByVal Original_fechaI_adicionales As Global.System.Nullable(Of Date)) As Integer
-            Return Me.Update(id_vacacion, dias, nota, fechaI, fechaF, motivo, fechaF_adicionales, fechaI_adicionales, Original_id, Original_id_vacacion, Original_dias, Original_fechaI, Original_fechaF, Original_motivo, Original_fechaF_adicionales, Original_fechaI_adicionales, Original_id)
+                    ByVal Original_fechaI_adicionales As Global.System.Nullable(Of Date),  _
+                    ByVal Original_fecha_carta As Global.System.Nullable(Of Date)) As Integer
+            Return Me.Update(id_vacacion, dias, nota, fechaI, fechaF, motivo, fechaF_adicionales, fechaI_adicionales, fecha_carta, Original_id, Original_id_vacacion, Original_dias, Original_fechaI, Original_fechaF, Original_motivo, Original_fechaF_adicionales, Original_fechaI_adicionales, Original_fecha_carta, Original_id)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function Insertar(ByVal id_vacacion As Decimal, ByVal dias As Integer, ByVal nota As String, ByVal fechaI As String, ByVal fechaF As String, ByVal motivo As String, ByVal fechaI_a As String, ByVal fechaF_a As String) As Integer
+        Public Overloads Overridable Function Insertar(ByVal id_vacacion As Decimal, ByVal dias As Integer, ByVal nota As String, ByVal fechaI As String, ByVal fechaF As String, ByVal motivo As String, ByVal fechaI_a As String, ByVal fechaF_a As String, ByVal fecha_carta As String) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
             command.Parameters(0).Value = CType(id_vacacion,Decimal)
             command.Parameters(1).Value = CType(dias,Integer)
@@ -3111,6 +3193,11 @@ Namespace dsVacacionesTableAdapters
                 command.Parameters(7).Value = Global.System.DBNull.Value
             Else
                 command.Parameters(7).Value = CType(fechaF_a,String)
+            End If
+            If (fecha_carta Is Nothing) Then
+                command.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(8).Value = CType(fecha_carta,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _

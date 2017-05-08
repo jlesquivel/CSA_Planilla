@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="planillaDataSet1" targetNamespace="http://tempuri.org/planillaDataSet1.xsd" xmlns:mstns="http://tempuri.org/planillaDataSet1.xsd" xmlns="http://tempuri.org/planillaDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="planillaConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="planillaConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Planilla.My.MySettings.GlobalReference.Default.planillaConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ContratosActivosTableAdapter" GeneratorDataComponentClassName="ContratosActivosTableAdapter" Name="ContratosActivos" UserDataComponentName="ContratosActivosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="planillaConnectionString1 (MySettings)" DbObjectName="planilla.dbo.ContratosActivos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT cedula, apellidos, apellidos+' '+nombre as nombre, id_emp, id_puesto, id_contrato, fecha_ini, fecha_fin, cantidad, id_categoria, anualidadReconocida, estado, recargo, tipo_pago, Nombre_categoria, id_dpto, Ingreso FROM dbo.ContratosActivos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cedula" DataSetColumn="cedula" />
+              <Mapping SourceColumn="apellidos" DataSetColumn="apellidos" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="id_emp" DataSetColumn="id_emp" />
+              <Mapping SourceColumn="id_puesto" DataSetColumn="id_puesto" />
+              <Mapping SourceColumn="id_contrato" DataSetColumn="id_contrato" />
+              <Mapping SourceColumn="fecha_ini" DataSetColumn="fecha_ini" />
+              <Mapping SourceColumn="fecha_fin" DataSetColumn="fecha_fin" />
+              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
+              <Mapping SourceColumn="id_categoria" DataSetColumn="id_categoria" />
+              <Mapping SourceColumn="anualidadReconocida" DataSetColumn="anualidadReconocida" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
+              <Mapping SourceColumn="recargo" DataSetColumn="recargo" />
+              <Mapping SourceColumn="tipo_pago" DataSetColumn="tipo_pago" />
+              <Mapping SourceColumn="Nombre_categoria" DataSetColumn="Nombre_categoria" />
+              <Mapping SourceColumn="id_dpto" DataSetColumn="id_dpto" />
+              <Mapping SourceColumn="Ingreso" DataSetColumn="Ingreso" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="planillaConnectionString1 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByIdPuesto" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByIdPuesto" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByIdPuesto">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT REPLACE(cedula, '-', '') AS cedula, apellidos  + ' ' + nombre AS nombre
+FROM     ContratosActivos
+WHERE  (id_puesto = @id_puesto)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id_puesto" ColumnName="id_puesto" DataSourceName="planilla.dbo.ContratosActivos" DataTypeServer="numeric(18, 0)" DbType="Decimal" Direction="Input" ParameterName="@id_puesto" Precision="18" ProviderType="Decimal" Scale="0" Size="9" SourceColumn="id_puesto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="puestos_ContratosActivosTableAdapter" GeneratorDataComponentClassName="puestos_ContratosActivosTableAdapter" Name="puestos_ContratosActivos" UserDataComponentName="puestos_ContratosActivosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="planillaConnectionString1 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT
+	ContratosActivos.id_puesto
+	,puestos.nombre
+FROM
+	ContratosActivos
+	INNER JOIN puestos
+		ON ContratosActivos.id_puesto = puestos.id_puesto</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_puesto" DataSetColumn="id_puesto" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="planillaDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="planillaDataSet1" msprop:Generator_UserDSName="planillaDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ContratosActivos" msprop:Generator_TableClassName="ContratosActivosDataTable" msprop:Generator_TableVarName="tableContratosActivos" msprop:Generator_RowChangedName="ContratosActivosRowChanged" msprop:Generator_TablePropName="ContratosActivos" msprop:Generator_RowDeletingName="ContratosActivosRowDeleting" msprop:Generator_RowChangingName="ContratosActivosRowChanging" msprop:Generator_RowEvHandlerName="ContratosActivosRowChangeEventHandler" msprop:Generator_RowDeletedName="ContratosActivosRowDeleted" msprop:Generator_RowClassName="ContratosActivosRow" msprop:Generator_UserTableName="ContratosActivos" msprop:Generator_RowEvArgName="ContratosActivosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cedula" msprop:Generator_ColumnVarNameInTable="columncedula" msprop:Generator_ColumnPropNameInRow="cedula" msprop:Generator_ColumnPropNameInTable="cedulaColumn" msprop:Generator_UserColumnName="cedula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellidos" msprop:Generator_ColumnVarNameInTable="columnapellidos" msprop:Generator_ColumnPropNameInRow="apellidos" msprop:Generator_ColumnPropNameInTable="apellidosColumn" msprop:Generator_UserColumnName="apellidos">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_emp" msprop:Generator_ColumnVarNameInTable="columnid_emp" msprop:Generator_ColumnPropNameInRow="id_emp" msprop:Generator_ColumnPropNameInTable="id_empColumn" msprop:Generator_UserColumnName="id_emp" type="xs:decimal" />
+              <xs:element name="id_puesto" msprop:Generator_ColumnVarNameInTable="columnid_puesto" msprop:Generator_ColumnPropNameInRow="id_puesto" msprop:Generator_ColumnPropNameInTable="id_puestoColumn" msprop:Generator_UserColumnName="id_puesto" type="xs:decimal" />
+              <xs:element name="id_contrato" msprop:Generator_ColumnVarNameInTable="columnid_contrato" msprop:Generator_ColumnPropNameInRow="id_contrato" msprop:Generator_ColumnPropNameInTable="id_contratoColumn" msprop:Generator_UserColumnName="id_contrato" type="xs:decimal" />
+              <xs:element name="fecha_ini" msprop:Generator_ColumnVarNameInTable="columnfecha_ini" msprop:Generator_ColumnPropNameInRow="fecha_ini" msprop:Generator_ColumnPropNameInTable="fecha_iniColumn" msprop:Generator_UserColumnName="fecha_ini" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha_fin" msprop:Generator_ColumnVarNameInTable="columnfecha_fin" msprop:Generator_ColumnPropNameInRow="fecha_fin" msprop:Generator_ColumnPropNameInTable="fecha_finColumn" msprop:Generator_UserColumnName="fecha_fin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:decimal" minOccurs="0" />
+              <xs:element name="id_categoria" msprop:Generator_ColumnVarNameInTable="columnid_categoria" msprop:Generator_ColumnPropNameInRow="id_categoria" msprop:Generator_ColumnPropNameInTable="id_categoriaColumn" msprop:Generator_UserColumnName="id_categoria" type="xs:decimal" minOccurs="0" />
+              <xs:element name="anualidadReconocida" msprop:Generator_ColumnVarNameInTable="columnanualidadReconocida" msprop:Generator_ColumnPropNameInRow="anualidadReconocida" msprop:Generator_ColumnPropNameInTable="anualidadReconocidaColumn" msprop:Generator_UserColumnName="anualidadReconocida" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="recargo" msprop:Generator_ColumnVarNameInTable="columnrecargo" msprop:Generator_ColumnPropNameInRow="recargo" msprop:Generator_ColumnPropNameInTable="recargoColumn" msprop:Generator_UserColumnName="recargo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tipo_pago" msprop:Generator_ColumnVarNameInTable="columntipo_pago" msprop:Generator_ColumnPropNameInRow="tipo_pago" msprop:Generator_ColumnPropNameInTable="tipo_pagoColumn" msprop:Generator_UserColumnName="tipo_pago" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre_categoria" msprop:Generator_ColumnVarNameInTable="columnNombre_categoria" msprop:Generator_ColumnPropNameInRow="Nombre_categoria" msprop:Generator_ColumnPropNameInTable="Nombre_categoriaColumn" msprop:Generator_UserColumnName="Nombre_categoria">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_dpto" msprop:Generator_ColumnVarNameInTable="columnid_dpto" msprop:Generator_ColumnPropNameInRow="id_dpto" msprop:Generator_ColumnPropNameInTable="id_dptoColumn" msprop:Generator_UserColumnName="id_dpto" type="xs:decimal" />
+              <xs:element name="Ingreso" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIngreso" msprop:Generator_ColumnPropNameInRow="Ingreso" msprop:Generator_ColumnPropNameInTable="IngresoColumn" msprop:Generator_UserColumnName="Ingreso" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="puestos_ContratosActivos" msprop:Generator_TableClassName="puestos_ContratosActivosDataTable" msprop:Generator_TableVarName="tablepuestos_ContratosActivos" msprop:Generator_RowChangedName="puestos_ContratosActivosRowChanged" msprop:Generator_TablePropName="puestos_ContratosActivos" msprop:Generator_RowDeletingName="puestos_ContratosActivosRowDeleting" msprop:Generator_RowChangingName="puestos_ContratosActivosRowChanging" msprop:Generator_RowEvHandlerName="puestos_ContratosActivosRowChangeEventHandler" msprop:Generator_RowDeletedName="puestos_ContratosActivosRowDeleted" msprop:Generator_RowClassName="puestos_ContratosActivosRow" msprop:Generator_UserTableName="puestos_ContratosActivos" msprop:Generator_RowEvArgName="puestos_ContratosActivosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_puesto" msprop:Generator_ColumnVarNameInTable="columnid_puesto" msprop:Generator_ColumnPropNameInRow="id_puesto" msprop:Generator_ColumnPropNameInTable="id_puestoColumn" msprop:Generator_UserColumnName="id_puesto" type="xs:decimal" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ContratosActivos" />
+      <xs:field xpath="mstns:id_contrato" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

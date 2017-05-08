@@ -88,9 +88,17 @@
     <Prefer32Bit>false</Prefer32Bit>
     <WarningLevel>0</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoUpdater.NET">
       <HintPath>..\..\_Herramientas\AutoUpdater.NET 1.3.1\Signed\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CircularProgressBar.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -116,8 +124,13 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -141,6 +154,7 @@
     <Compile Include="Clases\cEmpleado.vb" />
     <Compile Include="Clases\cExcel.vb" />
     <Compile Include="Clases\cHorasExtras.vb" />
+    <Compile Include="Clases\cSSVM_Prestamos.vb" />
     <Compile Include="Clases\cVacaciones.vb" />
     <Compile Include="Clases\cWord.vb" />
     <Compile Include="Clases\Evaluador.vb" />
@@ -286,6 +300,18 @@
     <Compile Include="Formularios\frmIncapacidades.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\frmLiquidacion.Designer.vb">
+      <DependentUpon>frmLiquidacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLiquidacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMarcas.Designer.vb">
+      <DependentUpon>frmMarcas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMarcas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\frmNomina.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +328,12 @@
       <DependentUpon>frmPlanillaAgregaRubro.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmPlanillaAgregaRubro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPrestamosSSVM.Designer.vb">
+      <DependentUpon>frmPrestamosSSVM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPrestamosSSVM.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmPuesto.vb">
@@ -365,6 +397,11 @@
     <Compile Include="Formularios\planillaDataSet.vb">
       <DependentUpon>planillaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="planillaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>planillaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ConstanciaSalario.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -419,11 +456,23 @@
       <DependentUpon>rptJPMNFondoReparto.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\rptLiquidacion.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLiquidacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\rptListadoContratosVigentes1.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptListadoContratosVigentes.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptMarcasGuardas.vb">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMarcasGuardas.rpt</DependentUpon>
     </Compile>
     <Compile Include="Reportes\rptPlanilla.vb">
       <DependentUpon>rptPlanilla.rpt</DependentUpon>
@@ -512,6 +561,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCoopeAndeX.resx">
       <DependentUpon>frmCoopeAndeX.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmDepartamento.resx">
       <DependentUpon>frmDepartamento.vb</DependentUpon>
@@ -523,6 +573,12 @@
     <EmbeddedResource Include="Formularios\frmIncapacidades.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmIncapacidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLiquidacion.resx">
+      <DependentUpon>frmLiquidacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmMarcas.resx">
+      <DependentUpon>frmMarcas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmNomina.resx">
       <DependentUpon>frmNomina.vb</DependentUpon>
@@ -538,6 +594,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPlanillaAgregaRubro.resx">
       <DependentUpon>frmPlanillaAgregaRubro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPrestamosSSVM.resx">
+      <DependentUpon>frmPrestamosSSVM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPuesto.resx">
       <DependentUpon>frmPuesto.vb</DependentUpon>
@@ -615,9 +674,17 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptJPMNFondoReparto.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptLiquidacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLiquidacion.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptListadoContratosVigentes.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptListadoContratosVigentes1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptMarcasGuardas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMarcasGuardas.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptPlanilla.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -638,6 +705,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Bitacora Planilla.xlsx" />
     <None Include="ClassDiagram2.cd" />
     <None Include="Formularios\dsVacaciones.xsc">
       <DependentUpon>dsVacaciones.xsd</DependentUpon>
@@ -745,6 +814,18 @@
     <None Include="imagenes\coopeande32.png" />
     <Content Include="money2.ico" />
     <Content Include="Resources\money2.ico" />
+    <None Include="packages.config" />
+    <None Include="planillaDataSet1.xsc">
+      <DependentUpon>planillaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="planillaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>planillaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="planillaDataSet1.xss">
+      <DependentUpon>planillaDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="plantillas\constTiempoLaborado.docx" />
     <None Include="plantillas\contVacaciones.docx" />
     <None Include="plantillas\Plantilla Salarios.xls" />
@@ -792,6 +873,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions>

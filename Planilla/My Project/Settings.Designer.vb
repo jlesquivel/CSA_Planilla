@@ -109,6 +109,17 @@ Namespace My
                 Me("CoopeAndeCorreos") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\ProjectsV13;Initial Catalog=planilla;Integrated Security=Tr"& _ 
+            "ue")>  _
+        Public ReadOnly Property planillaConnectionString3() As String
+            Get
+                Return CType(Me("planillaConnectionString3"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

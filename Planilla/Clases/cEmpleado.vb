@@ -6,11 +6,12 @@
 
     Dim dsEmp As New ds2planilla
     Dim taEmp As New ds2planillaTableAdapters.empleadosTableAdapter
-
+    Dim conn As New conexionSQL
 
     Sub New(pid_emp As Integer)
         _id_emp = pid_emp
         Dim regs As Integer
+        taEmp.Connection = conn.conexion
         regs = taEmp.FillById_Emp(dsEmp.empleados, _id_emp)
         If regs > 0 Then
             datos = dsEmp.empleados.Rows.Item(0)
@@ -21,6 +22,7 @@
     Sub New(pcedula As String)
         _cedula = pcedula
         Dim regs As Integer
+        taEmp.Connection = conn.conexion
         regs = taEmp.FillByCedula(dsEmp.empleados, _cedula)
         If regs > 0 Then
             datos = dsEmp.empleados.Rows.Item(0)

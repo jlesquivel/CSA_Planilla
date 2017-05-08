@@ -112,31 +112,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4357BEC7ED7D498DA253476AE855CBA2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B2E5DA5D85DADE2AA2871463E175BBE7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3A9EA1827471CC0D7D82FDB30BCC8EC4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0405B7532664DB62D01D7E84DCC44ED3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B77A44D02C53CB63593F835C9E005D2A"
+        "OwnerKey" = "8:_E4E82619DF03D7BA66313980529F8082"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -148,7 +124,31 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E4E82619DF03D7BA66313980529F8082"
+        "OwnerKey" = "8:_B77A44D02C53CB63593F835C9E005D2A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0405B7532664DB62D01D7E84DCC44ED3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3A9EA1827471CC0D7D82FDB30BCC8EC4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B2E5DA5D85DADE2AA2871463E175BBE7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4357BEC7ED7D498DA253476AE855CBA2"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -253,11 +253,6 @@
             "AssemblyAsmDisplayName" = "8:ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"
                 "ScatterAssemblies"
                 {
-                    "_0405B7532664DB62D01D7E84DCC44ED3"
-                    {
-                    "Name" = "8:ShockwaveFlashObjects.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:ShockwaveFlashObjects.dll"
             "TargetName" = "8:"
@@ -355,11 +350,6 @@
             "AssemblyAsmDisplayName" = "8:FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304"
                 "ScatterAssemblies"
                 {
-                    "_3A9EA1827471CC0D7D82FDB30BCC8EC4"
-                    {
-                    "Name" = "8:FlashControlV71.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:FlashControlV71.dll"
             "TargetName" = "8:"
@@ -426,11 +416,6 @@
             "AssemblyAsmDisplayName" = "8:AutoUpdater.NET, Version=1.3.1.0, Culture=neutral, PublicKeyToken=942f95247e354701, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B2E5DA5D85DADE2AA2871463E175BBE7"
-                    {
-                    "Name" = "8:AutoUpdater.NET.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:AutoUpdater.NET.dll"
             "TargetName" = "8:"
@@ -457,11 +442,6 @@
             "AssemblyAsmDisplayName" = "8:CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B77A44D02C53CB63593F835C9E005D2A"
-                    {
-                    "Name" = "8:CrystalDecisions.ReportAppServer.Prompting.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:CrystalDecisions.ReportAppServer.Prompting.dll"
             "TargetName" = "8:"
@@ -488,11 +468,6 @@
             "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_CB1F1476E4A11BEEB43E79BF66D0CE92"
-                    {
-                    "Name" = "8:stdole.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:stdole.dll"
             "TargetName" = "8:"
@@ -539,11 +514,6 @@
             "AssemblyAsmDisplayName" = "8:DevComponents.DotNetBar2, Version=12.6.0.4, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E4E82619DF03D7BA66313980529F8082"
-                    {
-                    "Name" = "8:DevComponents.DotNetBar2.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:DevComponents.DotNetBar2.dll"
             "TargetName" = "8:"
@@ -619,15 +589,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:iPlanilla"
-        "ProductCode" = "8:{823C1679-4250-43B8-9308-4D8832249226}"
-        "PackageCode" = "8:{B9201611-A7FD-4928-AB6C-0F3CBF2EA951}"
+        "ProductCode" = "8:{3AAC040F-FA45-430B-9A21-27BDCBAAFA52}"
+        "PackageCode" = "8:{E833CE7B-D8DF-4D23-9A29-FA99C0C21C28}"
         "UpgradeCode" = "8:{19BE1C7A-1F38-4E26-91D0-B898CBD57051}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:FALSE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.81"
+        "ProductVersion" = "8:1.0.82"
         "Manufacturer" = "8:SE"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

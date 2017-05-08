@@ -1,6 +1,7 @@
 
-
 Imports System.ComponentModel
+Imports CircularProgressBar
+Imports WinFormAnimation
 
 Public Class frmCoopeAndeX
 
@@ -23,8 +24,9 @@ Public Class frmCoopeAndeX
 
 
     Private Sub frmCoopeAndeX_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        '' CircularProgressBar1.Visible = False
         Me.VCoopeAndeXLSTableAdapter.Fill(Me.PlanillaDataSet.vCoopeAndeXLS)
+        CircularProgressBar1.Visible = False
 
     End Sub
 
@@ -32,7 +34,8 @@ Public Class frmCoopeAndeX
 
         If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
 
-            UcProgresoCircular1.Muestra()
+            ''UcProgresoCircular1.Muestra()
+            CircularProgressBar1.Visible = True
 
             TextBoxX1.Text = OpenFileDialog1.FileName
             BackgroundWorker1.RunWorkerAsync()
@@ -47,6 +50,15 @@ Public Class frmCoopeAndeX
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        UcProgresoCircular1.Oculta()
+
+        '' UcProgresoCircular1.Oculta()
+        CircularProgressBar1.Visible = False
+
+    End Sub
+
+    Private Sub frmCoopeAndeX_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        CircularProgressBar1.Dispose()
+        CircularProgressBar1 = Nothing
+
     End Sub
 End Class

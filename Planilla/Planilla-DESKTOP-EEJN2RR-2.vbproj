@@ -1,0 +1,842 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26DBA23F-08BB-47D8-B4E0-29C4979E8F8F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Planilla.My.MyApplication</StartupObject>
+    <RootNamespace>Planilla</RootNamespace>
+    <AssemblyName>Planilla</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Planilla.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Planilla.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>money2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>Planilla.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>Planilla.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoUpdater.NET">
+      <HintPath>..\..\_Herramientas\AutoUpdater.NET 1.3.1\Signed\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Clases\Ausencias.vb" />
+    <Compile Include="Clases\cAnualidades.vb" />
+    <Compile Include="Clases\carga.vb" />
+    <Compile Include="Clases\CargarLista.vb" />
+    <Compile Include="Clases\cConfiguracion.vb" />
+    <Compile Include="Clases\cCoopeAnde.vb" />
+    <Compile Include="Clases\cCorreo.vb" />
+    <Compile Include="Clases\cEmpleado.vb" />
+    <Compile Include="Clases\cExcel.vb" />
+    <Compile Include="Clases\cHorasExtras.vb" />
+    <Compile Include="Clases\cVacaciones.vb" />
+    <Compile Include="Clases\cWord.vb" />
+    <Compile Include="Clases\Evaluador.vb" />
+    <Compile Include="Clases\Incapacidades.vb" />
+    <Compile Include="Clases\NetworkInformation.vb" />
+    <Compile Include="Clases\Planilla.vb" />
+    <Compile Include="Clases\cLiquidacion.vb" />
+    <Compile Include="Controles\bEmpleado.designer.vb">
+      <DependentUpon>bEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\bEmpleado.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Clases\conexionSQL.vb" />
+    <Compile Include="Controles\colegiatura.Designer.vb">
+      <DependentUpon>colegiatura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\colegiatura.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\cPagos.Designer.vb">
+      <DependentUpon>cPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\cPagos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\cRubros.Designer.vb">
+      <DependentUpon>cRubros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\cRubros.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\cuEmpleado.Designer.vb">
+      <DependentUpon>cuEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\cuEmpleado.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucProgresoCircular.Designer.vb">
+      <DependentUpon>ucProgresoCircular.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucProgresoCircular.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucVacaciones.Designer.vb">
+      <DependentUpon>ucVacaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucVacaciones.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\dsVacaciones.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsVacaciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ds2planilla.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds2planilla.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ds2planilla.vb">
+      <DependentUpon>ds2planilla.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\dsEmpleados.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEmpleados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\dsPlanilla.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPlanilla.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\dsPlanilla.vb">
+      <DependentUpon>dsPlanilla.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frm.designer.vb">
+      <DependentUpon>frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAusencias.Designer.vb">
+      <DependentUpon>frmAusencias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAusencias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCategoria.Designer.vb">
+      <DependentUpon>frmCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCategoria2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmColegiatura.Designer.vb">
+      <DependentUpon>frmColegiatura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmColegiatura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConfiguracion.Designer.vb">
+      <DependentUpon>frmConfiguracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmConfiguracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConstSalario.Designer.vb">
+      <DependentUpon>frmConstSalario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmConstSalario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCoopeAnde.Designer.vb">
+      <DependentUpon>frmCoopeAnde.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCoopeAnde.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCoopeAndeX.Designer.vb">
+      <DependentUpon>frmCoopeAndeX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCoopeAndeX.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmDepartamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmHoraExtras.Designer.vb">
+      <DependentUpon>frmHoraExtras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmHoraExtras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmIncapacidades.Designer.vb">
+      <DependentUpon>frmIncapacidades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmIncapacidades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLiquidacion.Designer.vb">
+      <DependentUpon>frmLiquidacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLiquidacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmNomina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPerfiles2.Designer.vb">
+      <DependentUpon>frmPerfiles2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPerfiles2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPlanilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPlanillaAgregaRubro.Designer.vb">
+      <DependentUpon>frmPlanillaAgregaRubro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPlanillaAgregaRubro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPuesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmReporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\MonedaTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRubros.Designer.vb">
+      <DependentUpon>frmRubros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRubros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmVacaciones.Designer.vb">
+      <DependentUpon>frmVacaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmVacaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmVacaXPlanilla.Designer.vb">
+      <DependentUpon>frmVacaXPlanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmVacaXPlanilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Clases\Reportes.vb" />
+    <Compile Include="Controles\TextboxFormat.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\TreeViewSQL.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\UserControl2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Clases\Ventanas.vb" />
+    <Compile Include="Formularios\planillaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>planillaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\planillaDataSet.vb">
+      <DependentUpon>planillaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ConstanciaSalario.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConstanciaSalario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptAguinaldo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAguinaldo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptColillasHorasExtras.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptColillasHorasExtras.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptColillasPago.vb">
+      <DependentUpon>rptColillasPago.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reportes\rptColillasPagoEmpleado.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptColillasPagoEmpleado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptColillasPagoPOS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptColillasPagoPOS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptCoopAnde_Mensual.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCoopAnde_Mensual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptJPMN.vb">
+      <DependentUpon>rptJPMN.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptJPMNFondoReparto.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptJPMNFondoReparto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptLiquidacion.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLiquidacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptListadoContratosVigentes1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListadoContratosVigentes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptPlanilla.vb">
+      <DependentUpon>rptPlanilla.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptPlanillasMensual.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPlanillasMensual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptSSVM.vb">
+      <DependentUpon>rptSSVM.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptSSVM_Mensual.vb">
+      <DependentUpon>rptSSVM_Mensual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Settings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controles\bEmpleado.resx">
+      <DependentUpon>bEmpleado.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\colegiatura.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>colegiatura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\cPagos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cPagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\cRubros.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cRubros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\cuEmpleado.resx">
+      <DependentUpon>cuEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucProgresoCircular.resx">
+      <DependentUpon>ucProgresoCircular.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucVacaciones.resx">
+      <DependentUpon>ucVacaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frm.resx">
+      <DependentUpon>frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAusencias.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAusencias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCategoria.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCategoria2.resx">
+      <DependentUpon>frmCategoria2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmColegiatura.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmColegiatura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConfiguracion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConfiguracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConstSalario.resx">
+      <DependentUpon>frmConstSalario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmContrato.resx">
+      <DependentUpon>frmContrato.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCoopeAnde.resx">
+      <DependentUpon>frmCoopeAnde.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCoopeAndeX.resx">
+      <DependentUpon>frmCoopeAndeX.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmDepartamento.resx">
+      <DependentUpon>frmDepartamento.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmHoraExtras.resx">
+      <DependentUpon>frmHoraExtras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmIncapacidades.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmIncapacidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLiquidacion.resx">
+      <DependentUpon>frmLiquidacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmNomina.resx">
+      <DependentUpon>frmNomina.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPerfiles2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPerfiles2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPlanilla.resx">
+      <DependentUpon>frmPlanilla.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPlanillaAgregaRubro.resx">
+      <DependentUpon>frmPlanillaAgregaRubro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPuesto.resx">
+      <DependentUpon>frmPuesto.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmReporte.resx">
+      <DependentUpon>frmReporte.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\MonedaTextBox.resx">
+      <DependentUpon>MonedaTextBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRubros.resx">
+      <DependentUpon>frmRubros.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmVacaciones.resx">
+      <DependentUpon>frmVacaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmVacaXPlanilla.resx">
+      <DependentUpon>frmVacaXPlanilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\TextboxFormat.resx">
+      <DependentUpon>TextboxFormat.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\TreeViewSQL.resx">
+      <DependentUpon>TreeViewSQL.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\UserControl2.resx">
+      <DependentUpon>UserControl2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ConstanciaSalario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConstanciaSalario.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptAguinaldo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAguinaldo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptColillasHorasExtras.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptColillasHorasExtras.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptColillasPago.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptColillasPago.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptColillasPagoEmpleado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptColillasPagoEmpleado.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptColillasPagoPOS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptColillasPagoPOS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptCoopAnde_Mensual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoopAnde_Mensual.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptJPMN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptJPMN.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptJPMNFondoReparto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptJPMNFondoReparto.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptLiquidacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLiquidacion.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptListadoContratosVigentes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListadoContratosVigentes1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptPlanilla.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPlanilla.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptPlanillasMensual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPlanillasMensual.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptSSVM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSSVM.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptSSVM_Mensual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSSVM_Mensual.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Bitacora Planilla.xlsx" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Formularios\dsVacaciones.xsc">
+      <DependentUpon>dsVacaciones.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\dsVacaciones.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsVacaciones.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\dsVacaciones.xss">
+      <DependentUpon>dsVacaciones.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\ds2planilla.xsc">
+      <DependentUpon>ds2planilla.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\ds2planilla.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds2planilla.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Formularios\ds2planilla.xss">
+      <DependentUpon>ds2planilla.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\dsEmpleados.xsc">
+      <DependentUpon>dsEmpleados.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\dsEmpleados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEmpleados.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Formularios\dsEmpleados.xss">
+      <DependentUpon>dsEmpleados.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\dsEmpleados.xsx">
+      <DependentUpon>dsEmpleados.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\dsPlanilla.xsc">
+      <DependentUpon>dsPlanilla.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\dsPlanilla.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPlanilla.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Formularios\dsPlanilla.xss">
+      <DependentUpon>dsPlanilla.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\dsPlanilla.xsx">
+      <DependentUpon>dsPlanilla.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Formularios\planillaDataSet.xsc">
+      <DependentUpon>planillaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\planillaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>planillaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\planillaDataSet.xss">
+      <DependentUpon>planillaDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\coopeande32.png" />
+    <Content Include="money2.ico" />
+    <Content Include="Resources\money2.ico" />
+    <None Include="packages.config" />
+    <None Include="plantillas\constTiempoLaborado.docx" />
+    <None Include="plantillas\contVacaciones.docx" />
+    <None Include="plantillas\Plantilla Salarios.xls" />
+    <None Include="plantillas\PlantillaSalarios.xls" />
+    <None Include="Resources\092.png" />
+    <None Include="Resources\document.ico" />
+    <None Include="Resources\132.png" />
+    <None Include="Resources\security.ico" />
+    <Content Include="_Historial.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties StartAt="635830560000000000" Versioning="1" IncrementAction="2" IncrementOnBuild="False" IncrementOnRebuild="False" IncrementInformational="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

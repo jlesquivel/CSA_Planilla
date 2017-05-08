@@ -27,13 +27,11 @@ Partial Class bEmpleado
         Me.PlanillaDataSet = New Planilla.planillaDataSet()
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
         Me.ComboBoxEx1 = New DevComponents.DotNetBar.Controls.ComboBoxEx()
-        Me.PanelEx2 = New DevComponents.DotNetBar.PanelEx()
         Me.SwitchButton1 = New DevComponents.DotNetBar.Controls.SwitchButton()
         Me.V_empleadosTableAdapter = New Planilla.planillaDataSetTableAdapters.v_empleadosTableAdapter()
         CType(Me.V_empleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PlanillaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelEx1.SuspendLayout()
-        Me.PanelEx2.SuspendLayout()
         Me.SuspendLayout()
         '
         'V_empleadosBindingSource
@@ -51,12 +49,13 @@ Partial Class bEmpleado
         Me.PanelEx1.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
         Me.PanelEx1.Controls.Add(Me.ComboBoxEx1)
-        Me.PanelEx1.Controls.Add(Me.PanelEx2)
+        Me.PanelEx1.Controls.Add(Me.SwitchButton1)
         Me.PanelEx1.DisabledBackColor = System.Drawing.Color.Empty
         Me.PanelEx1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelEx1.Location = New System.Drawing.Point(0, 0)
+        Me.PanelEx1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(200, 351)
+        Me.PanelEx1.Size = New System.Drawing.Size(267, 432)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -71,37 +70,18 @@ Partial Class bEmpleado
         Me.ComboBoxEx1.DataSource = Me.V_empleadosBindingSource
         Me.ComboBoxEx1.DisplayMember = "nombre"
         Me.ComboBoxEx1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ComboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.ComboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.ComboBoxEx1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBoxEx1.ForeColor = System.Drawing.Color.Black
         Me.ComboBoxEx1.FormattingEnabled = True
-        Me.ComboBoxEx1.ItemHeight = 19
-        Me.ComboBoxEx1.Location = New System.Drawing.Point(0, 30)
+        Me.ComboBoxEx1.ItemHeight = 21
+        Me.ComboBoxEx1.Location = New System.Drawing.Point(0, 37)
+        Me.ComboBoxEx1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboBoxEx1.Name = "ComboBoxEx1"
-        Me.ComboBoxEx1.Size = New System.Drawing.Size(200, 321)
+        Me.ComboBoxEx1.Size = New System.Drawing.Size(267, 395)
+        Me.ComboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ComboBoxEx1.TabIndex = 2
         Me.ComboBoxEx1.ValueMember = "id_emp"
-        '
-        'PanelEx2
-        '
-        Me.PanelEx2.AutoScroll = True
-        Me.PanelEx2.CanvasColor = System.Drawing.SystemColors.Control
-        Me.PanelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.PanelEx2.Controls.Add(Me.SwitchButton1)
-        Me.PanelEx2.DisabledBackColor = System.Drawing.Color.Empty
-        Me.PanelEx2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelEx2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PanelEx2.Location = New System.Drawing.Point(0, 0)
-        Me.PanelEx2.Name = "PanelEx2"
-        Me.PanelEx2.Size = New System.Drawing.Size(200, 30)
-        Me.PanelEx2.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.PanelEx2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx2.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        Me.PanelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
-        Me.PanelEx2.Style.GradientAngle = 90
-        Me.PanelEx2.TabIndex = 1
         '
         'SwitchButton1
         '
@@ -109,13 +89,14 @@ Partial Class bEmpleado
         '
         '
         Me.SwitchButton1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.SwitchButton1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SwitchButton1.Dock = System.Windows.Forms.DockStyle.Top
         Me.SwitchButton1.Location = New System.Drawing.Point(0, 0)
+        Me.SwitchButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SwitchButton1.Name = "SwitchButton1"
         Me.SwitchButton1.OffText = "Empleados Activos"
         Me.SwitchButton1.OnBackColor = System.Drawing.Color.PaleGreen
         Me.SwitchButton1.OnText = "Todos los empleados"
-        Me.SwitchButton1.Size = New System.Drawing.Size(200, 30)
+        Me.SwitchButton1.Size = New System.Drawing.Size(267, 37)
         Me.SwitchButton1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.SwitchButton1.TabIndex = 0
         '
@@ -125,20 +106,19 @@ Partial Class bEmpleado
         '
         'bEmpleado
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.PanelEx1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "bEmpleado"
-        Me.Size = New System.Drawing.Size(200, 351)
+        Me.Size = New System.Drawing.Size(267, 432)
         CType(Me.V_empleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PlanillaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelEx1.ResumeLayout(False)
-        Me.PanelEx2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents PanelEx1 As DevComponents.DotNetBar.PanelEx
-    Friend WithEvents PanelEx2 As DevComponents.DotNetBar.PanelEx
     Friend WithEvents PlanillaDataSet As Planilla.planillaDataSet
     Friend WithEvents V_empleadosBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents V_empleadosTableAdapter As Planilla.planillaDataSetTableAdapters.v_empleadosTableAdapter

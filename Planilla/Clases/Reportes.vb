@@ -31,6 +31,28 @@ Public Class Reportes
         End Try
     End Sub
 
+    Public Sub AsignaDatoServidor(ByRef oreporte As Object, servidor As String, bd As String, usuario As String, clave As String)
+        Dim tbCurrent As CrystalDecisions.CrystalReports.Engine.Table
+        Dim tliCurrent As CrystalDecisions.Shared.TableLogOnInfo
+
+        oreporte.SetDatabaseLogon(usuario, clave, servidor, bd)
+
+        For Each tbCurrent In oreporte.Database.Tables
+            tliCurrent = tbCurrent.LogOnInfo
+            With tliCurrent.ConnectionInfo
+                .ServerName = servidor
+                .UserID = usuario
+                .Password = clave
+                .DatabaseName = bd
+                If conn.vusuario <> "" Then
+                    .IntegratedSecurity = False
+                End If
+
+            End With
+            tbCurrent.ApplyLogOnInfo(tliCurrent)
+        Next tbCurrent
+
+    End Sub
 
     Public Sub imprimir(ByVal oreporte As Object, ByVal impresora As Boolean, ByRef padre As Form)
         Try

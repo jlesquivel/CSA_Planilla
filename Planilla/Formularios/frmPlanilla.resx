@@ -118,34 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>537, 95</value>
+    <value>517, 65</value>
   </metadata>
   <metadata name="DataViewIngresos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>178, 56</value>
+    <value>1489, 17</value>
   </metadata>
   <metadata name="Ds2planilla1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>460, 17</value>
+    <value>636, 17</value>
   </metadata>
   <metadata name="DataViewDeducciones.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>327, 56</value>
+    <value>1697, 17</value>
   </metadata>
   <metadata name="DataView1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>578, 17</value>
+    <value>797, 17</value>
   </metadata>
   <metadata name="DVPlanillaPagosSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>647, 56</value>
+    <value>2144, 17</value>
   </metadata>
   <metadata name="SqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="SqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>298, 17</value>
+    <value>408, 17</value>
   </metadata>
   <data name="SqlInsertCommand1.CommandText" xml:space="preserve">
     <value>INSERT INTO vPagosxDpto(cedula, Expr1, apellidos, categoria, salario_base, cantidad, anualidad, salario_bruto, Expr2, id_dpto, nombre) VALUES (@cedula, @Expr1, @apellidos, @categoria, @salario_base, @cantidad, @anualidad, @salario_bruto, @Expr2, @id_dpto, @nombre); SELECT cedula, Expr1, apellidos, categoria, salario_base, cantidad, anualidad, salario_bruto, Expr2, id_dpto, nombre FROM vPagosxDpto</value>
   </data>
   <metadata name="SqlDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>154, 17</value>
+    <value>207, 17</value>
   </metadata>
   <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -157,10 +157,10 @@
     <value>False</value>
   </metadata>
   <metadata name="SqlConnection2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>688, 17</value>
+    <value>946, 17</value>
   </metadata>
   <metadata name="Planillas.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>825, 17</value>
+    <value>1136, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -210,7 +210,7 @@ SELECT id_planilla, fecha_ini, fecha_fin, id_dpto, estado FROM planillas WHERE (
 SELECT id_planilla, fecha_ini, fecha_fin, id_dpto, estado FROM planillas WHERE (id_planilla = @id_planilla) ORDER BY id_planilla DESC</value>
   </data>
   <metadata name="PlanillaPagosDetalle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>1263, 17</value>
   </metadata>
   <metadata name="SqlCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
@@ -237,7 +237,7 @@ SELECT id_planilla, fecha_ini, fecha_fin, id_dpto, estado FROM planillas WHERE (
     <value>False</value>
   </metadata>
   <metadata name="PlanillaResumenMonto.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>819, 56</value>
+    <value>2386, 17</value>
   </metadata>
   <metadata name="SqlSelectCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -249,28 +249,28 @@ SELECT id_planilla, fecha_ini, fecha_fin, id_dpto, estado FROM planillas WHERE (
     <value>False</value>
   </metadata>
   <metadata name="DotNetBarManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>2636, 17</value>
   </metadata>
   <metadata name="estado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="PlanillasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>182, 95</value>
+    <value>17, 65</value>
   </metadata>
   <metadata name="PlanillasBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>356, 95</value>
+    <value>262, 65</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>161</value>
   </metadata>
   <metadata name="Ahorro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>694, 95</value>
+    <value>737, 65</value>
   </metadata>
   <metadata name="Prestamo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>784, 95</value>
+    <value>856, 65</value>
   </metadata>
   <metadata name="coope.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>887, 95</value>
+    <value>994, 65</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ButtonItem6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1035,9 +1035,9 @@ SELECT id_planilla, fecha_ini, fecha_fin, id_dpto, estado FROM planillas WHERE (
 </value>
   </data>
   <metadata name="DataViewPlanillas.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>500, 56</value>
+    <value>1940, 17</value>
   </metadata>
   <metadata name="bw1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>976, 95</value>
+    <value>1106, 65</value>
   </metadata>
 </root>

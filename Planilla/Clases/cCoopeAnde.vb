@@ -81,7 +81,7 @@ Public Class cCoopeAnde
                         InsertCoopeAndeX(datos, id_archivo, ano, mes)
                     End If
                 Else
-                    'UNDONE:  verificar si el mismo archivo comparando con MD5
+
                     MsgBox("Año y mes Cargados Anteriormente")
                 End If
             End If
@@ -214,8 +214,9 @@ Public Class cCoopeAnde
                 libroXLS.Save()
                 libroXLS.Close()
                 excel.CerrarProcesoExcel()
+            Else
 
-                ''  MsgBox("Archivo Procesados con datos")
+                MsgBox("Error de Formato; verfique que en la celda A8 este el valor Cédula' ")
             End If
         Else
             Return 0

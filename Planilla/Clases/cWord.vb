@@ -102,6 +102,20 @@ Public Class cWord
         End If
     End Sub
 
+
+    Sub borraLinea_con(str As String)
+
+        Dim Unit1 As Microsoft.Office.Interop.Word.WdUnits = Microsoft.Office.Interop.Word.WdUnits.wdLine
+        Do While wdApp.Selection.Find.Execute(FindText:=str, Forward:=True, Format:=True) = True
+            With wdApp.Selection
+                .Expand(Unit1)
+                .Delete()
+            End With
+        Loop
+    End Sub
+
+
+
     '#Region " IDisposable Support "
 
     '    Protected Overrides Sub Finalize()

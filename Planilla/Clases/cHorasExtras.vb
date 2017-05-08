@@ -48,6 +48,12 @@
         Return (regs.Count > 0)
     End Function
 
+    Public Sub LiquidaHoras(pid_planillas As Integer)
+
+        Dim regs As ArrayList
+        regs = conn.llena("exec HoraExtra_act_id_planilla " & pid_planillas.ToString)
+
+    End Sub
 
 #End Region
 

@@ -3,6 +3,31 @@
     Private id_emp As Integer
     Dim oEmp As cEmpleado
     Dim datosContrato As ds2planilla.ContratosActivosRow
+    Dim conn As New conexionSQL
+
+
+    Dim fi, ff As Date
+    Dim vId_Contrato As Integer
+
+    Public ReadOnly Property id_contrato As Integer
+        Get
+            Return vId_Contrato
+        End Get
+    End Property
+
+    Public ReadOnly Property fechaI() As Date
+        Get
+            Return fi
+        End Get
+    End Property
+
+    Public ReadOnly Property fechaF() As Date
+        Get
+            Return ff
+        End Get
+    End Property
+
+
 
     Sub New()
         ' Esta llamada es exigida por el diseñador.
@@ -10,7 +35,6 @@
 
     End Sub
     Sub New(pid_emp As Integer)
-
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
 
@@ -35,10 +59,15 @@
             Dim oDS2 As New ds2planilla
             Dim dt As New ds2planillaTableAdapters.ContratosActivosTableAdapter
             Dim regs As Integer
+            dt.Connection = conn.conexion
             regs = dt.Fill_Id_emp(oDS2.ContratosActivos, pid_emp)
 
             If regs > 0 Then
                 datosContrato = oDS2.ContratosActivos.Rows.Item(0)
+
+                fi = datosContrato.fecha_ini
+                ff = datosContrato.fecha_fin
+                vId_Contrato = datosContrato.id_contrato
 
                 tContrato.Text = datosContrato.id_contrato
                 tCategoria.Text = datosContrato.Nombre_categoria

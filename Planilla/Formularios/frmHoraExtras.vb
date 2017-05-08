@@ -15,13 +15,13 @@ Public Class frmHoraExtras
 
             Dim fini, ffin As Date
             If Now.Day <= 15 Then
-                fini = Now.AddDays(Now.Day * -1)
-                ffin = fini.AddDays(15)
+                fini = DateSerial(Year(Now), Month(Now), 1)
+                ffin = fini.AddDays(14)
             Else
                 fini = DateSerial(Year(Now), Month(Now), 16)
                 ffin = DateSerial(Year(Now), Month(Now) + 1, 0)
             End If
-
+            Horas_extrasTableAdapter.Connection = conn.conexion
             regs = Horas_extrasTableAdapter.FillById_emp(Me.Ds2planilla.horas_extras, BEmpleado1.seleccionado, fini.ToString, ffin.ToString)
             If regs = 0 Then
                 ' Crea las hora extras si no existen

@@ -281,9 +281,6 @@ Public Class frmPlanilla
         Me.DockSite4 = New DevComponents.DotNetBar.DockSite()
         Me.DockSite1 = New DevComponents.DotNetBar.DockSite()
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
-        Me.PanelDockContainer2 = New DevComponents.DotNetBar.PanelDockContainer()
-        Me.UcProgresoCircular1 = New Planilla.ucProgresoCircular()
-        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.PanelDockContainer1 = New DevComponents.DotNetBar.PanelDockContainer()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IdplanillaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -294,6 +291,9 @@ Public Class frmPlanilla
         Me.TextboxFormat7 = New Planilla.TextboxFormat()
         Me.TextboxFormat8 = New Planilla.TextboxFormat()
         Me.TextboxFormat9 = New Planilla.TextboxFormat()
+        Me.PanelDockContainer2 = New DevComponents.DotNetBar.PanelDockContainer()
+        Me.UcProgresoCircular1 = New Planilla.ucProgresoCircular()
+        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.PanelDockContainer3 = New DevComponents.DotNetBar.PanelDockContainer()
         Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX()
         Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
@@ -379,10 +379,10 @@ Public Class frmPlanilla
         Me.DockSite1.SuspendLayout()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Bar1.SuspendLayout()
-        Me.PanelDockContainer2.SuspendLayout()
         Me.PanelDockContainer1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PlanillasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelDockContainer2.SuspendLayout()
         Me.PanelDockContainer3.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PlanillasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -394,29 +394,33 @@ Public Class frmPlanilla
         '
         Me.DateTimePicker2.CustomFormat = " dd MMMM  yyyy"
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker2.Location = New System.Drawing.Point(12, 65)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(11, 60)
+        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(155, 20)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(150, 20)
         Me.DateTimePicker2.TabIndex = 1
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.CustomFormat = " dd MMMM  yyyy"
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(12, 29)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(11, 26)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(155, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(150, 20)
         Me.DateTimePicker1.TabIndex = 0
         '
         'Panel1
         '
+        Me.Panel1.AutoSize = True
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.GroupBox2)
-        Me.Panel1.Location = New System.Drawing.Point(15, 312)
+        Me.Panel1.Location = New System.Drawing.Point(14, 288)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(728, 232)
+        Me.Panel1.Size = New System.Drawing.Size(694, 209)
         Me.Panel1.TabIndex = 5
         '
         'GroupBox1
@@ -436,18 +440,21 @@ Public Class frmPlanilla
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.TextboxFormat1)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox1.Location = New System.Drawing.Point(488, 8)
+        Me.GroupBox1.Location = New System.Drawing.Point(469, 7)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(232, 216)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(222, 199)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Resumen Empleado"
         '
         'Label12
         '
-        Me.Label12.Location = New System.Drawing.Point(40, 70)
+        Me.Label12.Location = New System.Drawing.Point(38, 65)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(64, 23)
+        Me.Label12.Size = New System.Drawing.Size(62, 21)
         Me.Label12.TabIndex = 11
         Me.Label12.Text = "Anualidad"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -455,10 +462,11 @@ Public Class frmPlanilla
         'TextboxFormat10
         '
         Me.TextboxFormat10.Formato = "C2"
-        Me.TextboxFormat10.Location = New System.Drawing.Point(104, 70)
+        Me.TextboxFormat10.Location = New System.Drawing.Point(100, 65)
+        Me.TextboxFormat10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextboxFormat10.Name = "TextboxFormat10"
         Me.TextboxFormat10.ReadOnly = True
-        Me.TextboxFormat10.Size = New System.Drawing.Size(100, 20)
+        Me.TextboxFormat10.Size = New System.Drawing.Size(97, 20)
         Me.TextboxFormat10.TabIndex = 12
         Me.TextboxFormat10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -467,98 +475,109 @@ Public Class frmPlanilla
         Me.TextboxFormat6.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TextboxFormat6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextboxFormat6.Formato = "C2"
-        Me.TextboxFormat6.Location = New System.Drawing.Point(104, 183)
+        Me.TextboxFormat6.Location = New System.Drawing.Point(100, 169)
+        Me.TextboxFormat6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextboxFormat6.Name = "TextboxFormat6"
-        Me.TextboxFormat6.Size = New System.Drawing.Size(100, 21)
+        Me.TextboxFormat6.Size = New System.Drawing.Size(97, 21)
         Me.TextboxFormat6.TabIndex = 10
         Me.TextboxFormat6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TextboxFormat5
         '
         Me.TextboxFormat5.Formato = "C2"
-        Me.TextboxFormat5.Location = New System.Drawing.Point(104, 159)
+        Me.TextboxFormat5.Location = New System.Drawing.Point(100, 146)
+        Me.TextboxFormat5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextboxFormat5.Name = "TextboxFormat5"
-        Me.TextboxFormat5.Size = New System.Drawing.Size(100, 20)
+        Me.TextboxFormat5.Size = New System.Drawing.Size(97, 20)
         Me.TextboxFormat5.TabIndex = 9
         Me.TextboxFormat5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TextboxFormat3
         '
         Me.TextboxFormat3.Formato = "C2"
-        Me.TextboxFormat3.Location = New System.Drawing.Point(104, 135)
+        Me.TextboxFormat3.Location = New System.Drawing.Point(100, 125)
+        Me.TextboxFormat3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextboxFormat3.Name = "TextboxFormat3"
-        Me.TextboxFormat3.Size = New System.Drawing.Size(100, 20)
+        Me.TextboxFormat3.Size = New System.Drawing.Size(97, 20)
         Me.TextboxFormat3.TabIndex = 8
         Me.TextboxFormat3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label7
         '
-        Me.Label7.Location = New System.Drawing.Point(24, 183)
+        Me.Label7.Location = New System.Drawing.Point(23, 169)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(80, 23)
+        Me.Label7.Size = New System.Drawing.Size(77, 22)
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "Salario Neto"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(24, 159)
+        Me.Label5.Location = New System.Drawing.Point(23, 146)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 23)
+        Me.Label5.Size = New System.Drawing.Size(77, 22)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Deducciones"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(24, 135)
+        Me.Label4.Location = New System.Drawing.Point(23, 125)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(80, 23)
+        Me.Label4.Size = New System.Drawing.Size(77, 21)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Salario Bruto"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(104, 24)
+        Me.TextBox1.Location = New System.Drawing.Point(100, 22)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(97, 20)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(104, 93)
+        Me.TextBox3.Location = New System.Drawing.Point(100, 86)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(97, 20)
         Me.TextBox3.TabIndex = 2
         Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(40, 24)
+        Me.Label1.Location = New System.Drawing.Point(38, 22)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 23)
+        Me.Label1.Size = New System.Drawing.Size(62, 21)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Categoria"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(40, 48)
+        Me.Label2.Location = New System.Drawing.Point(38, 44)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 23)
+        Me.Label2.Size = New System.Drawing.Size(62, 22)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Valor unid."
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(40, 93)
+        Me.Label3.Location = New System.Drawing.Point(38, 86)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 32)
+        Me.Label3.Size = New System.Drawing.Size(62, 30)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "(horas/dias/lecciones)"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -566,10 +585,11 @@ Public Class frmPlanilla
         'TextboxFormat1
         '
         Me.TextboxFormat1.Formato = "C2"
-        Me.TextboxFormat1.Location = New System.Drawing.Point(104, 48)
+        Me.TextboxFormat1.Location = New System.Drawing.Point(100, 44)
+        Me.TextboxFormat1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextboxFormat1.Name = "TextboxFormat1"
         Me.TextboxFormat1.ReadOnly = True
-        Me.TextboxFormat1.Size = New System.Drawing.Size(100, 20)
+        Me.TextboxFormat1.Size = New System.Drawing.Size(97, 20)
         Me.TextboxFormat1.TabIndex = 7
         Me.TextboxFormat1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -579,18 +599,21 @@ Public Class frmPlanilla
         Me.GroupBox3.Controls.Add(Me.DataGrid3)
         Me.GroupBox3.Controls.Add(Me.TextboxFormat2)
         Me.GroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox3.Location = New System.Drawing.Point(8, 8)
+        Me.GroupBox3.Location = New System.Drawing.Point(8, 7)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(232, 216)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Size = New System.Drawing.Size(222, 199)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Ingresos"
         '
         'Label6
         '
-        Me.Label6.Location = New System.Drawing.Point(48, 192)
+        Me.Label6.Location = New System.Drawing.Point(46, 178)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(56, 16)
+        Me.Label6.Size = New System.Drawing.Size(54, 14)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Sub total"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -604,15 +627,17 @@ Public Class frmPlanilla
         Me.DataGrid3.DataSource = Me.DataViewIngresos
         Me.DataGrid3.Dock = System.Windows.Forms.DockStyle.Top
         Me.DataGrid3.HeaderForeColor = System.Drawing.SystemColors.ControlText
-        Me.DataGrid3.Location = New System.Drawing.Point(3, 16)
+        Me.DataGrid3.Location = New System.Drawing.Point(2, 15)
+        Me.DataGrid3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGrid3.Name = "DataGrid3"
         Me.DataGrid3.RowHeaderWidth = 20
-        Me.DataGrid3.Size = New System.Drawing.Size(226, 176)
+        Me.DataGrid3.Size = New System.Drawing.Size(218, 162)
         Me.DataGrid3.TabIndex = 9
         Me.DataGrid3.TableStyles.AddRange(New System.Windows.Forms.DataGridTableStyle() {Me.DataGridTableStyle5})
         '
         'ContextMenuStrip1
         '
+        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarRubroToolStripMenuItem, Me.EliminarRubroToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(163, 48)
@@ -669,9 +694,10 @@ Public Class frmPlanilla
         '
         Me.TextboxFormat2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TextboxFormat2.Formato = "C2"
-        Me.TextboxFormat2.Location = New System.Drawing.Point(112, 192)
+        Me.TextboxFormat2.Location = New System.Drawing.Point(107, 178)
+        Me.TextboxFormat2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextboxFormat2.Name = "TextboxFormat2"
-        Me.TextboxFormat2.Size = New System.Drawing.Size(100, 20)
+        Me.TextboxFormat2.Size = New System.Drawing.Size(97, 20)
         Me.TextboxFormat2.TabIndex = 8
         Me.TextboxFormat2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -681,9 +707,11 @@ Public Class frmPlanilla
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.TextboxFormat4)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox2.Location = New System.Drawing.Point(248, 8)
+        Me.GroupBox2.Location = New System.Drawing.Point(238, 7)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(232, 216)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(222, 199)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Deducciones"
@@ -697,10 +725,11 @@ Public Class frmPlanilla
         Me.DataGrid2.DataSource = Me.DataViewDeducciones
         Me.DataGrid2.Dock = System.Windows.Forms.DockStyle.Top
         Me.DataGrid2.HeaderForeColor = System.Drawing.SystemColors.ControlText
-        Me.DataGrid2.Location = New System.Drawing.Point(3, 16)
+        Me.DataGrid2.Location = New System.Drawing.Point(2, 15)
+        Me.DataGrid2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGrid2.Name = "DataGrid2"
         Me.DataGrid2.RowHeaderWidth = 20
-        Me.DataGrid2.Size = New System.Drawing.Size(226, 176)
+        Me.DataGrid2.Size = New System.Drawing.Size(218, 162)
         Me.DataGrid2.TabIndex = 0
         Me.DataGrid2.TableStyles.AddRange(New System.Windows.Forms.DataGridTableStyle() {Me.DataGridTableStyle4})
         '
@@ -737,9 +766,10 @@ Public Class frmPlanilla
         '
         'Label8
         '
-        Me.Label8.Location = New System.Drawing.Point(48, 192)
+        Me.Label8.Location = New System.Drawing.Point(46, 178)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(56, 16)
+        Me.Label8.Size = New System.Drawing.Size(54, 14)
         Me.Label8.TabIndex = 11
         Me.Label8.Text = "Sub total"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -748,9 +778,10 @@ Public Class frmPlanilla
         '
         Me.TextboxFormat4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TextboxFormat4.Formato = "C2"
-        Me.TextboxFormat4.Location = New System.Drawing.Point(112, 192)
+        Me.TextboxFormat4.Location = New System.Drawing.Point(107, 178)
+        Me.TextboxFormat4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextboxFormat4.Name = "TextboxFormat4"
-        Me.TextboxFormat4.Size = New System.Drawing.Size(100, 20)
+        Me.TextboxFormat4.Size = New System.Drawing.Size(97, 20)
         Me.TextboxFormat4.TabIndex = 11
         Me.TextboxFormat4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -766,11 +797,12 @@ Public Class frmPlanilla
         Me.DataGrid1.DataSource = Me.DVPlanillaPagosSelect
         Me.DataGrid1.HeaderFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGrid1.HeaderForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.DataGrid1.Location = New System.Drawing.Point(26, 19)
+        Me.DataGrid1.Location = New System.Drawing.Point(25, 18)
+        Me.DataGrid1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGrid1.Name = "DataGrid1"
         Me.DataGrid1.PreferredColumnWidth = 150
         Me.DataGrid1.RowHeaderWidth = 15
-        Me.DataGrid1.Size = New System.Drawing.Size(448, 288)
+        Me.DataGrid1.Size = New System.Drawing.Size(430, 266)
         Me.DataGrid1.TabIndex = 6
         Me.DataGrid1.TableStyles.AddRange(New System.Windows.Forms.DataGridTableStyle() {Me.DataGridTableStyle1})
         '
@@ -927,9 +959,10 @@ Public Class frmPlanilla
         'Label9
         '
         Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Location = New System.Drawing.Point(20, 465)
+        Me.Label9.Location = New System.Drawing.Point(19, 430)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(80, 23)
+        Me.Label9.Size = New System.Drawing.Size(77, 21)
         Me.Label9.TabIndex = 13
         Me.Label9.Text = "Salario Neto"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -937,9 +970,10 @@ Public Class frmPlanilla
         'Label10
         '
         Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Location = New System.Drawing.Point(20, 441)
+        Me.Label10.Location = New System.Drawing.Point(19, 407)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(80, 23)
+        Me.Label10.Size = New System.Drawing.Size(77, 21)
         Me.Label10.TabIndex = 12
         Me.Label10.Text = "Deducciones"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -947,9 +981,10 @@ Public Class frmPlanilla
         'Label11
         '
         Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Location = New System.Drawing.Point(20, 417)
+        Me.Label11.Location = New System.Drawing.Point(19, 385)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(80, 23)
+        Me.Label11.Size = New System.Drawing.Size(77, 22)
         Me.Label11.TabIndex = 11
         Me.Label11.Text = "Salario Bruto"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -957,9 +992,11 @@ Public Class frmPlanilla
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.DataGrid5)
-        Me.GroupBox4.Location = New System.Drawing.Point(471, 3)
+        Me.GroupBox4.Location = New System.Drawing.Point(452, 2)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(264, 306)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Size = New System.Drawing.Size(254, 283)
         Me.GroupBox4.TabIndex = 10
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Resumen Planilla"
@@ -972,11 +1009,12 @@ Public Class frmPlanilla
         Me.DataGrid5.DataSource = Me.Ds2planilla1.PlanillaResumenMontos
         Me.DataGrid5.Dock = System.Windows.Forms.DockStyle.Top
         Me.DataGrid5.HeaderForeColor = System.Drawing.SystemColors.ControlText
-        Me.DataGrid5.Location = New System.Drawing.Point(3, 16)
+        Me.DataGrid5.Location = New System.Drawing.Point(2, 15)
+        Me.DataGrid5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGrid5.Name = "DataGrid5"
         Me.DataGrid5.ReadOnly = True
         Me.DataGrid5.RowHeaderWidth = 15
-        Me.DataGrid5.Size = New System.Drawing.Size(258, 290)
+        Me.DataGrid5.Size = New System.Drawing.Size(250, 267)
         Me.DataGrid5.TabIndex = 0
         Me.DataGrid5.TableStyles.AddRange(New System.Windows.Forms.DataGridTableStyle() {Me.DataGridTableStyle2})
         '
@@ -1038,9 +1076,10 @@ Public Class frmPlanilla
         Me.DockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.DockSite4.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
-        Me.DockSite4.Location = New System.Drawing.Point(0, 541)
+        Me.DockSite4.Location = New System.Drawing.Point(0, 433)
+        Me.DockSite4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DockSite4.Name = "DockSite4"
-        Me.DockSite4.Size = New System.Drawing.Size(767, 0)
+        Me.DockSite4.Size = New System.Drawing.Size(774, 0)
         Me.DockSite4.TabIndex = 15
         Me.DockSite4.TabStop = False
         '
@@ -1049,10 +1088,11 @@ Public Class frmPlanilla
         Me.DockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite1.Controls.Add(Me.Bar1)
         Me.DockSite1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.DockSite1.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer(New DevComponents.DotNetBar.DocumentBaseContainer() {CType(New DevComponents.DotNetBar.DocumentBarContainer(Me.Bar1, 221, 541), DevComponents.DotNetBar.DocumentBaseContainer)}, DevComponents.DotNetBar.eOrientation.Horizontal)
+        Me.DockSite1.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer(New DevComponents.DotNetBar.DocumentBaseContainer() {CType(New DevComponents.DotNetBar.DocumentBarContainer(Me.Bar1, 212, 433), DevComponents.DotNetBar.DocumentBaseContainer)}, DevComponents.DotNetBar.eOrientation.Horizontal)
         Me.DockSite1.Location = New System.Drawing.Point(0, 0)
+        Me.DockSite1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DockSite1.Name = "DockSite1"
-        Me.DockSite1.Size = New System.Drawing.Size(224, 541)
+        Me.DockSite1.Size = New System.Drawing.Size(215, 433)
         Me.DockSite1.TabIndex = 12
         Me.DockSite1.TabStop = False
         '
@@ -1066,8 +1106,8 @@ Public Class frmPlanilla
         Me.Bar1.AutoHideAnimationTime = 30
         Me.Bar1.AutoSyncBarCaption = True
         Me.Bar1.BarType = DevComponents.DotNetBar.eBarType.DockWindow
-        Me.Bar1.Controls.Add(Me.PanelDockContainer2)
         Me.Bar1.Controls.Add(Me.PanelDockContainer1)
+        Me.Bar1.Controls.Add(Me.PanelDockContainer2)
         Me.Bar1.Controls.Add(Me.PanelDockContainer3)
         Me.Bar1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Bar1.DockTabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Top
@@ -1077,48 +1117,15 @@ Public Class frmPlanilla
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.DockContainerItem1, Me.DockContainerItem2, Me.DockContainerItem3})
         Me.Bar1.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer
         Me.Bar1.Location = New System.Drawing.Point(0, 0)
+        Me.Bar1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.SelectedDockTab = 1
-        Me.Bar1.Size = New System.Drawing.Size(221, 541)
+        Me.Bar1.SelectedDockTab = 0
+        Me.Bar1.Size = New System.Drawing.Size(212, 433)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 0
         Me.Bar1.TabStop = False
-        Me.Bar1.Text = "Crea Planilla"
-        '
-        'PanelDockContainer2
-        '
-        Me.PanelDockContainer2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.PanelDockContainer2.Controls.Add(Me.UcProgresoCircular1)
-        Me.PanelDockContainer2.Controls.Add(Me.ButtonX1)
-        Me.PanelDockContainer2.Controls.Add(Me.DateTimePicker1)
-        Me.PanelDockContainer2.Controls.Add(Me.DateTimePicker2)
-        Me.PanelDockContainer2.DisabledBackColor = System.Drawing.Color.Empty
-        Me.PanelDockContainer2.Location = New System.Drawing.Point(3, 48)
-        Me.PanelDockContainer2.Name = "PanelDockContainer2"
-        Me.PanelDockContainer2.Size = New System.Drawing.Size(215, 490)
-        Me.PanelDockContainer2.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelDockContainer2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
-        Me.PanelDockContainer2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
-        Me.PanelDockContainer2.Style.GradientAngle = 90
-        Me.PanelDockContainer2.TabIndex = 2
-        '
-        'UcProgresoCircular1
-        '
-        Me.UcProgresoCircular1.BackColor = System.Drawing.Color.Transparent
-        Me.UcProgresoCircular1.Location = New System.Drawing.Point(20, 182)
-        Me.UcProgresoCircular1.Name = "UcProgresoCircular1"
-        Me.UcProgresoCircular1.Size = New System.Drawing.Size(100, 100)
-        Me.UcProgresoCircular1.TabIndex = 4
-        '
-        'ButtonX1
-        '
-        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX1.Location = New System.Drawing.Point(12, 118)
-        Me.ButtonX1.Name = "ButtonX1"
-        Me.ButtonX1.Size = New System.Drawing.Size(108, 41)
-        Me.ButtonX1.TabIndex = 3
-        Me.ButtonX1.Text = "Generar"
+        Me.Bar1.Text = "Planillas"
         '
         'PanelDockContainer1
         '
@@ -1132,8 +1139,9 @@ Public Class frmPlanilla
         Me.PanelDockContainer1.Controls.Add(Me.Label9)
         Me.PanelDockContainer1.DisabledBackColor = System.Drawing.Color.Empty
         Me.PanelDockContainer1.Location = New System.Drawing.Point(3, 48)
+        Me.PanelDockContainer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelDockContainer1.Name = "PanelDockContainer1"
-        Me.PanelDockContainer1.Size = New System.Drawing.Size(215, 490)
+        Me.PanelDockContainer1.Size = New System.Drawing.Size(206, 382)
         Me.PanelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
         Me.PanelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
@@ -1151,13 +1159,14 @@ Public Class frmPlanilla
         Me.DataGridView1.DataSource = Me.PlanillasBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Top
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowTemplate.Height = 20
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(215, 409)
+        Me.DataGridView1.Size = New System.Drawing.Size(206, 378)
         Me.DataGridView1.TabIndex = 21
         '
         'IdplanillaDataGridViewTextBoxColumn
@@ -1200,29 +1209,69 @@ Public Class frmPlanilla
         Me.TextboxFormat7.BackColor = System.Drawing.Color.PaleGreen
         Me.TextboxFormat7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextboxFormat7.Formato = "C2"
-        Me.TextboxFormat7.Location = New System.Drawing.Point(100, 462)
+        Me.TextboxFormat7.Location = New System.Drawing.Point(96, 426)
+        Me.TextboxFormat7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextboxFormat7.Name = "TextboxFormat7"
-        Me.TextboxFormat7.Size = New System.Drawing.Size(100, 21)
+        Me.TextboxFormat7.Size = New System.Drawing.Size(97, 21)
         Me.TextboxFormat7.TabIndex = 16
         Me.TextboxFormat7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TextboxFormat8
         '
         Me.TextboxFormat8.Formato = "C2"
-        Me.TextboxFormat8.Location = New System.Drawing.Point(100, 441)
+        Me.TextboxFormat8.Location = New System.Drawing.Point(96, 407)
+        Me.TextboxFormat8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextboxFormat8.Name = "TextboxFormat8"
-        Me.TextboxFormat8.Size = New System.Drawing.Size(100, 20)
+        Me.TextboxFormat8.Size = New System.Drawing.Size(97, 20)
         Me.TextboxFormat8.TabIndex = 15
         Me.TextboxFormat8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TextboxFormat9
         '
         Me.TextboxFormat9.Formato = "C2"
-        Me.TextboxFormat9.Location = New System.Drawing.Point(100, 420)
+        Me.TextboxFormat9.Location = New System.Drawing.Point(96, 388)
+        Me.TextboxFormat9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextboxFormat9.Name = "TextboxFormat9"
-        Me.TextboxFormat9.Size = New System.Drawing.Size(100, 20)
+        Me.TextboxFormat9.Size = New System.Drawing.Size(97, 20)
         Me.TextboxFormat9.TabIndex = 14
         Me.TextboxFormat9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'PanelDockContainer2
+        '
+        Me.PanelDockContainer2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelDockContainer2.Controls.Add(Me.UcProgresoCircular1)
+        Me.PanelDockContainer2.Controls.Add(Me.ButtonX1)
+        Me.PanelDockContainer2.Controls.Add(Me.DateTimePicker1)
+        Me.PanelDockContainer2.Controls.Add(Me.DateTimePicker2)
+        Me.PanelDockContainer2.DisabledBackColor = System.Drawing.Color.Empty
+        Me.PanelDockContainer2.Location = New System.Drawing.Point(3, 48)
+        Me.PanelDockContainer2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelDockContainer2.Name = "PanelDockContainer2"
+        Me.PanelDockContainer2.Size = New System.Drawing.Size(206, 382)
+        Me.PanelDockContainer2.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.PanelDockContainer2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
+        Me.PanelDockContainer2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
+        Me.PanelDockContainer2.Style.GradientAngle = 90
+        Me.PanelDockContainer2.TabIndex = 2
+        '
+        'UcProgresoCircular1
+        '
+        Me.UcProgresoCircular1.BackColor = System.Drawing.Color.Transparent
+        Me.UcProgresoCircular1.Location = New System.Drawing.Point(19, 168)
+        Me.UcProgresoCircular1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.UcProgresoCircular1.Name = "UcProgresoCircular1"
+        Me.UcProgresoCircular1.Size = New System.Drawing.Size(96, 92)
+        Me.UcProgresoCircular1.TabIndex = 4
+        '
+        'ButtonX1
+        '
+        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX1.Location = New System.Drawing.Point(11, 109)
+        Me.ButtonX1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonX1.Name = "ButtonX1"
+        Me.ButtonX1.Size = New System.Drawing.Size(104, 38)
+        Me.ButtonX1.TabIndex = 3
+        Me.ButtonX1.Text = "Generar"
         '
         'PanelDockContainer3
         '
@@ -1232,8 +1281,9 @@ Public Class frmPlanilla
         Me.PanelDockContainer3.Controls.Add(Me.DataGridView2)
         Me.PanelDockContainer3.DisabledBackColor = System.Drawing.Color.Empty
         Me.PanelDockContainer3.Location = New System.Drawing.Point(3, 48)
+        Me.PanelDockContainer3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelDockContainer3.Name = "PanelDockContainer3"
-        Me.PanelDockContainer3.Size = New System.Drawing.Size(215, 490)
+        Me.PanelDockContainer3.Size = New System.Drawing.Size(206, 382)
         Me.PanelDockContainer3.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelDockContainer3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
         Me.PanelDockContainer3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
@@ -1244,9 +1294,10 @@ Public Class frmPlanilla
         '
         Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX3.Location = New System.Drawing.Point(106, 417)
+        Me.ButtonX3.Location = New System.Drawing.Point(102, 385)
+        Me.ButtonX3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ButtonX3.Name = "ButtonX3"
-        Me.ButtonX3.Size = New System.Drawing.Size(94, 43)
+        Me.ButtonX3.Size = New System.Drawing.Size(90, 40)
         Me.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX3.TabIndex = 2
         Me.ButtonX3.Text = "LIMPIAR"
@@ -1255,9 +1306,10 @@ Public Class frmPlanilla
         '
         Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX2.Location = New System.Drawing.Point(9, 417)
+        Me.ButtonX2.Location = New System.Drawing.Point(9, 385)
+        Me.ButtonX2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(91, 43)
+        Me.ButtonX2.Size = New System.Drawing.Size(87, 40)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 1
         Me.ButtonX2.Text = "RECUPERAR"
@@ -1273,11 +1325,12 @@ Public Class frmPlanilla
         Me.DataGridView2.DataSource = Me.PlanillasBindingSource1
         Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Top
         Me.DataGridView2.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersVisible = False
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.Size = New System.Drawing.Size(215, 409)
+        Me.DataGridView2.Size = New System.Drawing.Size(206, 378)
         Me.DataGridView2.TabIndex = 0
         '
         'IdplanillaDataGridViewTextBoxColumn1
@@ -1341,9 +1394,10 @@ Public Class frmPlanilla
         Me.DockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite2.Dock = System.Windows.Forms.DockStyle.Right
         Me.DockSite2.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
-        Me.DockSite2.Location = New System.Drawing.Point(767, 0)
+        Me.DockSite2.Location = New System.Drawing.Point(774, 0)
+        Me.DockSite2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DockSite2.Name = "DockSite2"
-        Me.DockSite2.Size = New System.Drawing.Size(0, 541)
+        Me.DockSite2.Size = New System.Drawing.Size(0, 433)
         Me.DockSite2.TabIndex = 13
         Me.DockSite2.TabStop = False
         '
@@ -1351,9 +1405,10 @@ Public Class frmPlanilla
         '
         Me.DockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite8.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.DockSite8.Location = New System.Drawing.Point(0, 541)
+        Me.DockSite8.Location = New System.Drawing.Point(0, 433)
+        Me.DockSite8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DockSite8.Name = "DockSite8"
-        Me.DockSite8.Size = New System.Drawing.Size(767, 0)
+        Me.DockSite8.Size = New System.Drawing.Size(774, 0)
         Me.DockSite8.TabIndex = 19
         Me.DockSite8.TabStop = False
         '
@@ -1362,8 +1417,9 @@ Public Class frmPlanilla
         Me.DockSite5.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite5.Dock = System.Windows.Forms.DockStyle.Left
         Me.DockSite5.Location = New System.Drawing.Point(0, 0)
+        Me.DockSite5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DockSite5.Name = "DockSite5"
-        Me.DockSite5.Size = New System.Drawing.Size(0, 541)
+        Me.DockSite5.Size = New System.Drawing.Size(0, 433)
         Me.DockSite5.TabIndex = 16
         Me.DockSite5.TabStop = False
         '
@@ -1371,9 +1427,10 @@ Public Class frmPlanilla
         '
         Me.DockSite6.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite6.Dock = System.Windows.Forms.DockStyle.Right
-        Me.DockSite6.Location = New System.Drawing.Point(767, 0)
+        Me.DockSite6.Location = New System.Drawing.Point(774, 0)
+        Me.DockSite6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DockSite6.Name = "DockSite6"
-        Me.DockSite6.Size = New System.Drawing.Size(0, 541)
+        Me.DockSite6.Size = New System.Drawing.Size(0, 433)
         Me.DockSite6.TabIndex = 17
         Me.DockSite6.TabStop = False
         '
@@ -1382,8 +1439,9 @@ Public Class frmPlanilla
         Me.DockSite7.AccessibleRole = System.Windows.Forms.AccessibleRole.Window
         Me.DockSite7.Dock = System.Windows.Forms.DockStyle.Top
         Me.DockSite7.Location = New System.Drawing.Point(0, 0)
+        Me.DockSite7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DockSite7.Name = "DockSite7"
-        Me.DockSite7.Size = New System.Drawing.Size(767, 0)
+        Me.DockSite7.Size = New System.Drawing.Size(774, 0)
         Me.DockSite7.TabIndex = 18
         Me.DockSite7.TabStop = False
         '
@@ -1393,8 +1451,9 @@ Public Class frmPlanilla
         Me.DockSite3.Dock = System.Windows.Forms.DockStyle.Top
         Me.DockSite3.DocumentDockContainer = New DevComponents.DotNetBar.DocumentDockContainer()
         Me.DockSite3.Location = New System.Drawing.Point(0, 0)
+        Me.DockSite3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DockSite3.Name = "DockSite3"
-        Me.DockSite3.Size = New System.Drawing.Size(767, 0)
+        Me.DockSite3.Size = New System.Drawing.Size(774, 0)
         Me.DockSite3.TabIndex = 14
         Me.DockSite3.TabStop = False
         '
@@ -1404,10 +1463,11 @@ Public Class frmPlanilla
         Me.RibbonBarMergeContainer1.Controls.Add(Me.RibbonBar3)
         Me.RibbonBarMergeContainer1.Controls.Add(Me.RibbonBar2)
         Me.RibbonBarMergeContainer1.Controls.Add(Me.RibbonBar1)
-        Me.RibbonBarMergeContainer1.Location = New System.Drawing.Point(227, 89)
+        Me.RibbonBarMergeContainer1.Location = New System.Drawing.Point(218, 82)
+        Me.RibbonBarMergeContainer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.RibbonBarMergeContainer1.Name = "RibbonBarMergeContainer1"
         Me.RibbonBarMergeContainer1.RibbonTabText = "Planilla"
-        Me.RibbonBarMergeContainer1.Size = New System.Drawing.Size(833, 103)
+        Me.RibbonBarMergeContainer1.Size = New System.Drawing.Size(800, 95)
         '
         '
         '
@@ -1438,9 +1498,10 @@ Public Class frmPlanilla
         Me.RibbonBar3.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar3.DragDropSupport = True
         Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem12, Me.ButtonItem11, Me.ButtonItem10, Me.ButtonItem13, Me.ButtonItem14})
-        Me.RibbonBar3.Location = New System.Drawing.Point(587, 0)
+        Me.RibbonBar3.Location = New System.Drawing.Point(564, 0)
+        Me.RibbonBar3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.RibbonBar3.Name = "RibbonBar3"
-        Me.RibbonBar3.Size = New System.Drawing.Size(244, 103)
+        Me.RibbonBar3.Size = New System.Drawing.Size(234, 95)
         Me.RibbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar3.TabIndex = 2
         Me.RibbonBar3.Text = "Reportes Mensuales"
@@ -1524,9 +1585,10 @@ Public Class frmPlanilla
         Me.RibbonBar2.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar2.DragDropSupport = True
         Me.RibbonBar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem6, Me.ButtonItem7, Me.ButtonItem15, Me.ButtonItem8, Me.CoopeAnde, Me.ButtonItem1, Me.ButtonItem3, Me.ButtonItem4})
-        Me.RibbonBar2.Location = New System.Drawing.Point(156, 0)
+        Me.RibbonBar2.Location = New System.Drawing.Point(150, 0)
+        Me.RibbonBar2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.RibbonBar2.Name = "RibbonBar2"
-        Me.RibbonBar2.Size = New System.Drawing.Size(431, 103)
+        Me.RibbonBar2.Size = New System.Drawing.Size(414, 95)
         Me.RibbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar2.TabIndex = 1
         Me.RibbonBar2.Text = "Reportes"
@@ -1621,8 +1683,9 @@ Public Class frmPlanilla
         Me.RibbonBar1.DragDropSupport = True
         Me.RibbonBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem2, Me.ButtonItem5, Me.ButtonItem9})
         Me.RibbonBar1.Location = New System.Drawing.Point(0, 0)
+        Me.RibbonBar1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.RibbonBar1.Name = "RibbonBar1"
-        Me.RibbonBar1.Size = New System.Drawing.Size(156, 103)
+        Me.RibbonBar1.Size = New System.Drawing.Size(150, 95)
         Me.RibbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar1.TabIndex = 0
         Me.RibbonBar1.Text = "Planilla"
@@ -1768,9 +1831,12 @@ Public Class frmPlanilla
         '
         'frmPlanilla
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(767, 541)
+        Me.ClientSize = New System.Drawing.Size(774, 433)
         Me.Controls.Add(Me.RibbonBarMergeContainer1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.DockSite1)
@@ -1784,8 +1850,10 @@ Public Class frmPlanilla
         Me.Controls.Add(Me.DataGrid1)
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.Name = "frmPlanilla"
         Me.Text = "Planillas"
@@ -1810,24 +1878,25 @@ Public Class frmPlanilla
         Me.DockSite1.ResumeLayout(False)
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Bar1.ResumeLayout(False)
-        Me.PanelDockContainer2.ResumeLayout(False)
         Me.PanelDockContainer1.ResumeLayout(False)
         Me.PanelDockContainer1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PlanillasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelDockContainer2.ResumeLayout(False)
         Me.PanelDockContainer3.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PlanillasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RibbonBarMergeContainer1.ResumeLayout(False)
         CType(Me.DataViewPlanillas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
 #End Region
 
     Private Sub frmPlanilla_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.RibbonBar3.Visible = False
+        ''Me.RibbonBar3.Visible = False
         Me.Text = conn.llena("SELECT nombre FROM departamento WHERE id_dpto=" & id_dpto).Item(0)(0)
         Me.DataGridView1.RowHeadersWidth = 18
     End Sub
@@ -2075,6 +2144,7 @@ Public Class frmPlanilla
                 Me.ButtonItem5.Enabled = False
 
         End Select
+        Me.RibbonBar3.Visible = False
 
         If dias_reportes < 16 Then
             Me.RibbonBar3.Visible = True
@@ -2161,46 +2231,51 @@ Public Class frmPlanilla
 
 
     Private Sub ButtonItem8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem8.Click
-        Dim data As New DataSet
-        Dim ruta As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) _
+        Try
+
+            Dim data As New DataSet
+            Dim ruta As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) _
                             & "\" & "Planilla " & Me.Text & " " & CStr(id_planilla) & ".env"
-        Dim encabezado As String = ""
-        Dim resumen As String = ""
+            Dim encabezado As String = ""
+            Dim resumen As String = ""
 
-        ' Crea y carga la tabla con los datos
-        data.Tables.Add("tabla1")
-        conn.llena(data, "tabla1", "exec planilla_BNCR " & id_planilla.ToString & ",'Salarios'")
+            ' Crea y carga la tabla con los datos
+            data.Tables.Add("tabla1")
+            Dim inst As String = "exec planilla_BNCR " & id_planilla.ToString & ",'Salarios'"
+            conn.llena(data, "tabla1", inst)
 
-        ' Genera encabezado 
-        Dim datos As Array = conn.llena("Select idclienteBanco from bancos ").ToArray
-        encabezado = "1" & datos(0)(0).ToString.PadLeft(6, "0") &
+            ' Genera encabezado 
+            Dim datos As Array = conn.llena("Select idclienteBanco from bancos ").ToArray
+            encabezado = "1" & datos(0)(0).ToString.PadLeft(6, "0") &
                         Date.Now.ToShortDateString.Replace("/", "") _
                         & Me.id_planilla.ToString.PadLeft(6, "0") & "0000001" &
                         StrDup(40, "0")
 
-        ' Genera resumen
-        Dim reg As DataRow
-        Dim tmonto, tcuentas As Long             ' Suma las columnas monto y cuenta
-        For Each reg In data.Tables("tabla1").Rows
-            tmonto += CLng(reg("monto"))
-            tcuentas += CLng(reg("cuenta"))
-        Next
-        ' genera el string resumen
-        resumen = "4" &
+            ' Genera resumen
+            Dim reg As DataRow
+            Dim tmonto, tcuentas As Long             ' Suma las columnas monto y cuenta
+            For Each reg In data.Tables("tabla1").Rows
+                tmonto += CLng(reg("monto"))
+                tcuentas += CLng(reg("cuenta"))
+            Next
+            ' genera el string resumen
+            resumen = "4" &
                 tmonto.ToString.PadLeft(15, "0") &
                 tcuentas.ToString.PadLeft(10, "0") &
                 StrDup(42, "0")
 
-        ' Genera Archivo en Escritorio
-        conn.GeneraArchivoEncabezadoResumen(ruta, data.Tables(0), encabezado, resumen)
+            ' Genera Archivo en Escritorio
+            conn.GeneraArchivoEncabezadoResumen(ruta, data.Tables(0), encabezado, resumen)
 
-        'cambia el estado a la planilla 
-        plan.SetEstado(cPlanilla.Estado.Pagado, id_planilla)
+            'cambia el estado a la planilla 
+            plan.SetEstado(cPlanilla.Estado.Pagado, id_planilla)
 
-        Dim oHE As New cHorasExtras()
+            Dim oHE As New cHorasExtras()
+            oHE.LiquidaHoras(id_planilla)
 
-        oHE.
-
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
     '
     '
@@ -2319,6 +2394,7 @@ Public Class frmPlanilla
         ffin = DataGridView1.Rows(e.RowIndex).Cells(2).Value
 
         MuestraPlanilla(id_planilla)
+        DataGrid1.Focus()
 
     End Sub
 
@@ -2479,6 +2555,7 @@ Public Class frmPlanilla
         Me.DataGridView1.Refresh()
         Me.DataGridView2.Refresh()
     End Sub
+
 
 End Class
 

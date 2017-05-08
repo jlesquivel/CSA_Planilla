@@ -28,7 +28,7 @@ Public Class frmVacaciones
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
         If Not Traslape_Fechas_Grid() Then
             Dim diasD As Integer = DateDiff(DateInterval.Day, fechaI_ord.Value, fechaF_ord.Value) + 1
-            Vacacion_regTableAdapter.Insertar(_id, diasD, nota.Text, fechaI_ord.Value, fechaF_ord.Value, motivo.Text, fechaI_Adic.Value, fechaF_Adic.Value)
+            Vacacion_regTableAdapter.Insertar(_id, diasD, nota.Text, fechaI_ord.Value, fechaF_ord.Value, motivo.Text, fechaI_Adic.Value, fechaF_Adic.Value, Now)
             Vacacion_regTableAdapter.FillBy(Me.DsVacaciones.Vacacion_reg, _id)
             _saldo = _saldo - diasD
             DiasSaldo.Value = _saldo
@@ -104,9 +104,21 @@ Public Class frmVacaciones
         ' Crea Carta de Vacaciones
 
         Dim oVac As New cVacaciones
-        oVac.carta(_id_emp, DataGridViewX1.CurrentRow.DataBoundItem.row, "")
+        oVac.carta(_id_emp, DataGridViewX1.CurrentRow.DataBoundItem.row, "", True)
 
     End Sub
 
+    Private Sub DataGridViewX1_RowHeaderMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridViewX1.RowHeaderMouseDoubleClick
+
+        Try
+            Me.Cursor = Cursors.WaitCursor
+            DataGridViewX1.Rows.RemoveAt(e.RowIndex)
+            Vacacion_regTableAdapter.Update(DsVacaciones.Vacacion_reg)
+
+        Finally
+            Me.Cursor = Cursors.Default
+        End Try
+
+    End Sub
 End Class
 

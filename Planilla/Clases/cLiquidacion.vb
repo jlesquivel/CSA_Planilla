@@ -74,9 +74,10 @@ End Class
 'PREAVISO
 '===================
 '1.- Antes de los tres meses no hay obligación de dar preaviso pues se trata del período de prueba.
-'2.- Si tiene más de 3 meses pero menos de 6 meses de labores, debe darse 1 semana de preaviso.
-'3.- Si tiene más de 6 meses pero menos de 1 año de labores, debe darse 15 días de preaviso.
-'4.- Después de 1 año de labores debe darse 1 mes de preaviso. El preaviso debe darse en tiempo y solamente n casos especiales se puede dar en dinero.
+'2.- Si tiene más de 3 meses pero menos de 6 meses (< 180 dias )de labores, debe darse 1 semana (7 dias) de preaviso.
+'3.- Si tiene más de 6 meses pero menos de 1 año (< 365 )de labores, debe darse 15 días de preaviso.
+'4.- Después de 1 año de labores debe darse 1 mes  (30 dias) de preaviso. El preaviso debe darse en tiempo 
+'    y solamente n casos especiales se puede dar en dinero.
 
 '¿CÓMO SE CALCULA EL PAGO DE PREAVISO?
 'Se calcula tomando en cuenta el promedio de los salarios ordinarios y

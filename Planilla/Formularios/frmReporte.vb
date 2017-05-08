@@ -44,10 +44,11 @@ Public Class frmReporte
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(746, 466)
         Me.CrystalReportViewer1.TabIndex = 0
+        Me.CrystalReportViewer1.ToolPanelWidth = 240
         '
         'frmReporte
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.ClientSize = New System.Drawing.Size(746, 466)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.DoubleBuffered = True
